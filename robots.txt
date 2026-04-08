@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pink1119zz.github.io/ai-tools-tw/sitemap.xml

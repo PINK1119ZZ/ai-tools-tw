@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAG 是什麼?中小企業導入指南 2026 | AI Tools TW</title>
+<meta name="description" content="RAG (Retrieval-Augmented Generation) 完整解析。讓 AI 記得你公司的知識庫,5 個免費 RAG 工具實測比較。">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/rag-explained.html">
+<meta property="og:title" content="RAG 完整指南 2026"><meta property="og:type" content="article">
+<meta name="keywords" content="RAG,Retrieval Augmented Generation,向量資料庫,LangChain,LlamaIndex,企業 AI">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"RAG 完整指南 2026","datePublished":"2026-04-09","author":{"@type":"Organization","name":"AI Tools TW"},"publisher":{"@type":"Organization","name":"AI Tools TW"}}</script>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a><div class="nav-links"><a href="/ai-tools-tw/blog/">評測</a><a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a></div></div></nav>
+<article style="max-width:780px; margin:0 auto; padding:8rem 2rem 4rem; line-height:1.8;">
+<div style="color:var(--gray); font-size:0.9rem;">2026-04-09 · 7 分鐘閱讀 · 企業 AI</div>
+<h1 style="font-size:2.5rem; line-height:1.2;">RAG 是什麼?為什麼 2026 中小企業必懂?</h1>
+
+<p>你問 ChatGPT「我們公司退貨政策是什麼?」它一定答不出來,因為你的政策不在它的訓練資料裡。<strong>RAG(檢索增強生成)就是解決這件事的方法</strong> — 讓 AI 在回答前先去你的資料庫翻一翻,然後根據翻到的內容回答。</p>
+
+<h2>RAG 的三步驟(白話版)</h2>
+<ol>
+<li><strong>知識庫向量化</strong>:把你的 FAQ、文件、客戶資料切成小塊,用 embedding 模型轉成數字向量,存進向量資料庫(Chroma、Pinecone、Weaviate)</li>
+<li><strong>查詢時檢索</strong>:用戶問問題時,先把問題也轉成向量,從資料庫找最相關的 5-10 塊內容</li>
+<li><strong>送給 LLM 生成答案</strong>:把找到的內容 + 用戶問題一起送給 GPT/Claude,讓它根據實際資料回答</li>
+</ol>
+
+<h2>為什麼不直接 fine-tune?</h2>
+<table style="width:100%; margin:1.5rem 0;">
+<tr><th>項目</th><th>RAG</th><th>Fine-tuning</th></tr>
+<tr><td>更新資料</td><td>✅ 隨時加</td><td>❌ 要重訓</td></tr>
+<tr><td>成本</td><td>💰 低</td><td>💰💰💰 高</td></tr>
+<tr><td>技術門檻</td><td>中</td><td>高</td></tr>
+<tr><td>引用來源</td><td>✅ 可以</td><td>❌ 黑盒</td></tr>
+</table>
+
+<h2>5 個免費 / 入門 RAG 工具</h2>
+
+<h3>1. LangChain</h3>
+<p>最熱門的 Python 框架,模組化好,文件多。新手第一站。</p>
+
+<h3>2. LlamaIndex</h3>
+<p>專為 RAG 設計、API 比 LangChain 簡潔、文件處理特別強。</p>
+
+<h3>3. ChromaDB</h3>
+<p>免費的本地向量資料庫,跑在你電腦上,個資不外流。</p>
+
+<h3>4. Pinecone</h3>
+<p>雲端向量資料庫,免費版有 100k 向量額度。生產級首選。</p>
+
+<h3>5. Anything LLM</h3>
+<p>無程式碼介面,丟文件進去就能用。最快上手。</p>
+
+<h2>中小企業怎麼開始?</h2>
+<p>3 個典型場景:</p>
+<ul>
+<li><strong>內部知識庫 Bot</strong>:把員工手冊、SOP 餵進去,新人問什麼立刻有答案</li>
+<li><strong>客服 RAG</strong>:把產品 FAQ + 退貨政策餵進去,LINE Bot 自動回</li>
+<li><strong>銷售助理</strong>:把所有產品型錄餵進去,業務問什麼立刻找到</li>
+</ul>
+
+<div style="background:var(--dark-2); border-left:4px solid var(--accent); padding:1.5rem; border-radius:8px; margin:2rem 0;">
+<strong>💡 想直接用不想自己架?</strong><br>
+RAG 系統客製化從 NT$15,000 起,2-3 週上線。
+<a href="https://autodev-ai.com/contact.html" target="_blank" rel="noopener" style="color:var(--accent); font-weight:600;">AutoDev AI 諮詢 →</a>
+</div>
+</article>
+<footer style="text-align:center; padding:3rem 2rem; color:var(--gray);"><p>© 2026 AI Tools TW</p></footer>
+</body></html>
