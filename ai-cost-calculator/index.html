@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 訂閱費用計算器 2026｜ChatGPT / Claude / Cursor 哪個最划算？</title>
+<meta name="description" content="免費 AI 費用計算器：根據你的使用情境（寫作/編程/影像/語音），計算出最划算的 AI 工具訂閱組合，含月費明細與台灣推薦方案。">
+<meta name="keywords" content="AI費用計算,AI工具比較,ChatGPT Claude哪個划算,AI訂閱值不值得,Cursor費用,AI工具月費台灣">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/">
+<meta property="og:title" content="AI 訂閱費用計算器 2026 — 找出最划算的 AI 工具組合">
+<meta property="og:description" content="根據你的使用情境，計算最省錢的 AI 訂閱組合。純前端免費使用。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI 訂閱費用計算器 2026",
+  "description": "根據使用情境計算最划算的 AI 工具訂閱組合",
+  "url": "https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/",
+  "applicationCategory": "UtilityApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "AI Tools TW", "url": "https://pink1119zz.github.io/ai-tools-tw/" }
+}
+</script>
+<style>
+  :root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --red: #ef4444;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    color: white;
+    padding: 2.5rem 1rem;
+    text-align: center;
+  }
+  header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: .5rem; }
+  header p { opacity: .85; font-size: 1rem; max-width: 560px; margin: 0 auto; }
+  nav { background: white; border-bottom: 1px solid var(--border); padding: .75rem 1rem; font-size: .85rem; }
+  nav a { color: var(--primary); text-decoration: none; margin-right: .5rem; }
+  .container { max-width: 860px; margin: 0 auto; padding: 2rem 1rem; }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,.06);
+  }
+  .card h2 { font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem; color: var(--primary); }
+  .step-badge {
+    display: inline-block;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    text-align: center;
+    line-height: 24px;
+    font-size: .8rem;
+    font-weight: 700;
+    margin-right: .5rem;
+  }
+  .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: .75rem; margin-top: .75rem; }
+  .checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    padding: .75rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all .15s;
+    font-size: .9rem;
+  }
+  .checkbox-item:hover { border-color: var(--primary); background: #f0f1ff; }
+  .checkbox-item input[type=checkbox] { width: 16px; height: 16px; accent-color: var(--primary); }
+  .checkbox-item.checked { border-color: var(--primary); background: #eef2ff; }
+  .budget-slider { width: 100%; margin: .5rem 0; accent-color: var(--primary); }
+  .budget-display { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
+  .freq-select {
+    padding: .5rem .75rem;
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    font-size: .95rem;
+    color: var(--text);
+    background: white;
+    cursor: pointer;
+  }
+  .btn-calc {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background .15s;
+    margin-top: .5rem;
+  }
+  .btn-calc:hover { background: var(--primary-dark); }
+  #results { display: none; }
+  #results.show { display: block; }
+  .result-card {
+    background: var(--card-bg);
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .result-card.top-pick { border-color: var(--green); background: #f0fdf4; }
+  .tool-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+    width: 48px; height: 48px;
+    display: flex; align-items: center; justify-content: center;
+    background: white;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+  }
+  .tool-info { flex: 1; }
+  .tool-name { font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: .4rem; }
+  .badge-top { background: var(--green); color: white; font-size: .7rem; padding: .15rem .4rem; border-radius: 4px; }
+  .badge-rec { background: var(--amber); color: white; font-size: .7rem; padding: .15rem .4rem; border-radius: 4px; }
+  .tool-desc { color: var(--muted); font-size: .88rem; margin: .25rem 0; }
+  .tool-price { font-size: .95rem; font-weight: 600; color: var(--primary); margin-bottom: .4rem; }
+  .tool-why { font-size: .85rem; color: var(--text); background: #f1f5f9; border-radius: 6px; padding: .4rem .6rem; margin-bottom: .5rem; }
+  .btn-affiliate {
+    display: inline-block;
+    padding: .45rem .9rem;
+    background: var(--primary);
+    color: white;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: .85rem;
+    font-weight: 600;
+    transition: background .15s;
+  }
+  .btn-affiliate:hover { background: var(--primary-dark); }
+  .btn-affiliate.green { background: var(--green); }
+  .btn-affiliate.green:hover { background: #059669; }
+  .total-box {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    border-radius: 12px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: .5rem;
+  }
+  .total-box .label { opacity: .85; font-size: .9rem; }
+  .total-box .amount { font-size: 1.8rem; font-weight: 700; }
+  .top5-section { margin-top: 2rem; }
+  .top5-section h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 1rem; }
+  .rank-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+  .rank-table th { background: var(--primary); color: white; padding: .5rem .75rem; text-align: left; }
+  .rank-table td { padding: .6rem .75rem; border-bottom: 1px solid var(--border); }
+  .rank-table tr:hover td { background: #f8fafc; }
+  .disclaimer { font-size: .78rem; color: var(--muted); margin-top: 2rem; text-align: center; }
+  footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 1.5rem 1rem; font-size: .85rem; margin-top: 3rem; }
+  footer a { color: #818cf8; text-decoration: none; }
+  @media (max-width: 560px) {
+    header h1 { font-size: 1.4rem; }
+    .checkbox-grid { grid-template-columns: 1fr 1fr; }
+    .total-box { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🤖 AI 訂閱費用計算器 2026</h1>
+  <p>根據你的使用情境，找出最划算的 AI 工具訂閱組合。純前端、免費使用。</p>
+</header>
+
+<nav>
+  <a href="/ai-tools-tw/">首頁</a> ›
+  <a href="/ai-tools-tw/blog/">評測</a> ›
+  AI 費用計算器
+</nav>
+
+<div class="container">
+
+  <!-- Step 1 -->
+  <div class="card">
+    <h2><span class="step-badge">1</span>你主要用 AI 做什麼？（可多選）</h2>
+    <div class="checkbox-grid" id="usecases">
+      <label class="checkbox-item" id="lbl-writing">
+        <input type="checkbox" value="writing"> ✍️ 寫作 / 文案
+      </label>
+      <label class="checkbox-item" id="lbl-coding">
+        <input type="checkbox" value="coding"> 💻 寫程式 / 開發
+      </label>
+      <label class="checkbox-item" id="lbl-image">
+        <input type="checkbox" value="image"> 🎨 圖像生成
+      </label>
+      <label class="checkbox-item" id="lbl-voice">
+        <input type="checkbox" value="voice"> 🎙️ 語音 / 配音
+      </label>
+      <label class="checkbox-item" id="lbl-automation">
+        <input type="checkbox" value="automation"> ⚙️ 自動化工作流
+      </label>
+      <label class="checkbox-item" id="lbl-research">
+        <input type="checkbox" value="research"> 🔍 搜尋 / 研究
+      </label>
+      <label class="checkbox-item" id="lbl-video">
+        <input type="checkbox" value="video"> 🎬 影片製作
+      </label>
+      <label class="checkbox-item" id="lbl-business">
+        <input type="checkbox" value="business"> 🏢 商業 / 客服
+      </label>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="card">
+    <h2><span class="step-badge">2</span>每月 AI 工具預算上限</h2>
+    <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;">
+      <span class="budget-display" id="budgetDisplay">US$30</span>
+      <span style="color:var(--muted);font-size:.85rem;">/ 月</span>
+    </div>
+    <input type="range" class="budget-slider" id="budgetSlider" min="0" max="200" step="5" value="30">
+    <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--muted);">
+      <span>$0（只用免費版）</span><span>$100</span><span>$200+</span>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="card">
+    <h2><span class="step-badge">3</span>使用頻率</h2>
+    <select class="freq-select" id="freqSelect">
+      <option value="light">偶爾用（每週 1-2 次）</option>
+      <option value="regular" selected>定期用（每週 3-5 次）</option>
+      <option value="heavy">重度使用（每天都用）</option>
+      <option value="pro">專業/商業用途（每天多小時）</option>
+    </select>
+  </div>
+
+  <button class="btn-calc" onclick="calculate()">🔍 幫我算最划算組合</button>
+
+  <!-- Results -->
+  <div id="results">
+    <div style="margin: 2rem 0 1rem; font-size: 1.2rem; font-weight: 700;">📊 你的推薦 AI 訂閱組合</div>
+
+    <div class="total-box">
+      <div>
+        <div class="label">推薦方案總月費</div>
+        <div class="amount" id="totalCost">—</div>
+      </div>
+      <div style="text-align:right">
+        <div class="label">已選工具</div>
+        <div style="font-size:1.1rem;font-weight:600;" id="totalTools">—</div>
+      </div>
+    </div>
+
+    <div id="resultCards"></div>
+
+    <!-- Top 5 Combos -->
+    <div class="top5-section card">
+      <h2>🏆 台灣人最常用 AI 工具組合 Top 5</h2>
+      <table class="rank-table">
+        <thead>
+          <tr><th>#</th><th>組合名稱</th><th>月費</th><th>適合誰</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>🥇</td>
+            <td><strong>ChatGPT Plus + Cursor Pro</strong></td>
+            <td>US$40</td>
+            <td>工程師 / 全端開發者</td>
+          </tr>
+          <tr>
+            <td>🥈</td>
+            <td><strong>Claude Pro + Cursor Pro</strong></td>
+            <td>US$40</td>
+            <td>寫作型工程師 / 長文處理</td>
+          </tr>
+          <tr>
+            <td>🥉</td>
+            <td><strong>ChatGPT Plus（含 Sora）</strong></td>
+            <td>US$20</td>
+            <td>創作者 / 影片製作 / 內容行銷</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><strong>Claude Pro + n8n Cloud</strong></td>
+            <td>US$30</td>
+            <td>自動化重度用戶 / 小型創業者</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><strong>免費組合：Claude Free + n8n Free + Gemini Free</strong></td>
+            <td>US$0</td>
+            <td>預算有限 / 評估期用戶</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="disclaimer">* 以上費用為 2026 年 4 月官方定價，匯率僅供參考。聯盟連結標示「→ 前往」者，我們可能獲得推薦佣金，不影響評測結果。</p>
+  </div>
+
+  <!-- Static content for SEO -->
+  <div class="card" style="margin-top:2rem;">
+    <h2>📖 2026 主要 AI 工具定價一覽</h2>
+    <table class="rank-table" style="margin-top:.5rem;">
+      <thead>
+        <tr><th>工具</th><th>免費版</th><th>付費版月費</th><th>主要用途</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>ChatGPT Plus</td><td>✅ 有限制</td><td>US$20</td><td>通用對話、DALL-E 圖片、Sora 影片</td></tr>
+        <tr><td>Claude Pro</td><td>✅ 有限制</td><td>US$20</td><td>長文寫作、文件分析、程式碼</td></tr>
+        <tr><td>Cursor Pro</td><td>✅ 試用</td><td>US$20</td><td>AI 編程助手</td></tr>
+        <tr><td>n8n Cloud</td><td>✅ 5000 次/月</td><td>US$20起</td><td>工作流自動化</td></tr>
+        <tr><td>GitHub Copilot</td><td>✅ 個人免費</td><td>US$10/19</td><td>程式補全</td></tr>
+        <tr><td>Midjourney</td><td>❌</td><td>US$10起</td><td>圖像生成</td></tr>
+        <tr><td>Perplexity Pro</td><td>✅ 有限制</td><td>US$20</td><td>AI 搜尋研究</td></tr>
+        <tr><td>ElevenLabs</td><td>✅ 10k字/月</td><td>US$5起</td><td>AI 語音合成</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>💡 AI 訂閱常見問題</h2>
+    <p style="margin-bottom:.75rem;"><strong>Q: ChatGPT 和 Claude 要同時訂嗎？</strong><br>
+    A: 一般用戶選一個就夠。工程師或內容工作者可兩個都訂（US$40），但 Cursor Pro 自帶 Claude 存取，可考慮用 Cursor 替代 Claude Pro。</p>
+    <p style="margin-bottom:.75rem;"><strong>Q: n8n 值得付費嗎？</strong><br>
+    A: 如果你每月工作流執行量超過 5000 次，或需要多人協作，值得升級。自架 n8n 也是選項（需要 <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="nofollow">VPS 主機</a>，約 US$6-12/月）。</p>
+    <p><strong>Q: 有沒有學生或台灣優惠？</strong><br>
+    A: GitHub Copilot 在校學生免費。大部分工具無台灣專屬優惠，但可用年繳方案省 15-20%。</p>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 <a href="/ai-tools-tw/">AI Tools TW</a> — <a href="https://autodev-ai.com">AutoDev AI</a></p>
+  <p style="margin-top:.5rem;font-size:.75rem;">計算結果僅供參考。聯盟連結不影響推薦結果。</p>
+</footer>
+
+<script>
+const tools = [
+  {
+    id: 'chatgpt',
+    name: 'ChatGPT Plus',
+    icon: '🤖',
+    price: 20,
+    usecases: ['writing', 'image', 'research', 'business', 'video'],
+    freqs: ['light','regular','heavy','pro'],
+    desc: 'OpenAI 旗艦模型，內含 DALL-E 3 圖像、Sora 影片生成、Advanced Voice Mode',
+    why: '最通用的 AI 工具，幾乎所有情境都能用。圖像/影片需求者首選。',
+    link: 'https://chat.openai.com/auth/login?next=/pricing',
+    linkText: '→ 免費試用 ChatGPT',
+    linkClass: ''
+  },
+  {
+    id: 'claude',
+    name: 'Claude Pro',
+    icon: '🌟',
+    price: 20,
+    usecases: ['writing', 'coding', 'research', 'business'],
+    freqs: ['regular','heavy','pro'],
+    desc: 'Anthropic 的 Claude Sonnet / Opus，200k token 超長文脈，最強文字分析',
+    why: '長文處理、合約審查、程式碼審核首選。與 ChatGPT 互補，非替代關係。',
+    link: 'https://claude.ai/upgrade',
+    linkText: '→ 了解 Claude Pro',
+    linkClass: ''
+  },
+  {
+    id: 'cursor',
+    name: 'Cursor Pro',
+    icon: '💻',
+    price: 20,
+    usecases: ['coding'],
+    freqs: ['regular','heavy','pro'],
+    desc: 'AI 原生 IDE，整合 Claude + GPT-4o，支援整個 codebase 對話與自動修改',
+    why: '工程師的 AI 利器。Cursor Pro 自帶 Claude/GPT 配額，可替代 Claude Pro。',
+    link: 'https://cursor.com/pricing',
+    linkText: '→ Cursor 免費試用',
+    linkClass: ''
+  },
+  {
+    id: 'n8n',
+    name: 'n8n Cloud',
+    icon: '⚙️',
+    price: 20,
+    usecases: ['automation', 'business'],
+    freqs: ['regular','heavy','pro'],
+    desc: '開源自動化工具，整合 400+ 服務，含 AI Agent 節點，可連 LINE Bot / Telegram',
+    why: '想自動化工作流、串 API、接 LINE Bot 的首選。比 Zapier/Make 更靈活便宜。',
+    link: 'https://m.do.co/c/6121a295f624',
+    linkText: '→ DigitalOcean 自架 n8n（省更多）',
+    linkClass: 'green'
+  },
+  {
+    id: 'midjourney',
+    name: 'Midjourney',
+    icon: '🎨',
+    price: 10,
+    usecases: ['image'],
+    freqs: ['light','regular','heavy','pro'],
+    desc: '最頂級的 AI 圖像生成工具，藝術質感一流，Discord 操作介面',
+    why: '如果你有圖像創作需求，Midjourney Basic 每月 US$10 約可生成 200 張高品質圖。',
+    link: 'https://www.midjourney.com/checkout/plans',
+    linkText: '→ Midjourney 方案',
+    linkClass: ''
+  },
+  {
+    id: 'perplexity',
+    name: 'Perplexity Pro',
+    icon: '🔍',
+    price: 20,
+    usecases: ['research'],
+    freqs: ['heavy','pro'],
+    desc: 'AI 搜尋引擎，即時網路資料 + 來源引用，研究效率倍增',
+    why: '大量研究工作者的首選。比 ChatGPT 搜尋更精準，有來源引用更可信。',
+    link: 'https://perplexity.ai/pro',
+    linkText: '→ Perplexity Pro',
+    linkClass: ''
+  },
+  {
+    id: 'elevenlabs',
+    name: 'ElevenLabs',
+    icon: '🎙️',
+    price: 5,
+    usecases: ['voice', 'video'],
+    freqs: ['light','regular','heavy','pro'],
+    desc: 'AI 語音合成 / 複製，28 種語言，影片配音與 Podcast 製作首選',
+    why: '台灣中文語音效果不錯，Starter 方案 US$5 足夠一般影片配音需求。',
+    link: 'https://elevenlabs.io/pricing',
+    linkText: '→ ElevenLabs 免費試用',
+    linkClass: ''
+  },
+  {
+    id: 'github-copilot',
+    name: 'GitHub Copilot',
+    icon: '🐙',
+    price: 10,
+    usecases: ['coding'],
+    freqs: ['light','regular'],
+    desc: 'VS Code / JetBrains 整合，程式補全 + Copilot Chat，VS Code 用戶首選',
+    why: '習慣 VS Code 且預算有限的工程師推薦（個人免費版每月有使用上限）。',
+    link: 'https://github.com/features/copilot',
+    linkText: '→ GitHub Copilot',
+    linkClass: ''
+  }
+];
+
+// UI interactions
+document.querySelectorAll('.checkbox-item').forEach(label => {
+  label.querySelector('input').addEventListener('change', function() {
+    label.classList.toggle('checked', this.checked);
+  });
+});
+
+const slider = document.getElementById('budgetSlider');
+const display = document.getElementById('budgetDisplay');
+slider.addEventListener('input', () => {
+  display.textContent = slider.value >= 200 ? 'US$200+' : `US$${slider.value}`;
+});
+
+function calculate() {
+  const selected = Array.from(document.querySelectorAll('#usecases input:checked')).map(i => i.value);
+  const budget = parseInt(slider.value) || 200;
+  const freq = document.getElementById('freqSelect').value;
+
+  if (selected.length === 0) {
+    alert('請至少選擇一個使用情境 😊');
+    return;
+  }
+
+  // Score each tool
+  let scored = tools.map(t => {
+    let score = 0;
+    // Usecase match
+    const overlap = t.usecases.filter(u => selected.includes(u)).length;
+    score += overlap * 3;
+    // Frequency match
+    if (t.freqs.includes(freq)) score += 2;
+    // Budget consideration - prefer cheaper when budget is low
+    if (budget < 30 && t.price <= 10) score += 1;
+    if (budget < 20 && t.price <= 5) score += 2;
+    return { ...t, score, overlap };
+  }).filter(t => t.overlap > 0 || (t.usecases.some(u => ['automation','business'].includes(u)) && selected.some(u => ['automation','business'].includes(u))));
+
+  scored.sort((a, b) => b.score - a.score);
+
+  // Select tools within budget
+  let remaining = budget >= 200 ? 999 : budget;
+  let selected_tools = [];
+  for (const t of scored) {
+    if (t.overlap === 0) continue;
+    if (remaining >= t.price || selected_tools.length === 0) {
+      selected_tools.push(t);
+      remaining -= t.price;
+      if (selected_tools.length >= 4) break;
+    }
+  }
+
+  // Handle Cursor vs Claude overlap for coders
+  if (selected.includes('coding') && selected_tools.find(t=>t.id==='cursor') && selected_tools.find(t=>t.id==='claude')) {
+    // Mark Claude as optional if Cursor is top pick
+    const cursorIdx = selected_tools.findIndex(t=>t.id==='cursor');
+    const claudeIdx = selected_tools.findIndex(t=>t.id==='claude');
+    if (cursorIdx < claudeIdx) {
+      selected_tools[claudeIdx].optionalNote = '（Cursor Pro 已含 Claude 配額，可考慮省略）';
+    }
+  }
+
+  renderResults(selected_tools, budget);
+}
+
+function renderResults(tools, budget) {
+  const totalCost = tools.reduce((s, t) => s + t.price, 0);
+  document.getElementById('totalCost').textContent = `US$${totalCost}/月`;
+  document.getElementById('totalTools').textContent = `${tools.length} 個工具`;
+
+  const html = tools.map((t, i) => `
+    <div class="result-card ${i===0?'top-pick':''}">
+      <div class="tool-icon">${t.icon}</div>
+      <div class="tool-info">
+        <div class="tool-name">
+          ${t.name}
+          ${i===0 ? '<span class="badge-top">首選推薦</span>' : (i===1 ? '<span class="badge-rec">推薦</span>' : '')}
+        </div>
+        <div class="tool-desc">${t.desc}</div>
+        <div class="tool-price">US$${t.price}/月 ${t.optionalNote ? `<span style="color:var(--amber);font-size:.8rem;">${t.optionalNote}</span>` : ''}</div>
+        <div class="tool-why">💡 ${t.why}</div>
+        <a href="${t.link}" target="_blank" rel="nofollow" class="btn-affiliate ${t.linkClass}">${t.linkText}</a>
+      </div>
+    </div>
+  `).join('');
+
+  document.getElementById('resultCards').innerHTML = html;
+  const resultsEl = document.getElementById('results');
+  resultsEl.classList.add('show');
+  resultsEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+</body>
+</html>
