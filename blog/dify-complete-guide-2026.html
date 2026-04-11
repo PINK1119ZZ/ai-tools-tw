@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dify 完整教學 2026：開源 AI 工作流，台灣開發者怎麼用？ | AI Tools TW</title>
+  <meta name="description" content="Dify 是什麼？怎麼安裝、設定、串接 API？2026 最完整繁中 Dify 教學，涵蓋自架 vs 雲端、與 n8n 差異比較、台灣實戰應用案例。">
+  <link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/dify-complete-guide-2026.html">
+  <link rel="stylesheet" href="../style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Dify 完整教學 2026：開源 AI 工作流，台灣開發者怎麼用？",
+    "description": "Dify 是什麼？怎麼安裝、設定、串接 API？2026 最完整繁中 Dify 教學，涵蓋自架 vs 雲端、與 n8n 差異比較、台灣實戰應用案例。",
+    "datePublished": "2026-04-11",
+    "dateModified": "2026-04-11",
+    "author": {"@type": "Organization", "name": "AI Tools TW"},
+    "publisher": {"@type": "Organization", "name": "AI Tools TW"},
+    "image": "https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Dify 是免費的嗎？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dify 開源版本完全免費，可以自架在自己的伺服器上，沒有月費。雲端版（dify.ai）有免費方案（200 次 OpenAI API 呼叫/月），付費版從 $59/月起。自架版適合台灣開發者，只需要支付伺服器費用（DigitalOcean $6/月起）。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dify 和 n8n 有什麼不同？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "核心差異：Dify 專注 AI 應用開發（LLM 工作流、RAG 知識庫、Chatbot），n8n 則是通用自動化平台（串接各種 API、SaaS 工具）。兩者可以互補——用 n8n 做資料搬運和觸發，用 Dify 處理 AI 邏輯和生成。如果你的需求是「打造 AI 助理/知識庫」，Dify 更適合；如果是「自動化繁瑣工作流」，n8n 更強。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dify 支援哪些 LLM？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Dify 支援幾乎所有主流 LLM：OpenAI（GPT-4o、GPT-4.1）、Anthropic Claude（Sonnet 4、Opus 4）、Google Gemini（2.0 Flash、2.5 Pro）、Mistral、Llama 3、Cohere，以及本地模型（Ollama、LM Studio）。台灣開發者常用 GPT-4o mini 降低成本，搭配 Claude 處理複雜任務。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Dify 自架需要什麼規格的伺服器？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "最低建議：2 vCPU + 4GB RAM（DigitalOcean Droplet $24/月方案）。如果要跑向量資料庫（RAG 功能），建議 4GB RAM 以上。Docker Compose 一鍵啟動，大約 10 分鐘就能跑起來。注意：如果只是個人測試，$12/月 2GB RAM 方案也能跑，但不建議生產環境。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "台灣開發者用 Dify 最常做什麼？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "根據台灣社群討論，最熱門的用途有：(1) 企業內部知識庫 AI 問答（上傳公司文件，讓 AI 回答員工問題）；(2) 客服 Chatbot 串接 LINE/Telegram（比直接接 GPT API 更好管理）；(3) 行銷文案生成工作流（Brand Voice + 多語言輸出）；(4) 程式碼審查輔助（串接 GitHub Webhook）。"
+        }
+      }
+    ]
+  }
+  </script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', sans-serif; color: #1a1a1a; margin: 0; background: #fff; line-height: 1.8; }
+    .nav { background: #0f172a; padding: 14px 24px; display: flex; align-items: center; gap: 24px; }
+    .nav a { color: #e2e8f0; text-decoration: none; font-size: 15px; }
+    .nav a:hover { color: #60a5fa; }
+    .nav .logo { color: #fff; font-weight: 700; font-size: 18px; }
+    .hero { position: relative; height: 340px; overflow: hidden; }
+    .hero img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-overlay { position: absolute; inset: 0; background: rgba(15,23,42,0.6); display: flex; align-items: flex-end; padding: 32px; }
+    .hero-text h1 { color: #fff; font-size: 28px; line-height: 1.3; margin: 0 0 8px; max-width: 780px; }
+    .hero-text .meta { color: #94a3b8; font-size: 14px; }
+    .container { max-width: 820px; margin: 0 auto; padding: 40px 24px; }
+    h2 { font-size: 22px; font-weight: 700; color: #0f172a; border-left: 4px solid #3b82f6; padding-left: 12px; margin-top: 48px; }
+    h3 { font-size: 18px; font-weight: 600; color: #1e3a5f; margin-top: 32px; }
+    p { margin: 16px 0; }
+    .highlight-box { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+    .highlight-box strong { color: #1d4ed8; }
+    .warning-box { background: #fff7ed; border: 1px solid #fed7aa; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+    .warning-box strong { color: #c2410c; }
+    .comparison-table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+    .comparison-table th { background: #0f172a; color: #fff; padding: 12px 16px; text-align: left; }
+    .comparison-table td { padding: 11px 16px; border-bottom: 1px solid #e2e8f0; }
+    .comparison-table tr:hover td { background: #f8fafc; }
+    .tag-win { color: #16a34a; font-weight: 600; }
+    .tag-neutral { color: #6b7280; }
+    .cta-box { background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%); border-radius: 14px; padding: 28px 32px; margin: 40px 0; color: #fff; text-align: center; }
+    .cta-box h3 { color: #fff; margin: 0 0 10px; font-size: 20px; }
+    .cta-box p { color: #ddd6fe; margin: 0 0 20px; font-size: 15px; }
+    .cta-btn { display: inline-block; background: #fff; color: #1e40af; font-weight: 700; padding: 12px 28px; border-radius: 8px; text-decoration: none; font-size: 16px; transition: transform .15s; }
+    .cta-btn:hover { transform: translateY(-2px); }
+    .cta-btn.secondary { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,0.6); margin-left: 12px; }
+    .step-block { background: #f8fafc; border-radius: 10px; padding: 20px 24px; margin: 20px 0; border-left: 4px solid #3b82f6; }
+    .step-block h4 { margin: 0 0 8px; color: #1e40af; font-size: 16px; }
+    .code-block { background: #0f172a; color: #e2e8f0; border-radius: 8px; padding: 16px 20px; font-family: 'Courier New', monospace; font-size: 14px; overflow-x: auto; margin: 16px 0; }
+    .code-block .comment { color: #64748b; }
+    ul, ol { padding-left: 24px; }
+    li { margin: 8px 0; }
+    .related { background: #f8fafc; border-radius: 10px; padding: 20px 24px; margin: 40px 0; }
+    .related h3 { margin: 0 0 12px; font-size: 16px; color: #374151; }
+    .related a { display: block; color: #2563eb; text-decoration: none; margin: 6px 0; font-size: 15px; }
+    .related a:hover { text-decoration: underline; }
+    footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 24px; font-size: 14px; margin-top: 60px; }
+    @media(max-width:600px){ .hero { height: 220px; } .hero-text h1 { font-size: 20px; } }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="logo">AI Tools TW 🤖</a>
+  <a href="/blog/">文章</a>
+  <a href="/ai-cost-calculator/">費用計算器</a>
+  <a href="/mcp/">MCP 工具庫</a>
+</nav>
+
+<div class="hero">
+  <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80" alt="Dify AI 工作流平台教學 2026">
+  <div class="hero-overlay">
+    <div class="hero-text">
+      <h1>Dify 完整教學 2026：開源 AI 工作流，台灣開發者怎麼用？</h1>
+      <span class="meta">2026-04-11 · 更新：2026-04-11 · 閱讀約 12 分鐘</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <p>你有沒有想過，為什麼同樣是「接 ChatGPT API」，別人做出來的 AI 應用可以有記憶、能查資料庫、還能依不同條件走不同流程——而你的卻只是一個固定問固定答的對話框？</p>
+
+  <p>差距不在 API key，在工具。</p>
+
+  <p>Dify 就是那個讓你從「接 API」升級到「打造 AI 產品」的平台。它開源、免費可自架、介面直觀，目前全球已有 40 萬+ 開發者在用。但繁體中文的完整教學幾乎是零——所以我把兩週自架研究和實際跑過的流程整理成這篇文章，希望幫台灣開發者節省時間。</p>
+
+  <div class="highlight-box">
+    <strong>📌 這篇文章適合你，如果：</strong>
+    <ul style="margin:10px 0 0;">
+      <li>想打造 AI Chatbot / 知識庫，但不想從零寫程式</li>
+      <li>正在評估 Dify vs n8n，不知道選哪個</li>
+      <li>聽過 Dify 但不知道怎麼開始</li>
+      <li>想自架省費用，不想被雲端平台綁架</li>
+    </ul>
+  </div>
+
+  <h2>Dify 是什麼？一句話版本</h2>
+
+  <p>Dify 是一個<strong>開源 AI 應用開發平台</strong>，讓你用視覺化介面拼出 LLM 工作流、串接知識庫（RAG）、部署 Chatbot，而不需要自己寫後端程式。</p>
+
+  <p>它 2023 年在 GitHub 開源，2024 年獲得 $30M USD 融資，2026 年已是 GitHub 最熱門的 AI 項目之一（60,000+ stars）。用 Python 寫的，Docker 一鍵部署，MIT 授權可以商用。</p>
+
+  <p>你可以把它理解成：<strong>「沒有程式碼版本的 LangChain」</strong>，或者<strong>「專為 AI 打造的 n8n」</strong>。</p>
+
+  <h3>Dify 核心功能概覽</h3>
+
+  <ul>
+    <li><strong>工作流（Workflow）</strong>：視覺化拖拉節點，設計多步驟 AI 流程（如：擷取網頁 → 摘要 → 發送 Slack）</li>
+    <li><strong>知識庫（Knowledge Base）</strong>：上傳 PDF/Word/網址，自動建立向量資料庫，讓 AI 能查公司內部文件</li>
+    <li><strong>Chatbot / Agent</strong>：一鍵部署成網頁聊天框，可嵌入到任何網站，或透過 API 接 LINE Bot</li>
+    <li><strong>模型管理</strong>：統一設定 API Key，自由切換 GPT-4o、Claude、Gemini、本地 Llama</li>
+    <li><strong>日誌與監控</strong>：每次對話都有記錄，可以看 Token 用量、標記好壞回答</li>
+  </ul>
+
+  <h2>Dify 雲端版 vs 自架版：台灣開發者怎麼選？</h2>
+
+  <table class="comparison-table">
+    <tr>
+      <th>比較項目</th>
+      <th>雲端版（dify.ai）</th>
+      <th>自架版（Docker）</th>
+    </tr>
+    <tr>
+      <td>月費</td>
+      <td>免費 200 次/月；Starter $59；Pro $159</td>
+      <td><span class="tag-win">只需伺服器費 $6–$24/月</span></td>
+    </tr>
+    <tr>
+      <td>設定難度</td>
+      <td><span class="tag-win">最簡單，瀏覽器直接用</span></td>
+      <td>需要懂 Docker（15 分鐘設定）</td>
+    </tr>
+    <tr>
+      <td>資料隱私</td>
+      <td>資料在 Dify 雲端</td>
+      <td><span class="tag-win">資料完全在自己伺服器</span></td>
+    </tr>
+    <tr>
+      <td>使用量限制</td>
+      <td>免費版每月有限制</td>
+      <td><span class="tag-win">無限制</span></td>
+    </tr>
+    <tr>
+      <td>適合對象</td>
+      <td>快速試用、非技術人員</td>
+      <td><span class="tag-win">正式部署、企業、開發者</span></td>
+    </tr>
+    <tr>
+      <td>更新維護</td>
+      <td><span class="tag-win">自動更新</span></td>
+      <td>需手動 git pull + docker compose up</td>
+    </tr>
+  </table>
+
+  <p><strong>我的建議：</strong>如果你是認真要用，直接自架。費用差距很大（雲端版 Pro 一年 $1,908 vs 自架 DigitalOcean Droplet 一年 $144），而且資料不用給第三方。</p>
+
+  <div class="cta-box">
+    <h3>🚀 想自架 Dify？從 DigitalOcean 開始</h3>
+    <p>新用戶免費獲得 $200 美元點數，足夠跑 Dify 好幾個月。2 vCPU + 4GB RAM Droplet，每月只要 $24。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">領取 $200 免費點數 →</a>
+  </div>
+
+  <h2>自架 Dify 完整步驟（15 分鐘版）</h2>
+
+  <p>前置條件：一台 Linux 伺服器（Ubuntu 22.04），已安裝 Docker 和 Docker Compose。</p>
+
+  <div class="step-block">
+    <h4>步驟 1：Clone Dify 官方 Repo</h4>
+    <div class="code-block">git clone https://github.com/langgenius/dify.git<br>cd dify/docker</div>
+  </div>
+
+  <div class="step-block">
+    <h4>步驟 2：複製設定檔</h4>
+    <div class="code-block">cp .env.example .env<br><span class="comment"># 用你的編輯器開啟 .env，修改幾個關鍵設定：</span><br><span class="comment"># SECRET_KEY=（隨機 32 字元字串，可用 openssl rand -hex 16）</span><br><span class="comment"># NGINX_HTTPS_ENABLED=false（先用 HTTP 測試）</span></div>
+  </div>
+
+  <div class="step-block">
+    <h4>步驟 3：啟動所有服務</h4>
+    <div class="code-block">docker compose up -d<br><span class="comment"># 第一次會下載映像檔，等 3–5 分鐘</span><br><span class="comment"># 完成後訪問 http://你的IP/install 做初始設定</span></div>
+  </div>
+
+  <div class="step-block">
+    <h4>步驟 4：設定管理員帳號</h4>
+    <p>瀏覽器開啟 <code>http://你的伺服器IP</code>，會看到初始化畫面，設定管理員 Email 和密碼就完成了。</p>
+  </div>
+
+  <div class="step-block">
+    <h4>步驟 5：加入 LLM API Key</h4>
+    <p>進入 Settings → Model Provider，加入你的 OpenAI / Anthropic API Key。Dify 本身不綁你用哪家模型。</p>
+  </div>
+
+  <div class="warning-box">
+    <strong>⚠️ 常見踩雷：</strong>
+    <ul style="margin:10px 0 0;">
+      <li>伺服器要開 80 / 443 port，防火牆記得設定</li>
+      <li>2GB RAM 的機器跑起來會很卡，建議至少 4GB</li>
+      <li>升級版本：<code>git pull && docker compose down && docker compose up -d</code>，資料會保留</li>
+      <li>忘記開 SMTP 設定的話，邀請新成員的 Email 功能不會動</li>
+    </ul>
+  </div>
+
+  <h2>Dify 工作流實戰：3 個台灣常見應用場景</h2>
+
+  <h3>場景一：企業內部 FAQ 知識庫</h3>
+
+  <p>這是 Dify 最強的應用，也是台灣企業問最多的。流程是：</p>
+
+  <ol>
+    <li>把公司文件（員工手冊、SOP、產品規格書）上傳到 Dify 知識庫</li>
+    <li>Dify 自動切分段落、產生 Embedding 存入向量資料庫（內建 Weaviate）</li>
+    <li>員工問問題時，Dify 先向量搜尋找最相關段落，再讓 LLM 生成答案</li>
+    <li>可以設定「只根據上傳文件回答，不能自由發揮」，防止 AI 胡說</li>
+  </ol>
+
+  <p>實際效果：同事問「請假流程是什麼」，AI 會直接引用 HR 手冊的原文，還附頁碼。跟直接問 ChatGPT 最大的差別是：<strong>資料是你自己的，答案準確可追溯</strong>。</p>
+
+  <h3>場景二：LINE Bot AI 客服（串接 Dify API）</h3>
+
+  <p>Dify 部署好的 Chatbot 有 REST API，可以直接串 LINE Messaging API。概念上：</p>
+
+  <div class="code-block"><span class="comment"># 使用者傳訊息到 LINE Bot</span><br>LINE Webhook → 你的 Server → Dify Chat API<br>→ Dify 查知識庫 → LLM 生成回答 → 回傳給 LINE</div>
+
+  <p>比起直接接 OpenAI API，Dify 的優勢是：<strong>對話歷史管理、知識庫整合、系統 Prompt 版本控制</strong>都幫你做好了，不用自己寫這堆邏輯。</p>
+
+  <p>如果你在跑電商或餐廳，這個組合可以讓 LINE Bot 回答「今天有什麼菜？」「我的訂單狀態？」這類問題，比請人工客服省很多成本。</p>
+
+  <h3>場景三：行銷文案批次生成工作流</h3>
+
+  <p>Dify 的 Workflow 模式可以處理批次任務。例如：</p>
+
+  <ol>
+    <li>輸入：一份 CSV（產品名稱 + 規格 + 目標受眾）</li>
+    <li>Dify 逐行處理，用 GPT-4o mini 生成 IG 文案</li>
+    <li>輸出：一份帶有文案的 CSV，可以直接餵給排程工具</li>
+  </ol>
+
+  <p>這個場景用 n8n 也做得到，但 Dify 在 Prompt 管理（A/B 測試不同版本、查看哪個 Prompt 效果最好）這部分明顯更強。</p>
+
+  <h2>Dify vs n8n：到底選哪個？</h2>
+
+  <p>這是台灣開發者最常問的問題，我直接給結論：</p>
+
+  <table class="comparison-table">
+    <tr>
+      <th>需求</th>
+      <th>選這個</th>
+      <th>原因</th>
+    </tr>
+    <tr>
+      <td>打造 AI 聊天機器人、知識庫</td>
+      <td><span class="tag-win">Dify</span></td>
+      <td>原生支援 RAG、對話管理、多 LLM</td>
+    </tr>
+    <tr>
+      <td>串接 SaaS 工具（Slack、Gmail、Sheets）</td>
+      <td><span class="tag-win">n8n</span></td>
+      <td>有 400+ 官方整合節點</td>
+    </tr>
+    <tr>
+      <td>定時跑報表、資料搬運</td>
+      <td><span class="tag-win">n8n</span></td>
+      <td>排程觸發、Webhook 更靈活</td>
+    </tr>
+    <tr>
+      <td>管理多個 AI Prompt / 模型版本</td>
+      <td><span class="tag-win">Dify</span></td>
+      <td>內建版本控制和測試環境</td>
+    </tr>
+    <tr>
+      <td>非技術人員也要能修改流程</td>
+      <td><span class="tag-win">Dify</span></td>
+      <td>介面更直觀，學習曲線較低</td>
+    </tr>
+    <tr>
+      <td>複雜條件判斷 + 多平台觸發</td>
+      <td><span class="tag-win">n8n</span></td>
+      <td>節點邏輯更靈活，有 JS 自訂節點</td>
+    </tr>
+  </table>
+
+  <p>進階用法：<strong>兩個一起用</strong>——n8n 負責接 Webhook、搬資料、觸發流程，Dify 負責 AI 推理和生成。這在台灣做 LINE Bot 自動化的開發者圈子已經是常見搭配了。</p>
+
+  <h2>Dify 定價與費用試算</h2>
+
+  <p>雲端版定價（2026 最新）：</p>
+  <ul>
+    <li><strong>Sandbox（免費）</strong>：200 次 OpenAI API 呼叫、5 個應用、1 個知識庫</li>
+    <li><strong>Starter（$59/月）</strong>：無限應用、20 個知識庫、5 個成員</li>
+    <li><strong>Pro（$159/月）</strong>：進階監控、SSO 登入、優先支援</li>
+    <li><strong>Enterprise</strong>：合約報價，含私有部署選項</li>
+  </ul>
+
+  <p><strong>自架費用估算（DigitalOcean 為例）：</strong></p>
+  <ul>
+    <li>Droplet 2 vCPU 4GB RAM：$24/月（適合個人/小團隊）</li>
+    <li>Droplet 4 vCPU 8GB RAM：$48/月（適合中型企業）</li>
+    <li>LLM API 費用另計（OpenAI GPT-4o mini 約 $0.15/1M tokens，非常便宜）</li>
+  </ul>
+
+  <p>換算一下：自架一年花 $288–576，雲端版 Pro 一年 $1,908。如果你有工程師可以管，<strong>自架划算太多了</strong>。</p>
+
+  <div class="cta-box">
+    <h3>💡 用 DigitalOcean 自架 Dify，$200 點數夠用 8 個月</h3>
+    <p>台灣速度不差、介面繁中友善、Droplet 最快 55 秒建好。新帳號有 $200 免費點數，拿來自架 Dify 超划算。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" target="_blank" rel="noopener">免費試用 DigitalOcean →</a>
+  </div>
+
+  <h2>Dify 常見問題 Q&A</h2>
+
+  <h3>Dify 的資料安全嗎？</h3>
+  <p>雲端版的話，你的資料（上傳的文件、對話記錄）在 Dify 的伺服器。如果是處理敏感的企業內部資料，強烈建議自架——你的 Dify、你的資料庫、你的 LLM API Key，全在自己機器上，Dify 公司完全接觸不到。</p>
+
+  <h3>Dify 可以接 Google Gemini 嗎？</h3>
+  <p>可以。在 Settings → Model Provider 加入 Google API Key，就能用 Gemini 2.0 Flash 或 Gemini 2.5 Pro。Gemini 2.0 Flash 目前有免費額度，適合測試階段用來省成本。</p>
+
+  <h3>Dify 有手機 App 嗎？</h3>
+  <p>目前沒有原生 App，但部署出來的 Chatbot 是 Web-based，在手機瀏覽器操作沒問題。如果要做行動版 AI 助理，建議透過 API 接 LINE Bot 或 Telegram Bot，體驗更好。</p>
+
+  <h3>Dify 有台灣的用戶社群嗎？</h3>
+  <p>官方 Discord 有中文頻道，但繁中用戶還不算多。PTT 的 Soft_Job 版和 Facebook「台灣 AI 開發者」社群偶爾有人分享 Dify 心得。如果你在用 Dify 做有趣的東西，可以去這些社群分享，還能順便被看見。</p>
+
+  <h2>我的評分與最終建議</h2>
+
+  <table class="comparison-table">
+    <tr>
+      <th>評估項目</th>
+      <th>評分</th>
+      <th>說明</th>
+    </tr>
+    <tr>
+      <td>功能完整性</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>RAG + Chatbot + Workflow + 多模型，該有的都有</td>
+    </tr>
+    <tr>
+      <td>上手難度（自架）</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>有 Docker 基礎的話 15 分鐘搞定</td>
+    </tr>
+    <tr>
+      <td>社群與文件</td>
+      <td>⭐⭐⭐⭐</td>
+      <td>英文文件不錯，繁中資源少（這篇文章就是來補這個缺口的）</td>
+    </tr>
+    <tr>
+      <td>CP 值（自架版）</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>MIT 授權免費，只付伺服器費</td>
+    </tr>
+    <tr>
+      <td>LLM 多樣性</td>
+      <td>⭐⭐⭐⭐⭐</td>
+      <td>GPT / Claude / Gemini / 本地模型全支援</td>
+    </tr>
+  </table>
+
+  <p><strong>總結：</strong>如果你想打造真正有用的 AI 應用——不是玩具，是能幫企業省時間、幫自己賺錢的東西——Dify 是目前繁中世界最被低估的工具之一。它開源、免費、功能強，缺的只是繁中教學資源。現在進場，正是卡位的好時機。</p>
+
+  <p>先去 <a href="https://dify.ai" target="_blank" rel="noopener">dify.ai</a> 試試雲端版免費方案，感覺對了再考慮自架。自架的部分，<a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener">DigitalOcean 新帳號 $200 點數</a>夠你跑很久。</p>
+
+  <div class="related">
+    <h3>📚 延伸閱讀</h3>
+    <a href="/blog/n8n-vs-make-vs-zapier-2026.html">→ n8n vs Make vs Zapier 2026：台灣開發者怎麼選自動化平台？</a>
+    <a href="/blog/ai-agents-2026.html">→ AI Agent 是什麼？2026 完整入門，從概念到實作</a>
+    <a href="/blog/rag-explained.html">→ RAG 技術解析：讓 AI 讀懂你的文件，不再胡說八道</a>
+    <a href="/ai-cost-calculator/">→ AI 工具費用計算器：找出最適合你的 AI 訂閱組合</a>
+  </div>
+
+  <div class="highlight-box" style="margin-top:40px;">
+    <strong>🎓 想系統學習 AI 工具應用？</strong><br>
+    <span>Hahow 有台灣講師開設的 AI 工具實戰課程，從 ChatGPT 到工作流自動化都有涵蓋。比自己摸索省一半時間。</span><br>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener" style="color:#1d4ed8;font-weight:600;display:inline-block;margin-top:8px;">在 Hahow 找 AI 課程 →</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 AI Tools TW · 台灣 AI 工具評測站 · <a href="/" style="color:#60a5fa;">回首頁</a></p>
+  <p style="font-size:12px;margin-top:8px;">本站部分連結為聯盟連結，點擊後購買我們可能獲得佣金，不影響你的購買價格。</p>
+</footer>
+
+</body>
+</html>
