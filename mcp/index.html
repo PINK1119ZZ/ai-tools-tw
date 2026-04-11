@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCP 工具資料庫 2026 — Model Context Protocol 完整指南 | AI Tools TW</title>
+<meta name="description" content="2026 年最完整的 MCP（Model Context Protocol）工具資料庫。支援 Cursor、Claude Code、Windsurf 的 MCP Server 列表、安裝教學、實測評分。繁中唯一完整收錄。">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/mcp/">
+<meta property="og:title" content="MCP 工具資料庫 2026 — 最完整的 Model Context Protocol 繁中指南">
+<meta property="og:description" content="Cursor、Claude Code、Windsurf 都支援的 MCP Server 完整列表。GitHub、資料庫、瀏覽器、搜尋……讓 AI 從「聊天」變成「做事」。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/mcp/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="keywords" content="MCP,Model Context Protocol,MCP Server,Cursor MCP,Claude Code MCP,Windsurf MCP,AI 工具,2026,開發者工具,繁體中文">
+<meta name="author" content="AI Tools TW">
+<meta name="robots" content="index, follow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "headline": "MCP 工具資料庫 2026 — Model Context Protocol 完整指南",
+  "description": "2026 年最完整的 MCP（Model Context Protocol）工具資料庫。支援 Cursor、Claude Code、Windsurf 的 MCP Server 列表。",
+  "url": "https://pink1119zz.github.io/ai-tools-tw/mcp/",
+  "inLanguage": "zh-Hant",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"},
+  "datePublished": "2026-04-11",
+  "dateModified": "2026-04-11",
+  "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80",
+  "keywords": "MCP, Model Context Protocol, Cursor, Claude Code, AI 工具, 2026"
+}
+</script>
+<style>
+.mcp-hero { background: linear-gradient(135deg, #0F0F1A 0%, #1A1A2E 50%, #0F2027 100%); padding: 8rem 2rem 5rem; text-align: center; }
+.mcp-hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); line-height: 1.2; margin: 1rem 0; }
+.mcp-hero .subtitle { color: var(--gray); font-size: 1.1rem; max-width: 600px; margin: 1rem auto 2rem; }
+.badge-row { display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; margin: 1.5rem 0; }
+.badge { background: rgba(108,92,231,0.15); border: 1px solid rgba(108,92,231,0.4); color: var(--primary-light); padding: 0.4rem 1rem; border-radius: 20px; font-size: 0.85rem; }
+.badge.accent { background: rgba(0,210,211,0.1); border-color: rgba(0,210,211,0.4); color: var(--accent); }
+.hero-img { width: 100%; max-width: 900px; height: 300px; object-fit: cover; border-radius: 16px; margin: 2rem auto 0; display: block; opacity: 0.7; }
+
+/* Explainer */
+.explainer { max-width: 800px; margin: 0 auto; padding: 4rem 2rem; }
+.explainer h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+.explainer p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+.flow-box { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; font-family: monospace; font-size: 0.95rem; line-height: 2; color: var(--light); }
+.flow-box .arrow { color: var(--accent); }
+.flow-box .label { color: var(--gray); font-size: 0.8rem; }
+
+/* Support table */
+.support-section { background: var(--dark-2); padding: 4rem 2rem; }
+.support-section h2 { text-align: center; font-size: 1.8rem; margin-bottom: 0.5rem; }
+.support-section p { text-align: center; color: var(--gray); margin-bottom: 2rem; }
+.support-grid { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; }
+.support-card { background: var(--dark); border: 1px solid var(--dark-3); border-radius: 12px; padding: 1.5rem; text-align: center; transition: border-color 0.2s; }
+.support-card:hover { border-color: var(--primary); }
+.support-card .icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
+.support-card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+.support-card p { color: var(--gray); font-size: 0.85rem; margin: 0; }
+.support-card .tag { display: inline-block; margin-top: 0.75rem; background: rgba(0,210,211,0.1); color: var(--accent); border-radius: 4px; padding: 2px 8px; font-size: 0.75rem; }
+.support-card .tag.partial { background: rgba(255,165,0,0.1); color: #ffa500; }
+
+/* Category filter */
+.filter-section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem 1rem; }
+.filter-section h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.filter-section p { color: var(--gray); margin-bottom: 1.5rem; }
+.filter-tabs { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+.filter-tab { padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--dark-3); background: transparent; color: var(--gray); cursor: pointer; font-size: 0.9rem; transition: all 0.2s; font-family: inherit; }
+.filter-tab:hover, .filter-tab.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+/* Tool cards */
+.tools-grid { max-width: 1100px; margin: 0 auto; padding: 0 2rem 4rem; display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 1.5rem; }
+.tool-card { background: var(--dark-2); border: 1px solid var(--dark-3); border-radius: 12px; padding: 1.5rem; transition: all 0.2s; }
+.tool-card:hover { border-color: var(--primary); transform: translateY(-2px); }
+.tool-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.75rem; }
+.tool-icon { width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; background: var(--dark-3); flex-shrink: 0; }
+.tool-name { font-size: 1.05rem; font-weight: 700; }
+.tool-tags { display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.3rem; }
+.tool-tag { font-size: 0.7rem; padding: 1px 7px; border-radius: 4px; background: var(--dark-3); color: var(--gray); }
+.tool-tag.highlight { background: rgba(108,92,231,0.2); color: var(--primary-light); }
+.tool-desc { color: var(--gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem; }
+.tool-meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85rem; }
+.tool-rating { color: #ffd700; }
+.tool-difficulty { color: var(--gray); }
+.tool-install { margin-top: 0.75rem; background: var(--dark); border-radius: 6px; padding: 0.5rem 0.75rem; font-family: monospace; font-size: 0.8rem; color: var(--accent); overflow-x: auto; white-space: nowrap; }
+
+/* Quick start */
+.quickstart { background: var(--dark-2); padding: 4rem 2rem; }
+.quickstart-inner { max-width: 800px; margin: 0 auto; }
+.quickstart h2 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+.quickstart p { color: var(--gray); margin-bottom: 2rem; }
+.step { display: flex; gap: 1rem; margin-bottom: 1.5rem; }
+.step-num { background: var(--primary); color: white; width: 32px; height: 32px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; font-size: 0.9rem; }
+.step-content h3 { font-size: 1rem; margin-bottom: 0.25rem; }
+.step-content p { color: var(--gray); font-size: 0.9rem; margin: 0; }
+.step-content code { background: var(--dark-3); padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; color: var(--accent); }
+
+/* CTA */
+.mcp-cta { max-width: 700px; margin: 0 auto; padding: 4rem 2rem; text-align: center; }
+.mcp-cta h2 { font-size: 1.8rem; margin-bottom: 1rem; }
+.mcp-cta p { color: var(--gray); margin-bottom: 2rem; }
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn { padding: 0.75rem 1.75rem; border-radius: 8px; font-weight: 600; text-decoration: none; transition: all 0.2s; display: inline-block; }
+.btn-primary { background: var(--primary); color: white; }
+.btn-primary:hover { background: var(--primary-dark); }
+.btn-secondary { border: 1px solid var(--dark-3); color: var(--light); }
+.btn-secondary:hover { border-color: var(--primary); color: var(--primary-light); }
+
+/* Affiliate box */
+.affiliate-box { background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(0,210,211,0.1)); border: 1px solid rgba(108,92,231,0.3); border-radius: 12px; padding: 1.5rem; margin: 2rem 0; }
+.affiliate-box h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+.affiliate-box p { color: var(--gray); font-size: 0.9rem; margin-bottom: 1rem; }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a>
+    <div class="nav-links">
+      <a href="/ai-tools-tw/blog/">評測</a>
+      <a href="/ai-tools-tw/mcp/">MCP 資料庫</a>
+      <a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="mcp-hero">
+  <div class="badge-row">
+    <span class="badge">📡 2026 Q2 熱門</span>
+    <span class="badge accent">🔥 繁中唯一完整收錄</span>
+    <span class="badge">5,000+ MCP Servers</span>
+  </div>
+  <h1>MCP 工具資料庫<br><span class="gradient-text">讓 AI 從「說」變成「做」</span></h1>
+  <p class="subtitle">Model Context Protocol 完整指南。Cursor、Claude Code、Windsurf 通用的 MCP Server 精選列表 + 安裝教學 + 實測評分。</p>
+  <div class="badge-row">
+    <span class="badge">✅ Cursor 支援</span>
+    <span class="badge">✅ Claude Code 支援</span>
+    <span class="badge">✅ Windsurf 支援</span>
+    <span class="badge">✅ VS Code 支援</span>
+  </div>
+  <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&q=80" 
+       alt="MCP Model Context Protocol 開發者工具 2026" 
+       class="hero-img"
+       loading="eager">
+</section>
+
+<!-- What is MCP -->
+<section class="explainer">
+  <h2>什麼是 MCP？3 句話搞懂</h2>
+  <p>MCP（Model Context Protocol）是 Anthropic 在 2024 年底推出的開放標準，解決了 AI 工具「只能聊天、不能做事」的根本問題。</p>
+  <p>簡單說：以前你要讓 AI 存取 GitHub，要自己寫整合；現在只要接上 GitHub MCP Server，Cursor / Claude Code / Windsurf 全都能用，不用重複開發。</p>
+  <div class="flow-box">
+    <span style="color:var(--primary-light);">你</span> <span class="arrow">→</span> <strong>AI 助理</strong>（Cursor / Claude Code）<br>
+    <span class="label">↕ MCP Protocol（標準化協議）</span><br>
+    <span style="color:var(--accent);">MCP Server</span> <span class="arrow">→</span> GitHub / 資料庫 / 瀏覽器 / 搜尋 / Slack…<br>
+    <span class="label">一次寫好，所有 AI 客戶端通用</span>
+  </div>
+  <p>目前（2026 Q2）已有 <strong>5,000+ MCP Server</strong> 可用，從 GitHub、PostgreSQL、Puppeteer 到 Stripe，幾乎你能想到的工具都有人做好了。</p>
+</section>
+
+<!-- Client Support -->
+<section class="support-section">
+  <h2>哪些 AI 工具支援 MCP？</h2>
+  <p>以下客戶端皆原生支援 MCP Protocol（2026 Q2 資料）</p>
+  <div class="support-grid">
+    <div class="support-card">
+      <div class="icon">⚡</div>
+      <h3>Cursor 3</h3>
+      <p>最多 40 個工具，設定在 Settings > Tools & MCP</p>
+      <span class="tag">完整支援</span>
+    </div>
+    <div class="support-card">
+      <div class="icon">🖤</div>
+      <h3>Claude Code</h3>
+      <p>CLI 指令一行加入，Agent 模式原生整合</p>
+      <span class="tag">完整支援</span>
+    </div>
+    <div class="support-card">
+      <div class="icon">🌊</div>
+      <h3>Windsurf</h3>
+      <p>Cascade 模式整合，設定檔與 Cursor 格式兼容</p>
+      <span class="tag">完整支援</span>
+    </div>
+    <div class="support-card">
+      <div class="icon">🖥️</div>
+      <h3>Claude Desktop</h3>
+      <p>最早支援 MCP 的客戶端，設定在 claude_desktop_config.json</p>
+      <span class="tag">完整支援</span>
+    </div>
+    <div class="support-card">
+      <div class="icon">💻</div>
+      <h3>VS Code + Copilot</h3>
+      <p>2025 Q3 後支援，需安裝 MCP Extension</p>
+      <span class="tag partial">部分支援</span>
+    </div>
+    <div class="support-card">
+      <div class="icon">🤖</div>
+      <h3>ChatGPT</h3>
+      <p>透過 Custom GPT Actions 間接支援，非原生 MCP</p>
+      <span class="tag partial">間接支援</span>
+    </div>
+  </div>
+</section>
+
+<!-- Filter + Tool Cards -->
+<section>
+  <div class="filter-section">
+    <h2>🗂️ MCP Server 精選列表</h2>
+    <p>從 5,000+ 個 Server 中挑出最實用的，按類別分類，附實測評分</p>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterTools('all', this)">全部</button>
+      <button class="filter-tab" onclick="filterTools('dev', this)">🛠️ 開發</button>
+      <button class="filter-tab" onclick="filterTools('data', this)">🗄️ 資料</button>
+      <button class="filter-tab" onclick="filterTools('web', this)">🌐 網頁</button>
+      <button class="filter-tab" onclick="filterTools('infra', this)">☁️ 基礎設施</button>
+      <button class="filter-tab" onclick="filterTools('comms', this)">💬 溝通</button>
+      <button class="filter-tab" onclick="filterTools('biz', this)">💼 商業</button>
+    </div>
+  </div>
+
+  <div class="tools-grid" id="tools-grid">
+
+    <!-- GitHub -->
+    <div class="tool-card" data-category="dev">
+      <div class="tool-header">
+        <div class="tool-icon">🐙</div>
+        <div>
+          <div class="tool-name">GitHub MCP Server</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">官方出品</span>
+            <span class="tool-tag">開發</span>
+            <span class="tool-tag">必裝</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">完整 GitHub API 存取：Repo 管理、PR 審核、Issue 追蹤、Actions 工作流程、程式碼搜尋、安全掃描。讓 AI 直接操作你的 GitHub。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★★</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y @anthropic-ai/mcp-server-github</div>
+    </div>
+
+    <!-- Filesystem -->
+    <div class="tool-card" data-category="dev">
+      <div class="tool-header">
+        <div class="tool-icon">📁</div>
+        <div>
+          <div class="tool-name">Filesystem MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">官方</span>
+            <span class="tool-tag">開發</span>
+            <span class="tool-tag">基礎</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI 安全讀寫本地檔案系統。可指定允許的資料夾範圍，支援讀取、寫入、移動、搜尋。Cursor 3 的平行 Agent 最需要這個。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★★</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y @modelcontextprotocol/server-filesystem /path</div>
+    </div>
+
+    <!-- PostgreSQL -->
+    <div class="tool-card" data-category="data">
+      <div class="tool-header">
+        <div class="tool-icon">🐘</div>
+        <div>
+          <div class="tool-name">PostgreSQL MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag">資料庫</span>
+            <span class="tool-tag">後端</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">直接對 PostgreSQL 下自然語言查詢。AI 自動轉成 SQL、執行、回傳結果。不用自己寫 SELECT，說「找出上個月訂單最多的前 10 個用戶」就搞定。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐⭐ 中等</span>
+      </div>
+      <div class="tool-install">npx -y @modelcontextprotocol/server-postgres $DB_URL</div>
+    </div>
+
+    <!-- Puppeteer / Browser -->
+    <div class="tool-card" data-category="web">
+      <div class="tool-header">
+        <div class="tool-icon">🌐</div>
+        <div>
+          <div class="tool-name">Puppeteer MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag">瀏覽器</span>
+            <span class="tool-tag">自動化</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI 操作瀏覽器：截圖、點擊、填表、爬蟲。做自動化測試、登入填表、擷取動態頁面資料都靠這個。2026 最熱的 MCP 之一。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★★</span>
+        <span class="tool-difficulty">難度：⭐⭐ 中等</span>
+      </div>
+      <div class="tool-install">npx -y @modelcontextprotocol/server-puppeteer</div>
+    </div>
+
+    <!-- Supabase -->
+    <div class="tool-card" data-category="data">
+      <div class="tool-header">
+        <div class="tool-icon">⚡</div>
+        <div>
+          <div class="tool-name">Supabase MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">熱門</span>
+            <span class="tool-tag">資料庫</span>
+            <span class="tool-tag">BaaS</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">Supabase 官方 MCP Server。直接讓 AI 存取你的 Supabase 專案：查 PostgreSQL、管理 Auth、讀取 Storage，適合用 Supabase 做 side project 的開發者。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★★</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y @supabase/mcp-server-supabase</div>
+    </div>
+
+    <!-- Brave Search -->
+    <div class="tool-card" data-category="web">
+      <div class="tool-header">
+        <div class="tool-icon">🔍</div>
+        <div>
+          <div class="tool-name">Brave Search MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag">搜尋</span>
+            <span class="tool-tag">網頁</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI coding 工具搜尋最新網頁資訊，不再受訓練資料截止日限制。Cursor 3 寫程式時遇到不確定的 API，直接搜尋最新文件。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">需要 Brave Search API Key（免費方案可用）</div>
+    </div>
+
+    <!-- DigitalOcean -->
+    <div class="tool-card" data-category="infra">
+      <div class="tool-header">
+        <div class="tool-icon">🌊</div>
+        <div>
+          <div class="tool-name">DigitalOcean MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag">雲端</span>
+            <span class="tool-tag">部署</span>
+            <span class="tool-tag">基礎設施</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI 管理你的 DigitalOcean Droplets、App Platform 應用、資料庫、網域設定。直接說「幫我開一台 Ubuntu 22.04 的 $6/月 Droplet」就搞定。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐⭐ 中等</span>
+      </div>
+      <div class="tool-install">需要 DigitalOcean API Token</div>
+    </div>
+
+    <!-- Slack -->
+    <div class="tool-card" data-category="comms">
+      <div class="tool-header">
+        <div class="tool-icon">💬</div>
+        <div>
+          <div class="tool-name">Slack MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">官方</span>
+            <span class="tool-tag">溝通</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI 讀寫 Slack 訊息、查頻道歷史、搜尋特定關鍵字、發送通知。適合自動化「把 GitHub PR merge 後通知 Slack 頻道」等工作流程。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐⭐ 中等</span>
+      </div>
+      <div class="tool-install">npx -y @modelcontextprotocol/server-slack</div>
+    </div>
+
+    <!-- Firecrawl -->
+    <div class="tool-card" data-category="web">
+      <div class="tool-header">
+        <div class="tool-icon">🔥</div>
+        <div>
+          <div class="tool-name">Firecrawl MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">熱門</span>
+            <span class="tool-tag">爬蟲</span>
+            <span class="tool-tag">LLM Ready</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">把任何網站轉成 AI 可讀的乾淨文字。移除廣告、導覽列、HTML 雜訊。讓 Claude Code / Cursor 直接讀取最新文件、競品分析、新聞資訊。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★★</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y firecrawl-mcp（需要 Firecrawl API Key）</div>
+    </div>
+
+    <!-- E2B Code Sandbox -->
+    <div class="tool-card" data-category="dev">
+      <div class="tool-header">
+        <div class="tool-icon">🧪</div>
+        <div>
+          <div class="tool-name">E2B Code Sandbox MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag">沙盒</span>
+            <span class="tool-tag">執行</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">給 AI 一個安全的雲端沙盒環境直接執行程式碼（不只是寫）。AI 寫完就跑、看輸出、自動 debug，迴圈全在雲端，本機不受影響。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐⭐ 中等</span>
+      </div>
+      <div class="tool-install">npx -y @e2b/mcp-server</div>
+    </div>
+
+    <!-- Stripe -->
+    <div class="tool-card" data-category="biz">
+      <div class="tool-header">
+        <div class="tool-icon">💳</div>
+        <div>
+          <div class="tool-name">Stripe MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">官方</span>
+            <span class="tool-tag">支付</span>
+            <span class="tool-tag">商業</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">直接讓 AI 查看 Stripe 訂單、退款、用戶付款紀錄、收入統計。客服查帳、財務對帳，全程自然語言，省去登入後台查半天。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★★☆</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y @stripe/mcp-server（需要 Stripe API Key）</div>
+    </div>
+
+    <!-- Google Maps -->
+    <div class="tool-card" data-category="biz">
+      <div class="tool-header">
+        <div class="tool-icon">🗺️</div>
+        <div>
+          <div class="tool-name">Google Maps MCP</div>
+          <div class="tool-tags">
+            <span class="tool-tag highlight">官方</span>
+            <span class="tool-tag">地圖</span>
+          </div>
+        </div>
+      </div>
+      <p class="tool-desc">讓 AI 查地址、計算路線、找附近商家。開發 location-based 服務的好幫手，適合結合 Line Bot 或 Telegram Bot 做地點推薦功能。</p>
+      <div class="tool-meta">
+        <span class="tool-rating">★★★☆☆</span>
+        <span class="tool-difficulty">難度：⭐ 簡單</span>
+      </div>
+      <div class="tool-install">npx -y @modelcontextprotocol/server-google-maps</div>
+    </div>
+
+  </div><!-- /.tools-grid -->
+</section>
+
+<!-- Quick Start -->
+<section class="quickstart">
+  <div class="quickstart-inner">
+    <h2>⚡ 5 分鐘快速開始（Cursor 3 示範）</h2>
+    <p>以 GitHub MCP Server 為例，在 Cursor 3 裡設定 MCP</p>
+    
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-content">
+        <h3>開啟 Cursor 設定</h3>
+        <p>按 <code>Cmd/Ctrl + ,</code> → 搜尋 「Tools &amp; MCP」→ 點 「Add MCP Server」</p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-content">
+        <h3>填入 Server 設定</h3>
+        <p>Name: <code>github</code>，Command: <code>npx -y @anthropic-ai/mcp-server-github</code>，Env: <code>GITHUB_PERSONAL_ACCESS_TOKEN=你的Token</code></p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-content">
+        <h3>產生 GitHub Token</h3>
+        <p>GitHub Settings → Developer Settings → Personal Access Token → 勾選 repo 權限 → 複製 Token</p>
+      </div>
+    </div>
+    
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-content">
+        <h3>測試</h3>
+        <p>在 Cursor Chat 輸入「列出我在 GitHub 上的所有 repo」，看看 AI 能不能正確回應</p>
+      </div>
+    </div>
+
+    <div class="affiliate-box">
+      <h3>🚀 需要跑 MCP Server 的主機？</h3>
+      <p>自架 MCP Server（n8n、Puppeteer）建議用 DigitalOcean Droplet。$6/月就夠用，穩定有 API，台灣連線快。</p>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener sponsored" class="btn btn-primary" style="font-size:0.9rem;">DigitalOcean 免費 $200 試用 →</a>
+    </div>
+
+    <div class="affiliate-box" style="margin-top:1.5rem;">
+      <h3>📚 想系統學習 AI 開發？</h3>
+      <p>Hahow 上有台灣講師的 AI 工程師實戰課程，從 API 串接到 MCP 整合都有。</p>
+      <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" target="_blank" rel="noopener sponsored" class="btn btn-primary" style="font-size:0.9rem; background:var(--accent-dark);">Hahow AI 課程優惠 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="mcp-cta">
+  <h2>MCP 讓 AI 真正能「幫你做事」</h2>
+  <p>光是讀這篇還不夠，選一個 MCP Server 裝起來試試。GitHub MCP 10 分鐘搞定，你的 AI 開發工作流程會直接升級。</p>
+  <div class="cta-buttons">
+    <a href="/ai-tools-tw/blog/cursor-3-review-2026.html" class="btn btn-primary">看 Cursor 3 完整評測 →</a>
+    <a href="/ai-tools-tw/blog/ai-coding-tools.html" class="btn btn-secondary">AI Coding 工具比較</a>
+  </div>
+  <p style="color:var(--gray); font-size:0.85rem; margin-top:2rem;">📅 最後更新：2026-04-11 ・ 🔄 每月更新</p>
+</section>
+
+<footer style="text-align:center; padding:3rem 2rem; color:var(--gray); border-top:1px solid var(--dark-3);">
+  <p>© 2026 AI Tools TW — <a href="/ai-tools-tw/" style="color:var(--gray);">首頁</a> ・ <a href="/ai-tools-tw/blog/" style="color:var(--gray);">評測文章</a> ・ <a href="https://autodev-ai.com" target="_blank" rel="noopener" style="color:var(--gray);">AutoDev AI</a></p>
+</footer>
+
+<script>
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Filter functionality
+function filterTools(category, btn) {
+  document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.tool-card').forEach(card => {
+    card.style.display = (category === 'all' || card.dataset.category === category) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>
