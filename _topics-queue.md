@@ -7,7 +7,7 @@
 
 ## 2026-04-09
 
-- [ ] Cursor 3 — agent-first IDE 重大改版，支援平行多 Agent、Design Mode、多 repo — https://cursor.com/blog/cursor-3 — 優先度 ⭐⭐⭐
+- [x] Cursor 3 — agent-first IDE 重大改版，支援平行多 Agent、Design Mode、多 repo — https://cursor.com/blog/cursor-3 — 優先度 ⭐⭐⭐ ✅ 已發佈 2026-04-11
 - [ ] Google Gemma 4 — Google 開源多模態模型（2B~31B），Apache 2.0 商用免費，31B 性能逼近前沿商業模型 — https://blog.google/innovation-and-ai/technology/developers-tools/gemma-4/ — 優先度 ⭐⭐⭐
 - [ ] PrismML Bonsai 8B — 全球首個商業可用 1-bit LLM，8B 參數僅 1.1GB，可在手機/邊緣設備本地執行 — https://www.theregister.com/2026/04/04/prismml_1bit_llm/ — 優先度 ⭐⭐⭐
 - [ ] Dify v2026 — 開源 AI Workflow/Agent 視覺化平台，新增 Workflow→MCP Server 一鍵輸出，$30M Pre-A 融資 — https://github.com/langgenius/dify — 優先度 ⭐⭐
