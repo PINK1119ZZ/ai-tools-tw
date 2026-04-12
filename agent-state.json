@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-12T00:00:00+08:00",
+  "lastUpdated": "2026-04-12T15:01:00+00:00",
   "status": "active",
   "agentLog": [
     {
@@ -12,6 +12,17 @@
       "affiliates": ["hahow", "digitalocean"],
       "internalLinks": ["ai-coding-tools.html", "cursor-3-review-2026.html"],
       "notes": "初次建立 agent-state.json；首篇開源模型評測"
+    },
+    {
+      "date": "2026-04-12",
+      "action": "publish_article",
+      "title": "PrismML Bonsai 8B 評測 2026：1.15GB 跑 8B 模型，手機本地 AI 真的來了？",
+      "file": "blog/prismml-bonsai-8b-review-2026.html",
+      "wordCount": 2600,
+      "topicSource": "_topics-queue.md",
+      "affiliates": ["hahow", "digitalocean"],
+      "internalLinks": ["gemma-4-review-2026.html", "ai-coding-tools.html", "cursor-3-review-2026.html"],
+      "notes": "首篇邊緣 AI / 1-bit LLM 主題；技術深度評測含部署難度分析"
     }
   ],
   "publishedArticles": [
@@ -21,12 +32,14 @@
     "blog/n8n-vs-make-vs-zapier-2026.html",
     "blog/rag-explained.html",
     "blog/systeme-io-review-2026.html",
-    "blog/gemma-4-review-2026.html"
+    "blog/gemma-4-review-2026.html",
+    "blog/prismml-bonsai-8b-review-2026.html"
   ],
   "nextPriority": [
-    "PrismML Bonsai 8B — 全球首個商業可用 1-bit LLM",
-    "Dify v2026 — 開源 AI Workflow/Agent 視覺化平台",
-    "ElevenCreative by ElevenLabs — 一站式 AI 媒體製作"
+    "Dify v2026 — 開源 AI Workflow/Agent 視覺化平台（已有 dify-complete-guide，考慮更新版或側重 MCP 功能）",
+    "ElevenCreative by ElevenLabs — 一站式 AI 媒體製作",
+    "Mem0 — AI Agent 持久化記憶層開源框架",
+    "OWL (CAMEL-AI) — 多 Agent 任務自動化框架"
   ],
   "directives": []
 }
