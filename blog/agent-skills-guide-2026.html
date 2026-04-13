@@ -1,13 +1,14 @@
 <!DOCTYPE html>
+
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Agent Skills 完整入門 2026：讓 Claude Code 和 Cursor 學會你的工作流程 | AI Tools TW</title>
-  <meta name="description" content="Agent Skills 是什麼？怎麼寫 SKILL.md？2026 繁中第一篇完整教學，涵蓋 Claude Code、Cursor、Gemini CLI 設定步驟，附台灣開發者實戰範例。">
-  <link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/agent-skills-guide-2026.html">
-  <link rel="stylesheet" href="../style.css">
-  <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Agent Skills 完整入門 2026：讓 Claude Code 和 Cursor 學會你的工作流程 | AI Tools TW</title>
+<meta content="Agent Skills 是什麼？怎麼寫 SKILL.md？2026 繁中第一篇完整教學，涵蓋 Claude Code、Cursor、Gemini CLI 設定步驟，附台灣開發者實戰範例。" name="description"/>
+<link href="https://pink1119zz.github.io/ai-tools-tw/blog/agent-skills-guide-2026.html" rel="canonical"/>
+<link href="../style.css" rel="stylesheet"/>
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -19,7 +20,7 @@
     "publisher": {"@type": "Organization", "name": "AI Tools TW"}
   }
   </script>
-  <script type="application/ld+json">
+<script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -59,7 +60,7 @@
     ]
   }
   </script>
-  <style>
+<style>
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; margin: 0; color: #1a1a2e; background: #f8f9ff; line-height: 1.7; }
     header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 50px 20px; text-align: center; }
     header h1 { font-size: 2rem; margin: 0 0 12px; }
@@ -93,90 +94,87 @@
     .tag-row { margin: 16px 0; }
     .tag { display: inline-block; background: #f0f0ff; color: #667eea; border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; margin: 2px; }
     footer { text-align: center; padding: 30px; color: #999; font-size: 0.85rem; }
-  </style>
+  
+/* Blog optimizer additions */
+
+.reading-time { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 1.5rem; }
+.toc { background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2); border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 2rem; }
+.toc summary { cursor: pointer; font-weight: 700; color: #b0b8ff; font-size: 1.1rem; }
+.toc ul { list-style: none; padding-left: 0; margin-top: 0.8rem; }
+.toc li { margin-bottom: 0.5rem; }
+.toc a { color: #a5b4fc; text-decoration: none; }
+.toc a:hover { text-decoration: underline; }
+.related-articles { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+.related-articles h2 { text-align: center; margin-bottom: 1.5rem; }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+.related-card { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 1.2rem; text-decoration: none; transition: all 0.3s; display: block; }
+.related-card:hover { border-color: rgba(99,102,241,0.5); transform: translateY(-2px); }
+.related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
+.related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
+</style>
 </head>
 <body>
 <header>
-  <h1>Agent Skills 完整入門 2026</h1>
-  <p>讓 Claude Code、Cursor、Gemini CLI 真正學會你的工作流程——設定一次，永久受益</p>
-  <p style="margin-top:12px; font-size:0.85rem; opacity:0.8;">📅 2026-04-12 · ✍️ AI Tools TW · ⏱️ 約 10 分鐘閱讀</p>
+<h1>Agent Skills 完整入門 2026</h1><div class="reading-time">📖 預估閱讀時間：6 分鐘</div>
+<p>讓 Claude Code、Cursor、Gemini CLI 真正學會你的工作流程——設定一次，永久受益</p>
+<p style="margin-top:12px; font-size:0.85rem; opacity:0.8;">📅 2026-04-12 · ✍️ AI Tools TW · ⏱️ 約 10 分鐘閱讀</p>
 </header>
-
 <div class="container">
 <article>
-
 <div class="tag-row">
-  <span class="tag">Agent Skills</span>
-  <span class="tag">Claude Code</span>
-  <span class="tag">Cursor</span>
-  <span class="tag">Gemini CLI</span>
-  <span class="tag">AI 開發工具</span>
-  <span class="tag">SKILL.md</span>
+<span class="tag">Agent Skills</span>
+<span class="tag">Claude Code</span>
+<span class="tag">Cursor</span>
+<span class="tag">Gemini CLI</span>
+<span class="tag">AI 開發工具</span>
+<span class="tag">SKILL.md</span>
 </div>
-
 <div class="toc">
-  <h4>📋 本文目錄</h4>
-  <ol>
-    <li><a href="#what">什麼是 Agent Skills？</a></li>
-    <li><a href="#why">為什麼台灣開發者需要？</a></li>
-    <li><a href="#ecosystem">2026 生態系現況</a></li>
-    <li><a href="#how">怎麼寫 Skills 文件</a></li>
-    <li><a href="#examples">實戰範例：台灣開發者場景</a></li>
-    <li><a href="#setup">各工具安裝步驟</a></li>
-    <li><a href="#tips">進階技巧</a></li>
-    <li><a href="#pack">直接用現成包</a></li>
-    <li><a href="#faq">常見問題</a></li>
-  </ol>
+<h4>📋 本文目錄</h4>
+<ol>
+<li><a href="#what">什麼是 Agent Skills？</a></li>
+<li><a href="#why">為什麼台灣開發者需要？</a></li>
+<li><a href="#ecosystem">2026 生態系現況</a></li>
+<li><a href="#how">怎麼寫 Skills 文件</a></li>
+<li><a href="#examples">實戰範例：台灣開發者場景</a></li>
+<li><a href="#setup">各工具安裝步驟</a></li>
+<li><a href="#tips">進階技巧</a></li>
+<li><a href="#pack">直接用現成包</a></li>
+<li><a href="#faq">常見問題</a></li>
+</ol>
 </div>
-
 <p>如果你用過 Claude Code 或 Cursor，你一定遇過這個問題：每次開新對話，你都要重新說一遍「我用 TypeScript」「我偏好繁中說明」「部署用 DigitalOcean」……</p>
-
 <p>2026 年，這個問題有了完美的解法：<strong>Agent Skills</strong>。</p>
-
 <h2 id="what">什麼是 Agent Skills？</h2>
-
 <p>Agent Skills（技能文件）是一種放在專案或主目錄的 Markdown 文件，用來告訴 AI 助手你的偏好、工作規則、技術棧選擇。</p>
-
 <p>它的概念很簡單：<strong>寫一次，AI 永遠記住</strong>。</p>
-
 <div class="highlight-box">
 <strong>一句話解釋：</strong>Agent Skills 就是「給 AI 的入職說明書」。新員工入職你會給他 SOP，現在給 AI 一份 SOP，它就能立刻按你的方式工作。
 </div>
-
 <p>Skills 文件是純 Markdown 格式（<code>.md</code>），放在指定目錄後，AI 工具會在每次對話開始時自動載入，無需你每次重複說明。</p>
-
 <h2 id="why">為什麼台灣開發者特別需要？</h2>
-
 <p>相較於英文開發者，台灣開發者有幾個獨特需求：</p>
-
 <ul>
-  <li><strong>語言切換痛苦</strong>：AI 預設用英文說明，你想要繁中，每次都要說</li>
-  <li><strong>台灣特有技術棧</strong>：LINE Bot、台灣主機廠商（DigitalOcean TWD 方案）、繁中 README 格式</li>
-  <li><strong>本地化知識缺失</strong>：AI 不懂台灣法規限制、台灣常用 API（如台灣銀行 API、悠遊卡 API）</li>
-  <li><strong>繁中 Skills 資源幾乎為零</strong>：GitHub 上 22 萬+ Stars 的 agent-skills 相關倉庫幾乎全是英文</li>
+<li><strong>語言切換痛苦</strong>：AI 預設用英文說明，你想要繁中，每次都要說</li>
+<li><strong>台灣特有技術棧</strong>：LINE Bot、台灣主機廠商（DigitalOcean TWD 方案）、繁中 README 格式</li>
+<li><strong>本地化知識缺失</strong>：AI 不懂台灣法規限制、台灣常用 API（如台灣銀行 API、悠遊卡 API）</li>
+<li><strong>繁中 Skills 資源幾乎為零</strong>：GitHub 上 22 萬+ Stars 的 agent-skills 相關倉庫幾乎全是英文</li>
 </ul>
-
 <h2 id="ecosystem">2026 Agent Skills 生態系現況</h2>
-
 <table>
-  <tr><th>工具</th><th>Skills 支援</th><th>格式</th><th>路徑</th></tr>
-  <tr><td><strong>Claude Code</strong></td><td>✅ 完整支援</td><td><code>SKILL.md</code></td><td><code>.claude/skills/</code></td></tr>
-  <tr><td><strong>Cursor</strong></td><td>✅ 完整支援</td><td><code>.cursorrules</code></td><td>專案根目錄</td></tr>
-  <tr><td><strong>Gemini CLI</strong></td><td>✅ 原生支援</td><td><code>GEMINI.md</code></td><td>主目錄或專案根</td></tr>
-  <tr><td><strong>OpenAI Codex</strong></td><td>✅ 透過 AGENTS.md</td><td><code>AGENTS.md</code></td><td>專案根目錄</td></tr>
-  <tr><td><strong>GitHub Copilot</strong></td><td>部分支援</td><td><code>.github/copilot-instructions.md</code></td><td>Repo 根目錄</td></tr>
+<tr><th>工具</th><th>Skills 支援</th><th>格式</th><th>路徑</th></tr>
+<tr><td><strong>Claude Code</strong></td><td>✅ 完整支援</td><td><code>SKILL.md</code></td><td><code>.claude/skills/</code></td></tr>
+<tr><td><strong>Cursor</strong></td><td>✅ 完整支援</td><td><code>.cursorrules</code></td><td>專案根目錄</td></tr>
+<tr><td><strong>Gemini CLI</strong></td><td>✅ 原生支援</td><td><code>GEMINI.md</code></td><td>主目錄或專案根</td></tr>
+<tr><td><strong>OpenAI Codex</strong></td><td>✅ 透過 AGENTS.md</td><td><code>AGENTS.md</code></td><td>專案根目錄</td></tr>
+<tr><td><strong>GitHub Copilot</strong></td><td>部分支援</td><td><code>.github/copilot-instructions.md</code></td><td>Repo 根目錄</td></tr>
 </table>
-
 <p>重要數字：截至 2026 年 4 月，GitHub 上 <code>#agent-skills</code> 話題合計超過 22 萬 Stars，Anthropic 官方倉庫 <code>anthropics/skills</code> 和 Addy Osmani 的 <code>agent-skills</code> 倉庫都已進入 GitHub 週榜——但<strong>繁中教學幾乎為零</strong>。</p>
-
 <div class="highlight-box">
 <strong>🔥 現在是最佳卡位時機：</strong>Agent Skills 正在爆發期，繁中資源極度稀缺。先掌握的人，未來 12 個月都有優勢。
 </div>
-
 <h2 id="how">怎麼寫 Skills 文件</h2>
-
 <p>Skills 文件沒有嚴格語法，就是<strong>清楚的自然語言</strong>。以下是最有效的結構：</p>
-
 <pre><code># [技能名稱] Skills
 
 ## 適用場景
@@ -197,20 +195,15 @@
 - 程式碼：英文變數名
 - 注釋：繁中
 </code></pre>
-
 <h3>好的 Skills 寫法 vs 壞的寫法</h3>
-
 <table>
-  <tr><th>❌ 模糊（沒效果）</th><th>✅ 具體（有效果）</th></tr>
-  <tr><td>用好的程式碼風格</td><td>遵循 Google TypeScript Style Guide，縮排 2 空格，使用 const 優先</td></tr>
-  <tr><td>用繁中</td><td>所有說明文字、程式碼注釋、README 用繁體中文；變數名用英文 camelCase</td></tr>
-  <tr><td>部署到雲端</td><td>部署使用 DigitalOcean App Platform，node.js 環境，連線字串放 .env，不 hard-code</td></tr>
+<tr><th>❌ 模糊（沒效果）</th><th>✅ 具體（有效果）</th></tr>
+<tr><td>用好的程式碼風格</td><td>遵循 Google TypeScript Style Guide，縮排 2 空格，使用 const 優先</td></tr>
+<tr><td>用繁中</td><td>所有說明文字、程式碼注釋、README 用繁體中文；變數名用英文 camelCase</td></tr>
+<tr><td>部署到雲端</td><td>部署使用 DigitalOcean App Platform，node.js 環境，連線字串放 .env，不 hard-code</td></tr>
 </table>
-
 <h2 id="examples">實戰範例：台灣開發者場景</h2>
-
 <h3>範例 1：LINE Bot 開發 Skills</h3>
-
 <pre><code># LINE Bot 開發 Skills
 
 ## 適用場景
@@ -236,9 +229,7 @@
 - 變數命名：camelCase 英文（如 lineUserId，不是 line_user_id）
 - 錯誤訊息：繁中（方便台灣用戶理解）
 </code></pre>
-
 <h3>範例 2：全端快部署 Skills</h3>
-
 <pre><code># 部署偏好 Skills
 
 ## 適用場景
@@ -263,121 +254,112 @@
 - 用 GitHub Actions 自動部署（main branch push → deploy）
 - 測試環境：PR → preview deploy
 </code></pre>
-
 <div class="cta-box">
-  <h3>🚀 不想從零開始寫？直接用現成包</h3>
-  <p>我們整理了 5 個針對台灣開發者場景的 Agent Skills 文件，含繁中說明，下載即用。</p>
-  <a href="../agent-skills-pack/" class="cta-btn">查看台灣 AI 開發者 Skills 包 →</a>
+<h3>🚀 不想從零開始寫？直接用現成包</h3>
+<p>我們整理了 5 個針對台灣開發者場景的 Agent Skills 文件，含繁中說明，下載即用。</p>
+<a class="cta-btn" href="../agent-skills-pack/">查看台灣 AI 開發者 Skills 包 →</a>
 </div>
-
 <h2 id="setup">各工具安裝步驟</h2>
-
 <h3>Claude Code 安裝步驟</h3>
-
 <ol>
-  <li>在專案根目錄建立 <code>.claude/skills/</code> 目錄</li>
-  <li>把 <code>line-bot.md</code>、<code>deploy.md</code> 等文件放進去</li>
-  <li>重新開啟 Claude Code 對話，自動載入</li>
-  <li>驗證：輸入「你知道我用哪個部署平台嗎？」，看 Claude 回答是否符合你的 Skills</li>
+<li>在專案根目錄建立 <code>.claude/skills/</code> 目錄</li>
+<li>把 <code>line-bot.md</code>、<code>deploy.md</code> 等文件放進去</li>
+<li>重新開啟 Claude Code 對話，自動載入</li>
+<li>驗證：輸入「你知道我用哪個部署平台嗎？」，看 Claude 回答是否符合你的 Skills</li>
 </ol>
-
 <h3>Cursor 安裝步驟</h3>
-
 <ol>
-  <li>在專案根目錄建立 <code>.cursorrules</code>（單一文件）或 <code>.cursor/rules/</code>（多文件）</li>
-  <li>把你的偏好規則貼入</li>
-  <li>Cursor 會自動偵測並在下一個 Chat 對話中載入</li>
+<li>在專案根目錄建立 <code>.cursorrules</code>（單一文件）或 <code>.cursor/rules/</code>（多文件）</li>
+<li>把你的偏好規則貼入</li>
+<li>Cursor 會自動偵測並在下一個 Chat 對話中載入</li>
 </ol>
-
 <h3>Gemini CLI 安裝步驟</h3>
-
 <ol>
-  <li>在主目錄（<code>~/</code>）建立 <code>GEMINI.md</code> 作為全域 Skills</li>
-  <li>或在專案內建立 <code>GEMINI.md</code> 作為專案專屬 Skills</li>
-  <li>兩個都有時，專案 Skills 優先級高於全域</li>
+<li>在主目錄（<code>~/</code>）建立 <code>GEMINI.md</code> 作為全域 Skills</li>
+<li>或在專案內建立 <code>GEMINI.md</code> 作為專案專屬 Skills</li>
+<li>兩個都有時，專案 Skills 優先級高於全域</li>
 </ol>
-
 <h2 id="tips">進階技巧</h2>
-
 <h3>技巧 1：模組化設計，一個 Skills 文件一個主題</h3>
 <p>不要把所有設定塞進一個大文件。分開成 <code>language.md</code>、<code>deploy.md</code>、<code>security.md</code>，讓 AI 只在需要時載入對應模組（節省 token）。</p>
-
 <h3>技巧 2：用 MUST / NEVER 強調關鍵規則</h3>
 <pre><code>MUST: 每個函數都要有 JSDoc 注釋
 NEVER: 不可在程式碼中 hard-code 任何 API key 或密碼
 ALWAYS: 台灣市場的金額單位用新台幣（TWD），顯示格式 $XX,XXX
 </code></pre>
-
 <h3>技巧 3：加入「反面範例」</h3>
 <p>只說「要這樣」不如同時說「不要那樣」。AI 理解禁止規則的效果往往比正面描述更準確。</p>
-
 <h3>技巧 4：定期更新 Skills</h3>
 <p>你換了框架、換了部署平台、加了新 API——記得同步更新 Skills 文件。把 Skills 版本控制在 Git 裡，方便追蹤變更。</p>
-
 <h2 id="pack">直接用現成包（省時選項）</h2>
-
 <p>如果你不想花時間從零寫，可以直接使用我們整理的<strong>台灣 AI 開發者 Skills 包</strong>：</p>
 <ul>
-  <li>5 個針對台灣場景的 Skills 文件（LINE Bot / n8n / 全端部署 / 繁中文件 / 安全實踐）</li>
-  <li>每個文件附繁中說明，直接複製貼上或客製化</li>
-  <li>免費版：LINE Bot Skills 文件（從 GitHub 下載）</li>
-  <li>完整包：US$15，包含全部 5 個文件 + 說明 PDF</li>
+<li>5 個針對台灣場景的 Skills 文件（LINE Bot / n8n / 全端部署 / 繁中文件 / 安全實踐）</li>
+<li>每個文件附繁中說明，直接複製貼上或客製化</li>
+<li>免費版：LINE Bot Skills 文件（從 GitHub 下載）</li>
+<li>完整包：US$15，包含全部 5 個文件 + 說明 PDF</li>
 </ul>
-
 <div style="text-align:center; margin: 24px 0;">
-  <a href="../agent-skills-pack/" style="display:inline-block; background:linear-gradient(135deg,#667eea,#764ba2); color:white; padding:14px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:1rem;">查看完整 Skills 包 →</a>
+<a href="../agent-skills-pack/" style="display:inline-block; background:linear-gradient(135deg,#667eea,#764ba2); color:white; padding:14px 32px; border-radius:10px; text-decoration:none; font-weight:700; font-size:1rem;">查看完整 Skills 包 →</a>
 </div>
-
 <h2 id="faq">常見問題</h2>
-
 <details style="border: 1px solid #e8e8f0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;">
-  <summary style="cursor:pointer; font-weight:600; color:#333;">Agent Skills 和 AGENTS.md / CLAUDE.md 有什麼不同？</summary>
-  <p style="margin: 10px 0 0; color:#666;">AGENTS.md 是 Codex 的 agent 設定檔，CLAUDE.md 是 Claude Code 的整體規則。Agent Skills（SKILL.md）更聚焦在「特定技能模組」，可以有多個文件各司其職，並支援 lazy loading（用到才載入），節省 token。</p>
+<summary style="cursor:pointer; font-weight:600; color:#333;">Agent Skills 和 AGENTS.md / CLAUDE.md 有什麼不同？</summary>
+<p style="margin: 10px 0 0; color:#666;">AGENTS.md 是 Codex 的 agent 設定檔，CLAUDE.md 是 Claude Code 的整體規則。Agent Skills（SKILL.md）更聚焦在「特定技能模組」，可以有多個文件各司其職，並支援 lazy loading（用到才載入），節省 token。</p>
 </details>
 <details style="border: 1px solid #e8e8f0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;">
-  <summary style="cursor:pointer; font-weight:600; color:#333;">Skills 文件會影響 AI 的推理速度嗎？</summary>
-  <p style="margin: 10px 0 0; color:#666;">有輕微影響（多幾十 ms），因為 AI 需要載入並理解 Skills 內容。但相對於每次對話都要重新說明，這個代價微不足道。建議每個 Skills 文件控制在 500 字以內，保持簡潔有效。</p>
+<summary style="cursor:pointer; font-weight:600; color:#333;">Skills 文件會影響 AI 的推理速度嗎？</summary>
+<p style="margin: 10px 0 0; color:#666;">有輕微影響（多幾十 ms），因為 AI 需要載入並理解 Skills 內容。但相對於每次對話都要重新說明，這個代價微不足道。建議每個 Skills 文件控制在 500 字以內，保持簡潔有效。</p>
 </details>
 <details style="border: 1px solid #e8e8f0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;">
-  <summary style="cursor:pointer; font-weight:600; color:#333;">寫 Skills 文件需要特殊格式嗎？</summary>
-  <p style="margin: 10px 0 0; color:#666;">不需要。Skills 文件就是普通的 Markdown 文件，用自然語言描述你的偏好和規則。重點是要清晰具體，避免模糊說法。</p>
+<summary style="cursor:pointer; font-weight:600; color:#333;">寫 Skills 文件需要特殊格式嗎？</summary>
+<p style="margin: 10px 0 0; color:#666;">不需要。Skills 文件就是普通的 Markdown 文件，用自然語言描述你的偏好和規則。重點是要清晰具體，避免模糊說法。</p>
 </details>
 <details style="border: 1px solid #e8e8f0; border-radius: 8px; padding: 12px 16px; margin: 12px 0;">
-  <summary style="cursor:pointer; font-weight:600; color:#333;">台灣開發者最需要哪種 Skills 文件？</summary>
-  <p style="margin: 10px 0 0; color:#666;">根據實際使用情況，最有效的是：(1) 語言偏好 Skills（讓 AI 預設輸出繁中說明），(2) 框架偏好 Skills（你用 Next.js 還是 Nuxt 就說清楚），(3) 部署偏好 Skills（DigitalOcean / Vercel / Railway 各有不同指令）。</p>
+<summary style="cursor:pointer; font-weight:600; color:#333;">台灣開發者最需要哪種 Skills 文件？</summary>
+<p style="margin: 10px 0 0; color:#666;">根據實際使用情況，最有效的是：(1) 語言偏好 Skills（讓 AI 預設輸出繁中說明），(2) 框架偏好 Skills（你用 Next.js 還是 Nuxt 就說清楚），(3) 部署偏好 Skills（DigitalOcean / Vercel / Railway 各有不同指令）。</p>
 </details>
-
 <div style="background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%); border-radius: 16px; padding: 32px; margin: 40px 0; text-align: center; color: white;">
-  <h2 style="margin: 0 0 12px; font-size: 1.5rem;">🚀 部署你的 AI 開發環境</h2>
-  <p style="opacity: 0.9; margin: 0 0 20px; font-size: 1rem;">用 DigitalOcean 自架 n8n + 部署你的 Skills 工作流，取得 <strong>US$200 免費點數</strong>。</p>
-  <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="nofollow sponsored"
-     style="background: white; color: #4f46e5; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem;">
+<h2 style="margin: 0 0 12px; font-size: 1.5rem;">🚀 部署你的 AI 開發環境</h2>
+<p style="opacity: 0.9; margin: 0 0 20px; font-size: 1rem;">用 DigitalOcean 自架 n8n + 部署你的 Skills 工作流，取得 <strong>US$200 免費點數</strong>。</p>
+<a href="https://m.do.co/c/6121a295f624" rel="nofollow sponsored" style="background: white; color: #4f46e5; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1rem;" target="_blank">
     領取 DigitalOcean $200 點數 →
   </a>
 </div>
-
 <div style="background: #f8f9ff; border: 1px solid #e8e8f0; border-radius: 12px; padding: 24px; margin: 24px 0;">
-  <h3 style="margin: 0 0 12px; color: #333;">🎓 想系統學習 AI 工具應用？</h3>
-  <p style="margin: 0 0 16px; color: #666; font-size: 0.95rem;">Hahow 好學校有豐富的 AI 實作課程，從 prompt engineering 到 AI 自動化工作流，適合台灣開發者。</p>
-  <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71"
-     target="_blank" rel="nofollow sponsored"
-     style="background: #f97316; color: white; padding: 10px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem;">
+<h3 style="margin: 0 0 12px; color: #333;">🎓 想系統學習 AI 工具應用？</h3>
+<p style="margin: 0 0 16px; color: #666; font-size: 0.95rem;">Hahow 好學校有豐富的 AI 實作課程，從 prompt engineering 到 AI 自動化工作流，適合台灣開發者。</p>
+<a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" rel="nofollow sponsored" style="background: #f97316; color: white; padding: 10px 24px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem;" target="_blank">
     查看 Hahow AI 課程 →
   </a>
 </div>
-
 <div class="related">
-  <a href="./cursor-3-review-2026.html">🎯 Cursor 3 深度評測</a>
-  <a href="./ai-coding-tools.html">💻 2026 AI 編程工具比較</a>
-  <a href="../ai-cost-calculator/">💰 AI 工具費用計算器</a>
-  <a href="../agent-skills-pack/">📦 台灣 Skills 包下載</a>
-  <a href="./n8n-vs-make-vs-zapier-2026.html">⚙️ n8n vs Make vs Zapier</a>
+<a href="./cursor-3-review-2026.html">🎯 Cursor 3 深度評測</a>
+<a href="./ai-coding-tools.html">💻 2026 AI 編程工具比較</a>
+<a href="../ai-cost-calculator/">💰 AI 工具費用計算器</a>
+<a href="../agent-skills-pack/">📦 台灣 Skills 包下載</a>
+<a href="./n8n-vs-make-vs-zapier-2026.html">⚙️ n8n vs Make vs Zapier</a>
 </div>
-
 </article>
 </div>
-<footer>
-  <p>© 2026 AI Tools TW. <a href="../" style="color:#667eea;">返回首頁</a> | <a href="../blog/" style="color:#667eea;">所有文章</a></p>
+<section class="related-articles">
+<h2>📚 延伸閱讀</h2>
+<div class="related-grid">
+<a class="related-card" href="/ai-tools-tw/blog/ai-subscription-comparison-2026.html">
+<h3>2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Gemini / Grok / Cursor / Perplexity 哪個最值得？</h3>
+<p>2026 年最完整 AI 訂閱比較：ChatGPT Plus、Claude Pro、Gemini Advanced、SuperGrok、Cursor Pro、Perplexity Pro 六大工具價格與功能對照，幫你找出最划算的訂閱方案。</p>
+</a>
+<a class="related-card" href="/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html">
+<h3>n8n vs Make vs Zapier 2026</h3>
+<p>2026 年最熱門的三大工作流自動化平台 n8n、Make（Integromat）、Zapier 完整比較：功能、價格、適合對象、AI 整合能力一次看清楚。</p>
+</a>
+<a class="related-card" href="/ai-tools-tw/blog/dify-complete-guide-2026.html">
+<h3>Dify 完整教學 2026：開源 AI 工作流，台灣開發者怎麼用？</h3>
+<p>Dify 是什麼？怎麼安裝、設定、串接 API？2026 最完整繁中 Dify 教學，涵蓋自架 vs 雲端、與 n8n 差異比較、台灣實戰應用案例。</p>
+</a>
+</div>
+</section><footer>
+<p>© 2026 AI Tools TW. <a href="../" style="color:#667eea;">返回首頁</a> | <a href="../blog/" style="color:#667eea;">所有文章</a></p>
 </footer>
 </body>
 </html>
