@@ -160,11 +160,26 @@
 <h2>訂閱 AI 工具週報</h2>
 <p>每週精選最值得關注的 AI 工具更新與趨勢分析，直送你的信箱。</p>
 </div>
-<form action="https://docs.google.com/forms/d/e/FORM_ID/formResponse" class="email-form" method="POST" onsubmit="this.querySelector('.email-btn').textContent='已訂閱 ✓';this.querySelector('.email-btn').style.background='#10b981';" target="hidden_iframe">
-<input class="email-input" name="entry.EMAIL_FIELD" placeholder="your@email.com" required="" type="email"/>
-<button class="email-btn" type="submit">免費訂閱 →</button>
-</form>
+<form class="email-form" onsubmit="return submitNewsletter(this, 'ai-tools-tw')">
+    <input type="email" placeholder="your@email.com" required class="email-input" name="email">
+    <button type="submit" class="email-btn">免費訂閱 →</button>
+  </form>
 <p style="color:#64748b;font-size:0.8rem;margin-top:0.5rem;">加入 200+ 訂閱者。隨時退訂。</p>
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-</section></body>
+</section><script>
+function submitNewsletter(form, source) {
+  var email = form.email.value;
+  var btn = form.querySelector('button');
+  btn.disabled = true; btn.textContent = '...';
+  fetch('https://newsletter-api.76.13.219.163.nip.io/api/subscribe', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({email: email, source: source})
+  }).then(function(r){return r.json()}).then(function(d){
+    if(d.ok){ btn.textContent = '✓ 已訂閱'; btn.style.background='#10b981'; form.email.disabled=true; }
+    else { btn.textContent = d.error||'Error'; btn.disabled=false; }
+  }).catch(function(){ btn.textContent='Error'; btn.disabled=false; });
+  return false;
+}
+</script>
+</body>
 </html>
