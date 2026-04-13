@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI Tools TW</title>
+    <link>https://pink1119zz.github.io/ai-tools-tw</link>
+    <description>台灣 AI 工具評測與趨勢追蹤</description>
+    <language>zh-TW</language>
+    <lastBuildDate>Mon, 13 Apr 2026 21:44:51 GMT</lastBuildDate>
+    <atom:link href="https://pink1119zz.github.io/ai-tools-tw/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Systeme.io 評測 2026：免費的 ClickFunnels 替代？台灣人完整使用心得</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/systeme-io-review-2026.html</link>
+      <description>Systeme.io 完整評測：免費方案有多好用？台灣電商/課程創作者適合嗎？與 Teachable、Kajabi、Podia 詳細比較，含 60% 終身循環聯盟計畫分析。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/systeme-io-review-2026.html</guid>
+    </item>
+    <item>
+      <title>RAG 是什麼?中小企業導入指南 2026</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/rag-explained.html</link>
+      <description>RAG (Retrieval-Augmented Generation) 完整解析。讓 AI 記得你公司的知識庫,5 個免費 RAG 工具實測比較。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/rag-explained.html</guid>
+    </item>
+    <item>
+      <title>TubeBuddy 評測 2026：台灣 YouTuber 必看的頻道優化神器</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/tubebuddy-review-2026.html</link>
+      <description>TubeBuddy 免費版、Pro、Legend 深度比較！台灣 YouTuber 實測：關鍵字研究、A/B 測試縮圖、競品分析一次搞定。值不值得付費？看這篇就夠。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/tubebuddy-review-2026.html</guid>
+    </item>
+    <item>
+      <title>PrismML Bonsai 8B 評測 2026：1.15GB 跑 8B 模型，手機本地 AI 真的來了？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/prismml-bonsai-8b-review-2026.html</link>
+      <description>PrismML Bonsai 8B 完整評測：全球首款商業可用 1-bit LLM，8B 參數僅需 1.15GB，iPhone 跑 40 token/s，比同規模模型小 14 倍。台灣開發者必看深度分析。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/prismml-bonsai-8b-review-2026.html</guid>
+    </item>
+    <item>
+      <title>n8n vs Make vs Zapier 2026</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html</link>
+      <description>2026 年最熱門的三大工作流自動化平台 n8n、Make（Integromat）、Zapier 完整比較：功能、價格、適合對象、AI 整合能力一次看清楚。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html</guid>
+    </item>
+    <item>
+      <title>Mem0 評測 2026：讓 AI Agent 真正記住你，比 ChatGPT 記憶準 26%</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/mem0-ai-memory-guide-2026.html</link>
+      <description>Mem0 開源 AI 記憶框架完整評測：為什麼 ChatGPT 記憶老是忘記你說的話？Mem0 如何讓 AI Agent 持久化記憶、省 90% Token？台灣開發者安裝教學＋實測。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/mem0-ai-memory-guide-2026.html</guid>
+    </item>
+    <item>
+      <title>Google Gemma 4 評測 2026：免費開源模型真的能打贏 GPT-4o 嗎？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/gemma-4-review-2026.html</link>
+      <description>Google Gemma 4 開源多模態 AI 模型完整評測：2B 到 27B 參數全系列實測，Apache 2.0 商用免費，效能、速度、使用場景深度分析，台灣開發者必讀。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/gemma-4-review-2026.html</guid>
+    </item>
+    <item>
+      <title>Cursor 3 評測 2026：Agent-First IDE 值得升級嗎？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/cursor-3-review-2026.html</link>
+      <description>Cursor 3 重大改版實測：平行多 Agent、Design Mode、背景任務全面解析。跟 Claude Code、GitHub Copilot 比，誰才是 2026 最強 AI 開發工具？</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/cursor-3-review-2026.html</guid>
+    </item>
+    <item>
+      <title>Dify 完整教學 2026：開源 AI 工作流，台灣開發者怎麼用？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/dify-complete-guide-2026.html</link>
+      <description>Dify 是什麼？怎麼安裝、設定、串接 API？2026 最完整繁中 Dify 教學，涵蓋自架 vs 雲端、與 n8n 差異比較、台灣實戰應用案例。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/dify-complete-guide-2026.html</guid>
+    </item>
+    <item>
+      <title>AI Coding 工具 2026 大亂鬥 — Cursor / Claude Code / Copilot / Windsurf</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/ai-coding-tools.html</link>
+      <description>2026 最熱的 4 大 AI 寫程式工具實測比較。Cursor、Claude Code、GitHub Copilot、Windsurf 哪個最值得月費?</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/ai-coding-tools.html</guid>
+    </item>
+    <item>
+      <title>2026 AI 工具訂閱費用完整比較：ChatGPT / Claude / Gemini / Grok / Cursor / Perplexity 哪個最值得？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/ai-subscription-comparison-2026.html</link>
+      <description>2026 年最完整 AI 訂閱比較：ChatGPT Plus、Claude Pro、Gemini Advanced、SuperGrok、Cursor Pro、Perplexity Pro 六大工具價格與功能對照，幫你找出最划算的訂閱方案。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/ai-subscription-comparison-2026.html</guid>
+    </item>
+    <item>
+      <title>Agent Skills 完整入門 2026：讓 Claude Code 和 Cursor 學會你的工作流程</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/agent-skills-guide-2026.html</link>
+      <description>Agent Skills 是什麼？怎麼寫 SKILL.md？2026 繁中第一篇完整教學，涵蓋 Claude Code、Cursor、Gemini CLI 設定步驟，附台灣開發者實戰範例。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/agent-skills-guide-2026.html</guid>
+    </item>
+    <item>
+      <title>AI Agents 完整指南 2026</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/ai-agents-2026.html</link>
+      <description>2026 最熱的 AI Agent 全面比較:GPT Agents、Claude Computer Use、Open Interpreter、AutoGPT、Devin。功能、價格、適用場景一次看懂。</description>
+      <pubDate>Mon, 13 Apr 2026 21:44:50 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/ai-agents-2026.html</guid>
+    </item>
+  </channel>
+</rss>
