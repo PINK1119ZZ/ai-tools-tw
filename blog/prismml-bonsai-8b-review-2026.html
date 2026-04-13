@@ -117,8 +117,8 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
 .related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
 .related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
 </style>
-<meta property="og:image" content="/ai-tools-tw/blog/og/prismml-bonsai-8b-review-2026.svg">
-</head>
+<meta content="/ai-tools-tw/blog/og/prismml-bonsai-8b-review-2026.svg" property="og:image"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389"></script></head>
 <body>
 <nav class="nav">
 <div class="nav-inner">
@@ -157,13 +157,16 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
 </nav>
 <img alt="PrismML Bonsai 8B 1-bit LLM 評測" class="article-hero" height="450" loading="eager" src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1200&amp;auto=format&amp;fit=crop&amp;q=80" width="800"/>
 <div class="article-body">
-<p>如果有人告訴你，一個 8B 參數的 AI 模型只需要 <strong>1.15GB 記憶體</strong>，還能在 iPhone 上跑到每秒 40 個 token——你可能會以為這是誇大的行銷話術。</p>
+<p>如果有人告訴你，一個 8B 參數的 AI 模型只需要 <strong>1.15GB <a class="internal-link" href="/blog/mem0-ai-memory-guide-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">記憶</a>體</strong>，還能在 iPhone 上跑到每秒 40 個 token——你可能會以為這是誇大的行銷話術。</p>
 <p>但 PrismML 的 <strong>Bonsai 8B</strong> 就是這樣一個東西。這家從加州理工學院（Caltech）出來的 AI 新創，在 2026 年 3 月底發布了全球首款商業可用的 1-bit LLM，直接把「手機本地跑真正的 AI」從科幻變成了現實。</p>
 <p>這篇我會帶你看清楚：Bonsai 8B 到底是什麼黑科技、數據有沒有摻水、實際用起來怎樣，以及台灣的開發者和企業有沒有理由關注它。</p>
 <div class="highlight-box">
 <strong>⚡ 快速結論：</strong>Bonsai 8B 的技術架構是真實的突破，不是行銷噱頭。但目前部署複雜度比一般開源模型高（不支援 Ollama），有幻覺問題，基準數字也還缺乏第三方驗證。現在是「值得密切追蹤」的階段，而不是「立刻生產部署」的時機。
     </div>
-<h2 id="什麼是-1-bit-llm先搞懂這個才能看懂-bonsai">什麼是 1-bit LLM？先搞懂這個才能看懂 Bonsai</h2>
+<h2 id="什麼是-1-bit-llm先搞懂這個才能看懂-bonsai">什麼是 1-bit LLM？先搞懂這個才能看懂 Bonsai</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <p>要理解 Bonsai 8B 的意義，得先知道 AI 模型的重量（weight）是什麼。</p>
 <p>語言模型是由數十億個「權重」組成的，每個權重是一個數字，控制神經網路的連結強度。通常這些數字用 16-bit 或 32-bit 的浮點數存放。一個 8B 模型的 FP16 版本大約是 16GB——這就是為什麼你的 8GB MacBook Air 跑 7B 模型都跑得很吃力。</p>
 <p>解決方法之一是「量化」（quantization）：把 16-bit 的數字壓縮成 8-bit、4-bit，甚至更少。Ollama 上那些 Q4 模型就是這樣來的。量化有個代價：每壓縮一次，精度都會有損失，某些任務的表現會下降。</p>
@@ -224,7 +227,10 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
 <div class="highlight-box">
 <strong>⚠️ 重要提醒：</strong>目前所有數字均為 PrismML 自報，尚未有第三方獨立機構驗證。「Intelligence Density」（智能密度）這個指標是 PrismML 自行定義的，計算公式也未完全公開。看數字時要保留合理懷疑。
     </div>
-<h2 id="跟其他開源模型的比較">跟其他開源模型的比較</h2>
+<h2 id="跟其他開源模型的比較">跟其他開源模型的比較</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <table class="comparison-table">
 <tr>
 <th>模型</th>
@@ -359,10 +365,10 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
       完整步驟建議看 <a href="https://github.com/PrismML-Eng/Bonsai-demo" rel="noopener" target="_blank">官方 Bonsai-demo repo</a>，他們有 step-by-step 說明。
     </div>
 <h3>方法 3：等 Ollama 支援（推薦大多數人）</h3>
-<p>如果你不想花時間 compile，最實際的做法是訂閱 PrismML 的 newsletter 或關注他們的 GitHub，等官方宣布 Ollama 整合再動手。這個整合幾乎必然會來，只是時間問題。</p>
+<p>如果你不想花時間 compile，最實際的做法是<a class="internal-link" href="/blog/ai-subscription-comparison-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">訂閱</a> PrismML 的 newsletter 或關注他們的 GitHub，等官方宣布 Ollama 整合再動手。這個整合幾乎必然會來，只是時間問題。</p>
 <p>在等的這段時間，可以先在 <a href="https://m.do.co/c/6121a295f624" rel="noopener sponsored" target="_blank">DigitalOcean</a> 上開一台 GPU Droplet 玩玩看——H100 按小時計費，不需要一次花大錢，也是評估邊緣部署方案的好方式。</p>
 <h2 id="想搞懂邊緣-ai-和本地部署的基礎">想搞懂邊緣 AI 和本地部署的基礎？</h2>
-<p>Bonsai 8B 這類技術的崛起，讓「本地 AI 部署」從工程師的小眾技能，變成越來越多產品開發者必須了解的知識。如果你想系統性地學習 AI 應用開發——從 API 整合、RAG 架構，到了解如何在自己的產品裡加入 AI 功能——以下的學習資源值得看看。</p>
+<p>Bonsai 8B 這類技術的崛起，讓「本地 AI 部署」從工程師的小眾技能，變成越來越多產品開發者必須了解的知識。如果你想系統性地學習 AI 應用開發——從 API 整合、<a class="internal-link" href="/blog/rag-explained.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">RAG</a> 架構，到了解如何在自己的產品裡加入 AI 功能——以下的學習資源值得看看。</p>
 <div class="cta-box">
 <h3>🎓 Hahow AI 課程推薦</h3>
 <p>Hahow 上有幾門評分很高的 AI 開發課，涵蓋從 ChatGPT API 入門到進階的 LangChain、Prompt Engineering、本地 LLM 部署，繁中教學、台灣講師，比自己啃英文文件輕鬆太多。</p>
@@ -403,7 +409,10 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
 <p>如果你也在追蹤這個領域，也可以看看我們之前寫的 <a href="/ai-tools-tw/blog/gemma-4-review-2026.html">Gemma 4 評測</a>（同樣是開源本地模型），以及 <a href="/ai-tools-tw/blog/ai-coding-tools.html">AI Coding 工具比較</a>，看看本地 AI 如何改變開發工作流。</p>
 </div>
 </div>
-<section class="related-articles">
+<div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><section class="related-articles">
 <h2>📚 延伸閱讀</h2>
 <div class="related-grid">
 <a class="related-card" href="/ai-tools-tw/blog/dify-complete-guide-2026.html">
@@ -435,5 +444,24 @@ h1.article-title { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-hei
 <footer style="text-align:center; padding:3rem 2rem; color:var(--gray);">
 <p>© 2026 AI Tools TW · <a href="/ai-tools-tw/" style="color:var(--gray);">首頁</a> · <a href="/ai-tools-tw/blog/" style="color:var(--gray);">所有評測</a></p>
 </footer>
+<script>
+(function(){
+  var domains = ['m.do.co','abzcoupon.com','systeme.io','vbtrax.com','aftck.com','afflink.one','onelink.one','xiaofan8.gumroad.com'];
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = a.href || '';
+    for(var i=0;i<domains.length;i++){
+      if(href.indexOf(domains[i]) > -1){
+        var data = JSON.stringify({url:href,page:location.pathname,ts:Date.now()});
+        if(navigator.sendBeacon){
+          navigator.sendBeacon('https://newsletter-api.76.13.219.163.nip.io/api/track-click', data);
+        }
+        break;
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>

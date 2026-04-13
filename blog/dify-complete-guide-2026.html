@@ -130,8 +130,8 @@
 .related-card h3 { color: #e2e8f0; font-size: 1rem; margin: 0 0 0.5rem; }
 .related-card p { color: #94a3b8; font-size: 0.85rem; margin: 0; }
 </style>
-<meta property="og:image" content="/ai-tools-tw/blog/og/dify-complete-guide-2026.svg">
-</head>
+<meta content="/ai-tools-tw/blog/og/dify-complete-guide-2026.svg" property="og:image"/>
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7482625906579389"></script></head>
 <body>
 <nav class="nav">
 <a class="logo" href="/">AI Tools TW 🤖</a>
@@ -163,20 +163,23 @@
 </div>
 </div>
 <div class="container">
-<p>你有沒有想過，為什麼同樣是「接 ChatGPT API」，別人做出來的 AI 應用可以有記憶、能查資料庫、還能依不同條件走不同流程——而你的卻只是一個固定問固定答的對話框？</p>
+<p>你有沒有想過，為什麼同樣是「接 ChatGPT API」，別人做出來的 AI 應用可以有<a class="internal-link" href="/blog/mem0-ai-memory-guide-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">記憶</a>、能查資料庫、還能依不同條件走不同流程——而你的卻只是一個固定問固定答的對話框？</p>
 <p>差距不在 API key，在工具。</p>
 <p>Dify 就是那個讓你從「接 API」升級到「打造 AI 產品」的平台。它開源、免費可自架、介面直觀，目前全球已有 40 萬+ 開發者在用。但繁體中文的完整教學幾乎是零——所以我把兩週自架研究和實際跑過的流程整理成這篇文章，希望幫台灣開發者節省時間。</p>
 <div class="highlight-box">
 <strong>📌 這篇文章適合你，如果：</strong>
 <ul style="margin:10px 0 0;">
 <li>想打造 AI Chatbot / 知識庫，但不想從零寫程式</li>
-<li>正在評估 Dify vs n8n，不知道選哪個</li>
+<li>正在評估 Dify vs <a class="internal-link" href="/blog/n8n-vs-make-vs-zapier-2026.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">n8n</a>，不知道選哪個</li>
 <li>聽過 Dify 但不知道怎麼開始</li>
 <li>想自架省費用，不想被雲端平台綁架</li>
 </ul>
 </div>
-<h2 id="dify-是什麼一句話版本">Dify 是什麼？一句話版本</h2>
-<p>Dify 是一個<strong>開源 AI 應用開發平台</strong>，讓你用視覺化介面拼出 LLM 工作流、串接知識庫（RAG）、部署 Chatbot，而不需要自己寫後端程式。</p>
+<h2 id="dify-是什麼一句話版本">Dify 是什麼？一句話版本</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+<p>Dify 是一個<strong>開源 AI 應用開發平台</strong>，讓你用視覺化介面拼出 LLM 工作流、串接知識庫（<a class="internal-link" href="/blog/rag-explained.html" style="color:var(--primary-light,#a5b4fc);text-decoration:underline dotted;">RAG</a>）、部署 Chatbot，而不需要自己寫後端程式。</p>
 <p>它 2023 年在 GitHub 開源，2024 年獲得 $30M USD 融資，2026 年已是 GitHub 最熱門的 AI 項目之一（60,000+ stars）。用 Python 寫的，Docker 一鍵部署，MIT 授權可以商用。</p>
 <p>你可以把它理解成：<strong>「沒有程式碼版本的 LangChain」</strong>，或者<strong>「專為 AI 打造的 n8n」</strong>。</p>
 <h3>Dify 核心功能概覽</h3>
@@ -231,7 +234,10 @@
 <p>新用戶免費獲得 $200 美元點數，足夠跑 Dify 好幾個月。2 vCPU + 4GB RAM Droplet，每月只要 $24。</p>
 <a class="cta-btn" href="https://m.do.co/c/6121a295f624" rel="noopener" target="_blank">領取 $200 免費點數 →</a>
 </div>
-<h2 id="自架-dify-完整步驟15-分鐘版">自架 Dify 完整步驟（15 分鐘版）</h2>
+<h2 id="自架-dify-完整步驟15-分鐘版">自架 Dify 完整步驟（15 分鐘版）</h2><div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
 <p>前置條件：一台 Linux 伺服器（Ubuntu 22.04），已安裝 Docker 和 Docker Compose。</p>
 <div class="step-block">
 <h4>步驟 1：Clone Dify 官方 Repo</h4>
@@ -402,7 +408,10 @@
 <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" rel="noopener" style="color:#1d4ed8;font-weight:600;display:inline-block;margin-top:8px;" target="_blank">在 Hahow 找 AI 課程 →</a>
 </div>
 </div>
-<section class="related-articles">
+<div class="ad-unit" style="text-align:center;margin:2rem 0;min-height:100px;">
+<ins class="adsbygoogle" data-ad-client="ca-pub-7482625906579389" data-ad-format="fluid" data-ad-layout="in-article" data-ad-slot="auto" style="display:block; text-align:center;"></ins>
+<script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div><section class="related-articles">
 <h2>📚 延伸閱讀</h2>
 <div class="related-grid">
 <a class="related-card" href="/ai-tools-tw/blog/prismml-bonsai-8b-review-2026.html">
@@ -422,5 +431,24 @@
 <p>© 2026 AI Tools TW · 台灣 AI 工具評測站 · <a href="/" style="color:#60a5fa;">回首頁</a></p>
 <p style="font-size:12px;margin-top:8px;">本站部分連結為聯盟連結，點擊後購買我們可能獲得佣金，不影響你的購買價格。</p>
 </footer>
+<script>
+(function(){
+  var domains = ['m.do.co','abzcoupon.com','systeme.io','vbtrax.com','aftck.com','afflink.one','onelink.one','xiaofan8.gumroad.com'];
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a');
+    if(!a) return;
+    var href = a.href || '';
+    for(var i=0;i<domains.length;i++){
+      if(href.indexOf(domains[i]) > -1){
+        var data = JSON.stringify({url:href,page:location.pathname,ts:Date.now()});
+        if(navigator.sendBeacon){
+          navigator.sendBeacon('https://newsletter-api.76.13.219.163.nip.io/api/track-click', data);
+        }
+        break;
+      }
+    }
+  });
+})();
+</script>
 </body>
 </html>
