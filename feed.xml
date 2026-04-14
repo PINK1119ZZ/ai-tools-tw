@@ -5,8 +5,15 @@
     <link>https://pink1119zz.github.io/ai-tools-tw</link>
     <description>台灣 AI 工具評測與趨勢追蹤</description>
     <language>zh-TW</language>
-    <lastBuildDate>Mon, 13 Apr 2026 21:44:51 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 14 Apr 2026 02:00:00 GMT</lastBuildDate>
     <atom:link href="https://pink1119zz.github.io/ai-tools-tw/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>OWL (CAMEL-AI) 評測 2026：開源多 Agent 框架第一名，台灣開發者怎麼用？</title>
+      <link>https://pink1119zz.github.io/ai-tools-tw/blog/owl-camel-ai-multi-agent-2026.html</link>
+      <description>OWL 在 GAIA benchmark 拿下開源框架第一名（69.09%），NeurIPS 2025 入選。本文深入評測 OWL 的架構、安裝方式、MCP 整合、與 AutoGPT/CrewAI 比較，以及台灣實戰應用場景。</description>
+      <pubDate>Tue, 14 Apr 2026 02:00:00 GMT</pubDate>
+      <guid isPermaLink="true">https://pink1119zz.github.io/ai-tools-tw/blog/owl-camel-ai-multi-agent-2026.html</guid>
+    </item>
     <item>
       <title>Systeme.io 評測 2026：免費的 ClickFunnels 替代？台灣人完整使用心得</title>
       <link>https://pink1119zz.github.io/ai-tools-tw/blog/systeme-io-review-2026.html</link>
