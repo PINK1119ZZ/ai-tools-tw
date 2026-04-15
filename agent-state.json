@@ -77,5 +77,23 @@
     "OpenOwl — macOS 桌面自動化 MCP Server，讓 Claude/Codex AI 操控任何 App",
     "AgentShield — AI Agent 可觀測性 SDK，提供執行追蹤/風險偵測/成本追蹤"
   ],
-  "directives": []
+  "directives": [],
+  "internalLinkRuns": [
+    {
+      "date": "2026-04-15",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/owl-camel-ai-multi-agent-2026.html",
+        "blog/elevenlabs-elevencreative-review-2026.html"
+      ],
+      "linksAdded": [
+        {"file": "owl-camel-ai-multi-agent-2026.html", "anchor": "Dify", "target": "dify-complete-guide-2026.html"},
+        {"file": "owl-camel-ai-multi-agent-2026.html", "anchor": "n8n", "target": "n8n-vs-make-vs-zapier-2026.html"},
+        {"file": "owl-camel-ai-multi-agent-2026.html", "anchor": "AI 程式工具", "target": "ai-coding-tools.html"},
+        {"file": "elevenlabs-elevencreative-review-2026.html", "anchor": "AI 工具", "target": "ai-subscription-comparison-2026.html"},
+        {"file": "elevenlabs-elevencreative-review-2026.html", "anchor": "AI 訂閱費用完整比較", "target": "ai-subscription-comparison-2026.html"}
+      ],
+      "notes": "TW: 優先連結聯盟文章；OWL 加 Dify/n8n/ai-coding-tools；ElevenLabs 加 ai-subscription-comparison x2"
+    }
+  ]
 }
