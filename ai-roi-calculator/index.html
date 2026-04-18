@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 自動化 ROI 計算器 2026｜導入 n8n/AI 值得嗎？幫你算清楚</title>
+<meta name="description" content="免費 AI 自動化 ROI 計算器：輸入你的行業、員工數、手動流程時間，即算每月節省多少成本、投資回收期，以及最適合你的自動化方案。台灣企業必看。">
+<meta name="keywords" content="AI自動化ROI,n8n導入成本,AI自動化值得嗎,台灣AI自動化,自動化投資回報,n8n ROI計算">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/ai-roi-calculator/">
+<meta property="og:title" content="AI 自動化 ROI 計算器 2026 — 幫你算清楚導入值不值得">
+<meta property="og:description" content="輸入員工數和手動流程時間，即算每月節省成本與投資回收期。台灣企業免費使用。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/ai-roi-calculator/">
+<meta property="og:image" content="https://pink1119zz.github.io/ai-tools-tw/og/ai-roi-calculator.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI 自動化 ROI 計算器 2026 — 導入 n8n/AI 值得嗎？">
+<meta name="twitter:description" content="輸入員工數和手動流程時間，即算每月節省成本。台灣企業免費使用。">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "AI 自動化 ROI 計算器 2026",
+  "description": "輸入行業、員工數、手動流程時間，計算 AI 自動化導入的 ROI、每月節省成本、投資回收期",
+  "url": "https://pink1119zz.github.io/ai-tools-tw/ai-roi-calculator/",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Any",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TWD" },
+  "publisher": { "@type": "Organization", "name": "AI Tools TW", "url": "https://pink1119zz.github.io/ai-tools-tw/" },
+  "featureList": ["ROI 計算", "成本效益分析", "方案推薦", "投資回收期試算"]
+}
+</script>
+
+<style>
+  :root {
+    --primary: #0ea5e9;
+    --primary-dark: #0284c7;
+    --bg: #f0f9ff;
+    --card-bg: #ffffff;
+    --text: #0f172a;
+    --muted: #64748b;
+    --border: #e0f2fe;
+    --green: #10b981;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --teal: #14b8a6;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Noto Sans TC', 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+  }
+  header {
+    background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #06b6d4 100%);
+    color: white;
+    padding: 3rem 1rem 2.5rem;
+    text-align: center;
+  }
+  header .badge {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 20px;
+    padding: .25rem .9rem;
+    font-size: .8rem;
+    margin-bottom: 1rem;
+    letter-spacing: .5px;
+  }
+  header h1 { font-size: 2rem; font-weight: 800; margin-bottom: .75rem; line-height: 1.3; }
+  header p { opacity: .9; font-size: 1.05rem; max-width: 580px; margin: 0 auto; }
+  nav {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: .65rem 1rem;
+    font-size: .82rem;
+    color: var(--muted);
+  }
+  nav a { color: var(--primary); text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+  .container { max-width: 880px; margin: 0 auto; padding: 2rem 1rem 3rem; }
+
+  /* Summary box */
+  .summary-box {
+    background: #dbeafe;
+    border-left: 4px solid var(--primary);
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2rem;
+    font-size: .95rem;
+  }
+  .summary-box strong { color: var(--primary-dark); }
+
+  /* Disclosure */
+  .disclosure {
+    background: #fefce8;
+    border: 1px solid #fde68a;
+    border-radius: 6px;
+    padding: .6rem 1rem;
+    font-size: .82rem;
+    color: #92400e;
+    margin-bottom: 1.5rem;
+  }
+
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 1.75rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 8px rgba(14,165,233,0.06);
+  }
+  .card h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .step-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+    color: white;
+    border-radius: 50%;
+    width: 26px; height: 26px;
+    font-size: .82rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  /* Industry selector */
+  .industry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .75rem;
+    margin-top: .75rem;
+  }
+  .industry-item {
+    position: relative;
+  }
+  .industry-item input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0; height: 0;
+  }
+  .industry-item label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .35rem;
+    padding: .9rem .75rem;
+    border: 2px solid var(--border);
+    border-radius: 10px;
+    cursor: pointer;
+    background: #f8fcff;
+    transition: all .15s;
+    font-size: .88rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .industry-item label .icon { font-size: 1.6rem; }
+  .industry-item input:checked + label {
+    border-color: var(--primary);
+    background: #e0f2fe;
+    color: var(--primary-dark);
+    font-weight: 700;
+  }
+  .industry-item label:hover { border-color: #7dd3fc; background: #f0f9ff; }
+
+  /* Slider */
+  .field-group {
+    margin-bottom: 1.25rem;
+  }
+  .field-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: .5rem;
+    font-weight: 600;
+    font-size: .92rem;
+  }
+  .field-value {
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    padding: .15rem .7rem;
+    font-size: .85rem;
+    font-weight: 700;
+    min-width: 70px;
+    text-align: center;
+  }
+  .field-hint { font-size: .8rem; color: var(--muted); margin-top: .3rem; }
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #bae6fd;
+    outline: none;
+    cursor: pointer;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    box-shadow: 0 2px 6px rgba(14,165,233,0.4);
+    cursor: pointer;
+  }
+
+  /* Number inputs */
+  .num-input {
+    width: 100%;
+    padding: .6rem .9rem;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: border-color .15s;
+  }
+  .num-input:focus {
+    outline: none;
+    border-color: var(--primary);
+  }
+
+  /* Calculate button */
+  .calc-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform .1s, box-shadow .1s;
+    box-shadow: 0 4px 12px rgba(14,165,233,0.35);
+    margin-top: .5rem;
+  }
+  .calc-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(14,165,233,0.4); }
+  .calc-btn:active { transform: translateY(0); }
+
+  /* Results */
+  #results { display: none; }
+  .results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .metric-card {
+    background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+    border: 1px solid #bae6fd;
+    border-radius: 12px;
+    padding: 1.2rem 1rem;
+    text-align: center;
+  }
+  .metric-card.highlight {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5);
+    border-color: #6ee7b7;
+  }
+  .metric-card.warn {
+    background: linear-gradient(135deg, #fffbeb, #fef3c7);
+    border-color: #fcd34d;
+  }
+  .metric-label { font-size: .78rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .5px; margin-bottom: .4rem; }
+  .metric-value { font-size: 1.7rem; font-weight: 800; color: var(--primary-dark); line-height: 1.2; }
+  .metric-card.highlight .metric-value { color: #059669; }
+  .metric-card.warn .metric-value { color: #d97706; }
+  .metric-unit { font-size: .85rem; font-weight: 500; color: var(--muted); margin-top: .25rem; }
+
+  /* Plan cards */
+  .plan-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1rem; }
+  .plan-card {
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 1.25rem;
+    position: relative;
+    transition: border-color .15s;
+  }
+  .plan-card.recommended {
+    border-color: var(--primary);
+    background: #f0f9ff;
+  }
+  .plan-card .plan-badge {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--primary);
+    color: white;
+    font-size: .72rem;
+    font-weight: 700;
+    padding: .2rem .7rem;
+    border-radius: 20px;
+    white-space: nowrap;
+  }
+  .plan-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+  .plan-card .plan-price { font-size: 1.4rem; font-weight: 800; color: var(--primary-dark); margin-bottom: .5rem; }
+  .plan-card .plan-price small { font-size: .8rem; font-weight: 400; color: var(--muted); }
+  .plan-card ul { padding-left: 1.1rem; font-size: .88rem; color: #374151; }
+  .plan-card ul li { margin-bottom: .3rem; }
+  .plan-card .plan-cta {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: .55rem 1rem;
+    font-weight: 700;
+    font-size: .9rem;
+    transition: background .15s;
+  }
+  .plan-card .plan-cta:hover { background: var(--primary-dark); }
+  .plan-card .plan-cta.outline {
+    background: transparent;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+  }
+  .plan-card .plan-cta.outline:hover { background: #e0f2fe; }
+
+  /* ROI table */
+  .roi-table { width: 100%; border-collapse: collapse; font-size: .88rem; margin-top: 1rem; }
+  .roi-table th {
+    background: #e0f2fe;
+    padding: .6rem .8rem;
+    text-align: left;
+    font-weight: 700;
+    color: var(--primary-dark);
+    border-bottom: 2px solid var(--primary);
+  }
+  .roi-table td { padding: .55rem .8rem; border-bottom: 1px solid var(--border); }
+  .roi-table tr:last-child td { border-bottom: none; }
+  .roi-table tr:hover td { background: #f0f9ff; }
+  .positive { color: #059669; font-weight: 700; }
+  .negative { color: #dc2626; font-weight: 700; }
+
+  /* Divider label */
+  .section-label {
+    font-size: .85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary);
+    margin-bottom: .75rem;
+    padding-bottom: .4rem;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* Affiliate CTA block */
+  .affiliate-cta {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    color: white;
+    border-radius: 14px;
+    padding: 1.75rem;
+    margin: 2rem 0;
+    text-align: center;
+  }
+  .affiliate-cta h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; }
+  .affiliate-cta p { opacity: .85; font-size: .93rem; margin-bottom: 1.25rem; }
+  .cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+  .cta-btn {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 8px;
+    padding: .65rem 1.35rem;
+    font-weight: 700;
+    font-size: .92rem;
+    transition: transform .1s, opacity .1s;
+  }
+  .cta-btn:hover { transform: translateY(-1px); opacity: .9; }
+  .cta-btn.primary-btn { background: var(--primary); color: white; }
+  .cta-btn.secondary-btn { background: white; color: #0f172a; }
+
+  /* Related links */
+  .related-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: .75rem;
+    margin-top: 1rem;
+  }
+  .related-link {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: .8rem 1rem;
+    text-decoration: none;
+    color: var(--text);
+    font-size: .88rem;
+    font-weight: 500;
+    transition: border-color .15s, background .15s;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+  }
+  .related-link:hover { border-color: var(--primary); background: #f0f9ff; }
+  .related-link .arrow { margin-left: auto; color: var(--primary); }
+
+  /* Footer */
+  footer {
+    background: #0f172a;
+    color: #94a3b8;
+    text-align: center;
+    padding: 2rem 1rem;
+    font-size: .85rem;
+    margin-top: 3rem;
+  }
+  footer a { color: #7dd3fc; text-decoration: none; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.5rem; }
+    .metric-value { font-size: 1.4rem; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .plan-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="badge">🤖 免費互動工具</div>
+  <h1>AI 自動化 ROI 計算器 2026</h1>
+  <p>導入 n8n / AI 自動化，每月到底能省多少錢？<br>輸入你的情況，30秒幫你算清楚投資回報</p>
+</header>
+
+<nav>
+  <a href="https://pink1119zz.github.io/ai-tools-tw/">🏠 AI Tools TW</a> ›
+  <a href="https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/">AI 費用計算器</a> ›
+  AI 自動化 ROI 計算器
+</nav>
+
+<div class="container">
+
+  <!-- Summary Box -->
+  <div class="summary-box">
+    📊 <strong>這個工具能幫你算什麼？</strong>根據你的行業、員工數、手動流程時間與薪資，計算出：每月節省人力成本、自動化工具投資回收期，以及最適合你規模的自動化方案推薦（DO VPS / Cloudways / n8n Cloud）。
+  </div>
+
+  <!-- Disclosure -->
+  <div class="disclosure">
+    ⚠️ 本工具計算結果僅供參考，實際效益因公司流程複雜度而異。本頁含有聯盟連結，不影響我們的推薦立場。
+  </div>
+
+  <!-- Step 1: Industry -->
+  <div class="card">
+    <h2><span class="step-badge">1</span> 你的行業類型</h2>
+    <div class="industry-grid">
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-ecommerce" value="ecommerce" data-avg-salary="38000" data-automation-rate="55" checked>
+        <label for="ind-ecommerce">
+          <span class="icon">🛍️</span>電商/零售
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-service" value="service" data-avg-salary="42000" data-automation-rate="50">
+        <label for="ind-service">
+          <span class="icon">🏢</span>服務業/顧問
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-manufacturing" value="manufacturing" data-avg-salary="40000" data-automation-rate="45">
+        <label for="ind-manufacturing">
+          <span class="icon">🏭</span>製造/供應鏈
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-media" value="media" data-avg-salary="45000" data-automation-rate="60">
+        <label for="ind-media">
+          <span class="icon">🎬</span>媒體/自媒體
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-tech" value="tech" data-avg-salary="65000" data-automation-rate="65">
+        <label for="ind-tech">
+          <span class="icon">💻</span>科技/軟體
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-finance" value="finance" data-avg-salary="60000" data-automation-rate="58">
+        <label for="ind-finance">
+          <span class="icon">💰</span>金融/保險
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-edu" value="edu" data-avg-salary="38000" data-automation-rate="48">
+        <label for="ind-edu">
+          <span class="icon">📚</span>教育/補習班
+        </label>
+      </div>
+      <div class="industry-item">
+        <input type="radio" name="industry" id="ind-other" value="other" data-avg-salary="42000" data-automation-rate="50">
+        <label for="ind-other">
+          <span class="icon">🔧</span>其他
+        </label>
+      </div>
+    </div>
+  </div>
+
+  <!-- Step 2: Employees & Manual Hours -->
+  <div class="card">
+    <h2><span class="step-badge">2</span> 工作規模</h2>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>員工人數（參與手動流程的）</span>
+        <span class="field-value" id="emp-val">5 人</span>
+      </div>
+      <input type="range" id="emp-slider" min="1" max="50" value="5" step="1" oninput="updateSlider('emp-slider','emp-val', val => val+' 人')">
+      <div class="field-hint">只計算參與重複性手動任務的員工人數</div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>每人每週手動流程時間（小時）</span>
+        <span class="field-value" id="hours-val">8 小時</span>
+      </div>
+      <input type="range" id="hours-slider" min="1" max="40" value="8" step="1" oninput="updateSlider('hours-slider','hours-val', val => val+' 小時')">
+      <div class="field-hint">包含：資料整理、報表製作、客服回覆、訂單處理、社群排程等重複性工作</div>
+    </div>
+  </div>
+
+  <!-- Step 3: Salary & Auto Rate -->
+  <div class="card">
+    <h2><span class="step-badge">3</span> 薪資與自動化程度</h2>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>員工平均月薪（台幣）</span>
+        <span class="field-value" id="salary-val">NT$42,000</span>
+      </div>
+      <input type="range" id="salary-slider" min="28000" max="120000" value="42000" step="1000" oninput="updateSlider('salary-slider','salary-val', val => 'NT$'+Number(val).toLocaleString())">
+      <div class="field-hint">可參考行業平均：電商 3.8萬 / 科技業 6.5萬 / 製造業 4萬</div>
+    </div>
+
+    <div class="field-group">
+      <div class="field-label">
+        <span>預估可自動化比例</span>
+        <span class="field-value" id="autoRate-val">50%</span>
+      </div>
+      <input type="range" id="autoRate-slider" min="10" max="90" value="50" step="5" oninput="updateSlider('autoRate-slider','autoRate-val', val => val+'%')">
+      <div class="field-hint">保守 20-30%（只做基本自動化）｜積極 50-70%（完整 AI 自動化）｜激進 70%+（AI 全面接管重複工作）</div>
+    </div>
+  </div>
+
+  <!-- Calculate Button -->
+  <button class="calc-btn" onclick="calculate()">⚡ 立即計算我的自動化 ROI →</button>
+
+  <!-- Results Section -->
+  <div id="results">
+
+    <div class="card" style="margin-top:2rem;">
+      <div class="section-label">📊 每月效益估算</div>
+      <div class="results-grid">
+        <div class="metric-card highlight">
+          <div class="metric-label">每月節省人力成本</div>
+          <div class="metric-value" id="res-savings">-</div>
+          <div class="metric-unit">台幣/月</div>
+        </div>
+        <div class="metric-card highlight">
+          <div class="metric-label">每月節省工時</div>
+          <div class="metric-value" id="res-hours">-</div>
+          <div class="metric-unit">小時/月</div>
+        </div>
+        <div class="metric-card">
+          <div class="metric-label">年化節省金額</div>
+          <div class="metric-value" id="res-annual">-</div>
+          <div class="metric-unit">台幣/年</div>
+        </div>
+        <div class="metric-card warn">
+          <div class="metric-label">投資回收期</div>
+          <div class="metric-value" id="res-payback">-</div>
+          <div class="metric-unit">個月</div>
+        </div>
+      </div>
+
+      <!-- ROI Table -->
+      <div class="section-label" style="margin-top:1.5rem;">📈 3年投資效益分析</div>
+      <table class="roi-table">
+        <thead>
+          <tr>
+            <th>時間點</th>
+            <th>累積投入成本</th>
+            <th>累積節省金額</th>
+            <th>淨效益</th>
+          </tr>
+        </thead>
+        <tbody id="roi-table-body">
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Plan Recommendation -->
+    <div class="card">
+      <div class="section-label">🛠️ 適合你的自動化方案</div>
+      <div class="plan-cards" id="plan-cards">
+        <!-- dynamically filled -->
+      </div>
+    </div>
+
+    <!-- Mid-article Affiliate CTA -->
+    <div class="affiliate-cta">
+      <h3>🚀 準備好開始自動化了嗎？</h3>
+      <p>用 DigitalOcean VPS 自架 n8n，$200 免費試用額度，支援全程繁中社群</p>
+      <div class="cta-buttons">
+        <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" class="cta-btn primary-btn">
+          💎 試用 DigitalOcean（$200 免費額度）→
+        </a>
+        <a href="https://pink1119zz.github.io/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html" class="cta-btn secondary-btn">
+          📖 先看 n8n 完整教學
+        </a>
+      </div>
+    </div>
+
+    <!-- 自動化建議 -->
+    <div class="card">
+      <div class="section-label">💡 你最該先自動化的 3 件事</div>
+      <div id="suggestions" style="display:grid;gap:1rem;"></div>
+    </div>
+
+  </div><!-- end #results -->
+
+  <!-- Always-visible CTA section (1/3 page position) -->
+  <div class="card" style="margin-top:2rem;border-color:#bae6fd;">
+    <div class="section-label">🔗 延伸資源</div>
+    <div class="related-links">
+      <a href="https://pink1119zz.github.io/ai-tools-tw/ai-cost-calculator/" class="related-link">
+        💰 AI 訂閱費用計算器 <span class="arrow">→</span>
+      </a>
+      <a href="https://pink1119zz.github.io/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html" class="related-link">
+        ⚖️ n8n vs Make vs Zapier 比較 <span class="arrow">→</span>
+      </a>
+      <a href="https://autodev-ai.com/blog/deerflow-vs-dify-vs-n8n-2026.html" class="related-link">
+        🤖 DeerFlow vs Dify vs n8n <span class="arrow">→</span>
+      </a>
+      <a href="https://autodev-ai.com/services.html" class="related-link">
+        🏗️ 需要幫你實作？找我們 <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom Affiliate CTA -->
+  <div class="card" style="background:linear-gradient(135deg,#f0fdf4,#dcfce7);border-color:#86efac;">
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:.5rem;">🎯 準備動手，不知道從哪開始？</h3>
+    <p style="font-size:.93rem;color:#166534;margin-bottom:1.25rem;">我們提供 n8n 工作流設計、LINE Bot 開發、AI 自動化諮詢服務，已協助多家台灣中小企業導入自動化。</p>
+    <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+      <a href="https://autodev-ai.com/services.html" target="_blank" style="display:inline-block;background:#16a34a;color:white;text-decoration:none;border-radius:8px;padding:.65rem 1.35rem;font-weight:700;font-size:.92rem;">
+        📋 查看服務方案與報價 →
+      </a>
+      <a href="https://m.do.co/c/6121a295f624" target="_blank" rel="noopener" style="display:inline-block;background:white;color:#166534;border:2px solid #16a34a;text-decoration:none;border-radius:8px;padding:.65rem 1.35rem;font-weight:700;font-size:.92rem;">
+        ☁️ 自架 DO VPS（$200 試用）
+      </a>
+    </div>
+  </div>
+
+</div><!-- .container -->
+
+<footer>
+  <p>© 2026 <a href="https://pink1119zz.github.io/ai-tools-tw/">AI Tools TW</a> — 台灣 AI 工具評測與教學</p>
+  <p style="margin-top:.5rem;">計算結果為估算值，實際效益因企業流程複雜度而異。本頁含聯盟連結。</p>
+</footer>
+
+<script>
+// Slider update helper
+function updateSlider(sliderId, displayId, formatter) {
+  const slider = document.getElementById(sliderId);
+  const display = document.getElementById(displayId);
+  display.textContent = formatter(slider.value);
+}
+
+// Industry suggestions map
+const industrySuggestions = {
+  ecommerce: [
+    { icon: '📦', title: '訂單處理自動化', desc: '用 n8n 串接蝦皮/91App → Google Sheets → 自動通知物流，減少人工建單錯誤' },
+    { icon: '💬', title: 'LINE 客服 AI 回覆', desc: '導入 AI 客服機器人，自動處理 70% 重複性問題（退換貨查詢/到貨通知）' },
+    { icon: '📊', title: '庫存報表自動化', desc: '每日自動匯總庫存/銷售數據，直接發到 LINE 群，省掉每天製作 Excel 的時間' }
+  ],
+  service: [
+    { icon: '📅', title: '預約系統自動化', desc: '線上預約 → 自動發確認信/LINE 訊息 → Google Calendar 同步，零人工介入' },
+    { icon: '📝', title: '合約/報價書生成', desc: '客戶填表 → AI 自動生成客製化報價書 → PDF 發送，業務省下 30 分鐘/件' },
+    { icon: '📧', title: '跟進 Email 自動化', desc: '潛在客戶未回覆時，n8n 自動在 3/7/14 天發跟進信，轉換率提升 25-40%' }
+  ],
+  manufacturing: [
+    { icon: '📋', title: '採購單自動通知', desc: '庫存低於門檻 → 自動通知採購部門並附上建議採購量，減少斷料風險' },
+    { icon: '🔧', title: '設備異常告警', desc: 'IoT 感測器數據 → n8n 判斷異常 → 立即 LINE 通知現場主管，縮短響應時間' },
+    { icon: '📊', title: '生產日報自動化', desc: '每日自動匯集各站數據，生成生產日報並發送給管理層，省去手工匯整' }
+  ],
+  media: [
+    { icon: '📱', title: '社群跨平台排程', desc: 'n8n 一鍵同步發布：IG + FB + Twitter，加上自動配圖和 hashtag 生成' },
+    { icon: '✍️', title: 'AI 草稿生成', desc: '輸入關鍵字 → AI 生成初稿 → 人工潤稿，寫作時間縮短 50-60%' },
+    { icon: '📈', title: '數據報表自動化', desc: '每週自動匯總各平台數據，生成視覺化報告，找出爆款內容規律' }
+  ],
+  tech: [
+    { icon: '🔍', title: 'PR Review 自動化', desc: 'Claude Code Routines 每天自動 Review PR，指出問題，節省 code review 時間' },
+    { icon: '🐛', title: 'Bug 追蹤自動通知', desc: 'Sentry 錯誤 → n8n → 自動在 Slack 建立 ticket 並分派給對應工程師' },
+    { icon: '📦', title: 'CI/CD 狀態播報', desc: 'GitHub Actions 完成 → n8n 自動在 LINE/Slack 播報部署結果，告別頻繁刷 GitHub' }
+  ],
+  finance: [
+    { icon: '📊', title: '對帳自動化', desc: 'n8n 自動比對銀行流水與內帳，標記異常項目，會計省下每月 2-3 天對帳時間' },
+    { icon: '📋', title: '法遵報告生成', desc: 'AI 自動匯整合規資料，生成初稿供合規部門審核，大幅減少準備時間' },
+    { icon: '💬', title: 'KYC 資料預審', desc: '客戶上傳文件 → AI 自動判斷完整性並提示缺件，減少來回溝通次數' }
+  ],
+  edu: [
+    { icon: '📝', title: '學員出勤自動通知', desc: '缺席 → 自動 LINE 通知家長 + 記錄 Notion，老師不用手動處理' },
+    { icon: '💰', title: '繳費提醒自動化', desc: '月初自動發繳費提醒，到期未繳再發二次提醒，減少追款人力' },
+    { icon: '📖', title: '課程內容分發', desc: '上課後自動發送錄影連結、補充資料，學員滿意度提升，行政減負' }
+  ],
+  other: [
+    { icon: '📧', title: 'Email 自動分類', desc: 'AI 自動分類來信（客訴/詢問/合作），並路由給對應部門，零漏件' },
+    { icon: '📊', title: '業績報表自動化', desc: '每週自動匯總各項業績數字，圖表化後直接發到群組，省去手工製表' },
+    { icon: '💬', title: '客服自動回覆', desc: '常見問題 AI 回覆，複雜問題轉人工，客服量減少 40-60%' }
+  ]
+};
+
+// Plan configs based on company size
+function getPlans(employees, monthlySavings) {
+  const plans = [];
+
+  if (employees <= 3) {
+    plans.push({
+      name: 'n8n Cloud 入門版',
+      price: 'US$24/月',
+      tag: '推薦：最快上手',
+      recommended: true,
+      features: ['無需技術背景', 'n8n 官方託管', '5個 active workflows', '免費試用14天', '台灣繁中社群支援'],
+      ctaText: '免費試用 n8n Cloud →',
+      ctaUrl: 'https://n8n.io/cloud/',
+      ctaOutline: false
+    });
+    plans.push({
+      name: 'DigitalOcean VPS 自架',
+      price: 'US$6-12/月',
+      tag: null,
+      recommended: false,
+      features: ['最低成本方案', '完整功能無限制', '需要基本技術能力', '$200 免費試用額度', '按量付費'],
+      ctaText: '領取 $200 試用額度 →',
+      ctaUrl: 'https://m.do.co/c/6121a295f624',
+      ctaOutline: true
+    });
+  } else if (employees <= 15) {
+    plans.push({
+      name: 'DigitalOcean VPS 自架 n8n',
+      price: 'US$12-24/月',
+      tag: '推薦：最佳 CP 值',
+      recommended: true,
+      features: ['完整功能無限制', '月省 NT$' + Math.round(monthlySavings * 0.8).toLocaleString() + ' 以上', 'API 全面整合', '$200 免費試用額度', '台灣技術社群'],
+      ctaText: '領取 $200 試用額度 →',
+      ctaUrl: 'https://m.do.co/c/6121a295f624',
+      ctaOutline: false
+    });
+    plans.push({
+      name: 'n8n Cloud Pro',
+      price: 'US$50/月',
+      tag: null,
+      recommended: false,
+      features: ['零維運負擔', '15個 active workflows', '優先技術支援', '自動備份', '適合非技術創辦人'],
+      ctaText: '試用 n8n Cloud Pro →',
+      ctaUrl: 'https://n8n.io/cloud/',
+      ctaOutline: true
+    });
+    plans.push({
+      name: 'Cloudways 管理型主機',
+      price: 'US$14/月起',
+      tag: null,
+      recommended: false,
+      features: ['DO/AWS/GCP底層', '一鍵部署 n8n', '24/7 技術支援', '自動備份 + 監控', '無需管理伺服器'],
+      ctaText: '查看 Cloudways 方案 →',
+      ctaUrl: 'https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d',
+      ctaOutline: true
+    });
+  } else {
+    plans.push({
+      name: 'Cloudways 企業管理型',
+      price: 'US$50+/月',
+      tag: '推薦：規模化首選',
+      recommended: true,
+      features: ['DO/AWS/GCP 彈性切換', '專業 Managed 服務', '自動擴容 + 監控', '24/7 企業支援', 'SLA 保障'],
+      ctaText: '免費試用 Cloudways →',
+      ctaUrl: 'https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d',
+      ctaOutline: false
+    });
+    plans.push({
+      name: 'n8n Cloud Enterprise',
+      price: '聯繫報價',
+      tag: null,
+      recommended: false,
+      features: ['SSO 企業登入', '自訂工作流數量', '專屬 SLA', 'IP 白名單', '客製化合約'],
+      ctaText: '聯繫 n8n 企業方案 →',
+      ctaUrl: 'https://n8n.io/cloud/',
+      ctaOutline: true
+    });
+    plans.push({
+      name: 'AutoDev AI 客製化開發',
+      price: 'NT$15,000 起',
+      tag: null,
+      recommended: false,
+      features: ['台灣在地服務', '完整需求分析', 'LINE Bot 整合', 'AI 客服全套方案', '維運支援'],
+      ctaText: '查看服務方案 →',
+      ctaUrl: 'https://autodev-ai.com/services.html',
+      ctaOutline: true
+    });
+  }
+  return plans;
+}
+
+function calculate() {
+  // Get inputs
+  const industry = document.querySelector('input[name="industry"]:checked');
+  const employees = parseInt(document.getElementById('emp-slider').value);
+  const hoursPerWeek = parseInt(document.getElementById('hours-slider').value);
+  const salary = parseInt(document.getElementById('salary-slider').value);
+  const autoRate = parseInt(document.getElementById('autoRate-slider').value) / 100;
+
+  // Compute
+  const hourlyRate = salary / 176; // 22 days * 8 hours
+  const totalManualHoursPerMonth = employees * hoursPerWeek * 4.3;
+  const savedHoursPerMonth = Math.round(totalManualHoursPerMonth * autoRate);
+  const savedCostPerMonth = Math.round(savedHoursPerMonth * hourlyRate);
+  const annualSavings = savedCostPerMonth * 12;
+
+  // Determine tool cost based on employees
+  let toolCostNTD;
+  let toolName;
+  if (employees <= 3) {
+    toolCostNTD = 800; // ~US$24 n8n cloud
+    toolName = 'n8n Cloud 入門';
+  } else if (employees <= 15) {
+    toolCostNTD = 700; // ~US$12 DO VPS
+    toolName = 'DO VPS + n8n 自架';
+  } else {
+    toolCostNTD = 1800; // ~US$50 cloudways
+    toolName = 'Cloudways 管理型';
+  }
+
+  const paybackMonths = savedCostPerMonth > 0 ? Math.ceil(toolCostNTD / savedCostPerMonth) : 999;
+
+  // Display results
+  document.getElementById('res-savings').textContent = 'NT$' + savedCostPerMonth.toLocaleString();
+  document.getElementById('res-hours').textContent = savedHoursPerMonth;
+  document.getElementById('res-annual').textContent = 'NT$' + Math.round(annualSavings / 10000) + '萬';
+  document.getElementById('res-payback').textContent = paybackMonths >= 12 ? '12+' : (paybackMonths <= 1 ? '<1' : paybackMonths);
+
+  // ROI table
+  const tbody = document.getElementById('roi-table-body');
+  tbody.innerHTML = '';
+  const periods = [
+    { label: '第1個月', months: 1 },
+    { label: '第3個月', months: 3 },
+    { label: '第6個月', months: 6 },
+    { label: '第1年', months: 12 },
+    { label: '第2年', months: 24 },
+    { label: '第3年', months: 36 }
+  ];
+  periods.forEach(p => {
+    const totalCost = toolCostNTD * p.months;
+    const totalSaved = savedCostPerMonth * p.months;
+    const net = totalSaved - totalCost;
+    const row = document.createElement('tr');
+    row.innerHTML = `
+      <td>${p.label}</td>
+      <td>NT$${totalCost.toLocaleString()}</td>
+      <td>NT$${totalSaved.toLocaleString()}</td>
+      <td class="${net >= 0 ? 'positive' : 'negative'}">${net >= 0 ? '+' : ''}NT$${net.toLocaleString()}</td>
+    `;
+    tbody.appendChild(row);
+  });
+
+  // Plan cards
+  const plans = getPlans(employees, savedCostPerMonth);
+  const planCards = document.getElementById('plan-cards');
+  planCards.innerHTML = '';
+  plans.forEach(plan => {
+    const card = document.createElement('div');
+    card.className = 'plan-card' + (plan.recommended ? ' recommended' : '');
+    card.innerHTML = `
+      ${plan.tag ? `<span class="plan-badge">${plan.tag}</span>` : ''}
+      <h3>${plan.name}</h3>
+      <div class="plan-price">${plan.price}</div>
+      <ul>
+        ${plan.features.map(f => `<li>${f}</li>`).join('')}
+      </ul>
+      <a href="${plan.ctaUrl}" target="_blank" rel="noopener" class="plan-cta ${plan.ctaOutline ? 'outline' : ''}">${plan.ctaText}</a>
+    `;
+    planCards.appendChild(card);
+  });
+
+  // Suggestions
+  const industryKey = industry ? industry.value : 'other';
+  const suggestions = industrySuggestions[industryKey] || industrySuggestions.other;
+  const sugDiv = document.getElementById('suggestions');
+  sugDiv.innerHTML = suggestions.map(s => `
+    <div style="display:flex;gap:1rem;align-items:flex-start;padding:1rem;background:#f0f9ff;border-radius:10px;border:1px solid #bae6fd;">
+      <span style="font-size:2rem;">${s.icon}</span>
+      <div>
+        <strong style="color:#0284c7;">${s.title}</strong>
+        <p style="font-size:.88rem;color:#374151;margin-top:.25rem;">${s.desc}</p>
+      </div>
+    </div>
+  `).join('');
+
+  // Show results
+  document.getElementById('results').style.display = 'block';
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+// Initialize slider displays
+document.addEventListener('DOMContentLoaded', () => {
+  updateSlider('emp-slider', 'emp-val', val => val + ' 人');
+  updateSlider('hours-slider', 'hours-val', val => val + ' 小時');
+  updateSlider('salary-slider', 'salary-val', val => 'NT$' + Number(val).toLocaleString());
+  updateSlider('autoRate-slider', 'autoRate-val', val => val + '%');
+});
+</script>
+</body>
+</html>
