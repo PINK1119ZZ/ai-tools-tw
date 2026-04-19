@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明，台灣開發者完整教學</title>
+<meta name="description" content="用 Claude Code 燒錢不自知？ccusage（4800+ GitHub ⭐）免費 CLI 追蹤 Token 費用，Claudoscope macOS 原生 App 瀏覽 Session 記錄。2026 最完整中文教學，台灣開發者必裝。">
+<meta name="keywords" content="ccusage, Claudoscope, Claude Code 成本, Claude Code 費用追蹤, Claude Code token 使用量, claude code 台灣, AI 成本控制, Claude Pro Max 費用, Claude Code 教學">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">
+<!-- Open Graph -->
+<meta property="og:title" content="Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明">
+<meta property="og:description" content="你知道自己每天用 Claude Code 燒了多少錢嗎？ccusage CLI + Claudoscope macOS App，兩款免費工具讓成本完全透明。台灣開發者完整教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">
+<meta property="og:locale" content="zh_TW">
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明",
+  "description": "ccusage 和 Claudoscope 是兩款免費開源工具，幫助開發者追蹤 Claude Code Token 消耗與費用，台灣開發者完整教學。",
+  "datePublished": "2026-04-19",
+  "dateModified": "2026-04-19",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<style>
+.article-hero{background:linear-gradient(135deg,#0a0a1a 0%,#1a1040 40%,#0d2b1a 100%);padding:8rem 2rem 4rem;text-align:center;}
+.article-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;max-width:900px;margin:0 auto 1.2rem;line-height:1.3;}
+.article-hero .subtitle{color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:700px;margin:0 auto 2rem;}
+.article-meta{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.tag-pill{background:rgba(16,185,129,0.25);color:#6ee7b7;padding:4px 12px;border-radius:20px;font-size:0.8rem;border:1px solid rgba(16,185,129,0.35);}
+.article-body{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem;}
+.article-body h2{font-size:1.6rem;color:#1a202c;margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid #e2e8f0;}
+.article-body h3{font-size:1.2rem;color:#2d3748;margin:2rem 0 0.8rem;}
+.article-body p{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;}
+.article-body ul,ol{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;padding-left:1.5rem;}
+.article-body li{margin-bottom:0.5rem;}
+.highlight-box{background:linear-gradient(135deg,#10b98115,#065f4615);border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.highlight-box strong{color:#059669;}
+.warning-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.warning-box strong{color:#c2410c;}
+.info-box{background:linear-gradient(135deg,#eff6ff,#f0fdf4);border:1px solid #bfdbfe;border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.compare-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.95rem;}
+.compare-table th{background:linear-gradient(135deg,#065f46,#1e3a5f);color:#fff;padding:12px 16px;text-align:left;}
+.compare-table td{padding:10px 16px;border-bottom:1px solid #e2e8f0;color:#4a5568;}
+.compare-table tr:nth-child(even){background:#f8fafc;}
+.compare-table tr:hover{background:#f0fdf4;}
+.score-card{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;margin:2rem 0;}
+.score-item{background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1px solid #86efac;border-radius:12px;padding:1.2rem;text-align:center;}
+.score-item .score-num{font-size:2rem;font-weight:900;color:#059669;}
+.score-item .score-label{color:#6b7280;font-size:0.85rem;margin-top:4px;}
+.code-block{background:#1a1a2e;border-radius:12px;padding:1.5rem;margin:1.5rem 0;overflow-x:auto;}
+.code-block code{color:#e2e8f0;font-family:'Courier New',monospace;font-size:0.9rem;line-height:1.7;white-space:pre;}
+.code-block .comment{color:#6ee7b7;}
+.step-box{background:#f8fafc;border-left:4px solid #10b981;border-radius:0 12px 12px 0;padding:1.2rem 1.5rem;margin:1.5rem 0;}
+.step-box strong{color:#065f46;}
+.cta-section{background:linear-gradient(135deg,#0a0a1a 0%,#1a1040 50%,#0d2b1a 100%);border-radius:16px;padding:2.5rem;margin:2.5rem 0;text-align:center;}
+.cta-section h3{color:#fff;margin-bottom:0.5rem;font-size:1.3rem;}
+.cta-section p{color:rgba(255,255,255,0.75);margin-bottom:1.5rem;font-size:0.95rem;}
+.cta-btn{display:inline-block;background:#fff;color:#065f46;font-weight:700;padding:14px 32px;border-radius:50px;text-decoration:none;font-size:1rem;transition:transform .2s,box-shadow .2s;}
+.cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px rgba(0,0,0,0.3);}
+.dual-tool-banner{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;}
+@media(max-width:600px){.dual-tool-banner{grid-template-columns:1fr;}}
+.tool-card{background:#f8fafc;border:2px solid #e2e8f0;border-radius:14px;padding:1.5rem;text-align:center;}
+.tool-card.ccusage{border-color:rgba(16,185,129,0.4);}
+.tool-card.claudoscope{border-color:rgba(99,102,241,0.4);}
+.tool-card .tool-icon{font-size:2.5rem;margin-bottom:0.5rem;}
+.tool-card h4{color:#1a202c;margin:0.5rem 0;font-size:1.1rem;}
+.tool-card p{color:#6b7280;font-size:0.9rem;margin:0;}
+.toc{background:#f8fafc;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem 2rem;margin:2rem 0;}
+.toc h4{color:#2d3748;margin:0 0 0.8rem;}
+.toc ol{margin:0;padding-left:1.2rem;}
+.toc li{color:#6b7280;font-size:0.95rem;margin-bottom:0.4rem;}
+.toc a{color:#059669;text-decoration:none;}
+.toc a:hover{text-decoration:underline;}
+.verdict-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin:2rem 0;}
+@media(max-width:600px){.verdict-grid{grid-template-columns:1fr;}}
+.verdict-card{border-radius:14px;padding:1.5rem;}
+.verdict-card.pro{background:linear-gradient(135deg,#f0fdf4,#dcfce7);border:1px solid #86efac;}
+.verdict-card.con{background:linear-gradient(135deg,#fef2f2,#fee2e2);border:1px solid #fca5a5;}
+.verdict-card h4{font-size:1rem;margin:0 0 0.8rem;}
+.verdict-card.pro h4{color:#065f46;}
+.verdict-card.con h4{color:#991b1b;}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a><div class="nav-links"><a href="/ai-tools-tw/blog/">評測</a><a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a></div></div></nav>
+
+<section class="article-hero">
+<div class="tag-pill" style="display:inline-block;margin-bottom:1.5rem;">💰 成本管理</div>
+<h1>Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明</h1>
+<p class="subtitle">你上個月用 Claude Code 花了多少錢？說不出來？這兩款免費開源工具，讓每一顆 Token 的去向一目了然。</p>
+<div class="article-meta">
+  <span>📅 2026-04-19</span>
+  <span>⏱️ 閱讀約 12 分鐘</span>
+  <span>👤 AI Tools TW</span>
+  <span class="tag-pill">ccusage · Claudoscope · Claude Code</span>
+</div>
+</section>
+
+<article class="article-body">
+
+<div class="toc">
+<h4>📋 文章目錄</h4>
+<ol>
+  <li><a href="#problem">Claude Code 成本黑箱問題</a></li>
+  <li><a href="#ccusage">ccusage：4800+ ⭐ 的病毒級成本追蹤 CLI</a></li>
+  <li><a href="#ccusage-install">ccusage 安裝與使用教學（5 分鐘上手）</a></li>
+  <li><a href="#claudoscope">Claudoscope：macOS 原生 Session 分析 App</a></li>
+  <li><a href="#claudoscope-install">Claudoscope 安裝與功能教學</a></li>
+  <li><a href="#compare">ccusage vs Claudoscope：哪個適合你？</a></li>
+  <li><a href="#cost-optimize">台灣開發者 Claude Code 省錢 5 招</a></li>
+  <li><a href="#verdict">總結與推薦</a></li>
+</ol>
+</div>
+
+<h2 id="problem">😱 Claude Code 成本黑箱問題：你真的知道自己燒了多少？</h2>
+
+<p>如果你是 Claude Code 的重度用戶，你可能有過這樣的經驗：某天登入信用卡帳單，看到一筆你完全想不起來的 AI 費用。或者，你一直在用 Claude Pro/Max 方案，卻不知道自己每天消耗了多少 Token、哪些任務最燒錢、訂閱方案有沒有用划算。</p>
+
+<p>這不是個別現象。在 Reddit r/ClaudeAI 和 r/ClaudeCode 社群，「搞不清楚 Claude Code 費用」是最常見的抱怨之一。根據社群數據，Claude Code 重度用戶平均每天花費約 <strong>$6 美元（API 計費）</strong>，但每個月看到帳單時往往大吃一驚。更讓人崩潰的是：Claude 的企業 API 後台根本不提供每個工作階段的詳細費用分解。</p>
+
+<div class="warning-box">
+<strong>⚠️ 真實案例：</strong>社群有用戶分享，在 Claude Max 方案下一個月 AI coding 任務消耗的 Token 換算成 API 費用高達 <strong>$8,000+ 美元</strong>。雖然訂閱制讓他省了一大筆，但如果不追蹤，你根本不知道自己用了多少、哪些 workflow 最耗費資源。
+</div>
+
+<p>好消息是：開源社群已經造好輪子了。今天介紹兩款免費工具，完美互補，解決 Claude Code 成本透明化問題：</p>
+
+<div class="dual-tool-banner">
+  <div class="tool-card ccusage">
+    <div class="tool-icon">📊</div>
+    <h4>ccusage</h4>
+    <p>命令列 CLI 工具<br>Token 費用分析神器<br>4800+ GitHub ⭐ 病毒級爆紅</p>
+  </div>
+  <div class="tool-card claudoscope">
+    <div class="tool-icon">🔭</div>
+    <h4>Claudoscope</h4>
+    <p>macOS 原生 App<br>Session 瀏覽 + 全文搜尋<br>MIT 開源，完全離線</p>
+  </div>
+</div>
+
+<h2 id="ccusage">📊 ccusage：4800+ ⭐ 的病毒級成本追蹤 CLI</h2>
+
+<h3>這是什麼？</h3>
+
+<p><strong>ccusage</strong> 是一款開源命令列工具，讀取 Claude Code 在本機儲存的 JSONL 工作階段檔案（位於 <code>~/.claude/projects/</code>），分析你的 Token 消耗量並換算成 USD 費用。不需要連線、不需要 API Key、不傳送任何資料到外部伺服器——一切都在你自己的機器上運算。</p>
+
+<p>它在 2026 年初爆紅，GitHub 在短短幾週內衝到 4800+ ⭐，YouTube 甚至有影片專門介紹「那些每月燒 $8000+ token 的人的 ccusage 報告」。核心吸引力很簡單：<strong>你終於可以看到 Claude Code 帳單的真相</strong>。</p>
+
+<div class="highlight-box">
+<strong>💡 ccusage 如何運作：</strong><br>
+Claude Code 在每次對話時，會將完整的 Token 使用紀錄寫入本機 JSONL 檔案（位於 <code>~/.claude/projects/&lt;project-hash&gt;/</code>）。ccusage 解析這些檔案，對照 Anthropic 公開的定價表（Opus、Sonnet、Haiku 各不同），計算出你的實際或等效費用。完全本地執行，無需 API 呼叫。
+</div>
+
+<h3>ccusage 核心功能</h3>
+
+<ul>
+  <li><strong>📅 每日報告（Daily）：</strong>按日期彙整 Token 消耗與費用，一眼看出哪天最燒錢</li>
+  <li><strong>📆 每週報告（Weekly）：</strong>以週為單位追蹤使用模式，可自訂週起始日</li>
+  <li><strong>📈 每月報告（Monthly）：</strong>月度費用分析，和訂閱費用比較，算出實際划算程度</li>
+  <li><strong>💬 Session 報告：</strong>每個對話工作階段的費用細分，找出最耗費的任務</li>
+  <li><strong>⏰ 5 小時 Block 監控：</strong>追蹤 Claude 的 5 小時計費視窗，避免突破限額</li>
+  <li><strong>🤖 Model 追蹤：</strong>分別顯示 Opus / Sonnet / Haiku 各自的消耗</li>
+  <li><strong>🔄 Cache 支援：</strong>分別追蹤 cache creation 和 cache read Token（省錢關鍵）</li>
+  <li><strong>📤 JSON 輸出：</strong>匯出結構化資料，方便自建 Dashboard 或串接其他工具</li>
+  <li><strong>🌐 離線模式：</strong>使用預建定價資料，不需要網路連線</li>
+</ul>
+
+<!-- CTA 1: DataCamp (AI/數據課程) -->
+<div class="cta-section">
+<h3>🎓 想系統學習 AI 開發最佳實踐？</h3>
+<p>DataCamp 提供 Claude Code、LLM 工程、AI 成本優化的完整課程路徑，台灣開發者最愛的技術學習平台</p>
+<a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank">🚀 免費試用 DataCamp</a>
+</div>
+
+<h2 id="ccusage-install">⚙️ ccusage 安裝與使用教學（5 分鐘上手）</h2>
+
+<h3>安裝方式</h3>
+
+<p>ccusage 透過 npm 安裝，前提是你已經有 Node.js 環境（Claude Code 需要，所以你應該已有）：</p>
+
+<div class="code-block"><code><span class="comment"># 全域安裝（推薦）</span>
+npm install -g ccusage
+
+<span class="comment"># 或使用 npx 直接執行（不用安裝）</span>
+npx ccusage</code></div>
+
+<h3>基本指令速查</h3>
+
+<div class="code-block"><code><span class="comment"># 每日費用報告（最常用）</span>
+ccusage daily
+
+<span class="comment"># 每月費用報告</span>
+ccusage monthly
+
+<span class="comment"># 每週費用報告</span>
+ccusage weekly
+
+<span class="comment"># 每個 Session 的費用細分</span>
+ccusage session
+
+<span class="comment"># 即時監控（即時更新目前 Session）</span>
+ccusage monitor
+
+<span class="comment"># 匯出 JSON 格式</span>
+ccusage daily --json
+
+<span class="comment"># 查看特定日期範圍</span>
+ccusage daily --since 2026-04-01 --until 2026-04-30</code></div>
+
+<h3>典型輸出長這樣</h3>
+
+<div class="code-block"><code>Date         Input Tokens    Output Tokens   Cache Read   Cost (USD)
+-----------  -------------   -------------   ----------   ----------
+2026-04-18   2,340,521       187,432         4,521,000    $8.24
+2026-04-17   1,890,033       142,100         3,890,000    $6.71
+2026-04-16   3,120,450       221,000         5,100,000    $11.35
+...
+Total        7,350,004       550,532         13,511,000   $26.30</code></div>
+
+<div class="highlight-box">
+<strong>💡 台灣開發者注意：</strong>費用欄位顯示的是 <strong>API 等效費用</strong>（依照 pay-per-token 定價計算），不是你實際付的訂閱費。如果你是 Claude Pro（$20/月）或 Max（$100-200/月）用戶，這個數字讓你知道「訂閱方案幫你省了多少錢」，非常有參考價值。
+</div>
+
+<h3>進階：5 小時 Block 監控（防止突然斷線）</h3>
+
+<p>Claude Pro/Max 有「5 小時計費視窗」限制。超過限制後，Claude 會暫停回應，讓很多開發者在衝刺任務到一半時突然斷線。ccusage 的 Monitor 模式可以即時顯示你在當前視窗已用了多少 %，提早預警：</p>
+
+<div class="code-block"><code><span class="comment"># 即時監控，每 30 秒更新一次</span>
+ccusage monitor
+
+<span class="comment"># 輸出範例：</span>
+Current Block Usage: 67.3% (5-hour window)
+Estimated remaining: ~23 minutes
+Active model: claude-sonnet-4-6
+Current session cost: $2.14</code></div>
+
+<h3>ccusage 評分</h3>
+
+<div class="score-card">
+  <div class="score-item"><div class="score-num">9.5</div><div class="score-label">易用性</div></div>
+  <div class="score-item"><div class="score-num">9.8</div><div class="score-label">功能完整度</div></div>
+  <div class="score-item"><div class="score-num">10</div><div class="score-label">隱私安全</div></div>
+  <div class="score-item"><div class="score-num">9.0</div><div class="score-label">台灣適用性</div></div>
+</div>
+
+<!-- CTA 2: Gumroad Claude Code Pack -->
+<div class="cta-section" style="background:linear-gradient(135deg,#1a0533 0%,#2d1b69 50%,#0f172a 100%);">
+<h3>🎯 Claude Code 進階攻略包</h3>
+<p>$29 完整的 Claude Code 工作流、Prompt 模板、成本優化技巧集，台灣開發者實戰精華</p>
+<a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" style="background:#a855f7;color:#fff;" rel="noopener sponsored" target="_blank">💜 購買 Claude Code Pack（$29）</a>
+</div>
+
+<h2 id="claudoscope">🔭 Claudoscope：macOS 原生的 Session 分析 App</h2>
+
+<h3>這是什麼？</h3>
+
+<p><strong>Claudoscope</strong> 是一款 macOS 原生 Menu Bar App，用 Swift/SwiftUI 打造，解決「我有幾千個 Claude Code Sessions，完全找不到」的問題。它讀取 <code>~/.claude/projects/</code> 中的 JSONL 工作階段檔案，提供圖形介面讓你瀏覽、搜尋、分析每個對話。</p>
+
+<p>跟 ccusage 的差異在定位：ccusage 是聚焦在「費用分析」，Claudoscope 更像是一個「Claude Code Session 管理器」——你可以搜尋特定對話內容、查看工具調用記錄、偵測是否有 API Key 暴露的安全問題。</p>
+
+<h3>Claudoscope 核心功能</h3>
+
+<ul>
+  <li><strong>🗂️ Session 瀏覽器：</strong>圖形介面瀏覽所有歷史 Claude Code 工作階段，按日期/專案分組</li>
+  <li><strong>🔍 全文搜尋：</strong>搜尋所有 Sessions 的完整對話內容（包含工具輸出），快速找到你要的程式碼片段</li>
+  <li><strong>💰 Token 與費用分析：</strong>每個 Session 的 Token 消耗量和費用估算</li>
+  <li><strong>🔐 即時 Secret 偵測：</strong>掃描 Sessions 中是否有暴露的 API Key、密碼、Token（44 條規則）</li>
+  <li><strong>🏥 Config 健康檢查：</strong>分析 Claude Code 設定檔，提供 44 條 linting 規則建議</li>
+  <li><strong>🧩 工具調用顯示：</strong>完整顯示每次 Tool Call 的輸入輸出，debug 神器</li>
+  <li><strong>🧠 Thinking Block 支援：</strong>顯示 Claude Extended Thinking 的思考過程（如有開啟）</li>
+  <li><strong>⚙️ Plugin/Skill/Hook 視覺化：</strong>呈現 Claude Code 的 Agent Skills、Memory、Plugin 設定</li>
+  <li><strong>🔒 完全離線：</strong>零 API 呼叫、零遙測、完全本地執行</li>
+</ul>
+
+<div class="info-box">
+<strong>📦 技術規格：</strong>
+<ul style="margin:0.5rem 0 0;">
+  <li>語言：Swift / SwiftUI</li>
+  <li>安裝：Homebrew Cask</li>
+  <li>License：MIT 開源</li>
+  <li>平台：macOS only（macOS 13+ Ventura 以上）</li>
+  <li>GitHub：<code>cordwainersmith/claudoscope</code></li>
+</ul>
+</div>
+
+<!-- CTA 3: DigitalOcean (雲端主機) -->
+<div class="cta-section" style="background:linear-gradient(135deg,#001f3f 0%,#003d7a 50%,#001a33 100%);">
+<h3>☁️ 把 Claude Code 工作流部署到雲端？</h3>
+<p>DigitalOcean 提供專為開發者設計的 VPS，$6/月起，自架 CI/CD + Claude Code 自動化工作流首選</p>
+<a href="https://m.do.co/c/6121a295f624" class="cta-btn" style="background:#0069ff;color:#fff;" rel="noopener sponsored" target="_blank">🚀 DigitalOcean 免費試用 $200</a>
+</div>
+
+<h2 id="claudoscope-install">🛠️ Claudoscope 安裝與功能教學</h2>
+
+<h3>Homebrew 安裝（推薦）</h3>
+
+<div class="code-block"><code><span class="comment"># 加入 Claudoscope 的 Homebrew tap</span>
+brew tap cordwainersmith/tap
+
+<span class="comment"># 安裝 Claudoscope（作為 macOS App）</span>
+brew install --cask claudoscope
+
+<span class="comment"># 安裝完成後，在 Applications 資料夾找到並開啟</span>
+<span class="comment"># 或直接從 Launchpad 搜尋 Claudoscope</span></code></div>
+
+<p>安裝完成後，Claudoscope 會出現在 macOS Menu Bar（右上角）。點擊圖示即可開啟 App，它會自動掃描 <code>~/.claude/projects/</code> 下的所有 Sessions，<strong>不需要任何設定</strong>。</p>
+
+<div class="step-box">
+<strong>第一次開啟會看到：</strong>
+<ol>
+<li>左側面板：按專案和日期分組的所有 Session 列表</li>
+<li>右側主區：選取 Session 後顯示完整對話，包含工具調用</li>
+<li>頂部工具列：全文搜尋框、篩選器、Token 統計</li>
+<li>底部 Status Bar：Token 總計、費用估算</li>
+</ol>
+</div>
+
+<h3>最實用功能：全文搜尋</h3>
+
+<p>如果你的 Claude Code Sessions 累積了幾百甚至幾千個，「找那個兩週前解決 Django ORM 問題的對話」幾乎是不可能的任務。Claudoscope 的全文搜尋解決了這個問題：</p>
+
+<div class="code-block"><code><span class="comment"># 在 Claudoscope 搜尋框輸入關鍵字：</span>
+<span class="comment"># - 搜尋程式碼片段：async def get_user</span>
+<span class="comment"># - 搜尋工具名稱：write_file</span>
+<span class="comment"># - 搜尋錯誤訊息：TypeError cannot read</span>
+<span class="comment"># - 搜尋你的提問：如何設定 nginx</span>
+
+<span class="comment"># 搜尋範圍涵蓋：</span>
+<span class="comment"># ✓ 對話內容（你的問題 + Claude 的回答）</span>
+<span class="comment"># ✓ 工具調用的輸入/輸出</span>
+<span class="comment"># ✓ Claude 的 Thinking blocks（如有）</span>
+<span class="comment"># ✓ 系統提示詞（CLAUDE.md 等）</span></code></div>
+
+<h3>安全功能：Secret 即時偵測</h3>
+
+<p>這是 Claudoscope 最獨特的功能之一。它內建 44 條規則，掃描你的 Claude Code Sessions 中是否不小心貼上了 API Key、資料庫密碼、JWT Token 等敏感資訊。如果偵測到問題，會立即在介面上警告你。</p>
+
+<p>對於台灣的 AI 開發者來說，這個功能特別重要——Claude Code 在協助你寫程式時，常常需要看到設定檔、環境變數等，稍不注意就可能把 AWS Key 或 Stripe Secret 暴露在 Session 記錄中。</p>
+
+<h3>Claudoscope 評分</h3>
+
+<div class="score-card">
+  <div class="score-item"><div class="score-num">9.0</div><div class="score-label">易用性</div></div>
+  <div class="score-item"><div class="score-num">9.5</div><div class="score-label">功能完整度</div></div>
+  <div class="score-item"><div class="score-num">9.8</div><div class="score-label">安全功能</div></div>
+  <div class="score-item"><div class="score-num">8.5</div><div class="score-label">台灣適用性*</div></div>
+</div>
+
+<p style="font-size:0.85rem;color:#9ca3af;">* 僅支援 macOS，Windows/Linux 用戶請用 ccusage</p>
+
+<h2 id="compare">⚖️ ccusage vs Claudoscope：哪個適合你？</h2>
+
+<table class="compare-table">
+<thead>
+<tr><th>功能</th><th>ccusage</th><th>Claudoscope</th></tr>
+</thead>
+<tbody>
+<tr><td><strong>主要用途</strong></td><td>費用分析 + 成本報告</td><td>Session 管理 + 全文搜尋</td></tr>
+<tr><td><strong>平台支援</strong></td><td>macOS / Linux / Windows</td><td>macOS only</td></tr>
+<tr><td><strong>介面類型</strong></td><td>命令列（CLI）</td><td>原生 GUI App（Menu Bar）</td></tr>
+<tr><td><strong>費用追蹤</strong></td><td>✅ 詳細（日/週/月/Session）</td><td>✅ 基本（Session 層級）</td></tr>
+<tr><td><strong>全文搜尋 Sessions</strong></td><td>❌</td><td>✅ 支援工具調用內容</td></tr>
+<tr><td><strong>即時監控</strong></td><td>✅（Monitor 模式）</td><td>❌</td></tr>
+<tr><td><strong>Secret 偵測</strong></td><td>❌</td><td>✅（44 條規則）</td></tr>
+<tr><td><strong>Config 健康檢查</strong></td><td>❌</td><td>✅</td></tr>
+<tr><td><strong>5 小時 Block 追蹤</strong></td><td>✅</td><td>❌</td></tr>
+<tr><td><strong>JSON 匯出</strong></td><td>✅</td><td>❌</td></tr>
+<tr><td><strong>安裝方式</strong></td><td>npm install -g ccusage</td><td>brew install --cask claudoscope</td></tr>
+<tr><td><strong>離線使用</strong></td><td>✅</td><td>✅</td></tr>
+<tr><td><strong>License</strong></td><td>MIT</td><td>MIT</td></tr>
+<tr><td><strong>GitHub ⭐</strong></td><td>4800+</td><td>新興（快速成長中）</td></tr>
+</tbody>
+</table>
+
+<div class="info-box">
+<strong>💡 最佳策略：兩個都裝！</strong><br>
+ccusage 和 Claudoscope 功能互補，不是競爭關係。建議：
+<ul>
+<li><strong>每天用 ccusage</strong>：快速檢查昨日費用，監控 5 小時視窗</li>
+<li><strong>需要找舊 Session 時用 Claudoscope</strong>：全文搜尋、查看工具調用記錄</li>
+<li><strong>安全稽核時用 Claudoscope</strong>：定期掃描 Secret 洩露風險</li>
+</ul>
+</div>
+
+<!-- CTA 4: Hahow (線上課程) -->
+<div class="cta-section" style="background:linear-gradient(135deg,#1a0020 0%,#3d0057 50%,#0d0020 100%);">
+<h3>📚 想深入學習 Claude Code 與 AI 開發？</h3>
+<p>Hahow 有繁中 AI 工具實戰課程，從 Claude Code 基礎到進階工作流，台灣講師授課，學費支援台幣付款</p>
+<a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" style="background:#d946ef;color:#fff;" rel="noopener sponsored" target="_blank">🎓 瀏覽 Hahow AI 課程</a>
+</div>
+
+<h2 id="cost-optimize">💡 台灣開發者 Claude Code 省錢 5 招</h2>
+
+<p>有了 ccusage 的數據加持，你可以更精準地優化 Claude Code 使用方式。以下是根據台灣開發者社群整理的 5 個實用省錢技巧：</p>
+
+<h3>1. 善用 Prompt Caching（最重要！）</h3>
+
+<p>Prompt Cache 可以把重複出現的大型系統提示（如 CLAUDE.md、長篇上下文）快取起來，後續呼叫的 cache read 費率只有原始 input token 的 10%。從 ccusage 的報告中，你可以看到 "Cache Read Tokens" 欄位——數值越高，代表你越善用快取。</p>
+
+<div class="code-block"><code><span class="comment"># 優化前（每次都重新輸入 5000 token 的系統提示）：</span>
+Cost per day: $12.50
+
+<span class="comment"># 優化後（善用 prompt cache）：</span>
+Cache Read Tokens: 4,500,000
+Cost per day: $4.20  ← 省了 66%！</code></div>
+
+<h3>2. 用 ccusage 找出「費用怪獸」Session</h3>
+
+<p>執行 <code>ccusage session</code> 列出所有 Session 費用，你往往會發現有幾個 Session 佔了總費用的大多數。這些通常是超長對話、包含大型檔案的任務、或是讓 Claude 反覆讀同一份文件的任務。找到這些後，可以考慮把它們拆成較小的任務。</p>
+
+<h3>3. 依任務選擇合適模型</h3>
+
+<p>從 ccusage 的 model tracking 可以看出，Claude Opus 的費用是 Sonnet 的 5 倍。對於不需要最高智能的日常任務（如格式轉換、基本程式碼補全），明確指定使用 Sonnet 就好：</p>
+
+<div class="code-block"><code><span class="comment"># 在 CLAUDE.md 中設定預設 model 策略：</span>
+## Model Selection Guide
+- Complex architecture decisions: Use Opus 4.6
+- Regular coding tasks: Use Sonnet 4.6 (default)
+- Simple formatting/refactoring: Use Haiku 3.5</code></div>
+
+<h3>4. 訂閱 vs 按量計費的選擇</h3>
+
+<p>如果你用 ccusage 算出的「等效 API 費用」每月超過 $60，Claude Max ($100/月) 通常比 API 按量計費划算。如果每月等效費用低於 $20，Pro ($20/月) 就夠了；如果低於 $10，不訂閱直接用 API 反而更省。</p>
+
+<h3>5. 清理長 Session，從短 Context 開始</h3>
+
+<p>Claude Code 的 Token 費用和 Context Window 大小正相關。一個已經延續幾十個小時的超長 Session，每次呼叫都要傳送大量歷史記錄。定期用 <code>/compact</code> 指令整理對話、或開新 Session，可以顯著降低成本。ccusage 的 Monitor 模式會告訴你當前 Session 的 context 大小，超過一定門檻就考慮開新 Session。</p>
+
+<h2 id="verdict">🏁 總結：台灣 Claude Code 用戶必裝組合</h2>
+
+<p>如果你是 Claude Code 的日常使用者，無論訂閱方案還是 API 計費，以下是我的推薦：</p>
+
+<div class="verdict-grid">
+  <div class="verdict-card pro">
+    <h4>✅ ccusage 優點</h4>
+    <ul>
+      <li>跨平台（Windows/Linux/macOS）</li>
+      <li>安裝超簡單（npm install）</li>
+      <li>費用分析最詳細</li>
+      <li>即時監控防止突破限額</li>
+      <li>4800+ ⭐ 社群活躍、持續更新</li>
+    </ul>
+  </div>
+  <div class="verdict-card con">
+    <h4>⚠️ ccusage 限制</h4>
+    <ul>
+      <li>純命令列，非技術用戶學習曲線</li>
+      <li>無法搜尋 Session 對話內容</li>
+      <li>無安全掃描功能</li>
+    </ul>
+  </div>
+</div>
+
+<div class="verdict-grid">
+  <div class="verdict-card pro">
+    <h4>✅ Claudoscope 優點</h4>
+    <ul>
+      <li>圖形介面，直覺好用</li>
+      <li>全文搜尋所有 Sessions</li>
+      <li>Secret 偵測保護安全</li>
+      <li>完整工具調用記錄</li>
+      <li>Config 健康檢查</li>
+    </ul>
+  </div>
+  <div class="verdict-card con">
+    <h4>⚠️ Claudoscope 限制</h4>
+    <ul>
+      <li>macOS only，Windows/Linux 用不了</li>
+      <li>費用分析不如 ccusage 詳細</li>
+      <li>相對較新，社群規模尚小</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box">
+<strong>🎯 最終建議：</strong><br>
+<strong>macOS 用戶：</strong>兩個都裝，互補使用。ccusage 日常監控費用，Claudoscope 管理和搜尋歷史 Sessions。<br><br>
+<strong>Windows / Linux 用戶：</strong>目前只有 ccusage 可用。如果需要 Session 搜尋功能，可以參考 <code>yanicklandry/claude-code-history-viewer</code>（Electron App，跨平台但功能較陽春）。<br><br>
+<strong>訂閱費用已超過 $100/月的重度用戶：</strong>ccusage 的 model tracking + session breakdown 幾乎是必備，可以準確找出費用瓶頸並優化工作流。
+</div>
+
+<p>這兩款工具都免費開源（MIT），沒有任何理由不裝。就算你已經在用 Claude Pro/Max 訂閱方案，了解自己每天的 Token 消耗模式，才能真正知道錢花在哪裡、值不值得。</p>
+
+<p>延伸閱讀：</p>
+<ul>
+  <li><a href="/ai-tools-tw/blog/agentshield-ai-agent-observability-2026.html">AgentShield 評測：AI Agent 的可觀測性工具（包含成本追蹤）</a></li>
+  <li><a href="/ai-tools-tw/blog/openowl-macos-mcp-automation-2026.html">OpenOwl 評測：用 Claude 自動化你的 Mac 操作</a></li>
+  <li><a href="/ai-tools-tw/blog/ai-coding-tools.html">2026 最佳 AI 程式工具完整比較</a></li>
+  <li><a href="/ai-tools-tw/blog/cursor-3-review-2026.html">Cursor 3 評測：AI 程式碼編輯器新標竿</a></li>
+</ul>
+
+<!-- CTA 5: Cloudways (雲端主機 高單價) -->
+<div class="cta-section" style="background:linear-gradient(135deg,#0a1628 0%,#1e3a5f 50%,#0a0f1e 100%);">
+<h3>🚀 準備部署你的 AI 工具到生產環境？</h3>
+<p>Cloudways 受管雲端主機，比傳統 VPS 更快部署，適合 AI 工具、RAG 應用、自動化工作流上線</p>
+<a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn" style="background:#00b4d8;color:#fff;" rel="noopener sponsored" target="_blank">☁️ Cloudways 免費試用</a>
+</div>
+
+</article>
+
+<footer style="background:#1a1a2e;color:rgba(255,255,255,0.6);padding:3rem 2rem;text-align:center;">
+<p>© 2026 AI Tools TW · 台灣最完整 AI 工具評測站</p>
+<p style="font-size:0.85rem;margin-top:0.5rem;">本文包含聯盟行銷連結。我們只推薦實際測試過並認為有價值的工具。</p>
+</footer>
+
+</body>
+</html>
