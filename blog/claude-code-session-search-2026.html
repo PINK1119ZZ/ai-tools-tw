@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claude Code Session 搜尋 2026：search-sessions + cc-session，3000 個歷史對話秒找到</title>
+<meta name="description" content="Claude Code session 越積越多找不到？search-sessions（Rust CLI 280ms）+ cc-session（互動式 TUI），2026 最完整中文教學，台灣開發者必裝！含安裝步驟、比較表、5 大實戰場景。">
+<meta name="keywords" content="search-sessions, cc-session, Claude Code session 搜尋, Claude Code 歷史對話, claude resume session, Claude Code 教學 台灣, AI 開發工具 2026, Rust CLI 工具">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-session-search-2026.html">
+<!-- Open Graph -->
+<meta property="og:title" content="Claude Code Session 搜尋 2026：search-sessions + cc-session，3000 個歷史對話秒找到">
+<meta property="og:description" content="用了幾百個 Claude Code session 全忘了在哪？search-sessions 280ms 搜完全部，cc-session 互動式 TUI 一鍵 resume。台灣開發者完整教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-session-search-2026.html">
+<meta property="og:locale" content="zh_TW">
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Code Session 搜尋 2026：search-sessions + cc-session，3000 個歷史對話秒找到",
+  "description": "search-sessions 和 cc-session 是兩款 Rust 打造的免費開源工具，幫助開發者快速搜尋、瀏覽、恢復 Claude Code 歷史 Session，台灣開發者完整教學。",
+  "datePublished": "2026-04-21",
+  "dateModified": "2026-04-21",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<style>
+.article-hero{background:linear-gradient(135deg,#0a0a1a 0%,#1a1040 40%,#0a1f3d 100%);padding:8rem 2rem 4rem;text-align:center;}
+.article-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;max-width:900px;margin:0 auto 1.2rem;line-height:1.3;}
+.article-hero .subtitle{color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:700px;margin:0 auto 2rem;}
+.article-meta{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.tag-pill{background:rgba(99,102,241,0.25);color:#a5b4fc;padding:4px 12px;border-radius:20px;font-size:0.8rem;border:1px solid rgba(99,102,241,0.35);}
+.article-body{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem;}
+.article-body h2{font-size:1.6rem;color:#1a202c;margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid #e2e8f0;}
+.article-body h3{font-size:1.2rem;color:#2d3748;margin:2rem 0 0.8rem;}
+.article-body p{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;}
+.article-body ul,ol{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;padding-left:1.5rem;}
+.article-body li{margin-bottom:0.5rem;}
+.highlight-box{background:linear-gradient(135deg,#6366f115,#4f46e515);border:1px solid rgba(99,102,241,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.highlight-box strong{color:#6366f1;}
+.warning-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.warning-box strong{color:#c2410c;}
+.tip-box{background:linear-gradient(135deg,#10b98115,#065f4615);border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.tip-box strong{color:#059669;}
+.code-block{background:#1e1e2e;border-radius:10px;padding:1.5rem;margin:1.5rem 0;overflow-x:auto;}
+.code-block code{color:#cdd6f4;font-family:'JetBrains Mono','Fira Code',monospace;font-size:0.9rem;line-height:1.7;white-space:pre;}
+.comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.9rem;}
+.comparison-table th{background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;padding:0.75rem 1rem;text-align:left;}
+.comparison-table td{padding:0.75rem 1rem;border-bottom:1px solid #e2e8f0;color:#4a5568;}
+.comparison-table tr:hover td{background:#f8fafc;}
+.comparison-table .yes{color:#059669;font-weight:600;}
+.comparison-table .no{color:#dc2626;}
+.comparison-table .partial{color:#d97706;}
+.cta-block{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;padding:2rem;margin:2.5rem 0;text-align:center;}
+.cta-block h3{color:#fff;margin:0 0 0.5rem;font-size:1.3rem;}
+.cta-block p{color:rgba(255,255,255,0.85);margin:0 0 1.2rem;font-size:0.95rem;}
+.cta-block a.cta-btn{display:inline-block;background:#fff;color:#5b21b6;font-weight:700;padding:0.75rem 2rem;border-radius:30px;text-decoration:none;font-size:1rem;transition:transform .2s;}
+.cta-block a.cta-btn:hover{transform:translateY(-2px);}
+.cta-green{background:linear-gradient(135deg,#059669 0%,#0d9488 100%);}
+.cta-green a.cta-btn{color:#065f46;}
+.cta-blue{background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+.cta-blue a.cta-btn{color:#1e3a8a;}
+.cta-orange{background:linear-gradient(135deg,#ea580c 0%,#dc2626 100%);}
+.cta-orange a.cta-btn{color:#7c2d12;}
+.cta-teal{background:linear-gradient(135deg,#0891b2 0%,#0284c7 100%);}
+.cta-teal a.cta-btn{color:#0c4a6e;}
+.step-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.2rem 1.5rem;margin:1rem 0;}
+.step-box .step-num{display:inline-block;background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;width:28px;height:28px;border-radius:50%;text-align:center;line-height:28px;font-weight:700;font-size:0.85rem;margin-right:0.75rem;}
+.scenario-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.scenario-card h4{color:#1a202c;margin:0 0 0.5rem;font-size:1rem;}
+.scenario-card .tag{display:inline-block;background:#ede9fe;color:#6d28d9;padding:2px 8px;border-radius:4px;font-size:0.75rem;margin-bottom:0.5rem;}
+.score-table{width:100%;border-collapse:collapse;margin:2rem 0;}
+.score-table th{background:#1a202c;color:white;padding:0.75rem 1rem;text-align:left;font-size:0.9rem;}
+.score-table td{padding:0.75rem 1rem;border-bottom:1px solid #e2e8f0;color:#4a5568;font-size:0.9rem;}
+.score-bar{display:inline-block;background:linear-gradient(90deg,#6366f1,#8b5cf6);height:8px;border-radius:4px;vertical-align:middle;margin-right:8px;}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8V2BTMSWF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N8V2BTMSWF');
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a>
+    <div class="nav-links">
+      <a href="/ai-tools-tw/blog/">評測</a>
+      <a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <h1>Claude Code Session 搜尋 2026：search-sessions + cc-session，3000 個歷史對話秒找到</h1>
+  <p class="subtitle">你累積了幾百個 Claude Code session 卻找不到那個關鍵對話？兩款 Rust 打造的免費工具讓你 280ms 內搜遍全部歷史記錄，一鍵 resume 回到當時的情境。</p>
+  <div class="article-meta">
+    <span>📅 2026-04-21</span>
+    <span>⏱ 閱讀約 12 分鐘</span>
+    <span class="tag-pill">Claude Code</span>
+    <span class="tag-pill">開發工具</span>
+    <span class="tag-pill">Rust CLI</span>
+  </div>
+</section>
+
+<article class="article-body">
+
+  <div class="highlight-box">
+    <strong>📌 本文重點</strong><br>
+    你每次用 Claude Code 做的一切，都被儲存在 <code>~/.claude/projects/</code> 裡的 JSONL 檔案。問題是：三天後你想找當初那個「解決 auth bug 的對話」，根本不知道從何找起。<br><br>
+    <strong>search-sessions</strong>（Rust CLI，無需索引，280ms 搜完 1000+ sessions）和 <strong>cc-session</strong>（互動式 TUI，2000+ sessions 500ms 以內），是目前最快最好用的兩款 Claude Code session 管理工具。
+  </div>
+
+  <h2>問題的根源：Claude Code 的 Session 設計</h2>
+
+  <p>如果你已經認真用 Claude Code 工作了幾週，你的 <code>~/.claude/projects/</code> 目錄大概已經長這樣：</p>
+
+  <div class="code-block"><code>~/.claude/projects/
+├── -root-myapp-backend/
+│   ├── 7897c935-2069-4b75-bbad-a3fac62ea59c.jsonl  (480KB)
+│   ├── 3a2b1c0d-...jsonl  (220KB)
+│   └── ... 48 個 session
+├── -root-myapp-frontend/
+│   └── ... 31 個 session
+├── -root-infra/
+│   └── ... 27 個 session
+└── ... 共 38 個專案，766MB，超過 3000 個對話</code></div>
+
+  <p>每個 session 都是一個 UUID 命名的 JSONL 檔案，內容是 JSON Lines 格式的對話記錄。</p>
+
+  <p>你當然記得自己「上週三有一個 Kubernetes RBAC 的討論」，但你完全不知道這個對話在哪個專案目錄、叫什麼 UUID。就算你用 <code>grep</code> 硬幹，1.6GB 的 JSONL 也需要好幾秒，而且你可能連當時用的確切關鍵字都記不清楚。</p>
+
+  <p>這就是 <strong>search-sessions</strong> 和 <strong>cc-session</strong> 要解決的問題。</p>
+
+  <h2>工具一：search-sessions — 閃電搜尋，無須索引</h2>
+
+  <p><a href="https://github.com/sinzin91/search-sessions" target="_blank" rel="noopener">search-sessions</a> 是用 Rust 打造的 CLI 工具，最大特色是：<strong>不需要索引步驟，不需要資料庫，直接搜尋</strong>。</p>
+
+  <h3>核心特性</h3>
+  <ul>
+    <li><strong>Index 搜尋模式</strong>：掃描 session metadata（標題、專案路徑），<strong>18ms</strong> 完成</li>
+    <li><strong>Deep 搜尋模式</strong>：搜尋完整對話內容，使用 ripgrep 加速後約 <strong>280ms</strong></li>
+    <li><strong>原生 Claude Code 整合</strong>：支援設為 <code>/search-sessions</code> slash command，直接在 Claude Code 裡問「找上週的 auth 討論」</li>
+    <li><strong>OpenClaw 支援</strong>：加 <code>--openclaw</code> 旗標可搜尋 OpenClaw agent sessions</li>
+    <li><strong>無外部依賴</strong>：純 Rust 一個 binary，不需要 Python、SQLite、Node.js</li>
+  </ul>
+
+  <h3>安裝方法</h3>
+  <div class="code-block"><code># macOS / Linux（Homebrew）
+brew install sinzin91/tap/search-sessions
+
+# Rust（跨平台）
+cargo install search-sessions
+
+# 加速 deep search（可選，約快 3-5x）
+brew install ripgrep   # macOS
+apt install ripgrep     # Ubuntu/Debian</code></div>
+
+  <h3>基本用法</h3>
+  <div class="code-block"><code># 最基本搜尋（index 模式，18ms）
+search-sessions "kubernetes RBAC"
+
+# 深度搜尋完整對話內容
+search-sessions "docker compose" --deep
+
+# 限定某個專案
+search-sessions "auth" --project myapp
+
+# 時間範圍過濾
+search-sessions "deploy" --since "3 days ago"
+search-sessions "bug" --date today
+search-sessions "refactor" --since "last week"
+
+# 搜尋 OpenClaw sessions
+search-sessions "webhook" --openclaw</code></div>
+
+  <h3>搜尋結果範例</h3>
+  <div class="code-block"><code>❯ search-sessions "auth refactor"
+
+ [1] auth refactor discussion
+ Project: ~/Projects/myapp
+ Date: 2026-01-28 15:30
+ Session: 7897c935-2069-4b75-bbad-a3fac62ea59c
+ Resume: cd ~/Projects/myapp && claude -r 7897c935-2069-4b75-bbad-a3fac62ea59c
+
+ [2] JWT token refresh auth flow
+ Project: ~/Projects/api-service
+ Date: 2026-02-14 09:15
+ Session: 4b2d8f1a-...
+ Resume: cd ~/Projects/api-service && claude -r 4b2d8f1a-...</code></div>
+
+  <p>找到了，直接 copy-paste 那行 <code>Resume:</code> 指令就能無縫接續當時的對話。</p>
+
+  <h3>最強功能：當 Claude Code Slash Command</h3>
+
+  <p>這是 search-sessions 最聰明的設計。你可以把它設為 Claude Code 的 <code>/search-sessions</code> skill，然後直接在 Claude Code 裡說：</p>
+
+  <div class="code-block"><code># 在 Claude Code 裡直接說
+你：search my sessions for that kubernetes RBAC discussion
+
+# Claude Code 會自動執行搜尋，找到相關 session，
+# 並可以直接幫你 resume 那個 session</code></div>
+
+  <p>不需要切換視窗、不需要記指令。這讓 session 搜尋從「中斷工作流的動作」變成「Claude Code 工作流的一部分」。</p>
+
+  <!-- CTA 1：DataCamp AI 課程 -->
+  <div class="cta-block cta-teal">
+    <h3>🎓 想系統學習 AI 開發工具？</h3>
+    <p>DataCamp 提供 Python、AI/ML、LLM 應用完整課程路徑，邊做邊學，技術力快速提升</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank">立即開始學習 →</a>
+  </div>
+
+  <h2>工具二：cc-session — 互動式 TUI，完整 Session 瀏覽器</h2>
+
+  <p><a href="https://github.com/cc-deck/cc-session" target="_blank" rel="noopener">cc-session</a> 走的是另一個路線：<strong>互動式終端 UI（TUI）</strong>，讓你像用文件瀏覽器一樣瀏覽所有 Claude Code sessions。</p>
+
+  <h3>核心特性</h3>
+  <ul>
+    <li><strong>2000+ sessions 在 500ms 內完成掃描</strong>，Rust 速度優勢</li>
+    <li><strong>即時篩選</strong>：直接打字就能過濾，不需要切換模式，支援跨專案名稱、git branch、訊息內容</li>
+    <li><strong>Conversation Viewer</strong>：按 Enter 可以完整重播那個 session，含語法高亮、Markdown 表格渲染、可點擊 URL</li>
+    <li><strong>對話內搜尋</strong>：按 <code>/</code> 在 session 內搜尋，<code>n/N</code> 跳下一個/上一個結果</li>
+    <li><strong>深色/淺色主題自動偵測</strong>，可用 <code>--dark / --light</code> 強制切換</li>
+    <li><strong>跨平台剪貼簿</strong>：macOS 和 Linux（X11/Wayland）均支援，一鍵複製 resume 指令</li>
+  </ul>
+
+  <h3>安裝方法</h3>
+  <div class="code-block"><code># macOS（Homebrew）
+brew install cc-deck/tap/cc-session
+
+# Linux（curl installer）
+curl --proto '=https' --tlsv1.2 -LsSf \
+  https://github.com/cc-deck/cc-session/releases/latest/download/cc-session-installer.sh | sh
+
+# Rust（需要 Rust toolchain）
+cargo install --git https://github.com/cc-deck/cc-session</code></div>
+
+  <h3>基本用法</h3>
+  <div class="code-block"><code># 開啟互動式 session 瀏覽器
+cc-session
+
+# 只顯示最近一週的 sessions
+cc-session --since 7d
+
+# 只顯示最近 20 個 session
+cc-session --last 20
+
+# 強制淺色主題（截圖/投影時好用）
+cc-session --light</code></div>
+
+  <h3>TUI 操作方式</h3>
+  <div class="step-box">
+    <span class="step-num">1</span>
+    <strong>啟動</strong>：輸入 <code>cc-session</code> 後，看到所有 sessions 列表，每行左邊是對話摘要，右邊是專案名稱 + 時間
+  </div>
+  <div class="step-box">
+    <span class="step-num">2</span>
+    <strong>篩選</strong>：直接打字就開始過濾，不需要按任何切換鍵。關鍵字 300ms debounce 後會自動觸發深度搜尋（掃描完整對話內容）
+  </div>
+  <div class="step-box">
+    <span class="step-num">3</span>
+    <strong>查看</strong>：按 <code>Enter</code> 進入 conversation viewer，完整重播那個 session
+  </div>
+  <div class="step-box">
+    <span class="step-num">4</span>
+    <strong>Resume</strong>：按 <code>y</code> 或 <code>c</code> 複製 resume 指令，貼到 terminal 就能繼續那個 session
+  </div>
+  <div class="step-box">
+    <span class="step-num">5</span>
+    <strong>離開</strong>：按 <code>Escape</code> 清除篩選，再按一次 <code>Escape</code> 退出
+  </div>
+
+  <!-- CTA 2：Gumroad Claude Code Pack -->
+  <div class="cta-block cta-orange">
+    <h3>🚀 Claude Code 進階技巧大全</h3>
+    <p>台灣工程師整理的 Claude Code Pack：CLAUDE.md 範本、Multi-Agent 腳本、省錢設定、5 大實戰案例，一次學完</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" rel="noopener sponsored" target="_blank">取得 Claude Code Pack（$29）→</a>
+  </div>
+
+  <h2>search-sessions vs cc-session：詳細比較</h2>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>功能</th>
+        <th>search-sessions</th>
+        <th>cc-session</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>操作介面</strong></td>
+        <td>CLI（命令列）</td>
+        <td>TUI（互動式終端 UI）</td>
+      </tr>
+      <tr>
+        <td><strong>搜尋速度</strong></td>
+        <td class="yes">280ms（deep，with ripgrep）</td>
+        <td class="yes">500ms（2000+ sessions）</td>
+      </tr>
+      <tr>
+        <td><strong>無索引直接搜尋</strong></td>
+        <td class="yes">✅ 是</td>
+        <td class="yes">✅ 是</td>
+      </tr>
+      <tr>
+        <td><strong>時間範圍過濾</strong></td>
+        <td class="yes">✅ --since / --date</td>
+        <td class="yes">✅ --since / --last</td>
+      </tr>
+      <tr>
+        <td><strong>完整 session 重播</strong></td>
+        <td class="no">❌ 不支援</td>
+        <td class="yes">✅ 語法高亮、Markdown 渲染</td>
+      </tr>
+      <tr>
+        <td><strong>對話內搜尋</strong></td>
+        <td class="no">❌ 不支援</td>
+        <td class="yes">✅ / 鍵搜尋，n/N 跳結果</td>
+      </tr>
+      <tr>
+        <td><strong>Claude Code Skill 整合</strong></td>
+        <td class="yes">✅ /search-sessions slash command</td>
+        <td class="no">❌ 無（需切換 terminal）</td>
+      </tr>
+      <tr>
+        <td><strong>OpenClaw 支援</strong></td>
+        <td class="yes">✅ --openclaw</td>
+        <td class="partial">⚠️ 待確認</td>
+      </tr>
+      <tr>
+        <td><strong>其他工具比較</strong></td>
+        <td>vs Copilot Search、aichat</td>
+        <td>vs Claudoscope（macOS App）</td>
+      </tr>
+      <tr>
+        <td><strong>平台支援</strong></td>
+        <td>macOS / Linux</td>
+        <td>macOS / Linux</td>
+      </tr>
+      <tr>
+        <td><strong>安裝方式</strong></td>
+        <td>Homebrew / cargo</td>
+        <td>Homebrew / curl installer / cargo</td>
+      </tr>
+      <tr>
+        <td><strong>費用</strong></td>
+        <td class="yes">免費開源（MIT）</td>
+        <td class="yes">免費開源</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="tip-box">
+    <strong>💡 實戰建議：兩者搭配最好用</strong><br>
+    把 <strong>search-sessions</strong> 設為 Claude Code 的 slash command，用於「我記得有個討論但不知道在哪」的場景。<br>
+    用 <strong>cc-session</strong> 做日常「今天/這週在做什麼」的瀏覽，以及需要重讀完整 session 內容的場景。<br>
+    再搭配 <a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html" style="color:#059669;">ccusage 費用追蹤</a>，就有了完整的 Claude Code 工作流管理工具組。
+  </div>
+
+  <h2>與其他同類工具的完整比較</h2>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>速度</th>
+        <th>依賴項</th>
+        <th>原生 Claude 整合</th>
+        <th>特色</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>search-sessions</strong></td>
+        <td class="yes">280ms</td>
+        <td class="yes">無</td>
+        <td class="yes">✅ Slash command</td>
+        <td>最快、最輕量</td>
+      </tr>
+      <tr>
+        <td><strong>cc-session</strong></td>
+        <td class="yes">500ms</td>
+        <td class="yes">無</td>
+        <td class="no">❌</td>
+        <td>最完整 TUI 體驗</td>
+      </tr>
+      <tr>
+        <td>cc-conversation-search</td>
+        <td class="partial">~500ms</td>
+        <td class="no">Python + SQLite</td>
+        <td class="no">❌</td>
+        <td>需要 Python 環境</td>
+      </tr>
+      <tr>
+        <td>claude-history</td>
+        <td class="partial">~400ms</td>
+        <td class="partial">Rust</td>
+        <td class="no">❌ TUI only</td>
+        <td>功能較基本</td>
+      </tr>
+      <tr>
+        <td>aichat claude-code-tools</td>
+        <td class="partial">~300ms</td>
+        <td class="no">Python + Tantivy</td>
+        <td class="no">❌</td>
+        <td>重量級依賴</td>
+      </tr>
+      <tr>
+        <td>Claudoscope</td>
+        <td class="partial">GUI App</td>
+        <td class="partial">macOS App</td>
+        <td class="partial">⚠️ 獨立 App</td>
+        <td>macOS 圖形介面、費用追蹤</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5 大台灣開發者實戰場景</h2>
+
+  <div class="scenario-card">
+    <span class="tag">場景 1</span>
+    <h4>🔍 找上週的架構討論</h4>
+    <p>你上週四跟 Claude Code 討論了電商系統的資料庫 schema 設計，今天前輩問你當時的決策依據，你想翻出那段對話。</p>
+    <div class="code-block"><code># 在 Claude Code 裡直接說（設好 slash command 後）
+你：search my sessions for that ecommerce database schema discussion from last week
+
+# 或用 CLI
+search-sessions "database schema ecommerce" --since "7 days ago"</code></div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">場景 2</span>
+    <h4>🐛 找已解決的 bug 解法</h4>
+    <p>三週前用 Claude Code 解決了一個 Next.js 的奇怪水合 (hydration) 錯誤，現在另一個專案出現類似問題，想找回當時的解法。</p>
+    <div class="code-block"><code># Deep search 搜尋完整對話內容
+search-sessions "nextjs hydration error" --deep --project my-portfolio
+
+# 或用 cc-session TUI
+cc-session --since 30d
+# 然後直接打 "hydration" 即時過濾</code></div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">場景 3</span>
+    <h4>📋 接手同事的 Claude Code 工作</h4>
+    <p>你要繼續同事昨天做到一半的 API 重構任務，需要找到他留下的那個 session 繼續。</p>
+    <div class="code-block"><code># cc-session 瀏覽今天/昨天的 sessions
+cc-session --since 2d
+
+# 找到對應 session 後，按 Enter 看對話內容確認
+# 確認後複製 resume 指令繼續</code></div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">場景 4</span>
+    <h4>📊 整理本月的 Claude Code 工作記錄</h4>
+    <p>月底要做工作回顧，需要整理這個月用 Claude Code 完成了哪些任務。</p>
+    <div class="code-block"><code># 搜尋本月的 deploy 相關 sessions
+search-sessions "deploy" --since "2026-04-01"
+search-sessions "feature" --since "2026-04-01" --deep
+search-sessions "refactor" --since "2026-04-01"
+
+# 或用 cc-session 視覺化瀏覽
+cc-session --since 30d
+# 打字過濾不同關鍵字逐一回顧</code></div>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">場景 5</span>
+    <h4>🔗 Resume 長期進行中的大型任務</h4>
+    <p>你在做一個需要多次 session 累積的大型重構，每次開工前需要快速找回上次的 session 繼續。</p>
+    <div class="code-block"><code># 每天開工前
+cc-session --last 10  # 看最近 10 個 session
+# 直接打專案名稱過濾，找到後 Enter 確認，copy resume 指令
+
+# 或在 Claude Code 裡
+你：resume my last session on the payment refactor</code></div>
+  </div>
+
+  <!-- CTA 3：DigitalOcean -->
+  <div class="cta-block cta-blue">
+    <h3>☁️ 需要部署 Claude Code 伺服器環境？</h3>
+    <p>DigitalOcean Droplet 是台灣開發者跑 Claude Code 遠端環境的熱門選擇：穩定、便宜、API 友善，新用戶 $200 免費額度</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="noopener sponsored" target="_blank">獲取 $200 免費額度 →</a>
+  </div>
+
+  <h2>進階設定：讓 search-sessions 成為 Claude Code Skill</h2>
+
+  <p>這是 search-sessions 最值得花時間設定的功能。完成後，你可以在任何 Claude Code session 裡直接說「幫我找上週討論過 X 的 session」，Claude Code 會自動執行搜尋並回傳結果。</p>
+
+  <h3>設定步驟</h3>
+
+  <div class="step-box">
+    <span class="step-num">1</span>
+    <strong>安裝 search-sessions</strong>
+    <div class="code-block"><code>brew install sinzin91/tap/search-sessions</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">2</span>
+    <strong>在 Claude Code session 裡貼上設定指令</strong>
+    <div class="code-block"><code># 把這行貼到任意 Claude Code session
+Set up https://github.com/sinzin91/search-sessions as a /search-sessions skill.
+# Claude Code 會自動讀取文件、安裝設定</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">3</span>
+    <strong>也可以設定自動記憶觸發</strong>
+    <div class="code-block"><code># 把這行加到你的 CLAUDE.md
+Update your relevant files to use search-sessions when asked to remember or recall information.
+# 之後 Claude Code 在你問「你記得嗎...」時會自動搜尋</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">4</span>
+    <strong>測試</strong>
+    <div class="code-block"><code># 在 Claude Code 裡說
+你：search my sessions for authentication bug fixes
+
+# Claude Code 應該會執行
+# /search-sessions "authentication bug fixes" --deep
+# 並回傳搜尋結果</code></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 CLAUDE.md 最佳實踐</strong><br>
+    建議在你的 <code>CLAUDE.md</code>（全域或專案層級）加上這一行：<br>
+    <code>When the user asks to "remember", "recall", "find a past session", or "do you remember when", use search-sessions tool to find relevant sessions.</code><br><br>
+    這樣 Claude Code 就會知道何時要觸發 session 搜尋，大幅改善工作流連貫性。
+  </div>
+
+  <h2>常見問題 FAQ</h2>
+
+  <h3>Q：搜尋結果不準怎麼辦？</h3>
+  <p>預設的 index 模式只搜尋 session metadata（標題 + 專案路徑），如果你的關鍵字在對話內容裡，需要加 <code>--deep</code> 旗標。另外建議安裝 ripgrep（<code>brew install ripgrep</code>），deep search 速度會快 3-5 倍。</p>
+
+  <h3>Q：cc-session 的 TUI 在我的 terminal 顯示異常？</h3>
+  <p>試試 <code>cc-session --light</code> 或 <code>cc-session --dark</code> 強制指定主題。某些 terminal（如 iTerm2 的部分主題）自動偵測可能失準，手動指定通常能解決。</p>
+
+  <h3>Q：能在 CI/CD pipeline 或 script 裡用嗎？</h3>
+  <p>search-sessions 完全適合腳本用途，輸出是純文字格式方便解析。cc-session 是 TUI 工具，不適合 pipeline 場景，請用 search-sessions。</p>
+
+  <h3>Q：台灣用戶需要特別設定什麼嗎？</h3>
+  <p>不需要，兩個工具對繁體中文關鍵字的支援都很好（Rust 原生 UTF-8 支援）。搜尋中文內容時建議用 <code>--deep</code> 模式，因為中文通常不會出現在 session metadata 裡。</p>
+
+  <h3>Q：這些工具跟 Claudoscope 有什麼差別？</h3>
+  <p><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claudoscope</a> 是 macOS 的圖形介面 App，強調費用追蹤和 Secret 偵測。search-sessions 和 cc-session 是 CLI/TUI 工具，強調快速搜尋和 resume。功能互補，建議都裝。</p>
+
+  <h2>Claude Code 工具組推薦：完整工作流</h2>
+
+  <p>把這幾個工具搭配起來，就是目前台灣 Claude Code 開發者最強的工作流工具組：</p>
+
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>工具</th>
+        <th>功能</th>
+        <th>重要性</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>search-sessions</strong></td>
+        <td>跨 session 快速搜尋</td>
+        <td><span class="score-bar" style="width:90px;"></span> 必裝</td>
+      </tr>
+      <tr>
+        <td><strong>cc-session</strong></td>
+        <td>互動式 session 瀏覽</td>
+        <td><span class="score-bar" style="width:80px;"></span> 強烈推薦</td>
+      </tr>
+      <tr>
+        <td><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html"><strong>ccusage</strong></a></td>
+        <td>費用追蹤、帳單分析</td>
+        <td><span class="score-bar" style="width:90px;"></span> 必裝</td>
+      </tr>
+      <tr>
+        <td><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html"><strong>Claudoscope</strong></a></td>
+        <td>macOS GUI、Secret 偵測</td>
+        <td><span class="score-bar" style="width:70px;"></span> Mac 用戶推薦</td>
+      </tr>
+      <tr>
+        <td><a href="/ai-tools-tw/blog/agentshield-ai-agent-observability-2026.html"><strong>AgentShield</strong></a></td>
+        <td>Agent 可觀測性、風險偵測</td>
+        <td><span class="score-bar" style="width:70px;"></span> 進階用戶</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA 4：Hahow AI 課程 -->
+  <div class="cta-block cta-green">
+    <h3>📚 想學 Claude Code 從入門到進階？</h3>
+    <p>Hahow 提供台灣最完整的 AI 工具應用課程：提示工程、Claude Code 實戰、自動化工作流，繁體中文教學，隨時複習</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" rel="noopener sponsored" target="_blank">探索 Hahow AI 課程 →</a>
+  </div>
+
+  <h2>總結：該裝哪個？</h2>
+
+  <div class="highlight-box">
+    <strong>三句話總結：</strong><br><br>
+    1. <strong>如果你只想裝一個：</strong>裝 <strong>search-sessions</strong>，設為 Claude Code slash command，280ms 搜完全部 sessions，零設定成本。<br><br>
+    2. <strong>如果你想要完整體驗：</strong>兩個都裝。用 <strong>cc-session</strong> 做日常瀏覽和 session 內容閱讀，用 <strong>search-sessions</strong> 做關鍵字搜尋和腳本自動化。<br><br>
+    3. <strong>如果你同時在意費用：</strong>再加上 <a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html" style="color:#6366f1;"><strong>ccusage</strong></a>，三件套齊了，Claude Code 工作流完整管理。
+  </div>
+
+  <p>這兩個工具都是免費開源，安裝不到五分鐘。如果你已經用 Claude Code 累積了幾十甚至幾百個 session，現在就裝，省下的時間比安裝時間多幾百倍。</p>
+
+  <!-- CTA 5：Cloudways -->
+  <div class="cta-block" style="background:linear-gradient(135deg,#7c3aed 0%,#5b21b6 100%);">
+    <h3>🖥️ 需要穩定的雲端主機跑 AI 應用？</h3>
+    <p>Cloudways 管理型雲端主機，自動備份 + SSL + CDN，專為開發者優化。首月享高額折扣，台灣用戶熱門選擇</p>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn" rel="noopener sponsored" target="_blank">試用 Cloudways →</a>
+  </div>
+
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓 AI 帳單完全透明</a></li>
+    <li><a href="/ai-tools-tw/blog/agentshield-ai-agent-observability-2026.html">AgentShield 評測 2026：AI Agent 可觀測性 SDK 完整教學</a></li>
+    <li><a href="/ai-tools-tw/blog/openowl-macos-mcp-automation-2026.html">OpenOwl 評測 2026：讓 AI 自動操控你的 Mac</a></li>
+    <li><a href="/ai-tools-tw/blog/ai-coding-tools.html">2026 AI 程式開發工具完整比較：Cursor vs Claude Code vs Copilot</a></li>
+    <li><a href="/ai-tools-tw/mcp/">MCP 完整指南 2026：什麼是 Model Context Protocol？</a></li>
+  </ul>
+
+</article>
+
+<footer style="background:#0a0a1a;color:rgba(255,255,255,0.6);text-align:center;padding:2rem;">
+  <p>© 2026 AI Tools TW — 台灣最完整的 AI 工具評測站</p>
+  <p style="font-size:0.85rem;margin-top:0.5rem;">本站含聯盟行銷連結，購買時不影響您的價格，感謝支持！</p>
+</footer>
+</body>
+</html>
