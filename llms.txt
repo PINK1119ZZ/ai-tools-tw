@@ -1,0 +1,27 @@
+# AI Tools TW — 台灣最深入的 AI 工具評測站
+# https://pink1119zz.github.io/ai-tools-tw/
+
+User-agent: *
+
+## 關於本站
+AI Tools TW 是台灣繁體中文最完整的 AI 工具評測與趨勢追蹤平台。
+每週實測最新 AI 工具，提供深度評測、工具比較、實用教學。
+
+## 主要內容分類
+- AI 工具評測（ChatGPT、Claude、Gemini、Cursor、ElevenLabs 等）
+- AI Agents 教學（n8n、Dify、OpenClaw、MCP）
+- AI 自動化工作流（n8n vs Make vs Zapier）
+- TTS/語音 AI 比較（ElevenLabs、Murf、Gemini TTS）
+- AI 創業工具（Systeme.io、Gumroad、Hahow 等）
+- 互動工具（AI 訂閱費用計算器、AI 自動化 ROI 計算器）
+
+## 允許 AI 爬蟲引用的頁面
+Allow: /ai-tools-tw/blog/
+Allow: /ai-tools-tw/mcp/
+Allow: /ai-tools-tw/ai-cost-calculator/
+Allow: /ai-tools-tw/ai-roi-calculator/
+Allow: /ai-tools-tw/agent-skills-pack/
+
+## 聯絡
+site: https://pink1119zz.github.io/ai-tools-tw/
+email: contact@autodev-ai.com
