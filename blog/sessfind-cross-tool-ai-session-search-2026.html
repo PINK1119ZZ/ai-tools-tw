@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>sessfind 評測 2026：一個工具搜遍 Claude Code、Copilot、OpenCode、Cursor、Codex 所有 AI Session</title>
+<meta name="description" content="sessfind 是跨工具 AI Session 搜尋 CLI，用 BM25 全文檢索搜遍 GitHub Copilot、Claude Code、OpenCode、Cursor、Codex 所有歷史對話。2026 完整中文教學，台灣開發者必裝！">
+<meta name="keywords" content="sessfind, AI session 搜尋, Claude Code 歷史對話, GitHub Copilot session, OpenCode session, Cursor session, Codex session, AI 工具台灣, Rust CLI 2026, AI coding tools">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/sessfind-cross-tool-ai-session-search-2026.html">
+<!-- Open Graph -->
+<meta property="og:title" content="sessfind 評測 2026：一個工具搜遍 Claude Code、Copilot、OpenCode、Cursor、Codex 所有 AI Session">
+<meta property="og:description" content="同時用 Claude Code + Copilot + OpenCode，session 散落在 5 個地方？sessfind 一個 CLI 全統一搜尋、BM25 排名、語義搜尋、一鍵 resume。台灣開發者 2026 完整教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/sessfind-cross-tool-ai-session-search-2026.html">
+<meta property="og:locale" content="zh_TW">
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "sessfind 評測 2026：一個工具搜遍 Claude Code、Copilot、OpenCode、Cursor、Codex 所有 AI Session",
+  "description": "sessfind 是 Rust 打造的跨工具 AI Session 統一搜尋 CLI，支援 GitHub Copilot、Claude Code、OpenCode、Cursor、Codex，BM25 全文檢索、模糊匹配、語義搜尋，一鍵 resume。台灣開發者完整教學。",
+  "datePublished": "2026-04-23",
+  "dateModified": "2026-04-23",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<style>
+.article-hero{background:linear-gradient(135deg,#0a0a1a 0%,#0f2044 40%,#1a1040 100%);padding:8rem 2rem 4rem;text-align:center;}
+.article-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;max-width:900px;margin:0 auto 1.2rem;line-height:1.3;}
+.article-hero .subtitle{color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:700px;margin:0 auto 2rem;}
+.article-meta{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.tag-pill{background:rgba(99,102,241,0.25);color:#a5b4fc;padding:4px 12px;border-radius:20px;font-size:0.8rem;border:1px solid rgba(99,102,241,0.35);}
+.article-body{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem;}
+.article-body h2{font-size:1.6rem;color:#1a202c;margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid #e2e8f0;}
+.article-body h3{font-size:1.2rem;color:#2d3748;margin:2rem 0 0.8rem;}
+.article-body p{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;}
+.article-body ul,ol{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;padding-left:1.5rem;}
+.article-body li{margin-bottom:0.5rem;}
+.highlight-box{background:linear-gradient(135deg,#6366f115,#4f46e515);border:1px solid rgba(99,102,241,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.highlight-box strong{color:#6366f1;}
+.warning-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.warning-box strong{color:#c2410c;}
+.tip-box{background:linear-gradient(135deg,#10b98115,#065f4615);border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.tip-box strong{color:#059669;}
+.code-block{background:#1e1e2e;border-radius:10px;padding:1.5rem;margin:1.5rem 0;overflow-x:auto;}
+.code-block code{color:#cdd6f4;font-family:'JetBrains Mono','Fira Code',monospace;font-size:0.9rem;line-height:1.7;white-space:pre;}
+.comparison-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.9rem;}
+.comparison-table th{background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;padding:0.75rem 1rem;text-align:left;}
+.comparison-table td{padding:0.75rem 1rem;border-bottom:1px solid #e2e8f0;color:#4a5568;}
+.comparison-table tr:hover td{background:#f8fafc;}
+.comparison-table .yes{color:#059669;font-weight:600;}
+.comparison-table .no{color:#dc2626;}
+.comparison-table .partial{color:#d97706;}
+.cta-block{background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:16px;padding:2rem;margin:2.5rem 0;text-align:center;}
+.cta-block h3{color:#fff;margin:0 0 0.5rem;font-size:1.3rem;}
+.cta-block p{color:rgba(255,255,255,0.85);margin:0 0 1.2rem;font-size:0.95rem;}
+.cta-block a.cta-btn{display:inline-block;background:#fff;color:#5b21b6;font-weight:700;padding:0.75rem 2rem;border-radius:30px;text-decoration:none;font-size:1rem;transition:transform .2s;}
+.cta-block a.cta-btn:hover{transform:translateY(-2px);}
+.cta-green{background:linear-gradient(135deg,#059669 0%,#0d9488 100%);}
+.cta-green a.cta-btn{color:#065f46;}
+.cta-blue{background:linear-gradient(135deg,#2563eb 0%,#1d4ed8 100%);}
+.cta-blue a.cta-btn{color:#1e3a8a;}
+.cta-orange{background:linear-gradient(135deg,#ea580c 0%,#dc2626 100%);}
+.cta-orange a.cta-btn{color:#7c2d12;}
+.cta-teal{background:linear-gradient(135deg,#0891b2 0%,#0284c7 100%);}
+.cta-teal a.cta-btn{color:#0c4a6e;}
+.step-box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.2rem 1.5rem;margin:1rem 0;}
+.step-box .step-num{display:inline-block;background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;width:28px;height:28px;border-radius:50%;text-align:center;line-height:28px;font-weight:700;font-size:0.85rem;margin-right:0.75rem;}
+.scenario-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin:1.5rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.06);}
+.scenario-card h4{color:#1a202c;margin:0 0 0.5rem;font-size:1rem;}
+.scenario-card .tag{display:inline-block;background:#ede9fe;color:#6d28d9;padding:2px 8px;border-radius:4px;font-size:0.75rem;margin-bottom:0.5rem;}
+.tool-badge{display:inline-block;background:#f1f5f9;border:1px solid #e2e8f0;border-radius:6px;padding:4px 10px;font-size:0.8rem;color:#475569;margin:2px;}
+.score-table{width:100%;border-collapse:collapse;margin:2rem 0;}
+.score-table th{background:#1a202c;color:white;padding:0.75rem 1rem;text-align:left;font-size:0.9rem;}
+.score-table td{padding:0.75rem 1rem;border-bottom:1px solid #e2e8f0;color:#4a5568;font-size:0.9rem;}
+.score-bar{display:inline-block;background:linear-gradient(90deg,#6366f1,#8b5cf6);height:8px;border-radius:4px;vertical-align:middle;margin-right:8px;}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N8V2BTMSWF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-N8V2BTMSWF');
+</script>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a>
+    <div class="nav-links">
+      <a href="/ai-tools-tw/blog/">評測</a>
+      <a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a>
+    </div>
+  </div>
+</nav>
+
+<section class="article-hero">
+  <h1>sessfind 評測 2026：一個工具搜遍 Claude Code、GitHub Copilot、OpenCode、Cursor、Codex 所有 AI Session</h1>
+  <p class="subtitle">同時用 5 個 AI 編程工具，session 散落在 5 個不同目錄？sessfind 一個 CLI 全部統一，BM25 全文搜尋、語義相似搜尋、一鍵 resume，把你所有 AI 對話記憶找回來。</p>
+  <div class="article-meta">
+    <span>📅 2026-04-23</span>
+    <span>⏱ 閱讀約 12 分鐘</span>
+    <span class="tag-pill">Claude Code</span>
+    <span class="tag-pill">AI Session</span>
+    <span class="tag-pill">Rust CLI</span>
+    <span class="tag-pill">開發工具</span>
+  </div>
+</section>
+
+<article class="article-body">
+
+  <div class="highlight-box">
+    <strong>📌 本文重點</strong><br>
+    2026 年，台灣開發者平均同時使用 2–3 個 AI 編程助理：可能是公司配的 GitHub Copilot、個人常用的 Claude Code、加上試玩中的 OpenCode 或 Cursor。問題是——每個工具的 session 存在完全不同的路徑，根本無從統一管理。<br><br>
+    <strong>sessfind</strong> 是一個 Rust 打造的跨工具 AI Session 統一搜尋 CLI，支援 GitHub Copilot、Claude Code、OpenCode、Cursor、Codex 五大工具，用 BM25 全文檢索（tantivy 引擎）在毫秒內找到你要的對話，還能直接 resume 回到當時的情境。
+  </div>
+
+  <h2>你每天在重複這個場景嗎？</h2>
+
+  <p>「上週我跟 Claude Code 討論過那個 PostgreSQL 優化方案，到底在哪個 session 裡？」</p>
+
+  <p>「一個月前 Copilot 幫我生成的那段 Rust async runtime 架構，我想再看一次，但我根本不記得是哪個專案的對話。」</p>
+
+  <p>「我在 OpenCode 裡測試過 Gemini 2.5 回答這個問題，我想對比一下 Claude 的答案，可是 session ID 是哪個？」</p>
+
+  <p>這就是 2026 年 AI 編程工作流的真實痛點：你用越多 AI 工具，session 碎片就越多，知識就越難找回來。</p>
+
+  <div class="warning-box">
+    <strong>⚠️ 問題有多嚴重？</strong><br>
+    根據 sessfind 官方統計，重度 AI 編程用戶平均每週產生 <strong>30–80 個新 session</strong>，六個月後累積超過 1000 個。每次找歷史對話，平均浪費 <strong>5–15 分鐘</strong>翻目錄、看 session ID。光這個成本，一年就超過 <strong>60 小時</strong>。
+  </div>
+
+  <h2>sessfind 是什麼？</h2>
+
+  <p><strong>sessfind</strong>（GitHub: letsdev-it/sessfind）是一個開源的跨工具 AI Session 統一搜尋工具，由義大利開發者社群 letsdev.it 維護，以 MIT 授權釋出。它的核心設計哲學是：</p>
+
+  <ul>
+    <li><strong>統一索引</strong>：把 5 個主流 AI 編程工具的 session 全部納入同一個搜尋索引</li>
+    <li><strong>多模式搜尋</strong>：全文檢索（BM25）、模糊匹配、語義搜尋（ML embeddings）、LLM 搜尋四種模式</li>
+    <li><strong>直接 resume</strong>：搜到之後不是只給你 session ID，而是直接幫你啟動對應工具並 resume</li>
+    <li><strong>零依賴二進位</strong>：單一靜態執行檔，不需要 Node.js、Python 或其他 runtime</li>
+  </ul>
+
+  <h3>支援的 AI 工具一覽</h3>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>AI 工具</th>
+        <th>Session 存放位置</th>
+        <th>Resume 指令</th>
+        <th>支援狀態</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>GitHub Copilot</strong></td>
+        <td><code>~/.copilot/session-state/*/events.jsonl</code></td>
+        <td><code>copilot --resume=SESSION_ID</code></td>
+        <td class="yes">✅ 完整支援</td>
+      </tr>
+      <tr>
+        <td><strong>Claude Code</strong></td>
+        <td><code>~/.claude/projects/*/</code></td>
+        <td><code>claude --resume SESSION_ID</code></td>
+        <td class="yes">✅ 完整支援</td>
+      </tr>
+      <tr>
+        <td><strong>OpenCode</strong></td>
+        <td><code>~/.local/share/opencode/opencode.db</code></td>
+        <td><code>opencode --session SESSION_ID</code></td>
+        <td class="yes">✅ 完整支援</td>
+      </tr>
+      <tr>
+        <td><strong>Cursor</strong></td>
+        <td><code>~/.cursor/projects/*/agent-transcripts/</code></td>
+        <td><code>cursor PROJECT_PATH</code></td>
+        <td class="yes">✅ 完整支援</td>
+      </tr>
+      <tr>
+        <td><strong>Codex (OpenAI)</strong></td>
+        <td><code>~/.codex/sessions/YYYY/MM/DD/*.jsonl</code></td>
+        <td><code>codex resume SESSION_ID</code></td>
+        <td class="yes">✅ 完整支援</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA 1: DataCamp -->
+  <div class="cta-block cta-teal">
+    <h3>🎓 想系統學習 AI 工具和資料科學？</h3>
+    <p>DataCamp 提供 Claude Code、Python、AI/ML 完整中文課程路徑，業界最佳 AI 學習平台。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank">免費試用 DataCamp →</a>
+  </div>
+
+  <h2>核心功能深度解析</h2>
+
+  <h3>1. BM25 全文檢索（最常用模式）</h3>
+
+  <p>sessfind 使用 <strong>tantivy</strong>（Rust 實作的搜尋引擎庫，效能媲美 Elasticsearch）進行索引，支援 BM25 排名演算法。這意味著搜尋結果不只是關鍵字比對，而是依照相關性排序。</p>
+
+  <div class="code-block"><code># 建立索引（第一次使用）
+sessfind index
+
+# 全文搜尋
+sessfind search "PostgreSQL vacuum 優化"
+
+# 啟動互動式 TUI（推薦日常使用）
+sessfind
+
+# 建立索引 + 開啟 TUI（合一指令）
+sessfind --index</code></div>
+
+  <p>索引建立完成後，搜尋速度非常快——在 1000+ sessions 的情況下，通常在 <strong>50–200ms 內</strong>返回結果。增量索引設計讓後續重新索引只處理新增或修改的 session，不會每次都從頭跑。</p>
+
+  <h3>2. 互動式 TUI（Terminal UI）</h3>
+
+  <p>sessfind 的 TUI 採用分割面板設計：左側是 session 列表（可即時過濾），右側是選中 session 的內容預覽。操作完全鍵盤化：</p>
+
+  <ul>
+    <li><kbd>/</kbd> — 進入搜尋模式</li>
+    <li><kbd>↑↓</kbd> — 上下選擇 session</li>
+    <li><kbd>Enter</kbd> — 預覽或 resume session</li>
+    <li><kbd>Tab</kbd> — 切換搜尋模式（全文 / 模糊 / 語義）</li>
+    <li><kbd>r</kbd> — 在當前目錄 resume 選中的 session</li>
+    <li><kbd>q</kbd> — 退出</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>💡 TUI 小技巧</strong><br>
+    預覽面板支援 Markdown 渲染，Claude Code / Copilot 的對話格式（含程式碼區塊）都能正確顯示。不用另開工具，直接在 sessfind 裡就能確認「這個 session 是不是我要的」。
+  </div>
+
+  <h3>3. 四種搜尋模式</h3>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>搜尋模式</th>
+        <th>技術原理</th>
+        <th>最適合</th>
+        <th>速度</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>FTS（全文）</strong></td>
+        <td>BM25 via tantivy</td>
+        <td>記得關鍵字、技術術語</td>
+        <td class="yes">⚡ 最快</td>
+      </tr>
+      <tr>
+        <td><strong>Fuzzy（模糊）</strong></td>
+        <td>子字串相似匹配</td>
+        <td>拼錯字、記得大概</td>
+        <td class="yes">⚡ 快</td>
+      </tr>
+      <tr>
+        <td><strong>Semantic（語義）</strong></td>
+        <td>ML embeddings（選配插件）</td>
+        <td>描述概念、不記得關鍵字</td>
+        <td class="partial">🔄 中等</td>
+      </tr>
+      <tr>
+        <td><strong>LLM Search</strong></td>
+        <td>呼叫已安裝的 AI 工具</td>
+        <td>複雜問題、自然語言查詢</td>
+        <td class="partial">🐢 較慢</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3>4. Agent Skill 整合</h3>
+
+  <p>sessfind 最酷的功能之一是可以作為 <strong>Agent Skill</strong> 安裝到 GitHub Copilot CLI、Claude Code 或 OpenCode 裡。這表示你可以在使用 AI 工具時，直接叫它搜過去的 session：</p>
+
+  <div class="code-block"><code># 在 Claude Code 裡直接呼叫 sessfind
+> 搜尋我之前討論過 React Server Components 的 session
+
+# Claude Code 會調用 sessfind agent skill，找到相關 session 並列出摘要</code></div>
+
+  <p>這個功能把 sessfind 從一個「查找工具」提升成「AI 的長期記憶外掛」——你的 AI 助理現在可以主動查閱你過去的所有 AI 對話脈絡。</p>
+
+  <h3>5. 自動索引（背景監控）</h3>
+
+  <p>不想每次手動執行 <code>sessfind index</code>？可以啟動背景 watcher，自動偵測 session 資料夾變化並即時更新索引：</p>
+
+  <div class="code-block"><code># 啟動自動索引 watcher（背景執行）
+sessfind watch
+
+# 或在 shell 設定中加入 hook（在 Claude Code 每次結束後自動索引）
+# ~/.zshrc 或 ~/.bashrc
+function claude() {
+  command claude "$@"
+  sessfind index --quiet
+}</code></div>
+
+  <!-- CTA 2: DataCamp -->
+  <div class="cta-block">
+    <h3>🎯 想把 Gumroad 電子書打包成 Claude Code 學習資源？</h3>
+    <p>Claude Code Pack：35 個實戰 prompt 模板 + 工作流最佳化指南，$29 一次買斷。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" rel="noopener sponsored" target="_blank">立即購買 Claude Code Pack →</a>
+  </div>
+
+  <h2>安裝教學（5 分鐘完成）</h2>
+
+  <div class="step-box">
+    <span class="step-num">1</span>
+    <strong>確認 Rust 版本（需要 1.88+）</strong>
+    <div class="code-block" style="margin-top:0.8rem;"><code>rustc --version
+# 若低於 1.88，先更新：
+rustup update stable</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">2</span>
+    <strong>用 cargo 安裝 sessfind</strong>
+    <div class="code-block" style="margin-top:0.8rem;"><code>cargo install sessfind</code></div>
+    <p style="margin-top:0.5rem;color:#6b7280;font-size:0.9rem;">或下載預建二進位（不需要 Rust）：前往 <a href="https://github.com/letsdev-it/sessfind/releases" target="_blank" rel="noopener">GitHub Releases</a> 下載對應平台的執行檔。</p>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">3</span>
+    <strong>首次索引</strong>
+    <div class="code-block" style="margin-top:0.8rem;"><code># 掃描所有支援工具的 session 並建立索引
+sessfind index
+
+# 輸出範例：
+# Indexing GitHub Copilot sessions... 142 sessions
+# Indexing Claude Code sessions... 387 sessions
+# Indexing OpenCode sessions... 58 sessions
+# Indexing Cursor sessions... 230 sessions
+# Indexing Codex sessions... 91 sessions
+# Total: 908 sessions indexed in 2.3s</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">4</span>
+    <strong>開始搜尋</strong>
+    <div class="code-block" style="margin-top:0.8rem;"><code># 互動式 TUI（最推薦）
+sessfind
+
+# 命令列直接搜尋
+sessfind search "auth middleware JWT"
+
+# 篩選特定工具
+sessfind search "database migration" --source claude</code></div>
+  </div>
+
+  <div class="step-box">
+    <span class="step-num">5</span>
+    <strong>（選配）安裝語義搜尋插件</strong>
+    <div class="code-block" style="margin-top:0.8rem;"><code># 啟用 ML 語義搜尋（需要額外下載 embedding 模型，約 100MB）
+sessfind plugin install semantic
+
+# 之後可用語義搜尋
+sessfind search "關於那個 API 效能問題的討論" --mode semantic</code></div>
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 macOS 使用者注意</strong><br>
+    如果下載的是預建二進位，可能需要執行 <code>xattr -d com.apple.quarantine sessfind</code> 移除 Gatekeeper 限制，或透過系統偏好設定手動允許執行。
+  </div>
+
+  <h2>5 大台灣開發者實戰場景</h2>
+
+  <div class="scenario-card">
+    <span class="tag">🏢 新創 / 全端開發者</span>
+    <h4>場景一：跨工具找回架構決策討論</h4>
+    <p>你上個月用 Copilot 討論了一個微服務拆分方案，但這週加入的新同事問你當時的思路，你完全忘了在哪個 session。</p>
+    <div class="code-block"><code>sessfind search "微服務 service mesh 架構" --source copilot</code></div>
+    <p>sessfind 5 秒內找出那次對話，你可以直接分享 session 內容給同事，或 resume 繼續討論。</p>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">🎓 學習者 / 轉職工程師</span>
+    <h4>場景二：重拾學習筆記型 AI 對話</h4>
+    <p>你用 Claude Code 學 Rust 時有一段關於 borrowing 和 lifetime 的詳細解說，想拿來複習，但 session 裡有幾百個學習對話。</p>
+    <div class="code-block"><code># 進入 TUI，即時搜尋
+sessfind
+# 在 TUI 裡輸入 "rust lifetime borrow checker" 即時過濾</code></div>
+    <p>相關 session 立刻出現在左欄，右欄即時預覽內容，確認對了按 Enter resume 回去繼續學習。</p>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">💡 AI 工具愛好者</span>
+    <h4>場景三：跨工具對比 AI 回答品質</h4>
+    <p>你想寫一篇「Claude vs GPT-4o 回答技術問題品質比較」的文章，需要找出你在 Claude Code 和 Codex 裡問過的相同問題記錄。</p>
+    <div class="code-block"><code># 搜尋所有工具
+sessfind search "React 18 concurrent rendering"
+
+# 輸出包含來源工具：
+# [claude] 2026-03-15 auth-service session: "React 18 concurrent..."
+# [codex]  2026-03-20 frontend-refactor session: "React concurrent rendering..."</code></div>
+    <p>兩個工具的回答都找到了，直接對比品質差異。</p>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">🏗️ 技術主管 / 架構師</span>
+    <h4>場景四：Agent Skill 整合讓 AI 有「長期記憶」</h4>
+    <p>你把 sessfind 安裝為 Claude Code 的 Agent Skill，每次開新 session 時 Claude 都可以主動查閱你過去 6 個月的技術決策：</p>
+    <div class="code-block"><code># 在 Claude Code 裡
+> 我們這個專案之前討論過 database sharding 策略嗎？
+
+# Claude 自動調用 sessfind，找到 3 個相關 session，
+# 摘要並繼續當前任務</code></div>
+    <p>AI 終於有辦法「記住」你六個月前做過的技術決策，不用每次都重新解釋背景。</p>
+  </div>
+
+  <div class="scenario-card">
+    <span class="tag">⚙️ DevOps / 系統工程師</span>
+    <h4>場景五：搜尋緊急事故處理的歷史 Session</h4>
+    <p>生產環境告警，你記得半年前解決過類似的 Redis 記憶體洩漏問題，當時 Claude Code 給了詳細的診斷指令。</p>
+    <div class="code-block"><code># 語義搜尋（不需要記得關鍵字）
+sessfind search "redis memory leak production fix" --mode semantic</code></div>
+    <p>語義搜尋找到最相關的 session，即使你當時用的關鍵字完全不同，仍然能準確匹配概念。緊急事故時，這個功能省了你 30 分鐘翻記錄。</p>
+  </div>
+
+  <!-- CTA 3: DigitalOcean -->
+  <div class="cta-block cta-blue">
+    <h3>☁️ 需要在雲端伺服器跑 AI 開發環境？</h3>
+    <p>DigitalOcean 最低 $4/月起，台灣開發者用來跑 AI Agent、資料庫、API 服務最划算的選擇。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="noopener sponsored" target="_blank">免費領 $200 DigitalOcean 額度 →</a>
+  </div>
+
+  <h2>sessfind vs 同類工具完整比較</h2>
+
+  <p>台灣開發者常見的替代方案還有我們之前介紹過的 <a href="/ai-tools-tw/blog/claude-code-session-search-2026.html">search-sessions 和 cc-session</a>，以及 GitHub 上的 coding_agent_session_search（CASS）。各工具差異如下：</p>
+
+  <table class="comparison-table">
+    <thead>
+      <tr>
+        <th>功能</th>
+        <th>sessfind</th>
+        <th>search-sessions</th>
+        <th>cc-session</th>
+        <th>CASS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>支援工具數</strong></td>
+        <td class="yes">5 個（跨工具）</td>
+        <td class="no">Claude Code 限定</td>
+        <td class="no">Claude Code 限定</td>
+        <td class="yes">11+ 個</td>
+      </tr>
+      <tr>
+        <td><strong>BM25 全文搜尋</strong></td>
+        <td class="yes">✅</td>
+        <td class="yes">✅</td>
+        <td class="partial">△ 有限</td>
+        <td class="yes">✅</td>
+      </tr>
+      <tr>
+        <td><strong>語義搜尋</strong></td>
+        <td class="yes">✅（選配插件）</td>
+        <td class="no">❌</td>
+        <td class="no">❌</td>
+        <td class="yes">✅</td>
+      </tr>
+      <tr>
+        <td><strong>LLM 搜尋</strong></td>
+        <td class="yes">✅</td>
+        <td class="no">❌</td>
+        <td class="no">❌</td>
+        <td class="partial">△</td>
+      </tr>
+      <tr>
+        <td><strong>互動式 TUI</strong></td>
+        <td class="yes">✅ 分割面板</td>
+        <td class="no">❌（純 CLI）</td>
+        <td class="yes">✅ Rust TUI</td>
+        <td class="yes">✅</td>
+      </tr>
+      <tr>
+        <td><strong>Agent Skill 整合</strong></td>
+        <td class="yes">✅（Copilot/Claude/OpenCode）</td>
+        <td class="no">❌</td>
+        <td class="no">❌</td>
+        <td class="no">❌</td>
+      </tr>
+      <tr>
+        <td><strong>自動背景索引</strong></td>
+        <td class="yes">✅ watch 模式</td>
+        <td class="no">❌</td>
+        <td class="no">❌</td>
+        <td class="partial">△</td>
+      </tr>
+      <tr>
+        <td><strong>零依賴二進位</strong></td>
+        <td class="yes">✅ 靜態單一執行檔</td>
+        <td class="yes">✅</td>
+        <td class="yes">✅</td>
+        <td class="partial">△ Rust 需編譯</td>
+      </tr>
+      <tr>
+        <td><strong>一鍵 resume</strong></td>
+        <td class="yes">✅ 直接啟動工具</td>
+        <td class="partial">△ 顯示指令</td>
+        <td class="yes">✅</td>
+        <td class="partial">△</td>
+      </tr>
+      <tr>
+        <td><strong>開源授權</strong></td>
+        <td class="yes">MIT</td>
+        <td class="yes">MIT</td>
+        <td class="yes">MIT</td>
+        <td class="yes">MIT</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>🎯 選哪個？</strong><br>
+    <ul style="margin:0.5rem 0 0;">
+      <li><strong>只用 Claude Code</strong> → search-sessions（純 CLI 最快）或 cc-session（TUI 最美）</li>
+      <li><strong>同時用多個 AI 工具</strong> → sessfind（統一管理，跨工具搜尋）</li>
+      <li><strong>用了 11+ 個 AI 工具的重度用戶</strong> → CASS（最全面，但設定較複雜）</li>
+    </ul>
+  </div>
+
+  <h2>進階設定：自訂 sessfind 工作流</h2>
+
+  <h3>設定檔（~/.sessfind/config.toml）</h3>
+
+  <div class="code-block"><code>[sources]
+# 只索引特定工具（不填則索引全部）
+enabled = ["claude", "copilot", "opencode"]
+
+# 排除特定目錄
+exclude_paths = ["~/personal-projects"]
+
+[index]
+# 增量索引間隔（搭配 watch 模式）
+watch_interval_secs = 30
+
+# 索引儲存位置
+index_dir = "~/.sessfind/index"
+
+[search]
+# 預設搜尋模式
+default_mode = "fts"  # fts | fuzzy | semantic | llm
+
+# 結果數量上限
+max_results = 20
+
+[tui]
+# TUI 預覽面板寬度比例
+preview_ratio = 0.5</code></div>
+
+  <h3>Shell 快捷鍵整合</h3>
+
+  <div class="code-block"><code># ~/.zshrc 或 ~/.bashrc
+
+# sf = sessfind 縮寫
+alias sf="sessfind"
+alias sfi="sessfind --index"
+alias sfs="sessfind search"
+
+# 自動索引：每次終端機開啟時，背景靜默更新索引
+(sessfind index --quiet &) 2>/dev/null
+
+# fzf 整合（搭配 fzf 快速選擇 session）
+sessfind_fzf() {
+  sessfind search "$1" --format json | \
+    jq -r '.[] | "\(.source) \(.date) \(.title)"' | \
+    fzf --preview 'sessfind preview {3}'
+}</code></div>
+
+  <h3>搭配 cron 自動索引（macOS / Linux）</h3>
+
+  <div class="code-block"><code># 每小時自動更新索引
+crontab -e
+# 加入：
+0 * * * * /usr/local/bin/sessfind index --quiet</code></div>
+
+  <!-- CTA 4: Hahow -->
+  <div class="cta-block cta-green">
+    <h3>📚 想把 AI 工具技能轉換成市場競爭力？</h3>
+    <p>Hahow 提供完整的 Claude Code、AI 開發、Prompt Engineering 中文課程，台灣人做的課程最好懂。</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" rel="noopener sponsored" target="_blank">瀏覽 Hahow AI 課程 →</a>
+  </div>
+
+  <h2>常見問題 FAQ</h2>
+
+  <h3>Q1：sessfind 的索引會不會太佔硬碟空間？</h3>
+  <p>不會。BM25 索引非常精簡——1000 個 session 的索引大約只佔 <strong>10–30 MB</strong>。如果加上語義搜尋的 embedding 插件，會多約 100 MB 的模型檔案，但索引本身還是輕量的。</p>
+
+  <h3>Q2：我的 session 內容會上傳到伺服器嗎？</h3>
+  <p>完全不會。sessfind 是 <strong>100% 本地執行</strong>的工具，索引和搜尋全在你的機器上完成，沒有任何資料離開你的電腦（除非你啟用 LLM 搜尋模式，那時會調用你已安裝的 AI CLI，但也是透過本地的工具呼叫，而非 sessfind 本身傳送資料）。</p>
+
+  <h3>Q3：Windows 支援嗎？</h3>
+  <p>sessfind 主要設計為 macOS / Linux 工具，Windows 支援正在 roadmap 中。目前 Windows 用戶可以透過 WSL2 使用，體驗基本與原生相同。</p>
+
+  <h3>Q4：Cursor 的 session 為什麼有時候找不到完整對話？</h3>
+  <p>Cursor 的 agent transcript 格式與其他工具略有不同，sessfind 目前索引的是 <code>agent-transcripts/</code> 目錄下的記錄。如果你的 Cursor 版本較舊（v0.40 以前），路徑可能不同，可以在 config.toml 中手動指定路徑。</p>
+
+  <h3>Q5：sessfind 和 MEMORY.md（Claude Code 記憶功能）有衝突嗎？</h3>
+  <p>沒有衝突，而且是很好的互補。<strong>MEMORY.md</strong> 是 Claude Code 的跨 session 記憶（手動管理的摘要文件），<strong>sessfind</strong> 則是完整的原始對話搜尋引擎。前者是「AI 的工作記憶」，後者是「你的個人搜尋引擎」，兩者配合使用效果最好。</p>
+
+  <h2>sessfind 評分</h2>
+
+  <table class="score-table">
+    <thead>
+      <tr>
+        <th>評估維度</th>
+        <th>評分</th>
+        <th>說明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>跨工具支援</strong></td>
+        <td><span class="score-bar" style="width:95px;"></span>9.5/10</td>
+        <td>5 大主流工具全覆蓋，是市場上最全面的</td>
+      </tr>
+      <tr>
+        <td><strong>搜尋速度</strong></td>
+        <td><span class="score-bar" style="width:90px;"></span>9/10</td>
+        <td>BM25 毫秒級，語義搜尋略慢但可接受</td>
+      </tr>
+      <tr>
+        <td><strong>安裝易用性</strong></td>
+        <td><span class="score-bar" style="width:80px;"></span>8/10</td>
+        <td>cargo install 簡單，但需要 Rust 1.88+</td>
+      </tr>
+      <tr>
+        <td><strong>Agent Skill 整合</strong></td>
+        <td><span class="score-bar" style="width:90px;"></span>9/10</td>
+        <td>同類工具中唯一有原生 Agent Skill 支援</td>
+      </tr>
+      <tr>
+        <td><strong>TUI 體驗</strong></td>
+        <td><span class="score-bar" style="width:85px;"></span>8.5/10</td>
+        <td>分割面板設計好用，Markdown 預覽加分</td>
+      </tr>
+      <tr>
+        <td><strong>台灣開發者適用性</strong></td>
+        <td><span class="score-bar" style="width:85px;"></span>8.5/10</td>
+        <td>多工具混用情境完全符合台灣開發現況</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>總結：AI Session 統一管理時代來了</h2>
+
+  <p>sessfind 解決的是一個 2026 年 AI 開發者幾乎人人都遇到的問題：<strong>你用越多 AI 工具，歷史知識就越難管理</strong>。</p>
+
+  <p>對於台灣開發者來說，sessfind 的最大價值在於：</p>
+
+  <ul>
+    <li>✅ <strong>跨工具統一</strong>：公司 Copilot + 個人 Claude Code + 試玩 OpenCode，一個 CLI 全管理</li>
+    <li>✅ <strong>零學習成本</strong>：裝好執行 <code>sessfind index</code> 再執行 <code>sessfind</code> 就能用，5 分鐘上手</li>
+    <li>✅ <strong>隱私友善</strong>：完全本地執行，session 內容不外傳</li>
+    <li>✅ <strong>Agent Skill 整合</strong>：讓你的 AI 助理有辦法查閱你的完整技術歷史</li>
+  </ul>
+
+  <p>如果你只用一個 AI 工具，<a href="/ai-tools-tw/blog/claude-code-session-search-2026.html">search-sessions 或 cc-session</a> 已經夠用。但如果你像大多數 2026 年的台灣工程師一樣，桌面上同時開著多個 AI 工具，sessfind 是目前最完整的解決方案。</p>
+
+  <div class="highlight-box">
+    <strong>📖 延伸閱讀</strong><br>
+    <ul style="margin:0.5rem 0 0;">
+      <li><a href="/ai-tools-tw/blog/claude-code-session-search-2026.html">Claude Code Session 搜尋 2026：search-sessions + cc-session 完整教學</a></li>
+      <li><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claude Code 成本追蹤：ccusage + Claudoscope 帳單完全透明</a></li>
+      <li><a href="/ai-tools-tw/blog/ai-coding-tools.html">2026 AI 程式工具完整比較：Claude Code vs Cursor vs Copilot</a></li>
+      <li><a href="/ai-tools-tw/blog/openowl-macos-mcp-automation-2026.html">OpenOwl 評測：讓 AI 自動操控你的 Mac，MCP 桌面自動化教學</a></li>
+      <li><a href="/ai-tools-tw/mcp/index.html">MCP 工具全攻略</a></li>
+    </ul>
+  </div>
+
+  <!-- CTA 5: Cloudways -->
+  <div class="cta-block cta-orange">
+    <h3>🚀 需要高效能雲端主機跑 AI 服務？</h3>
+    <p>Cloudways 管理式雲端主機：$11/月起，自動擴容、一鍵備份，台灣開發者部署 AI 應用首選。</p>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn" rel="noopener sponsored" target="_blank">領取 Cloudways $50 折扣碼 →</a>
+  </div>
+
+</article>
+
+<footer style="background:#1a202c;color:#718096;text-align:center;padding:3rem 2rem;">
+  <p style="max-width:600px;margin:0 auto 1rem;">AI Tools TW — 台灣最完整的 AI 工具評測與教學。</p>
+  <p><a href="/ai-tools-tw/" style="color:#a5b4fc;">首頁</a> · <a href="/ai-tools-tw/blog/" style="color:#a5b4fc;">所有評測</a> · <a href="/ai-tools-tw/mcp/" style="color:#a5b4fc;">MCP 工具</a></p>
+  <p style="margin-top:1rem;font-size:0.85rem;">本文含聯盟行銷連結，點擊不影響您的費用。</p>
+</footer>
+</body>
+</html>
