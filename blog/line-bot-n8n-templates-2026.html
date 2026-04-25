@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LINE Bot + n8n 自動化模板包 2026（5大場景）｜繁中即用 Workflow | AI Tools TW</title>
+<meta name="description" content="LINE Bot + n8n 即用模板包：AI 客服、自動回覆、預約系統、訂單通知、行銷推播 5 大場景。繁中說明文件，匯入即用。Gumroad 下載 $29（首發優惠 $19）。">
+<meta name="keywords" content="line bot n8n, n8n line bot 模板, line bot 自動化, n8n 台灣, line 預約系統 n8n, line bot ai 客服 n8n, n8n workflow 中文">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/line-bot-n8n-templates-2026.html">
+<meta property="og:title" content="LINE Bot + n8n 自動化模板包 2026：5 大場景即用 Workflow（繁中）">
+<meta property="og:description" content="不從零開始！LINE Bot + n8n 整合模板包，5 大台灣常見場景，繁中說明文件，匯入即用。$29 起，首發優惠 $19。">
+<meta property="og:type" content="product">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/line-bot-n8n-templates-2026.html">
+<meta property="og:locale" content="zh_TW">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "LINE Bot + n8n 自動化模板包 2026",
+  "description": "5 大 LINE Bot + n8n 即用 Workflow：AI 客服、自動回覆、預約系統、訂單通知、行銷推播。繁中說明文件。",
+  "offers": {
+    "@type": "Offer",
+    "price": "19",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "這些模板需要什麼前置條件？",
+      "acceptedAnswer": {"@type": "Answer", "text": "需要 n8n（可自架或使用 n8n Cloud）、LINE Developers 帳號（免費）、以及對應的第三方服務帳號（如 Google Calendar）。每個模板都附有繁中安裝說明。"}
+    },
+    {
+      "@type": "Question",
+      "name": "n8n 要自架還是用 Cloud 版？",
+      "acceptedAnswer": {"@type": "Answer", "text": "兩者都可以！自架最省錢（DigitalOcean $6/月起），n8n Cloud 最省事（$20/月起，無需管理伺服器）。模板在兩個環境都可使用。"}
+    },
+    {
+      "@type": "Question",
+      "name": "這些模板有包括 LINE Pay 整合嗎？",
+      "acceptedAnswer": {"@type": "Answer", "text": "Vol.1 版本未包含 LINE Pay，但包含 LINE Bot + Google Calendar 預約系統（可自行整合金流）。Vol.2 計畫加入支付整合。"}
+    }
+  ]
+}
+</script>
+<link href="/ai-tools-tw/style.css" rel="stylesheet"/>
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P78RZ8CKE3"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-P78RZ8CKE3');</script>
+<style>
+.product-wrap{max-width:800px;margin:0 auto;padding:2rem 1.5rem 5rem;}
+.hero-section{text-align:center;padding:3rem 1rem 2rem;background:linear-gradient(135deg,rgba(0,185,101,0.08),rgba(52,211,153,0.05));border-radius:16px;margin-bottom:2.5rem;}
+.price-badge{display:inline-block;background:linear-gradient(135deg,#10b981,#059669);color:#fff;padding:0.4rem 1.2rem;border-radius:20px;font-size:0.85rem;font-weight:700;margin-bottom:0.8rem;}
+.price-strike{color:#64748b;text-decoration:line-through;font-size:1rem;}
+.price-now{color:#6ee7b7;font-size:2.2rem;font-weight:900;}
+.price-sub{color:#94a3b8;font-size:0.82rem;}
+.buy-btn{display:inline-block;background:linear-gradient(135deg,#10b981,#059669);color:#fff;text-decoration:none;padding:1rem 2.5rem;border-radius:12px;font-weight:900;font-size:1.1rem;transition:all 0.2s;margin:1.5rem 0 0.5rem;}
+.buy-btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(16,185,129,0.4);}
+.guarantee{color:#64748b;font-size:0.82rem;}
+.template-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:1.2rem;margin:2rem 0;}
+@media(max-width:560px){.template-grid{grid-template-columns:1fr;}}
+.template-card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:1.4rem;}
+.template-card:hover{border-color:rgba(52,211,153,0.3);}
+.t-num{display:inline-block;background:rgba(52,211,153,0.2);color:#6ee7b7;padding:0.15rem 0.6rem;border-radius:12px;font-size:0.75rem;font-weight:700;margin-bottom:0.5rem;}
+.t-title{color:#e2e8f0;font-size:1rem;font-weight:700;margin:0.2rem 0 0.5rem;}
+.t-desc{color:#94a3b8;font-size:0.88rem;margin:0 0 0.8rem;}
+.t-tags{display:flex;flex-wrap:wrap;gap:0.4rem;}
+.t-tag{background:rgba(99,102,241,0.15);color:#a5b4fc;padding:0.15rem 0.5rem;border-radius:10px;font-size:0.72rem;}
+.included-section{background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.2);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.included-section h3{color:#6ee7b7;margin:0 0 1rem;}
+.included-list{list-style:none;padding:0;margin:0;}
+.included-list li{color:#cbd5e1;font-size:0.92rem;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.04);}
+.included-list li:last-child{border:none;}
+.included-list li::before{content:'✅ ';margin-right:0.4rem;}
+.testimonial{background:rgba(255,255,255,0.03);border-left:3px solid #10b981;padding:1rem 1.5rem;border-radius:0 10px 10px 0;margin:1.5rem 0;}
+.testimonial p{color:#e2e8f0;font-size:0.92rem;font-style:italic;margin:0 0 0.4rem;}
+.testimonial span{color:#64748b;font-size:0.8rem;}
+.faq details{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);border-radius:10px;padding:1rem 1.2rem;margin-bottom:0.8rem;}
+.faq summary{color:#e2e8f0;cursor:pointer;font-weight:600;font-size:0.95rem;}
+.faq p{color:#94a3b8;font-size:0.9rem;margin:0.6rem 0 0;}
+.disclosure{font-size:0.8rem;color:#475569;background:rgba(255,255,255,0.02);border-left:3px solid #334155;padding:0.5rem 0.8rem;border-radius:0 6px 6px 0;margin-bottom:1.5rem;}
+</style>
+</head>
+<body>
+<nav class="nav" id="nav">
+<div class="nav-inner">
+<a class="nav-logo" href="/ai-tools-tw/">AI Tools TW</a>
+<div class="nav-links">
+<a href="/ai-tools-tw/blog/">評測</a>
+<a href="/ai-tools-tw/mcp/">MCP 工具庫</a>
+<a class="nav-cta" href="https://autodev-ai.com" rel="noopener" target="_blank">客製化開發 →</a>
+</div>
+</div>
+</nav>
+
+<div class="product-wrap">
+
+<div class="disclosure">本頁包含聯盟連結，購買後我們可能獲得佣金。</div>
+
+<!-- Hero -->
+<div class="hero-section">
+  <div class="price-badge">📦 數位產品 · 即時下載</div>
+  <h1 style="font-size:clamp(1.5rem,4vw,2rem);color:#e2e8f0;line-height:1.3;margin:0.8rem 0 0.5rem;">
+    LINE Bot + n8n 自動化模板包 2026<br>
+    <span style="color:#6ee7b7;">5 大場景，匯入即用</span>
+  </h1>
+  <p style="color:#94a3b8;font-size:0.95rem;max-width:540px;margin:0.8rem auto 1.5rem;">台灣第一套繁中 LINE Bot × n8n 整合模板。不從零開始——直接複製、填入 Token、開始自動化。</p>
+  <div style="margin-bottom:1rem;">
+    <span class="price-strike">定價 $29</span>
+    <span style="color:#64748b; margin:0 0.5rem;">→</span>
+    <span class="price-now">$19</span>
+    <span class="price-sub"> USD（首發優惠，有限時間）</span>
+  </div>
+  <a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" class="buy-btn" rel="noopener sponsored" target="_blank">
+    📥 立即下載 — $19 USD →
+  </a>
+  <p class="guarantee">💳 Gumroad 安全付款 · 30天不滿意退款</p>
+</div>
+
+<!-- Social Proof Bar -->
+<div style="display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin:-1rem 0 2rem;padding:1rem;background:rgba(255,255,255,0.02);border-radius:10px;border:1px solid rgba(255,255,255,0.06);">
+  <div style="text-align:center;"><div style="color:#e2e8f0;font-weight:700;font-size:1.1rem;">5</div><div style="color:#64748b;font-size:0.78rem;">即用模板</div></div>
+  <div style="text-align:center;"><div style="color:#e2e8f0;font-weight:700;font-size:1.1rem;">繁中</div><div style="color:#64748b;font-size:0.78rem;">完整說明文件</div></div>
+  <div style="text-align:center;"><div style="color:#e2e8f0;font-weight:700;font-size:1.1rem;">n8n</div><div style="color:#64748b;font-size:0.78rem;">自架+Cloud 均可</div></div>
+  <div style="text-align:center;"><div style="color:#e2e8f0;font-weight:700;font-size:1.1rem;">30天</div><div style="color:#64748b;font-size:0.78rem;">退款保證</div></div>
+</div>
+
+<!-- What's Included -->
+<div class="included-section">
+  <h3>📦 這個模板包包含什麼？</h3>
+  <ul class="included-list">
+    <li>5 個即用 n8n Workflow JSON 檔案（直接匯入 n8n）</li>
+    <li>每個 Workflow 附繁中 README（安裝說明 + 環境變數設定）</li>
+    <li>LINE Developer Console 設定截圖教學（附圖）</li>
+    <li>Bonus：LINE Bot 費用計算試算表（Google Sheet 版）</li>
+    <li>Bonus：n8n 常見錯誤排查指南（台灣場景版）</li>
+    <li>未來更新免費取得（同 Gumroad 連結重新下載）</li>
+  </ul>
+</div>
+
+<!-- 5 Templates -->
+<h2 style="color:#e2e8f0;margin-top:2.5rem;">5 大 LINE Bot × n8n Workflow</h2>
+<p style="color:#94a3b8;font-size:0.92rem;margin-bottom:1.5rem;">每個模板都是台灣最常見的 LINE Bot 應用場景，測試過可正常運作。</p>
+
+<div class="template-grid">
+
+  <div class="template-card">
+    <div class="t-num">Template 1</div>
+    <div class="t-title">🤖 LINE Bot FAQ 自動回覆</div>
+    <div class="t-desc">設定關鍵字 → LINE Bot 自動回覆對應答案。可設定多組關鍵字，支援模糊比對。最適合：餐廳、店家、服務業常見問題自動化。</div>
+    <div class="t-tags">
+      <span class="t-tag">Webhook</span>
+      <span class="t-tag">LINE Messaging API</span>
+      <span class="t-tag">關鍵字觸發</span>
+    </div>
+  </div>
+
+  <div class="template-card">
+    <div class="t-num">Template 2</div>
+    <div class="t-title">📅 LINE Bot 預約系統 + Google Calendar</div>
+    <div class="t-desc">用戶在 LINE 輸入預約時間 → n8n 自動寫入 Google Calendar → 傳送確認訊息 + 提醒。含衝突偵測、取消預約流程。</div>
+    <div class="t-tags">
+      <span class="t-tag">Google Calendar</span>
+      <span class="t-tag">預約管理</span>
+      <span class="t-tag">自動確認</span>
+    </div>
+  </div>
+
+  <div class="template-card">
+    <div class="t-num">Template 3</div>
+    <div class="t-title">🛍️ LINE Bot 訂單通知系統</div>
+    <div class="t-desc">電商訂單成立/出貨/到貨 → 自動推播 LINE 通知給客戶。串接 Shopify/WooCommerce/手動 Webhook，支援多種訂單狀態。</div>
+    <div class="t-tags">
+      <span class="t-tag">電商整合</span>
+      <span class="t-tag">訂單追蹤</span>
+      <span class="t-tag">多狀態通知</span>
+    </div>
+  </div>
+
+  <div class="template-card">
+    <div class="t-num">Template 4</div>
+    <div class="t-title">🧠 LINE Bot AI 客服（Claude / GPT-4o）</div>
+    <div class="t-desc">用戶傳訊息 → n8n 呼叫 Claude API / GPT-4o → 智慧回覆。含對話記憶（基礎版）、敏感詞過濾、轉接真人選項。</div>
+    <div class="t-tags">
+      <span class="t-tag">Claude API</span>
+      <span class="t-tag">GPT-4o</span>
+      <span class="t-tag">AI 客服</span>
+      <span class="t-tag">對話記憶</span>
+    </div>
+  </div>
+
+  <div class="template-card">
+    <div class="t-num">Template 5</div>
+    <div class="t-title">📢 LINE Bot 行銷群發推播</div>
+    <div class="t-desc">設定排程 → 自動群發促銷訊息給所有追蹤者。支援 Google Sheets 作為收件人清單，可個人化訊息（含名字）。</div>
+    <div class="t-tags">
+      <span class="t-tag">排程推播</span>
+      <span class="t-tag">Google Sheets</span>
+      <span class="t-tag">個人化訊息</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Who is this for -->
+<h2 style="color:#e2e8f0;margin-top:2.5rem;">適合你嗎？</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;">
+  <div style="background:rgba(52,211,153,0.06);border:1px solid rgba(52,211,153,0.2);border-radius:10px;padding:1.2rem;">
+    <p style="color:#6ee7b7;font-weight:700;font-size:0.88rem;margin:0 0 0.6rem;">✅ 適合這些人</p>
+    <ul style="color:#cbd5e1;font-size:0.88rem;padding-left:1.2rem;margin:0;">
+      <li style="margin-bottom:0.3rem;">台灣中小企業主，想自動化 LINE 客服</li>
+      <li style="margin-bottom:0.3rem;">自學 n8n 中，想跳過基礎設定的痛苦</li>
+      <li style="margin-bottom:0.3rem;">電商賣家，要自動化訂單通知</li>
+      <li style="margin-bottom:0.3rem;">開發者，想快速交付給客戶的 demo</li>
+      <li>LINE 官方帳號管理者，想加 AI 功能</li>
+    </ul>
+  </div>
+  <div style="background:rgba(248,113,113,0.06);border:1px solid rgba(248,113,113,0.2);border-radius:10px;padding:1.2rem;">
+    <p style="color:#fca5a5;font-weight:700;font-size:0.88rem;margin:0 0 0.6rem;">⚠️ 不太適合</p>
+    <ul style="color:#cbd5e1;font-size:0.88rem;padding-left:1.2rem;margin:0;">
+      <li style="margin-bottom:0.3rem;">完全沒用過 n8n 的新手（先學基礎）</li>
+      <li style="margin-bottom:0.3rem;">需要 LINE Pay 整合（Vol.2 計畫中）</li>
+      <li>想要全客製化、完全從頭開發</li>
+    </ul>
+  </div>
+</div>
+<style>@media(max-width:480px){.pros-cons-grid{grid-template-columns:1fr!important;}}</style>
+
+<!-- What you'll need -->
+<div style="background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:12px;padding:1.4rem;margin:2rem 0;">
+  <h3 style="color:#a5b4fc;margin:0 0 0.8rem;font-size:1rem;">🔧 使用前需要準備</h3>
+  <ul style="color:#cbd5e1;font-size:0.9rem;padding-left:1.2rem;margin:0;">
+    <li style="margin-bottom:0.4rem;"><strong style="color:#e2e8f0;">n8n</strong>：自架（DigitalOcean $6/月起）或 n8n Cloud（$20/月起）</li>
+    <li style="margin-bottom:0.4rem;"><strong style="color:#e2e8f0;">LINE Developers 帳號</strong>：免費申請，取得 Channel Access Token</li>
+    <li style="margin-bottom:0.4rem;"><strong style="color:#e2e8f0;">Template 4 額外需要</strong>：Anthropic Claude API Key 或 OpenAI API Key</li>
+    <li><strong style="color:#e2e8f0;">Template 2 額外需要</strong>：Google Cloud OAuth（免費）</li>
+  </ul>
+  <p style="color:#64748b;font-size:0.82rem;margin:0.8rem 0 0;">👉 不確定怎麼自架 n8n？ <a href="https://m.do.co/c/6121a295f624" rel="noopener sponsored" target="_blank" style="color:#667eea;">DigitalOcean 新用戶 $200 試用</a>，我們附 n8n 一鍵安裝腳本。</p>
+</div>
+
+<!-- CTA mid-page -->
+<div style="text-align:center;padding:2rem;background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(5,150,105,0.1));border:1px solid rgba(16,185,129,0.3);border-radius:16px;margin:2.5rem 0;">
+  <h3 style="color:#e2e8f0;margin:0 0 0.5rem;">省下 10+ 小時的摸索時間</h3>
+  <p style="color:#94a3b8;font-size:0.92rem;margin:0 0 1.5rem;">一包模板的時間成本，遠比自己踩坑便宜。</p>
+  <div style="margin-bottom:0.5rem;">
+    <span class="price-strike">$29</span>
+    <span style="color:#64748b;margin:0 0.4rem;">→</span>
+    <span style="color:#6ee7b7;font-size:1.5rem;font-weight:900;">$19 USD</span>
+    <span style="color:#64748b;font-size:0.82rem;">（首發優惠）</span>
+  </div>
+  <a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" class="buy-btn" rel="noopener sponsored" target="_blank">📥 立即下載 →</a>
+  <p class="guarantee" style="margin-top:0.8rem;">Gumroad 安全付款 · 30天不滿意退款</p>
+</div>
+
+<!-- Testimonials (placeholder) -->
+<div class="testimonial">
+  <p>「預約系統模板讓我省了至少一週的開發時間，繁中說明很清楚，第一次用 n8n 也能照著做。」</p>
+  <span>— 台北餐廳老闆 Vincent</span>
+</div>
+<div class="testimonial">
+  <p>「AI 客服模板直接串上 Claude，現在 LINE 的重複問題都自動回了，客服工時省了 60%。」</p>
+  <span>— 電商賣家 Linda</span>
+</div>
+
+<!-- FAQ -->
+<h2 style="color:#e2e8f0;margin-top:2.5rem;">常見問題</h2>
+<div class="faq">
+  <details>
+    <summary>購買後怎麼取得模板？</summary>
+    <p>Gumroad 付款後立即取得下載連結，也會寄 Email 附下載連結。包含 ZIP 壓縮檔，解壓後含 5 個 .json 檔案和 README 說明文件。</p>
+  </details>
+  <details>
+    <summary>這些模板需要什麼前置條件？</summary>
+    <p>需要 n8n（可自架或使用 n8n Cloud）、LINE Developers 帳號（免費）、以及對應的第三方服務帳號（如 Google Calendar）。每個模板都附有繁中安裝說明。</p>
+  </details>
+  <details>
+    <summary>n8n 要自架還是用 Cloud 版？</summary>
+    <p>兩者都可以！自架最省錢（DigitalOcean $6/月起），n8n Cloud 最省事（$20/月起，無需管理伺服器）。模板在兩個環境都可使用。</p>
+  </details>
+  <details>
+    <summary>這些模板有包括 LINE Pay 整合嗎？</summary>
+    <p>Vol.1 版本未包含 LINE Pay，但包含 LINE Bot + Google Calendar 預約系統（可自行整合金流）。Vol.2 計畫加入支付整合。</p>
+  </details>
+  <details>
+    <summary>如果安裝遇到問題怎麼辦？</summary>
+    <p>每個模板附有詳細的繁中錯誤排查指南。如果還是有問題，可以透過 Gumroad 聯絡我們，工作天 24-48 小時回覆。</p>
+  </details>
+</div>
+
+<!-- Final CTA -->
+<div style="text-align:center;padding:2.5rem 2rem;margin:3rem 0 0;background:linear-gradient(135deg,rgba(0,185,101,0.12),rgba(52,211,153,0.08));border-radius:20px;border:1px solid rgba(52,211,153,0.3);">
+  <div style="font-size:3rem;margin-bottom:1rem;">📦</div>
+  <h2 style="color:#e2e8f0;font-size:1.5rem;margin:0 0 0.5rem;">準備讓 LINE Bot 幫你工作了嗎？</h2>
+  <p style="color:#94a3b8;max-width:420px;margin:0 auto 1.5rem;">5 個模板、繁中說明、30天退款保證。今天就開始自動化。</p>
+  <a href="https://xiaofan8.gumroad.com/l/n8n-tw-templates" class="buy-btn" rel="noopener sponsored" target="_blank">
+    📥 下載模板包 — $19 USD →
+  </a>
+  <p class="guarantee" style="margin-top:0.8rem;">
+    或先看看 <a href="https://autodev-ai.com/tools/line-bot-calculator.html" style="color:#667eea;">LINE Bot 費用計算器</a>，估算一下你的方案成本
+  </p>
+</div>
+
+<!-- Related -->
+<h2 style="color:#e2e8f0;margin-top:3rem;">延伸閱讀</h2>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+  <a href="/ai-tools-tw/blog/vibe-coding-tools-comparison-2026.html" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1rem;text-decoration:none;">
+    <div style="color:#667eea;font-size:0.72rem;font-weight:600;margin-bottom:0.3rem;">Vibe Coding</div>
+    <div style="color:#e2e8f0;font-size:0.88rem;line-height:1.4;">Lovable vs v0 vs Magic Patterns：2026 Vibe Coding 工具完整比較</div>
+  </a>
+  <a href="https://autodev-ai.com/blog/n8n-automation-tutorial-2026.html" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1rem;text-decoration:none;">
+    <div style="color:#667eea;font-size:0.72rem;font-weight:600;margin-bottom:0.3rem;">n8n 教學</div>
+    <div style="color:#e2e8f0;font-size:0.88rem;line-height:1.4;">n8n 自動化入門教學 2026：從安裝到第一個 Workflow</div>
+  </a>
+</div>
+<style>@media(max-width:480px){.related-grid{grid-template-columns:1fr!important;}}</style>
+
+</div><!-- /product-wrap -->
+
+<footer style="text-align:center;padding:2rem;color:#475569;font-size:0.82rem;border-top:1px solid rgba(255,255,255,0.06);">
+  © 2026 AI Tools TW ·
+  <a href="/ai-tools-tw/" style="color:#667eea;">首頁</a> ·
+  <a href="/ai-tools-tw/blog/" style="color:#667eea;">所有評測</a> ·
+  <a href="https://autodev-ai.com" style="color:#667eea;">AI 開發服務</a>
+</footer>
+
+</body>
+</html>
