@@ -1,7 +1,18 @@
 {
-  "lastUpdated": "2026-04-25T02:00:00+00:00",
+  "lastUpdated": "2026-04-26T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-04-26",
+      "action": "publish_article",
+      "title": "CASS 評測 2026：11 種 AI 工具 Session 統一搜尋，Codex/Claude/Gemini/Cursor 跨工具知識庫完整教學",
+      "file": "blog/cass-coding-agent-session-search-2026.html",
+      "wordCount": 2600,
+      "topicSource": "nextPriority (CASS — 667⭐ 開源工具，支援 11+ AI 工具 session 統一搜尋)",
+      "affiliates": ["datacamp", "digitalocean", "gumroad", "capcut", "cloudways"],
+      "internalLinks": ["sessfind-cross-tool-ai-session-search-2026.html", "claude-code-session-search-2026.html", "claude-code-cost-tracker-ccusage-claudoscope-2026.html", "n8n-2-14-mcp-ai-workflow-2026.html", "ai-coding-tools.html"],
+      "notes": "CASS（coding-agent-search）深度評測；11+ AI 工具覆蓋（vs sessfind 5種），三種搜尋模式（詞彙/語義/混合 RRF），Robot Mode（--robot flag 讓 AI Agent 查歷史記錄），SSH 遠端搜尋，Token 優化輸出（--fields minimal）。含 5 個台灣實戰場景（新創/遊戲開發/醫療系統/電商/SaaS）、完整 vs sessfind vs cc-session 比較表、5 分鐘安裝教學、進階技巧。5 個漸層 CTA：DataCamp/DigitalOcean/Gumroad/CapCut/Cloudways。"
+    },
     {
       "date": "2026-04-25",
       "action": "publish_article",
@@ -196,12 +207,13 @@
     "blog/n8n-2-14-mcp-ai-workflow-2026.html",
     "blog/sessfind-cross-tool-ai-session-search-2026.html",
     "blog/glm-5-1-open-source-coding-model-review-2026.html",
-    "blog/dify-v1-6-mcp-two-way-integration-2026.html"
+    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
+    "blog/cass-coding-agent-session-search-2026.html"
   ],
   "nextPriority": [
-    "CASS (coding_agent_session_search) — 667⭐ 開源工具，支援 11+ AI 工具 session 統一搜尋，可做更深度評測或與 sessfind 的詳細比較文",
     "n8n + Claude Code 進階教學 — 複雜 workflow 建立流程、debug 技巧、best practices",
-    "AI 訂閱費用比較 2026 更新版 — 補充 GPT-5.4/Claude 4.6 Opus 定價，更新現有 ai-subscription-comparison-2026.html"
+    "AI 訂閱費用比較 2026 更新版 — 補充 GPT-5.4/Claude 4.6 Opus 定價，更新現有 ai-subscription-comparison-2026.html",
+    "DeepSeek V4 評測 2026 — SWE-bench 81%，比 V3 大幅進步，API 定價競爭分析"
   ],
   "directives": [],
   "internalLinkRuns": [

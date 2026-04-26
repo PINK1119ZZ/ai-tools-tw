@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CASS 評測 2026：11 種 AI 工具 Session 統一搜尋，Codex/Claude/Gemini/Cursor 跨工具知識庫完整教學</title>
+<meta name="description" content="CASS（coding-agent-search）是 Rust 打造的跨 AI 工具 Session 搜尋 TUI，支援 11+ 種 AI 編碼工具（Codex、Claude Code、Gemini CLI、Cursor、Aider 等），三種搜尋模式、LLM Robot Mode。台灣開發者 2026 完整安裝教學。">
+<meta name="keywords" content="CASS, coding-agent-search, AI session 搜尋, Claude Code session, Codex session, Gemini CLI session, Cursor session, Aider session, 跨工具搜尋, AI 工具台灣, Rust TUI 2026">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/cass-coding-agent-session-search-2026.html">
+<!-- Open Graph -->
+<meta property="og:title" content="CASS 評測 2026：11 種 AI 工具 Session 統一搜尋，跨工具知識庫完整教學">
+<meta property="og:description" content="同時用 Claude Code + Codex + Cursor + Aider？CASS 一個 TUI 搜遍 11+ 種 AI 工具歷史對話，三種搜尋模式，還有 LLM Robot Mode 讓 AI Agent 自動查自己的歷史記錄。台灣開發者完整教學。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/cass-coding-agent-session-search-2026.html">
+<meta property="og:locale" content="zh_TW">
+<!-- Schema.org Article -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "CASS 評測 2026：11 種 AI 工具 Session 統一搜尋，Codex/Claude/Gemini/Cursor 跨工具知識庫完整教學",
+  "description": "CASS（coding-agent-search）是 Rust 打造的跨 AI 工具 Session 搜尋 TUI，支援 11+ 種 AI 編碼工具，三種搜尋模式，LLM Robot Mode。台灣開發者完整教學。",
+  "datePublished": "2026-04-26",
+  "dateModified": "2026-04-26",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"}
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-tools-tw/style.css">
+<style>
+.article-hero{background:linear-gradient(135deg,#0a1628 0%,#0d2d4a 40%,#1a2040 100%);padding:8rem 2rem 4rem;text-align:center;}
+.article-hero h1{font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;max-width:900px;margin:0 auto 1.2rem;line-height:1.3;}
+.article-hero .subtitle{color:rgba(255,255,255,0.75);font-size:1.1rem;max-width:700px;margin:0 auto 2rem;}
+.article-meta{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;color:rgba(255,255,255,0.6);font-size:0.9rem;}
+.tag-pill{background:rgba(16,185,129,0.25);color:#6ee7b7;padding:4px 12px;border-radius:20px;font-size:0.8rem;border:1px solid rgba(16,185,129,0.35);}
+.article-body{max-width:800px;margin:0 auto;padding:3rem 2rem 5rem;}
+.article-body h2{font-size:1.6rem;color:#1a202c;margin:2.5rem 0 1rem;padding-bottom:0.5rem;border-bottom:2px solid #e2e8f0;}
+.article-body h3{font-size:1.2rem;color:#2d3748;margin:2rem 0 0.8rem;}
+.article-body p{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;}
+.article-body ul,ol{color:#4a5568;line-height:1.85;margin-bottom:1.2rem;padding-left:1.5rem;}
+.article-body li{margin-bottom:0.5rem;}
+.highlight-box{background:linear-gradient(135deg,#10b98115,#059f6815);border:1px solid rgba(16,185,129,0.25);border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.highlight-box strong{color:#059669;}
+.warning-box{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:1.5rem;margin:2rem 0;}
+.warning-box strong{color:#d97706;}
+.code-block{background:#1a202c;color:#e2e8f0;border-radius:10px;padding:1.5rem;font-family:'Courier New',monospace;font-size:0.9rem;overflow-x:auto;margin:1.5rem 0;line-height:1.7;}
+.code-block .comment{color:#68d391;}
+.code-block .cmd{color:#63b3ed;}
+.compare-table{width:100%;border-collapse:collapse;margin:2rem 0;font-size:0.95rem;}
+.compare-table th{background:#2d3748;color:#fff;padding:12px 16px;text-align:left;}
+.compare-table td{padding:11px 16px;border-bottom:1px solid #e2e8f0;color:#4a5568;}
+.compare-table tr:nth-child(even) td{background:#f7fafc;}
+.compare-table .yes{color:#059669;font-weight:600;}
+.compare-table .no{color:#e53e3e;}
+.compare-table .partial{color:#d97706;}
+.scenario-card{background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:1.5rem;margin:1rem 0;box-shadow:0 2px 8px rgba(0,0,0,0.04);}
+.scenario-card h4{color:#2d3748;margin:0 0 0.8rem;font-size:1.05rem;}
+.scenario-card p{color:#4a5568;margin:0;font-size:0.95rem;line-height:1.7;}
+.cta-box{background:linear-gradient(135deg,#1e3a5f 0%,#0d47a1 100%);border-radius:16px;padding:2rem;margin:2.5rem 0;text-align:center;}
+.cta-box h3{color:#fff;margin:0 0 0.6rem;font-size:1.3rem;}
+.cta-box p{color:rgba(255,255,255,0.85);margin:0 0 1.2rem;font-size:0.95rem;}
+.cta-btn{display:inline-block;background:#fff;color:#1e3a5f;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;font-size:0.95rem;transition:transform 0.2s;}
+.cta-btn:hover{transform:translateY(-2px);}
+.cta-box-green{background:linear-gradient(135deg,#064e3b 0%,#065f46 100%);}
+.cta-box-green .cta-btn{color:#064e3b;}
+.cta-box-orange{background:linear-gradient(135deg,#7c2d12 0%,#c2410c 100%);}
+.cta-box-orange .cta-btn{color:#7c2d12;}
+.cta-box-purple{background:linear-gradient(135deg,#3730a3 0%,#4f46e5 100%);}
+.cta-box-purple .cta-btn{color:#3730a3;}
+.cta-box-teal{background:linear-gradient(135deg,#134e4a 0%,#0f766e 100%);}
+.cta-box-teal .cta-btn{color:#134e4a;}
+.feature-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin:1.5rem 0;}
+.feature-item{background:#f7fafc;border-radius:10px;padding:1rem;border-left:3px solid #10b981;}
+.feature-item h4{color:#2d3748;margin:0 0 0.4rem;font-size:0.95rem;}
+.feature-item p{color:#718096;margin:0;font-size:0.85rem;}
+.toc-box{background:#f7fafc;border:1px solid #e2e8f0;border-radius:10px;padding:1.5rem 1.5rem 1rem;margin:2rem 0;}
+.toc-box h3{margin:0 0 1rem;color:#2d3748;font-size:1rem;}
+.toc-box ol{margin:0;padding-left:1.2rem;}
+.toc-box li{margin-bottom:0.4rem;}
+.toc-box a{color:#4f46e5;text-decoration:none;font-size:0.9rem;}
+.toc-box a:hover{text-decoration:underline;}
+.badge{display:inline-block;background:#dbeafe;color:#1e40af;padding:2px 10px;border-radius:20px;font-size:0.8rem;font-weight:600;margin-right:6px;}
+.badge-green{background:#d1fae5;color:#065f46;}
+.badge-orange{background:#ffedd5;color:#c2410c;}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PLACEHOLDER"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PLACEHOLDER');
+</script>
+</head>
+<body>
+<nav class="navbar">
+  <div class="nav-container">
+    <a href="/ai-tools-tw/" class="nav-logo">🤖 AI Tools TW</a>
+    <div class="nav-links">
+      <a href="/ai-tools-tw/blog/">文章</a>
+      <a href="/ai-tools-tw/ai-coding-tools.html">編碼工具</a>
+      <a href="/ai-tools-tw/mcp/">MCP 專區</a>
+    </div>
+  </div>
+</nav>
+
+<header class="article-hero">
+  <div class="tag-pill">AI 工具評測</div>&nbsp;
+  <div class="tag-pill">開發者工具</div>&nbsp;
+  <div class="tag-pill">Session 管理</div>
+  <h1>CASS 評測 2026：11 種 AI 工具 Session 統一搜尋<br>Codex、Claude Code、Gemini CLI、Cursor 跨工具知識庫完整教學</h1>
+  <p class="subtitle">同時用 5 種以上 AI 工具？歷史對話散落各地？CASS 一個 TUI 全統一，還有 Robot Mode 讓 AI 幫 AI 查記錄。</p>
+  <div class="article-meta">
+    <span>📅 2026-04-26</span>
+    <span>⏱ 閱讀約 13 分鐘</span>
+    <span>🌟 GitHub 667+ Stars</span>
+    <span>🦀 Rust 打造</span>
+  </div>
+</header>
+
+<main class="article-body">
+
+<div class="toc-box">
+  <h3>📋 本文目錄</h3>
+  <ol>
+    <li><a href="#problem">你每天用幾種 AI 工具？Session 到底散在哪？</a></li>
+    <li><a href="#what-is-cass">CASS 是什麼？和 sessfind 有什麼不同？</a></li>
+    <li><a href="#supported-agents">支援 11+ AI 工具列表</a></li>
+    <li><a href="#three-modes">三種搜尋模式深度解析</a></li>
+    <li><a href="#robot-mode">Robot Mode：讓 AI 幫 AI 查歷史記錄</a></li>
+    <li><a href="#install">5 分鐘安裝教學（Mac/Linux/Windows）</a></li>
+    <li><a href="#taiwan-scenarios">5 個台灣開發者實戰場景</a></li>
+    <li><a href="#compare">CASS vs sessfind vs cc-session 比較表</a></li>
+    <li><a href="#tips">進階技巧與最佳實踐</a></li>
+    <li><a href="#conclusion">總結與推薦</a></li>
+  </ol>
+</div>
+
+<h2 id="problem">你每天用幾種 AI 工具？Session 到底散在哪？</h2>
+
+<p>台灣的 AI 開發者已經不再只用一種工具了。根據 2026 年的使用習慣，一個中高級開發者的典型配置是：</p>
+
+<ul>
+  <li>🖥️ <strong>Claude Code</strong> 處理複雜的多檔案重構</li>
+  <li>⚡ <strong>Codex CLI</strong> 做快速的命令行任務自動化</li>
+  <li>💎 <strong>Cursor</strong> 日常 IDE 內的補全與 Chat</li>
+  <li>🤖 <strong>Gemini CLI</strong> 需要長 Context 或 Google 生態整合時</li>
+  <li>🔧 <strong>Aider</strong> 處理大型 codebase 的 git 整合修改</li>
+</ul>
+
+<p>這帶來了一個真實的痛點：<strong>你上週在 Claude Code 解決的那個 JWT 驗證問題，這週在 Codex 撞到同樣的坑，但你完全找不回那段對話。</strong></p>
+
+<p>你的知識散落在：</p>
+<ul>
+  <li><code>~/.claude/projects/</code>（Claude Code）</li>
+  <li><code>~/.codex/sessions/</code>（OpenAI Codex）</li>
+  <li><code>~/.config/cursor/</code>（Cursor）</li>
+  <li><code>~/.gemini/</code>（Gemini CLI）</li>
+  <li>各種 Aider 歷史文件</li>
+</ul>
+
+<p>每次都要分別打開、分別搜尋，效率極差。<strong>CASS（coding-agent-search）</strong>就是為了解決這個問題而生。</p>
+
+<div class="cta-box">
+  <h3>🎓 想系統學習 AI 輔助開發？</h3>
+  <p>DataCamp 有專門的 AI 工具使用課程，從基礎到進階，台灣學員可直接用信用卡訂閱。</p>
+  <a href="https://afflink.one/s/aavAC" rel="noopener sponsored" target="_blank" class="cta-btn">🚀 查看 DataCamp AI 課程</a>
+</div>
+
+<h2 id="what-is-cass">CASS 是什麼？和 sessfind 有什麼不同？</h2>
+
+<p>CASS（全名 coding-agent-search）是由 Jeffrey Emanuel（Dicklesworthstone）開發的開源 Rust CLI 工具，在 GitHub 上獲得 667+ Stars（截至 2026 年 4 月）。它的目標是成為所有 AI 編碼工具歷史記錄的統一搜尋引擎。</p>
+
+<div class="highlight-box">
+  <strong>核心定位：</strong>CASS 不只是一個搜尋工具，它是你的 <strong>跨工具 AI 對話知識庫</strong>。你在任何 AI 工具裡找到的解決方案，都能在任何其他工具裡即時調用。
+</div>
+
+<p>很多人看到這裡會問：「我上個月不是剛看過 sessfind 的評測？這和 sessfind 有什麼不同？」</p>
+
+<p>這是個好問題。以下是核心差異：</p>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>面向</th>
+      <th>CASS</th>
+      <th>sessfind</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>支援工具數</td>
+      <td class="yes">11+ 種</td>
+      <td>5 種</td>
+    </tr>
+    <tr>
+      <td>TUI 介面</td>
+      <td class="yes">✅ 完整互動式 TUI</td>
+      <td class="partial">⚠️ 基本 TUI</td>
+    </tr>
+    <tr>
+      <td>Robot / LLM Mode</td>
+      <td class="yes">✅ 有（--robot flag）</td>
+      <td class="no">❌ 無</td>
+    </tr>
+    <tr>
+      <td>遠端 SSH 搜尋</td>
+      <td class="yes">✅ 支援</td>
+      <td class="no">❌ 無</td>
+    </tr>
+    <tr>
+      <td>搜尋模式</td>
+      <td>詞彙 + 語義 + 混合（3 種）</td>
+      <td>BM25 + 語義（2 種）</td>
+    </tr>
+    <tr>
+      <td>索引架構</td>
+      <td>SQLite + 倒排索引</td>
+      <td>本地文件索引</td>
+    </tr>
+    <tr>
+      <td>Token 優化輸出</td>
+      <td class="yes">✅ --fields minimal</td>
+      <td class="no">❌ 無</td>
+    </tr>
+    <tr>
+      <td>社群</td>
+      <td>667+ Stars（HN 上過）</td>
+      <td>較小型</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>簡單說：<strong>sessfind 適合只用幾種工具、需要快速 resume 的使用者；CASS 適合多工具重度用戶，特別是需要讓 AI Agent 自動查詢過去記錄的場景。</strong></p>
+
+<h2 id="supported-agents">支援 11+ AI 工具列表</h2>
+
+<p>CASS 目前支援以下 AI 編碼工具的 Session 索引與搜尋：</p>
+
+<div class="feature-grid">
+  <div class="feature-item">
+    <h4>Claude Code</h4>
+    <p>Anthropic 旗艦 CLI，讀取 ~/.claude/projects/ 目錄</p>
+  </div>
+  <div class="feature-item">
+    <h4>OpenAI Codex CLI</h4>
+    <p>~/.codex/sessions/ 全版本支援</p>
+  </div>
+  <div class="feature-item">
+    <h4>Gemini CLI</h4>
+    <p>Google Gemini 命令行，支援 ~/.gemini/ 路徑</p>
+  </div>
+  <div class="feature-item">
+    <h4>Cursor</h4>
+    <p>AI 原生 IDE，讀取 Chat History 記錄</p>
+  </div>
+  <div class="feature-item">
+    <h4>Aider</h4>
+    <p>Git 整合 AI 編碼，讀取 .aider.chat.history.md</p>
+  </div>
+  <div class="feature-item">
+    <h4>Cline</h4>
+    <p>VS Code 插件形式的 AI Agent</p>
+  </div>
+  <div class="feature-item">
+    <h4>Amp</h4>
+    <p>Sourcegraph 旗下 AI 編碼助理</p>
+  </div>
+  <div class="feature-item">
+    <h4>Zed AI</h4>
+    <p>高效能編輯器內建 AI 功能</p>
+  </div>
+  <div class="feature-item">
+    <h4>Windsurf</h4>
+    <p>Codeium 旗下 AI IDE</p>
+  </div>
+  <div class="feature-item">
+    <h4>Continue</h4>
+    <p>開源 AI 編碼插件（VS Code/JetBrains）</p>
+  </div>
+  <div class="feature-item">
+    <h4>OpenCode</h4>
+    <p>開源輕量 AI 編碼 CLI</p>
+  </div>
+</div>
+
+<p>所有索引的數據存放在 <code>~/.local/share/coding-agent-search/</code>（Linux）或平台對應目錄。<strong>CASS 採用唯讀模式，絕對不修改你的原始 Session 文件。</strong></p>
+
+<div class="cta-box cta-box-green">
+  <h3>☁️ 想在雲端部署自己的 AI 開發環境？</h3>
+  <p>DigitalOcean Droplet 是台灣開發者最常用的 VPS 選擇，新帳號免費試用 $200 額度，2 個月夠用。</p>
+  <a href="https://m.do.co/c/6121a295f624" rel="noopener sponsored" target="_blank" class="cta-btn">🚀 DigitalOcean 免費試用 $200</a>
+</div>
+
+<h2 id="three-modes">三種搜尋模式深度解析</h2>
+
+<p>CASS 的核心競爭力之一是提供三種搜尋模式，針對不同場景有不同的最佳選擇：</p>
+
+<h3>模式一：詞彙搜尋（Lexical Search）</h3>
+
+<p>使用 BM25 演算法的全文搜尋，速度最快，適合已知關鍵字的精確查詢。</p>
+
+<div class="code-block">
+<span class="comment"># 詞彙搜尋：直接找關鍵字</span>
+<span class="cmd">cass search "JWT authentication error" --mode lexical --limit 10</span>
+
+<span class="comment"># 過濾特定工具</span>
+<span class="cmd">cass search "prisma migration" --agent claude --limit 5</span>
+
+<span class="comment"># 限制時間範圍（近 7 天）</span>
+<span class="cmd">cass search "rate limiting" --days 7</span>
+</div>
+
+<p>適用場景：你記得你說過什麼詞、你找的是特定錯誤訊息、你需要速度而非精確度。</p>
+
+<h3>模式二：語義搜尋（Semantic Search）</h3>
+
+<p>使用向量嵌入進行語義相似度搜尋，即使你的查詢用詞和歷史對話完全不同，也能找到概念相近的內容。</p>
+
+<div class="code-block">
+<span class="comment"># 語義搜尋：用概念搜尋</span>
+<span class="cmd">cass search "如何讓 API 請求不超過頻率限制" --mode semantic</span>
+
+<span class="comment"># 等同於找：rate limiting, throttling, exponential backoff, token bucket...</span>
+</div>
+
+<p>適用場景：你只記得問題大概是什麼，但不記得確切詞彙；跨語言搜尋（中文查詢找英文記錄）。</p>
+
+<h3>模式三：混合搜尋（Hybrid Search）</h3>
+
+<p>結合詞彙和語義搜尋，用 RRF（倒數排名融合）演算法合併結果，取兩者之長。CASS 官方推薦的預設模式。</p>
+
+<div class="code-block">
+<span class="comment"># 混合搜尋（預設模式）</span>
+<span class="cmd">cass search "nextjs server component data fetching"</span>
+
+<span class="comment"># 用 Alt+S 在 TUI 中即時切換搜尋模式</span>
+<span class="comment"># 不需要重啟，切換後即時重新排名</span>
+</div>
+
+<div class="highlight-box">
+  <strong>TUI 快捷鍵提示：</strong>在互動式 TUI 中，按 <code>Alt+S</code> 可即時切換搜尋模式。按 <code>agent:claude</code> 輸入過濾器可只看 Claude 的記錄，<code>date:today</code> 看今天，<code>dir:my-project</code> 篩選特定專案目錄。
+</div>
+
+<h2 id="robot-mode">Robot Mode：讓 AI 幫 AI 查歷史記錄</h2>
+
+<p>這是 CASS 最獨特、也是最令人興奮的功能之一——<strong>Robot Mode</strong>（通過 <code>--robot</code> 或 <code>--json</code> flag 開啟）。</p>
+
+<p>Robot Mode 讓 CASS 輸出機器可讀的 JSON 格式，<strong>可以直接被 AI Agent 呼叫</strong>。這意味著你可以在 Claude Code 或 n8n Workflow 裡，讓 AI 自動查詢過去所有工具的歷史記錄。</p>
+
+<h3>Robot Mode 輸出範例</h3>
+
+<div class="code-block">
+<span class="comment"># Robot Mode：輸出機器可讀 JSON</span>
+<span class="cmd">cass search "authentication error" --robot --limit 5</span>
+
+<span class="comment"># 輸出格式（stdout 只有乾淨的 JSON，錯誤訊息走 stderr）：</span>
+{
+  "results": [
+    {
+      "source_path": "~/.claude/projects/myapp/session-abc123.jsonl",
+      "line_number": 42,
+      "agent": "claude",
+      "score": 0.94,
+      "snippet": "JWT token 驗證失敗的原因是時區不一致...",
+      "date": "2026-04-18"
+    }
+  ],
+  "total": 23,
+  "query": "authentication error"
+}
+</div>
+
+<h3>在 Claude Code 的 CLAUDE.md 裡設定自動查詢</h3>
+
+<div class="code-block">
+<span class="comment"># ~/.claude/CLAUDE.md 加入這段</span>
+Before solving any technical problem, run:
+cass search "{problem_keywords}" --robot --limit 3 --fields minimal
+to check if this has been solved before in any AI tool session.
+</div>
+
+<h3>Token 優化：--fields minimal</h3>
+
+<p>當搜尋結果要傳給 AI 處理時，Token 效率很重要。<code>--fields minimal</code> 只返回 source_path、line_number、agent 三個欄位，大幅減少 Token 消耗：</p>
+
+<div class="code-block">
+<span class="comment"># 完整輸出：可能 500+ tokens</span>
+<span class="cmd">cass search "docker compose" --robot</span>
+
+<span class="comment"># 最小化輸出：約 50 tokens</span>
+<span class="cmd">cass search "docker compose" --robot --fields minimal --limit 5</span>
+</div>
+
+<div class="cta-box cta-box-purple">
+  <h3>📘 想學 Claude Code 完整工作流程？</h3>
+  <p>Claude Code Pack 包含 30+ 個實戰 Prompt、CLAUDE.md 模板、以及 MCP 整合最佳實踐。</p>
+  <a href="https://xiaofan8.gumroad.com/l/kknad" rel="noopener sponsored" target="_blank" class="cta-btn">🛒 取得 Claude Code Pack（$29）</a>
+</div>
+
+<h2 id="install">5 分鐘安裝教學（Mac/Linux/Windows）</h2>
+
+<h3>方法一：Cargo 安裝（推薦）</h3>
+
+<div class="code-block">
+<span class="comment"># 確認 Rust 工具鏈已安裝</span>
+<span class="cmd">curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh</span>
+
+<span class="comment"># 安裝 CASS</span>
+<span class="cmd">cargo install coding-agent-search</span>
+
+<span class="comment"># 確認安裝成功</span>
+<span class="cmd">cass --version</span>
+<span class="comment"># → cass 0.1.61</span>
+</div>
+
+<h3>方法二：直接下載二進制（無需 Rust）</h3>
+
+<div class="code-block">
+<span class="comment"># macOS (Apple Silicon)</span>
+<span class="cmd">curl -L https://github.com/Dicklesworthstone/coding_agent_session_search/releases/latest/download/cass-aarch64-apple-darwin -o cass</span>
+<span class="cmd">chmod +x cass && sudo mv cass /usr/local/bin/</span>
+
+<span class="comment"># macOS (Intel)</span>
+<span class="cmd">curl -L https://github.com/Dicklesworthstone/coding_agent_session_search/releases/latest/download/cass-x86_64-apple-darwin -o cass</span>
+<span class="cmd">chmod +x cass && sudo mv cass /usr/local/bin/</span>
+
+<span class="comment"># Linux (x86_64)</span>
+<span class="cmd">curl -L https://github.com/Dicklesworthstone/coding_agent_session_search/releases/latest/download/cass-x86_64-unknown-linux-gnu -o cass</span>
+<span class="cmd">chmod +x cass && sudo mv cass /usr/local/bin/</span>
+</div>
+
+<h3>初始化索引</h3>
+
+<div class="code-block">
+<span class="comment"># 建立索引（首次需要幾分鐘，視 session 數量）</span>
+<span class="cmd">cass index</span>
+
+<span class="comment"># 檢查索引健康狀態</span>
+<span class="cmd">cass health</span>
+<span class="comment"># exit 0 = 正常，exit 1 = 需要先執行 index</span>
+
+<span class="comment"># 查看支援的工具及對應 session 路徑</span>
+<span class="cmd">cass sources agents list</span>
+
+<span class="comment"># 排除不需要的工具（也會清除對應索引）</span>
+<span class="cmd">cass sources agents exclude windsurf</span>
+</div>
+
+<h3>啟動 TUI 互動介面</h3>
+
+<div class="code-block">
+<span class="comment"># 啟動 TUI（推薦日常使用）</span>
+<span class="cmd">cass</span>
+
+<span class="comment"># 或直接 CLI 搜尋</span>
+<span class="cmd">cass search "your query here"</span>
+</div>
+
+<div class="warning-box">
+  <strong>⚠️ 注意：</strong>CASS 索引建立後，後續搜尋是即時的。但建議設定定時更新索引（每天或每次大量使用後）：<code>cass index --incremental</code> 只更新新增的 session，速度快很多。
+</div>
+
+<h2 id="taiwan-scenarios">5 個台灣開發者實戰場景</h2>
+
+<div class="scenario-card">
+  <h4>🏢 場景一：新創公司後端工程師（台北信義區）</h4>
+  <p>小明同時用 Claude Code（重構）和 Codex CLI（快速任務），三個月累積 800+ sessions。某天接到 bug report：「用戶的 Google OAuth 在某些 Safari 版本失效。」他搜尋 <code>cass search "OAuth Safari CORS"</code>，30 秒找到兩個月前在 Codex 解決過同一問題的完整解法。<strong>節省 2 小時除錯時間。</strong></p>
+</div>
+
+<div class="scenario-card">
+  <h4>🎮 場景二：獨立遊戲開發者（高雄）</h4>
+  <p>小華用 Cursor 寫 Unity C#，但偶爾用 Aider 做大批量腳本修改。她在 Cursor 裡問 AI：「幫我找我之前解決過 NavMesh 路徑計算問題的記錄。」Claude Code 透過 Robot Mode 呼叫 <code>cass search "NavMesh pathfinding" --robot</code>，直接把解法片段貼回 Cursor 的 Chat。<strong>跨工具知識即時流動。</strong></p>
+</div>
+
+<div class="scenario-card">
+  <h4>🏥 場景三：醫療系統開發商（台中）</h4>
+  <p>大型醫院的醫療資訊系統廠商，開發團隊 8 人各自用不同 AI 工具。用 CASS 的遠端 SSH 搜尋功能，把所有開發機的 session 索引集中，讓任何人都能搜尋全團隊的 AI 對話記錄。新人入職查詢 <code>cass search "HL7 FHIR 台灣健保格式"</code> 直接繼承前人的實戰知識。<strong>知識不再因為離職而消失。</strong></p>
+</div>
+
+<div class="scenario-card">
+  <h4>🛒 場景四：電商平台前端工程師（新北）</h4>
+  <p>同時面試多家公司的工程師小林，每次面試前用 <code>cass search "系統設計 高并發 購物車" --days 180</code> 快速重溫過去六個月和 AI 討論過的系統設計問題與解法，用 TUI 的 date 過濾器找出最近討論的技術話題。<strong>面試前的最強複習工具。</strong></p>
+</div>
+
+<div class="scenario-card">
+  <h4>📱 場景五：SaaS 創業者（遠端工作）</h4>
+  <p>同時接多個客戶的全端 SaaS 開發者，用 <code>dir:client-a</code> 過濾器搜尋特定客戶專案相關的 AI 對話。在 n8n Workflow 裡設定：每週五自動執行 <code>cass search --robot --days 7</code>，把本週所有 AI 工具的解法摘要整理成 Markdown 週報，自動發到 Slack。<strong>自動化的開發週誌。</strong></p>
+</div>
+
+<h2 id="compare">CASS vs sessfind vs cc-session 比較表</h2>
+
+<p>市場上現在有三個主要的 AI Session 搜尋工具，功能定位各有不同：</p>
+
+<table class="compare-table">
+  <thead>
+    <tr>
+      <th>功能</th>
+      <th>CASS</th>
+      <th>sessfind</th>
+      <th>cc-session</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>支援工具數</td>
+      <td class="yes">11+</td>
+      <td>5</td>
+      <td>1（僅 Claude Code）</td>
+    </tr>
+    <tr>
+      <td>TUI 互動介面</td>
+      <td class="yes">✅ 完整</td>
+      <td class="partial">⚠️ 基本</td>
+      <td class="yes">✅ 精緻</td>
+    </tr>
+    <tr>
+      <td>LLM Robot Mode</td>
+      <td class="yes">✅ 有</td>
+      <td class="no">❌</td>
+      <td class="no">❌</td>
+    </tr>
+    <tr>
+      <td>遠端 SSH 搜尋</td>
+      <td class="yes">✅ 有</td>
+      <td class="no">❌</td>
+      <td class="no">❌</td>
+    </tr>
+    <tr>
+      <td>詞彙搜尋</td>
+      <td class="yes">✅</td>
+      <td class="yes">✅ BM25</td>
+      <td class="yes">✅</td>
+    </tr>
+    <tr>
+      <td>語義搜尋</td>
+      <td class="yes">✅</td>
+      <td class="yes">✅</td>
+      <td class="no">❌</td>
+    </tr>
+    <tr>
+      <td>混合搜尋</td>
+      <td class="yes">✅ RRF 融合</td>
+      <td class="no">❌</td>
+      <td class="no">❌</td>
+    </tr>
+    <tr>
+      <td>Session Resume</td>
+      <td class="partial">⚠️ 顯示路徑</td>
+      <td class="yes">✅ 一鍵 resume</td>
+      <td class="yes">✅ 一鍵 resume</td>
+    </tr>
+    <tr>
+      <td>索引速度</td>
+      <td>快（SQLite）</td>
+      <td>快（本地）</td>
+      <td>快（專屬）</td>
+    </tr>
+    <tr>
+      <td>Token 優化輸出</td>
+      <td class="yes">✅ --fields minimal</td>
+      <td class="no">❌</td>
+      <td class="no">❌</td>
+    </tr>
+    <tr>
+      <td>開源授權</td>
+      <td class="yes">MIT</td>
+      <td class="yes">MIT</td>
+      <td class="yes">MIT</td>
+    </tr>
+    <tr>
+      <td>GitHub Stars</td>
+      <td>667+</td>
+      <td>較少</td>
+      <td>中等</td>
+    </tr>
+    <tr>
+      <td>最適合</td>
+      <td>多工具重度用戶、AI Agent 整合</td>
+      <td>少工具、需要快速 resume</td>
+      <td>Claude Code 單一工具深度用戶</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="highlight-box">
+  <strong>選工具建議：</strong>如果你同時用 3 種以上 AI 工具，或者想讓 AI Agent 自動查詢歷史記錄，選 CASS。如果你主要用 Claude Code 且需要快速 resume，cc-session 更合適。如果你用 5 種以下工具且不需要 Robot Mode，sessfind 也是好選擇。
+</div>
+
+<div class="cta-box cta-box-orange">
+  <h3>🎬 用 CapCut 把你的 AI 開發過程做成教學影片？</h3>
+  <p>台灣 YouTube 技術頻道正在爆發，CapCut 的 AI 剪輯功能讓你不需要剪接技巧也能出片。</p>
+  <a href="https://vbtrax.com/track/clicks/9453/c627c2bc9b0126dafe8dec2bd32e9d452d6745c963bcb0f90067b504641200a8cd3ea5e2576e9f663499abdb4aee7abb970d" rel="noopener sponsored" target="_blank" class="cta-btn">🎬 免費試用 CapCut</a>
+</div>
+
+<h2 id="tips">進階技巧與最佳實踐</h2>
+
+<h3>技巧一：設定 Shell Alias 快速啟動</h3>
+
+<div class="code-block">
+<span class="comment"># 加入 ~/.zshrc 或 ~/.bashrc</span>
+alias cs='cass search'
+alias ct='cass'  <span class="comment"># 啟動 TUI</span>
+alias ci='cass index --incremental'  <span class="comment"># 增量更新索引</span>
+
+<span class="comment"># 使用範例</span>
+<span class="cmd">cs "React hydration error" --agent claude --days 30</span>
+</div>
+
+<h3>技巧二：整合進 CLAUDE.md（自動搜尋歷史）</h3>
+
+<div class="code-block">
+<span class="comment"># ~/.claude/CLAUDE.md 加入以下規則：</span>
+## Knowledge Search Protocol
+When encountering a technical problem:
+1. First check: cass search "{keywords}" --robot --limit 3 --fields minimal
+2. If results found: review before re-solving
+3. Robot mode output format: JSON to stdout, diagnostics to stderr
+</div>
+
+<h3>技巧三：CASS + n8n 自動週報</h3>
+
+<p>用 n8n 的 Execute Command 節點，每週五定時執行：</p>
+
+<div class="code-block">
+<span class="comment"># n8n Execute Command 節點設定</span>
+Command: cass search "{{$json.query}}" --robot --days 7 --limit 20
+Working Directory: /home/user
+
+<span class="comment"># 後接 Code 節點解析 JSON，送 Slack/Email</span>
+</div>
+
+<h3>技巧四：遠端 SSH 搜尋（團隊共用）</h3>
+
+<div class="code-block">
+<span class="comment"># 在遠端機器上建立索引</span>
+<span class="cmd">ssh dev-server 'cass index'</span>
+
+<span class="comment"># 本地搜尋遠端機器的索引</span>
+<span class="cmd">cass sources remote add dev-server ssh://user@dev-server.example.com</span>
+<span class="cmd">cass search "production bug fix" --source dev-server</span>
+</div>
+
+<h3>技巧五：自動容錯（Typo 自動修正）</h3>
+
+<p>CASS 的一個小亮點：CLI 有容錯機制，打錯指令會自動提示並修正：</p>
+
+<div class="code-block">
+<span class="cmd">cass serach "query"</span>
+<span class="comment"># → Did you mean: cass search "query"?</span>
+<span class="comment"># → Autocorrecting... (with teaching notes)</span>
+</div>
+
+<h2 id="conclusion">總結與推薦</h2>
+
+<p>CASS 解決了 2026 年 AI 開發者最真實的一個問題：<strong>多工具並用時，知識的碎片化。</strong></p>
+
+<p>它的核心優勢：</p>
+<ul>
+  <li>✅ <strong>11+ AI 工具支援</strong>：覆蓋市場上幾乎所有主流工具</li>
+  <li>✅ <strong>Robot Mode</strong>：讓 AI 幫 AI 查記錄，AI Agent 整合的殺手級功能</li>
+  <li>✅ <strong>三種搜尋模式</strong>：詞彙、語義、混合，場景全覆蓋</li>
+  <li>✅ <strong>Token 優化</strong>：<code>--fields minimal</code> 讓 AI 整合更省錢</li>
+  <li>✅ <strong>唯讀安全</strong>：絕不修改原始 session 文件</li>
+</ul>
+
+<p>比較適合的使用者：</p>
+<ul>
+  <li>同時使用 3 種以上 AI 工具的重度用戶</li>
+  <li>想讓 Claude Code/n8n Workflow 自動查詢過去解法的開發者</li>
+  <li>團隊想共享 AI 對話知識庫的組織</li>
+  <li>追求跨工具搜尋精度的工程師</li>
+</ul>
+
+<p>如果你只用 Claude Code 一種工具，<a href="/ai-tools-tw/blog/claude-code-session-search-2026.html">cc-session</a> 可能是更專注的選擇。如果你用的工具剛好在 sessfind 支援的 5 種範圍內，<a href="/ai-tools-tw/blog/sessfind-cross-tool-ai-session-search-2026.html">sessfind</a> 的一鍵 resume 也很好用。</p>
+
+<p>但如果你想要最完整的跨工具覆蓋、最強的 AI 整合能力，<strong>CASS 是 2026 年這個賽道的最佳選擇</strong>。</p>
+
+<div class="highlight-box">
+  <strong>📦 立即安裝：</strong>
+  <code>cargo install coding-agent-search</code><br>
+  GitHub：<a href="https://github.com/Dicklesworthstone/coding_agent_session_search" target="_blank" rel="noopener">Dicklesworthstone/coding_agent_session_search</a>（MIT 開源）
+</div>
+
+<div class="cta-box cta-box-teal">
+  <h3>🌐 想架設自己的 AI 服務？選對雲端主機很重要</h3>
+  <p>Cloudways 是台灣開發者部署 Node.js / Python AI 應用的熱門選擇，管理介面友好、效能穩定。</p>
+  <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" rel="noopener sponsored" target="_blank" class="cta-btn">🚀 試用 Cloudways（最高 $125 回饋）</a>
+</div>
+
+<h2>延伸閱讀</h2>
+
+<ul>
+  <li>📖 <a href="/ai-tools-tw/blog/sessfind-cross-tool-ai-session-search-2026.html">sessfind 評測：5 種 AI 工具 Session 統一搜尋</a></li>
+  <li>📖 <a href="/ai-tools-tw/blog/claude-code-session-search-2026.html">Claude Code Session 搜尋：search-sessions + cc-session</a></li>
+  <li>📖 <a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claude Code 成本追蹤：ccusage + Claudoscope</a></li>
+  <li>📖 <a href="/ai-tools-tw/blog/n8n-2-14-mcp-ai-workflow-2026.html">n8n 2.14 MCP 評測：Claude Code 一句話建 Workflow</a></li>
+  <li>📖 <a href="/ai-tools-tw/ai-coding-tools.html">2026 AI 編碼工具完整比較</a></li>
+</ul>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <p>© 2026 AI Tools TW — 台灣 AI 工具評測與教學</p>
+    <p style="font-size:0.85rem;opacity:0.7;margin-top:0.5rem;">本文部分連結為聯盟行銷連結，點擊後本站可能獲得佣金，不影響評測公正性。</p>
+  </div>
+</footer>
+
+</body>
+</html>
