@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>n8n + Claude Code 進階教學 2026：複雜 Workflow 建立、Debug 技巧與 Best Practices 完整指南</title>
+  <meta name="description" content="深入掌握 n8n 與 Claude Code 的進階整合技巧：複雜 Workflow 架構設計、常見錯誤 Debug 方法、效能優化 Best Practices，台灣開發者 2026 完整實戰教學。" />
+  <meta property="og:title" content="n8n + Claude Code 進階教學 2026：複雜 Workflow 建立、Debug 技巧與 Best Practices" />
+  <meta property="og:description" content="掌握 n8n + Claude Code 進階整合：複雜 Workflow 架構、Debug 技巧、效能優化，台灣開發者完整實戰指南。" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://aitools.tw/blog/n8n-claude-code-advanced-workflow-2026.html" />
+  <meta property="og:image" content="https://aitools.tw/blog/og/n8n-mcp-2026.jpg" />
+  <link rel="canonical" href="https://aitools.tw/blog/n8n-claude-code-advanced-workflow-2026.html" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    body { font-family: 'Noto Sans TC', 'Segoe UI', sans-serif; line-height: 1.8; color: #1a1a2e; background: #f8f9fa; margin: 0; padding: 0; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h1 { font-size: 2rem; font-weight: 800; color: #0f3460; line-height: 1.3; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.4rem; font-weight: 700; color: #16213e; margin-top: 2.5rem; padding-bottom: 0.4rem; border-bottom: 3px solid #e94560; }
+    h3 { font-size: 1.15rem; font-weight: 700; color: #0f3460; margin-top: 1.8rem; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+    .tag { background: #e94560; color: white; padding: 2px 10px; border-radius: 20px; font-size: 0.8rem; margin-right: 6px; }
+    .highlight-box { background: linear-gradient(135deg, #f0f4ff 0%, #e8f5e9 100%); border-left: 4px solid #0f3460; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+    .warning-box { background: #fff8e1; border-left: 4px solid #ff9800; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+    .tip-box { background: linear-gradient(135deg, #e8f5e9, #f1f8e9); border-left: 4px solid #2e7d32; padding: 1.2rem 1.5rem; border-radius: 8px; margin: 1.5rem 0; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    th { background: #0f3460; color: white; padding: 10px 12px; text-align: left; }
+    td { padding: 9px 12px; border-bottom: 1px solid #e0e0e0; }
+    tr:nth-child(even) { background: #f5f5f5; }
+    tr:hover { background: #e8f0fe; }
+    code { background: #1a1a2e; color: #a8ff78; padding: 2px 8px; border-radius: 4px; font-size: 0.88rem; font-family: 'Courier New', monospace; }
+    pre { background: #1a1a2e; color: #e0e0e0; padding: 1.2rem; border-radius: 8px; overflow-x: auto; font-size: 0.88rem; line-height: 1.7; }
+    pre code { background: none; color: inherit; padding: 0; }
+    .cta-box { background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #e94560 100%); border-radius: 12px; padding: 1.8rem; margin: 2rem 0; text-align: center; color: white; }
+    .cta-box h3 { color: white; margin-top: 0; font-size: 1.2rem; }
+    .cta-box p { color: rgba(255,255,255,0.9); margin: 0.5rem 0 1.2rem; font-size: 0.95rem; }
+    .cta-btn { display: inline-block; background: white; color: #0f3460; font-weight: 700; padding: 0.75rem 2rem; border-radius: 50px; text-decoration: none; font-size: 1rem; transition: transform 0.2s; margin: 0 6px; }
+    .cta-btn:hover { transform: scale(1.04); }
+    .breadcrumb { font-size: 0.85rem; color: #888; margin-bottom: 1.5rem; }
+    .breadcrumb a { color: #0f3460; text-decoration: none; }
+    ul li, ol li { margin-bottom: 0.5rem; }
+    .toc { background: #f0f4ff; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1.5rem 0; }
+    .toc h4 { margin: 0 0 0.8rem; color: #0f3460; }
+    .toc ol { margin: 0; padding-left: 1.5rem; }
+    .toc li { margin-bottom: 0.4rem; }
+    .toc a { color: #0f3460; text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .badge { display: inline-block; background: #e94560; color: white; font-size: 0.75rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; margin-left: 6px; vertical-align: middle; }
+    .badge-green { background: #2e7d32; }
+    .step-box { background: white; border-radius: 10px; padding: 1.2rem 1.5rem; margin: 1rem 0; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 4px solid #e94560; }
+    .step-box .step-num { font-size: 0.8rem; font-weight: 700; color: #e94560; text-transform: uppercase; letter-spacing: 1px; }
+    .scenario-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+    .scenario-card { background: white; border-radius: 10px; padding: 1.2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.07); }
+    .scenario-card .icon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+    .scenario-card h4 { margin: 0 0 0.5rem; color: #0f3460; font-size: 1rem; }
+    .scenario-card p { margin: 0; font-size: 0.88rem; color: #555; }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="breadcrumb">
+    <a href="/">首頁</a> › <a href="/blog/">部落格</a> › n8n + Claude Code 進階教學 2026
+  </div>
+
+  <span class="tag">n8n</span>
+  <span class="tag">Claude Code</span>
+  <span class="tag">進階教學</span>
+  <span class="tag">自動化</span>
+
+  <h1>n8n + Claude Code 進階教學 2026：複雜 Workflow 建立、Debug 技巧與 Best Practices 完整指南</h1>
+
+  <div class="meta">
+    發布：2026-05-03 ｜ 作者：AI Tools TW 編輯團隊 ｜ 閱讀時間：約 12 分鐘
+  </div>
+
+  <div class="highlight-box">
+    <strong>🚀 本文重點：</strong>你已經會用 Claude Code 建立基本 n8n Workflow，但複雜場景怎麼辦？本文深入講解多層條件分支設計、錯誤處理架構、效能瓶頸排查，以及讓 Claude Code 產出「可維護」Workflow 的 Prompt 技巧。台灣開發者從入門到進階的完整路線圖。
+  </div>
+
+  <div class="toc">
+    <h4>📋 本文目錄</h4>
+    <ol>
+      <li><a href="#why-advanced">為什麼基礎教學不夠用？</a></li>
+      <li><a href="#architecture">複雜 Workflow 架構設計原則</a></li>
+      <li><a href="#prompt-mastery">Claude Code Prompt 進階技巧</a></li>
+      <li><a href="#debug">Debug 完整流程：從錯誤到修復</a></li>
+      <li><a href="#error-handling">錯誤處理與重試機制設計</a></li>
+      <li><a href="#performance">效能優化 Best Practices</a></li>
+      <li><a href="#taiwan-scenarios">5 個台灣實戰場景</a></li>
+      <li><a href="#pitfalls">常見陷阱與避坑指南</a></li>
+      <li><a href="#conclusion">總結與推薦資源</a></li>
+    </ol>
+  </div>
+
+  <h2 id="why-advanced">為什麼基礎教學不夠用？</h2>
+
+  <p>n8n 2.14 推出 MCP 整合後，台灣開發者紛紛開始用 Claude Code 建立 Workflow。但很快就遇到同樣的問題：</p>
+
+  <ul>
+    <li>簡單的「抓資料 → 發通知」沒問題，但加入條件判斷後 Workflow 開始出錯</li>
+    <li>Claude Code 產出的 JSON 有時無法直接匯入，或匯入後節點連線斷掉</li>
+    <li>Workflow 跑到一半失敗，不知道從哪裡開始 Debug</li>
+    <li>同樣的邏輯，有人的 Workflow 跑 2 秒，有人跑 30 秒</li>
+  </ul>
+
+  <p>這些問題不是 n8n 的 bug，也不是 Claude Code 不夠強——而是<strong>進階使用需要不同的思維框架</strong>。本文就是要填補這個空缺。</p>
+
+  <div class="warning-box">
+    <strong>⚠️ 前置條件：</strong>本文假設你已完成基礎設定（n8n 自架或雲端版、Claude Code MCP 連線）。如果還沒，先看 <a href="/ai-tools-tw/blog/n8n-2-14-mcp-ai-workflow-2026.html">n8n 2.14 MCP 基礎教學</a>。
+  </div>
+
+  <h2 id="architecture">複雜 Workflow 架構設計原則</h2>
+
+  <h3>原則一：單一職責，模組化拆分</h3>
+
+  <p>最常見的錯誤是把所有邏輯塞進一個 Workflow。正確做法是按職責拆分：</p>
+
+  <table>
+    <tr><th>層級</th><th>職責</th><th>範例</th></tr>
+    <tr><td>觸發層</td><td>接收事件、排程</td><td>Webhook / Schedule Trigger</td></tr>
+    <tr><td>資料層</td><td>抓取、轉換、驗證資料</td><td>HTTP Request + Code Node</td></tr>
+    <tr><td>邏輯層</td><td>條件判斷、路由</td><td>IF / Switch Node</td></tr>
+    <tr><td>執行層</td><td>實際動作（發信、寫 DB）</td><td>Gmail / Postgres / Slack</td></tr>
+    <tr><td>錯誤層</td><td>失敗處理、通知</td><td>Error Trigger + Telegram</td></tr>
+  </table>
+
+  <p>用 Claude Code 建立時，告訴它你要哪一層，而不是一次要求整個流程。</p>
+
+  <h3>原則二：善用 Sub-Workflow（Execute Workflow Node）</h3>
+
+  <p>當邏輯超過 15 個節點，就應該考慮拆成子 Workflow：</p>
+
+  <pre><code># 告訴 Claude Code 的 Prompt 範例
+請建立一個主 Workflow，負責：
+1. 接收 Webhook 訂單資料
+2. 呼叫子 Workflow "validate-order" 驗證資料
+3. 根據驗證結果分流：成功 → 呼叫 "process-payment"，失敗 → 呼叫 "notify-error"
+每個子 Workflow 請分開建立，主 Workflow 用 Execute Workflow Node 呼叫。</code></pre>
+
+  <h3>原則三：資料流要明確，避免隱式依賴</h3>
+
+  <p>n8n 的資料以 <code>items[]</code> 陣列傳遞。複雜 Workflow 最常見的 bug 是節點間資料格式不一致。建立時要求 Claude Code 在每個關鍵節點加入資料驗證：</p>
+
+  <pre><code>// Code Node 加入資料驗證（讓 Claude Code 生成這段）
+const items = $input.all();
+if (!items.length) throw new Error('上游節點沒有回傳資料');
+const required = ['orderId', 'amount', 'email'];
+for (const item of items) {
+  for (const field of required) {
+    if (!item.json[field]) throw new Error(`缺少必要欄位: ${field}`);
+  }
+}
+return items;</code></pre>
+
+  <h2 id="prompt-mastery">Claude Code Prompt 進階技巧</h2>
+
+  <h3>技巧一：給 Claude Code 完整的上下文</h3>
+
+  <p>模糊的 Prompt 產出模糊的 Workflow。進階用法是提供「需求規格書」格式：</p>
+
+  <pre><code>請用 n8n MCP 建立一個 Workflow，規格如下：
+
+【觸發】每天早上 9:00（台灣時間 UTC+8）
+【資料來源】PostgreSQL 資料表 orders，條件：status='pending' AND created_at > NOW()-INTERVAL '24h'
+【處理邏輯】
+  - 訂單金額 > 10000：發送 Slack 通知給 #high-value-orders 頻道
+  - 訂單金額 1000-10000：發送 Email 給業務團隊
+  - 訂單金額 < 1000：寫入 Google Sheets 彙整表
+【錯誤處理】任何節點失敗時，發 Telegram 訊息給 @admin
+【命名規範】節點名稱用中文，Workflow 名稱：daily-order-triage-v1</code></pre>
+
+  <h3>技巧二：迭代式建立，不要一次到位</h3>
+
+  <div class="step-box">
+    <div class="step-num">Step 1</div>
+    <strong>先建骨架：</strong>「建立 Workflow 骨架，只包含觸發節點和各分支的佔位節點，不需要實際連線到外部服務」
+  </div>
+  <div class="step-box">
+    <div class="step-num">Step 2</div>
+    <strong>填充邏輯：</strong>「在骨架基礎上，補充 IF 節點的條件判斷邏輯，條件是 {{ $json.amount > 10000 }}」
+  </div>
+  <div class="step-box">
+    <div class="step-num">Step 3</div>
+    <strong>接外部服務：</strong>「把 Slack 佔位節點替換成真實的 Slack 節點，頻道 ID 是 C0123456789」
+  </div>
+  <div class="step-box">
+    <div class="step-num">Step 4</div>
+    <strong>加錯誤處理：</strong>「在整個 Workflow 加入 Error Trigger，失敗時發 Telegram 通知」
+  </div>
+
+  <h3>技巧三：要求 Claude Code 解釋它的設計決策</h3>
+
+  <p>在 Prompt 結尾加上：「建立完成後，請說明你選擇這個架構的原因，以及有哪些潛在問題需要注意。」這樣可以提前發現設計缺陷，而不是等到 Workflow 跑起來才發現。</p>
+
+  <div class="cta-box">
+    <h3>🎓 想系統學習 n8n 自動化？</h3>
+    <p>Hahow 有完整的 n8n 中文課程，從基礎到進階，台灣講師教學更貼近本地需求。</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" rel="noopener sponsored" target="_blank">🎓 前往 Hahow 看課程</a>
+  </div>
+
+
+  <h2 id="debug">Debug 完整流程：從錯誤到修復</h2>
+
+  <h3>第一步：讀懂 n8n 的錯誤訊息</h3>
+
+  <p>n8n 的錯誤分三類，處理方式完全不同：</p>
+
+  <table>
+    <tr><th>錯誤類型</th><th>常見訊息</th><th>根本原因</th><th>解法</th></tr>
+    <tr><td>節點設定錯誤</td><td>Parameter "X" is required</td><td>必填欄位沒填</td><td>檢查節點設定，補上缺少的參數</td></tr>
+    <tr><td>資料格式錯誤</td><td>Cannot read property 'X' of undefined</td><td>上游資料結構不符預期</td><td>在前一節點加 Code Node 做資料轉換</td></tr>
+    <tr><td>外部服務錯誤</td><td>401 Unauthorized / 429 Too Many Requests</td><td>認證失效或超過 API 限制</td><td>更新 Credential / 加入 Wait Node 限速</td></tr>
+  </table>
+
+  <h3>第二步：用 Claude Code 輔助 Debug</h3>
+
+  <p>把錯誤訊息直接貼給 Claude Code，搭配這個 Prompt 模板：</p>
+
+  <pre><code>我的 n8n Workflow 在 [節點名稱] 出現以下錯誤：
+
+錯誤訊息：[貼上完整錯誤]
+該節點的輸入資料：[貼上 Input 的 JSON]
+該節點的設定：[貼上節點設定截圖或 JSON]
+
+請分析錯誤原因，並提供修復方案。如果需要修改 Workflow，請用 n8n MCP update_workflow 工具直接修改。</code></pre>
+
+  <h3>第三步：善用 n8n 的 Execution Log</h3>
+
+  <p>每次執行都有完整的 Execution Log，記錄每個節點的 Input/Output。Debug 時的黃金法則：</p>
+
+  <ul>
+    <li><strong>從失敗節點往上追</strong>：找到第一個資料開始「不對」的節點</li>
+    <li><strong>比較成功與失敗的執行</strong>：n8n 可以並排比較兩次執行的差異</li>
+    <li><strong>用 Set Node 做中間檢查點</strong>：在懷疑有問題的節點前後各加一個 Set Node，輸出 <code>{{ $json }}</code> 確認資料</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>💡 進階技巧：</strong>在 Claude Code 裡執行 <code>n8n_get_execution</code> MCP 工具，可以直接拿到最近一次執行的完整 log，讓 Claude Code 自動分析哪個節點出問題。
+  </div>
+
+  <h2 id="error-handling">錯誤處理與重試機制設計</h2>
+
+  <h3>基礎：Error Trigger Workflow</h3>
+
+  <p>每個重要的 Workflow 都應該有對應的錯誤處理 Workflow。用 Claude Code 建立的標準模板：</p>
+
+  <pre><code>請建立一個錯誤處理 Workflow，命名為 "error-handler-global"：
+1. 觸發：Error Trigger（接收所有 Workflow 的錯誤）
+2. 格式化錯誤訊息，包含：Workflow 名稱、節點名稱、錯誤內容、執行時間
+3. 發送 Telegram 通知給管理員
+4. 寫入 Google Sheets 錯誤日誌（欄位：時間、Workflow、錯誤、狀態=待處理）
+5. 如果同一個 Workflow 在 1 小時內錯誤超過 3 次，額外發 Email 警報</code></pre>
+
+  <h3>進階：節點層級的重試邏輯</h3>
+
+  <p>n8n 內建重試設定，但對於需要自訂重試邏輯的場景，用 Code Node 實作：</p>
+
+  <pre><code>// 指數退避重試（讓 Claude Code 生成並嵌入 Code Node）
+async function withRetry(fn, maxRetries = 3) {
+  for (let i = 0; i < maxRetries; i++) {
+    try {
+      return await fn();
+    } catch (err) {
+      if (i === maxRetries - 1) throw err;
+      const delay = Math.pow(2, i) * 1000; // 1s, 2s, 4s
+      await new Promise(r => setTimeout(r, delay));
+    }
+  }
+}
+// 在 HTTP Request 前包裝
+return withRetry(() => $http.get(url));</code></pre>
+
+
+  <h2 id="performance">效能優化 Best Practices</h2>
+
+  <h3>1. 批次處理取代逐筆處理</h3>
+
+  <p>最常見的效能殺手：對每筆資料各發一次 API 請求。</p>
+
+  <table>
+    <tr><th>做法</th><th>100 筆資料耗時</th><th>API 費用</th></tr>
+    <tr><td>❌ 逐筆 HTTP Request</td><td>~50 秒</td><td>100 次呼叫</td></tr>
+    <tr><td>✅ 批次 HTTP Request（每批 20 筆）</td><td>~5 秒</td><td>5 次呼叫</td></tr>
+  </table>
+
+  <p>告訴 Claude Code：「請用 Split In Batches Node 把資料分成每批 20 筆，再呼叫 API，不要逐筆處理。」</p>
+
+  <h3>2. 善用 n8n 的並行執行</h3>
+
+  <pre><code># Prompt 範例
+這個 Workflow 需要同時：
+A. 從 PostgreSQL 抓訂單資料
+B. 從 Shopify API 抓庫存資料
+C. 從 Google Sheets 抓定價表
+
+請讓 A、B、C 並行執行（不要串行），最後用 Merge Node 合併結果。</code></pre>
+
+  <h3>3. 快取重複查詢</h3>
+
+  <p>如果 Workflow 每次執行都查同一份靜態資料（如定價表、設定檔），用 Static Data 或 Redis 快取：</p>
+
+  <pre><code>// Code Node：讀取靜態快取
+const cache = $getWorkflowStaticData('global');
+if (!cache.priceTable || Date.now() - cache.priceTableUpdated > 3600000) {
+  // 快取過期，重新抓取
+  cache.priceTable = await fetchPriceTable();
+  cache.priceTableUpdated = Date.now();
+}
+return [{ json: { priceTable: cache.priceTable } }];</code></pre>
+
+  <div class="cta-box">
+    <h3>☁️ n8n 自架需要穩定的雲端主機？</h3>
+    <p>Cloudways 提供一鍵部署 n8n，SSD 高效能伺服器，台灣用戶延遲低，新用戶最高 $125 折扣。</p>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn" rel="noopener sponsored" target="_blank">☁️ 前往 Cloudways</a>
+  </div>
+
+
+  <h2 id="taiwan-scenarios">5 個台灣實戰場景</h2>
+
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <div class="icon">🏥</div>
+      <h4>診所預約管理</h4>
+      <p>LINE 訊息觸發 → Claude Code 解析預約意圖 → 查詢空檔 → 寫入 Google Calendar → 回覆確認</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">🛒</div>
+      <h4>電商庫存警報</h4>
+      <p>每小時掃描 Shopify 庫存 → 低於閾值 → Claude Code 生成補貨建議 → Slack 通知採購</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">📊</div>
+      <h4>財務報表自動化</h4>
+      <p>月底觸發 → 抓 PostgreSQL 交易資料 → Claude Code 分析異常 → 生成 PDF → Email 給財務長</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">🎓</div>
+      <h4>線上課程學員追蹤</h4>
+      <p>每日檢查學員進度 → 停滯超過 7 天 → Claude Code 生成個人化鼓勵訊息 → 自動發送 Email</p>
+    </div>
+    <div class="scenario-card">
+      <div class="icon">🏢</div>
+      <h4>B2B 潛客評分</h4>
+      <p>新表單提交 → 抓公司資料 → Claude Code 評分（行業/規模/預算）→ 高分自動排業務行程</p>
+    </div>
+  </div>
+
+  <h3>場景深度拆解：電商庫存警報</h3>
+
+  <p>以電商庫存警報為例，展示完整的 Claude Code Prompt 到 Workflow 的流程：</p>
+
+  <pre><code># 給 Claude Code 的完整 Prompt
+請用 n8n MCP 建立庫存警報 Workflow：
+
+觸發：每小時執行一次
+資料來源：Shopify API GET /admin/api/2024-01/products.json?limit=250
+篩選條件：variants 中任一 inventory_quantity < 10
+處理邏輯：
+  - 庫存 0：緊急警報（Slack #urgent + Email 給老闆）
+  - 庫存 1-5：高優先（Slack #inventory-alerts）
+  - 庫存 6-9：一般提醒（每日彙整一次，不即時發送）
+去重：同一商品在 6 小時內不重複發送警報（用 Static Data 記錄）
+Workflow 名稱：shopify-inventory-alert-v2</code></pre>
+
+  <p>Claude Code 會自動處理 Shopify 分頁（<code>page_info</code> cursor）、建立 Switch Node 分流、以及用 Static Data 實作去重邏輯。</p>
+
+
+  <h2 id="pitfalls">常見陷阱與避坑指南</h2>
+
+  <table>
+    <tr><th>陷阱</th><th>症狀</th><th>解法</th></tr>
+    <tr><td>Expression 語法錯誤</td><td>節點顯示紅色，訊息含 "expression"</td><td>用 <code>{{ }}</code> 包裹，確認路徑用 <code>$json.field</code> 而非 <code>json.field</code></td></tr>
+    <tr><td>時區問題</td><td>排程時間不對，差 8 小時</td><td>n8n 預設 UTC，台灣要設 <code>Asia/Taipei</code> 或手動 +8</td></tr>
+    <tr><td>Webhook 只能觸發一次</td><td>第二次呼叫沒反應</td><td>確認 Workflow 是 Active 狀態，不是 Test 模式</td></tr>
+    <tr><td>Claude Code 產出的 JSON 無法匯入</td><td>匯入時報 parse error</td><td>要求 Claude Code 輸出時用 <code>n8n_import_workflow</code> 直接匯入，不要手動複製 JSON</td></tr>
+    <tr><td>Sub-Workflow 資料傳遞失敗</td><td>Execute Workflow Node 回傳空值</td><td>子 Workflow 最後一個節點必須有資料輸出，加 Set Node 確保有回傳值</td></tr>
+    <tr><td>API Rate Limit 被封</td><td>429 錯誤，Workflow 中斷</td><td>在 HTTP Request 前加 Wait Node（1-2 秒），或用 Split In Batches 控制速率</td></tr>
+  </table>
+
+  <div class="warning-box">
+    <strong>⚠️ 特別注意：</strong>用 Claude Code 修改現有 Workflow 時，務必先備份（<code>n8n_export_workflow</code>）。Claude Code 的 <code>update_workflow</code> 是覆蓋式更新，沒有版本控制。
+  </div>
+
+
+  <h2 id="version-control">Workflow 版本控制與團隊協作</h2>
+
+  <h3>用 Git 管理 n8n Workflow</h3>
+
+  <p>n8n 雲端版沒有內建版本控制，但可以用 Claude Code 搭配 Git 實現：</p>
+
+  <pre><code># 讓 Claude Code 定期備份所有 Workflow
+請執行以下操作：
+1. 用 n8n_list_workflows 列出所有 Workflow
+2. 對每個 Workflow 執行 n8n_export_workflow，儲存為 JSON 檔案
+3. 檔名格式：{workflow-id}-{workflow-name}.json
+4. 儲存到 ~/n8n-backups/ 目錄
+5. git add . && git commit -m "backup: $(date +%Y-%m-%d)"</code></pre>
+
+  <h3>多人協作的命名規範</h3>
+
+  <p>團隊使用 n8n 時，統一命名規範可以避免大量混亂：</p>
+
+  <table>
+    <tr><th>類型</th><th>命名格式</th><th>範例</th></tr>
+    <tr><td>主 Workflow</td><td>{功能}-main-v{版本}</td><td>order-process-main-v3</td></tr>
+    <tr><td>子 Workflow</td><td>{功能}-sub-{子功能}</td><td>order-process-sub-validate</td></tr>
+    <tr><td>錯誤處理</td><td>{功能}-error-handler</td><td>order-process-error-handler</td></tr>
+    <tr><td>測試用</td><td>TEST-{功能}-{日期}</td><td>TEST-order-process-20260503</td></tr>
+  </table>
+
+  <p>在 Claude Code Prompt 中明確指定命名規範，它會自動套用。</p>
+
+  <h2 id="monitoring">上線後的監控策略</h2>
+
+  <h3>建立 Workflow 健康儀表板</h3>
+
+  <p>用 Claude Code 建立一個「監控 Workflow」，每小時檢查所有重要 Workflow 的執行狀態：</p>
+
+  <pre><code>請建立監控 Workflow "health-check-dashboard"：
+1. 每小時觸發
+2. 用 n8n API 抓取過去 1 小時內所有 Workflow 的執行記錄
+3. 統計：成功率、平均執行時間、失敗次數
+4. 如果任何 Workflow 失敗率 > 20%，立即發 Slack 警報
+5. 每天早上 9:00 發送日報到 #ops-daily 頻道
+6. 把統計資料寫入 Google Sheets 供長期追蹤</code></pre>
+
+  <h3>關鍵指標追蹤</h3>
+
+  <ul>
+    <li><strong>執行成功率</strong>：目標 > 99%，低於 95% 需立即調查</li>
+    <li><strong>平均執行時間</strong>：建立基準線，超過 2 倍基準線時警報</li>
+    <li><strong>API 費用</strong>：追蹤每個 Workflow 的 Claude API token 消耗</li>
+    <li><strong>佇列積壓</strong>：如果 Webhook 觸發頻率超過處理速度，需要加入佇列機制</li>
+  </ul>
+
+  <div class="tip-box">
+    <strong>💡 成本控制技巧：</strong>在 Claude Code 節點設定 <code>max_tokens</code> 上限，避免單次呼叫消耗過多 token。一般分類任務設 200 tokens，摘要任務設 500 tokens，只有需要長文生成的場景才放開限制。
+  </div>
+
+  <h2 id="conclusion">總結與推薦資源</h2>
+
+  <p>n8n + Claude Code 的進階使用，核心是三件事：</p>
+  <ul>
+    <li><strong>架構先行</strong>：複雜 Workflow 先設計分層架構，再讓 Claude Code 實作</li>
+    <li><strong>迭代建立</strong>：分步驟 Prompt，每步驗證，不要一次要求完整 Workflow</li>
+    <li><strong>錯誤優先</strong>：每個 Workflow 都要有錯誤處理，上線前先測試失敗路徑</li>
+  </ul>
+
+  <p>延伸閱讀：</p>
+  <ul>
+    <li><a href="/ai-tools-tw/blog/n8n-2-14-mcp-ai-workflow-2026.html">n8n 2.14 MCP 基礎教學：用 Claude Code 一句話建 Workflow</a></li>
+    <li><a href="/ai-tools-tw/blog/n8n-vs-make-vs-zapier-2026.html">n8n vs Make vs Zapier 2026 完整比較</a></li>
+    <li><a href="/ai-tools-tw/blog/dify-v1-6-mcp-two-way-integration-2026.html">Dify v1.6.0 雙向 MCP：把 Workflow 變成 Claude 能呼叫的工具</a></li>
+    <li><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claude Code 成本追蹤：ccusage + Claudoscope 教學</a></li>
+  </ul>
+
+  <div class="cta-box">
+    <h3>📊 想學 AI 自動化與數據分析？</h3>
+    <p>DataCamp 提供 n8n、Python、AI 工作流完整課程，台灣用戶可用中文介面學習。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank">📊 前往 DataCamp</a>
+  </div>
+
+  <div class="cta-box">
+    <h3>🖥️ 自架 n8n 需要穩定 VPS？</h3>
+    <p>DigitalOcean 一鍵部署 n8n Droplet，$6/月起，台灣新加坡節點延遲低，新用戶 $200 免費額度。</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="noopener sponsored" target="_blank">🖥️ 前往 DigitalOcean</a>
+  </div>
+
+  <div class="cta-box">
+    <h3>💡 Claude Code Pack — 進階 Prompt 模板集</h3>
+    <p>包含 50+ 個 n8n Workflow 建立 Prompt 模板，直接複製使用，省去反覆試錯的時間。</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" rel="noopener sponsored" target="_blank">💡 $29 取得 Claude Code Pack</a>
+  </div>
+
+</div>
+</body>
+</html>
