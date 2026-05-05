@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenCode 評測 2026：153K ⭐ 開源 Claude Code 替代方案，75+ 模型免費用，台灣開發者完整教學</title>
+  <meta name="description" content="OpenCode 深度評測：153K GitHub stars 開源 AI coding agent，支援 75+ 模型（Claude/GPT/Gemini），終端機 + 桌面 + IDE 三合一，比 Claude Code 便宜且隱私更好。台灣開發者安裝教學與實戰場景。">
+  <meta name="keywords" content="OpenCode 評測, OpenCode 台灣, OpenCode vs Claude Code, OpenCode 安裝教學, 開源 AI coding agent, AI 程式助手 2026, Claude Code 替代方案">
+  <meta property="og:title" content="OpenCode 評測 2026：153K ⭐ 開源 Claude Code 替代方案，75+ 模型免費用">
+  <meta property="og:description" content="OpenCode 深度評測：153K GitHub stars，支援 75+ 模型，終端機 + 桌面 + IDE，比 Claude Code 更便宜更隱私。台灣開發者完整教學。">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/opencode-open-source-claude-code-alternative-2026.html">
+  <link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/opencode-open-source-claude-code-alternative-2026.html">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    body { background: #0a0a0f; color: #e8e8f0; font-family: 'Inter', -apple-system, sans-serif; line-height: 1.7; }
+    .hero { background: linear-gradient(135deg, #0a0a1a 0%, #1a0d2b 40%, #0a0a1a 100%); padding: 4rem 2rem 3rem; text-align: center; border-bottom: 1px solid rgba(139,92,246,0.2); }
+    .hero-badge { display: inline-block; background: rgba(139,92,246,0.15); border: 1px solid rgba(139,92,246,0.4); color: #a78bfa; padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; margin-bottom: 1.5rem; letter-spacing: 0.05em; }
+    .hero h1 { font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800; color: #fff; margin: 0 0 1rem; line-height: 1.25; max-width: 900px; margin-left: auto; margin-right: auto; }
+    .hero-sub { font-size: 1.1rem; color: #a0aec0; max-width: 650px; margin: 0 auto 2rem; }
+    .hero-stats { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; margin-top: 2rem; }
+    .hero-stat { text-align: center; }
+    .hero-stat .num { font-size: 2rem; font-weight: 800; color: #a78bfa; }
+    .hero-stat .label { font-size: 0.8rem; color: #718096; text-transform: uppercase; letter-spacing: 0.05em; }
+    .container { max-width: 860px; margin: 0 auto; padding: 2rem 1.5rem; }
+    h2 { font-size: 1.5rem; font-weight: 700; color: #fff; margin: 2.5rem 0 1rem; border-left: 4px solid #a78bfa; padding-left: 1rem; }
+    h3 { font-size: 1.2rem; font-weight: 600; color: #c4b5fd; margin: 2rem 0 0.8rem; }
+    p { color: #cbd5e0; margin-bottom: 1rem; }
+    a { color: #a78bfa; }
+    .toc { background: rgba(139,92,246,0.07); border: 1px solid rgba(139,92,246,0.2); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .toc h4 { color: #a78bfa; margin: 0 0 1rem; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .toc ol { margin: 0; padding-left: 1.5rem; }
+    .toc li { color: #a0aec0; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .toc a { color: #a78bfa; text-decoration: none; }
+    .verdict-box { background: linear-gradient(135deg, rgba(139,92,246,0.12), rgba(99,102,241,0.08)); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; padding: 2rem; margin: 2rem 0; }
+    .verdict-box h3 { color: #a78bfa; margin-top: 0; }
+    .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0; }
+    @media(max-width:600px){ .pros-cons { grid-template-columns: 1fr; } }
+    .pros, .cons { background: rgba(255,255,255,0.04); border-radius: 10px; padding: 1.2rem; }
+    .pros h4 { color: #34d399; margin: 0 0 0.8rem; }
+    .cons h4 { color: #f87171; margin: 0 0 0.8rem; }
+    .pros li, .cons li { color: #cbd5e0; margin-bottom: 0.4rem; font-size: 0.9rem; }
+    table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.9rem; }
+    th { background: rgba(139,92,246,0.15); color: #a78bfa; padding: 10px 14px; text-align: left; border-bottom: 1px solid rgba(139,92,246,0.2); }
+    td { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); color: #cbd5e0; }
+    tr:hover td { background: rgba(255,255,255,0.03); }
+    code { background: rgba(139,92,246,0.15); color: #c4b5fd; padding: 2px 7px; border-radius: 4px; font-size: 0.88em; font-family: 'Fira Code', monospace; }
+    pre { background: #0d0d1a; border: 1px solid rgba(139,92,246,0.2); border-radius: 10px; padding: 1.2rem; overflow-x: auto; margin: 1rem 0; }
+    pre code { background: none; padding: 0; color: #e2e8f0; font-size: 0.88rem; }
+    .cta-box { background: linear-gradient(135deg, #1a0533 0%, #0d1a3a 50%, #0a1a1a 100%); border: 1px solid rgba(139,92,246,0.3); border-radius: 16px; padding: 2rem; margin: 2.5rem 0; text-align: center; }
+    .cta-box h3 { color: #fff; margin: 0 0 0.5rem; font-size: 1.2rem; }
+    .cta-box p { color: #a0aec0; margin: 0 0 1.2rem; font-size: 0.95rem; }
+    .cta-btn { display: inline-block; background: linear-gradient(135deg, #7c3aed, #4f46e5); color: #fff !important; padding: 12px 28px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; transition: opacity 0.2s; }
+    .cta-btn:hover { opacity: 0.85; }
+    .highlight-box { background: rgba(139,92,246,0.08); border-left: 4px solid #a78bfa; border-radius: 0 10px 10px 0; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+    .scenario { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.5rem; margin: 1rem 0; }
+    .scenario h4 { color: #c4b5fd; margin: 0 0 0.6rem; }
+    .tag { display: inline-block; background: rgba(139,92,246,0.2); color: #a78bfa; padding: 2px 10px; border-radius: 12px; font-size: 0.78rem; font-weight: 600; margin-right: 6px; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-badge">🔓 開源 AI Coding Agent 評測</div>
+  <h1>OpenCode 評測 2026：153K ⭐ 開源 Claude Code 替代方案<br>75+ 模型免費切換，隱私完全掌控</h1>
+  <p class="hero-sub">MIT 授權、終端機 + 桌面 + IDE 三合一，支援 Claude / GPT / Gemini / 本地模型，台灣開發者完整安裝與實戰教學</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="num">153K</div><div class="label">GitHub Stars</div></div>
+    <div class="hero-stat"><div class="num">75+</div><div class="label">支援模型</div></div>
+    <div class="hero-stat"><div class="num">MIT</div><div class="label">開源授權</div></div>
+    <div class="hero-stat"><div class="num">$0</div><div class="label">工具本身費用</div></div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="toc">
+    <h4>📋 目錄</h4>
+    <ol>
+      <li><a href="#what-is-opencode">OpenCode 是什麼？</a></li>
+      <li><a href="#vs-claude-code">vs Claude Code / Cursor 完整比較</a></li>
+      <li><a href="#install">5 分鐘安裝教學（macOS / Linux / Windows）</a></li>
+      <li><a href="#providers">75+ 模型怎麼選？Zen 方案解析</a></li>
+      <li><a href="#features">核心功能深度解析</a></li>
+      <li><a href="#taiwan-scenarios">5 個台灣實戰場景</a></li>
+      <li><a href="#pricing">費用試算：比 Claude Code 省多少？</a></li>
+      <li><a href="#verdict">總評與推薦對象</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-is-opencode">OpenCode 是什麼？為什麼 153K Stars？</h2>
+
+  <p>2026 年 AI coding agent 市場競爭激烈，但大多數工具有三個共同問題：<strong>月費 $15–50、綁定單一模型供應商、程式碼上傳到你無法控制的伺服器</strong>。OpenCode 是目前最受歡迎的開源解法。</p>
+
+  <p>由 Anomaly 團隊開發，OpenCode 在 GitHub 累積超過 <strong>153,000 顆星</strong>，是開源 AI coding 工具中排名第一。MIT 授權意味著你可以自由使用、修改、甚至商業部署，完全不需要付授權費。</p>
+
+  <div class="highlight-box">
+    <strong>核心定位：</strong>OpenCode 是 Claude Code 的開源替代方案。同樣在終端機運作、同樣支援 agentic 模式自主完成任務，但你可以接任何模型的 API，程式碼不離開你的機器。
+  </div>
+
+  <p>OpenCode 支援三種使用介面：</p>
+  <ul>
+    <li><strong>終端機 TUI</strong>：最輕量，適合 SSH 遠端開發</li>
+    <li><strong>桌面 App</strong>（Beta）：macOS / Windows / Linux，圖形介面</li>
+    <li><strong>IDE 擴充</strong>：VS Code、Neovim、Zed 等主流編輯器</li>
+  </ul>
+
+  <h2 id="vs-claude-code">OpenCode vs Claude Code vs Cursor：完整比較表</h2>
+
+  <table>
+    <thead>
+      <tr><th>項目</th><th>OpenCode</th><th>Claude Code</th><th>Cursor</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>授權</td><td>MIT 開源</td><td>閉源商業</td><td>閉源商業</td></tr>
+      <tr><td>工具費用</td><td>$0（只付 API）</td><td>$20/月 Pro</td><td>$20/月 Pro</td></tr>
+      <tr><td>支援模型數</td><td>75+ 供應商</td><td>僅 Claude</td><td>多模型但有限</td></tr>
+      <tr><td>本地模型</td><td>✅ Ollama 支援</td><td>❌</td><td>⚠️ 部分</td></tr>
+      <tr><td>程式碼隱私</td><td>✅ 不離開本機</td><td>⚠️ 上傳 Anthropic</td><td>⚠️ 上傳 Cursor</td></tr>
+      <tr><td>介面</td><td>終端機 + 桌面 + IDE</td><td>終端機</td><td>IDE（VS Code fork）</td></tr>
+      <tr><td>Multi-session</td><td>✅ 多 Agent 並行</td><td>✅</td><td>⚠️ 有限</td></tr>
+      <tr><td>AGENTS.md 支援</td><td>✅ /init 自動生成</td><td>✅</td><td>❌</td></tr>
+      <tr><td>MCP 整合</td><td>✅</td><td>✅</td><td>⚠️ 部分</td></tr>
+      <tr><td>自架部署</td><td>✅ Docker 支援</td><td>❌</td><td>❌</td></tr>
+    </tbody>
+  </table>
+
+  <p>結論很清楚：如果你在意<strong>費用控制、模型靈活性、或程式碼隱私</strong>，OpenCode 是目前最強的開源選擇。</p>
+
+</div>
+
+<div class="container">
+
+  <!-- CTA 1: DataCamp -->
+  <div class="cta-box">
+    <h3>🎓 想系統學習 AI 開發技能？</h3>
+    <p>DataCamp 提供 Python、機器學習、LLM 應用完整課程，台灣開發者最推薦的 AI 技能平台</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank">立即開始學習 DataCamp →</a>
+  </div>
+
+  <h2 id="install">5 分鐘安裝教學</h2>
+
+  <h3>macOS / Linux（推薦方式）</h3>
+  <pre><code># 一鍵安裝腳本
+curl -fsSL https://opencode.ai/install | bash
+
+# 或用 Homebrew
+brew install anomalyco/tap/opencode
+
+# 驗證安裝
+opencode --version</code></pre>
+
+  <h3>Windows</h3>
+  <pre><code># Chocolatey
+choco install opencode
+
+# 或 Scoop
+scoop install opencode
+
+# 或 npm（跨平台）
+npm install -g opencode-ai</code></pre>
+
+  <h3>Docker（伺服器部署）</h3>
+  <pre><code>docker run -it --rm ghcr.io/anomalyco/opencode</code></pre>
+
+  <h3>初始化專案</h3>
+  <pre><code># 進入你的專案目錄
+cd /path/to/your-project
+
+# 啟動 OpenCode
+opencode
+
+# 在 TUI 內執行初始化（自動分析專案結構）
+/init
+
+# 連接 API 供應商
+/connect</code></pre>
+
+  <div class="highlight-box">
+    <strong>💡 台灣開發者提示：</strong>執行 <code>/init</code> 後，OpenCode 會自動在專案根目錄建立 <code>AGENTS.md</code>，記錄專案架構與 coding 慣例，讓 AI 更準確理解你的程式碼。
+  </div>
+
+  <h2 id="providers">75+ 模型怎麼選？OpenCode Zen 方案解析</h2>
+
+  <p>OpenCode 支援超過 75 個模型供應商，選擇多到讓人頭痛。官方提供 <strong>OpenCode Zen</strong> 方案，幫你篩選出最適合 coding agent 的模型組合。</p>
+
+  <table>
+    <thead>
+      <tr><th>使用情境</th><th>推薦模型</th><th>費用估算</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>日常 coding 助手</td><td>Claude Sonnet 4 / GPT-5.4</td><td>$5–15/月</td></tr>
+      <tr><td>複雜重構任務</td><td>Claude Opus 4.7</td><td>$20–50/月</td></tr>
+      <tr><td>省錢方案</td><td>Kimi K2.6 / DeepSeek V4 Pro</td><td>$1–5/月</td></tr>
+      <tr><td>完全免費（本地）</td><td>Ollama + Llama 4 / Qwen3</td><td>$0（需 GPU）</td></tr>
+      <tr><td>隱私敏感專案</td><td>本地 Ollama 模型</td><td>$0</td></tr>
+    </tbody>
+  </table>
+
+  <p>透過 <code>/connect</code> 指令，你可以在 TUI 內直接切換供應商，不需要重新安裝或修改設定檔。</p>
+
+  <h2 id="features">核心功能深度解析</h2>
+
+  <h3>1. Multi-Session 並行執行</h3>
+  <p>OpenCode 支援同時開啟多個 Agent session，可以讓不同 Agent 並行處理不同模組。例如：一個 Agent 寫後端 API、另一個同時寫前端元件，最後合併結果。</p>
+
+  <h3>2. MCP（Model Context Protocol）整合</h3>
+  <p>完整支援 MCP，可以連接 Zapier、Notion、Linear、GitHub 等外部工具，讓 Agent 直接操作你的工作流程。</p>
+
+  <h3>3. AGENTS.md 專案記憶</h3>
+  <p>執行 <code>/init</code> 後自動生成 <code>AGENTS.md</code>，記錄：</p>
+  <ul>
+    <li>專案架構與技術棧</li>
+    <li>Coding 風格與命名慣例</li>
+    <li>常用指令與部署流程</li>
+    <li>注意事項與禁止操作</li>
+  </ul>
+
+  <h3>4. 完全隱私保護</h3>
+  <p>OpenCode 官方聲明：<strong>不儲存任何程式碼或 context 資料</strong>。搭配本地 Ollama 模型，程式碼完全不離開你的機器，適合醫療、金融、法律等隱私敏感產業。</p>
+
+  <!-- CTA 2: DigitalOcean -->
+  <div class="cta-box">
+    <h3>☁️ 需要雲端伺服器跑 OpenCode + 本地模型？</h3>
+    <p>DigitalOcean GPU Droplet 讓你在雲端自架 Ollama，享有完整隱私又不需要本地 GPU</p>
+    <a href="https://m.do.co/c/6121a295f624" class="cta-btn" rel="noopener sponsored" target="_blank">DigitalOcean 免費試用 $200 →</a>
+  </div>
+
+  <h2 id="taiwan-scenarios">5 個台灣實戰場景</h2>
+
+  <div class="scenario">
+    <h4>🏥 場景一：醫療軟體公司（隱私優先）</h4>
+    <span class="tag">隱私</span><span class="tag">本地部署</span>
+    <p>台北某醫療 SaaS 公司，病患資料不能上傳第三方。使用 OpenCode + Ollama + Llama 4 本地模型，AI coding agent 完全在內網運作，符合個資法規範，同時享有 AI 輔助開發效率。</p>
+  </div>
+
+  <div class="scenario">
+    <h4>🛒 場景二：電商新創（省錢方案）</h4>
+    <span class="tag">成本控制</span><span class="tag">多模型</span>
+    <p>台中電商新創，5 人工程團隊原本每人付 $20/月 Claude Code，共 $100/月。改用 OpenCode 後，工具費 $0，API 費用依實際用量，整體省下約 60%。日常任務用 Kimi K2.6（$0.60/MTok），複雜任務才切換 Claude Opus 4.7。</p>
+  </div>
+
+  <div class="scenario">
+    <h4>🎮 場景三：獨立遊戲開發者（多模型切換）</h4>
+    <span class="tag">靈活切換</span><span class="tag">個人開發</span>
+    <p>高雄獨立遊戲開發者，用 OpenCode 在同一個介面切換不同模型：寫遊戲邏輯用 DeepSeek V4 Pro（便宜），設計對話劇情用 Claude Sonnet 4（創意強），最佳化效能用 GPT-5.4（推理強）。</p>
+  </div>
+
+  <div class="scenario">
+    <h4>🏦 場景四：金融科技公司（合規需求）</h4>
+    <span class="tag">合規</span><span class="tag">自架</span>
+    <p>台灣 FinTech 公司，金管會要求資料不得出境。用 Docker 自架 OpenCode + 本地 Qwen3-72B，所有 AI 輔助開發在公司內網完成，通過 ISO 27001 稽核。</p>
+  </div>
+
+  <div class="scenario">
+    <h4>📚 場景五：線上教育平台（多人協作）</h4>
+    <span class="tag">團隊協作</span><span class="tag">Multi-session</span>
+    <p>新竹線上教育平台，10 人工程團隊用 OpenCode Multi-session 功能，前後端同時開發不同功能模組，搭配 MCP 整合 Linear 專案管理，開發速度提升 40%。</p>
+  </div>
+
+  <!-- CTA 3: Cloudways -->
+  <div class="cta-box">
+    <h3>🚀 想自架 OpenCode 給整個團隊用？</h3>
+    <p>Cloudways 管理式雲端主機，一鍵部署 Docker，適合中小型開發團隊自架 AI 工具</p>
+    <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" class="cta-btn" rel="noopener sponsored" target="_blank">Cloudways 免費試用 3 天 →</a>
+  </div>
+
+  <h2 id="pricing">費用試算：比 Claude Code 省多少？</h2>
+
+  <p>以一個中型專案、每月約 5M tokens 用量為例：</p>
+
+  <table>
+    <thead>
+      <tr><th>方案</th><th>工具費</th><th>API 費用</th><th>月總費用</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Claude Code Pro + Claude Opus 4.7</td><td>$20</td><td>~$75</td><td>~$95</td></tr>
+      <tr><td>OpenCode + Claude Opus 4.7</td><td>$0</td><td>~$75</td><td>~$75</td></tr>
+      <tr><td>OpenCode + Claude Sonnet 4</td><td>$0</td><td>~$15</td><td>~$15</td></tr>
+      <tr><td>OpenCode + Kimi K2.6</td><td>$0</td><td>~$3</td><td>~$3</td></tr>
+      <tr><td>OpenCode + Ollama 本地</td><td>$0</td><td>$0</td><td>$0</td></tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    <strong>省錢策略：</strong>日常 coding 用 Kimi K2.6 或 DeepSeek V4 Pro（便宜 10–30 倍），遇到複雜架構設計才切換 Claude Opus 4.7。OpenCode 讓你輕鬆實現這個「混合模型」策略。
+  </div>
+
+  <!-- CTA 4: Hahow -->
+  <div class="cta-box">
+    <h3>📖 想深入學習 AI Agent 開發？</h3>
+    <p>Hahow 有豐富的 AI 應用、Python 自動化、LLM 開發課程，台灣最大線上學習平台</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" rel="noopener sponsored" target="_blank">瀏覽 Hahow AI 課程 →</a>
+  </div>
+
+  <h2 id="verdict">總評與推薦對象</h2>
+
+  <div class="verdict-box">
+    <h3>⭐ OpenCode 總評</h3>
+    <div class="pros-cons">
+      <div class="pros">
+        <h4>✅ 優點</h4>
+        <ul>
+          <li>完全免費（MIT 開源）</li>
+          <li>75+ 模型自由切換</li>
+          <li>程式碼不離開本機</li>
+          <li>支援本地 Ollama 模型</li>
+          <li>終端機 + 桌面 + IDE 三合一</li>
+          <li>Multi-session 並行執行</li>
+          <li>完整 MCP 整合</li>
+          <li>Docker 自架支援</li>
+        </ul>
+      </div>
+      <div class="cons">
+        <h4>❌ 缺點</h4>
+        <ul>
+          <li>桌面 App 仍在 Beta</li>
+          <li>需要自行管理 API keys</li>
+          <li>社群支援不如 Claude Code 官方</li>
+          <li>部分進階功能文件不完整</li>
+        </ul>
+      </div>
+    </div>
+    <p><strong>推薦給：</strong>在意費用控制的開發者、需要隱私保護的企業、想靈活切換模型的進階用戶、有自架需求的團隊。</p>
+    <p><strong>不推薦給：</strong>想要最簡單開箱即用體驗、不想管理 API keys、或深度依賴 Anthropic 生態系的用戶。</p>
+  </div>
+
+  <!-- CTA 5: Gumroad -->
+  <div class="cta-box">
+    <h3>💡 Claude Code 進階使用技巧包</h3>
+    <p>$29 Claude Code Pack：Prompt 模板、成本控制技巧、與 OpenCode 搭配使用指南，台灣開發者實戰整理</p>
+    <a href="https://xiaofan8.gumroad.com/l/kknad" class="cta-btn" rel="noopener sponsored" target="_blank">取得 Claude Code Pack $29 →</a>
+  </div>
+
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="kimi-code-cli-review-2026.html">Kimi Code CLI 評測 2026：比 Claude Code 便宜 10 倍的 AI Coding Agent</a></li>
+    <li><a href="claude-code-cost-tracker-ccusage-claudoscope-2026.html">Claude Code 成本追蹤 2026：ccusage + Claudoscope 讓帳單完全透明</a></li>
+    <li><a href="kimi-k2-6-open-weight-agent-review-2026.html">Kimi K2.6 評測 2026：開源 1T MoE 打敗 Claude Opus 4.6</a></li>
+    <li><a href="deepseek-v4-pro-review-2026.html">DeepSeek V4 Pro 評測 2026：1.6T 開源模型 MIT 授權</a></li>
+    <li><a href="n8n-claude-code-advanced-workflow-2026.html">n8n + Claude Code 進階教學 2026：複雜 Workflow 建立完整指南</a></li>
+  </ul>
+
+</div>
+
+<footer style="text-align:center; padding: 2rem; color: #4a5568; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); margin-top: 3rem;">
+  <p>© 2026 AI Tools TW — 台灣 AI 工具評測站 | <a href="../index.html" style="color:#a78bfa;">回首頁</a></p>
+</footer>
+
+</body>
+</html>
