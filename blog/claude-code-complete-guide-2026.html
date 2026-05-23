@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Claude Code 完整教學 2026：進階 Prompt 技巧、費用最佳化、MCP 配置台灣指南</title>
+<meta content="Claude Code 2026 完整教學：進階 Prompt 工程技巧、CLAUDE.md 設定最佳實踐、費用控制策略（ccusage 監控）、MCP 伺服器配置、台灣開發者 5 個實戰場景。從安裝到精通，一篇搞定。" name="description"/>
+<link href="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-complete-guide-2026.html" rel="canonical"/>
+<meta content="Claude Code 完整教學 2026：進階 Prompt 技巧、費用最佳化、MCP 配置台灣指南" property="og:title"/>
+<meta content="Claude Code 2026 完整教學：進階 Prompt 工程、CLAUDE.md 設定、費用最佳化（ccusage）、MCP 配置、台灣開發者實戰場景。從入門到精通。" property="og:description"/>
+<meta content="article" property="og:type"/>
+<meta content="https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-complete-guide-2026.html" property="og:url"/>
+<meta content="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="/ai-tools-tw/style.css" rel="stylesheet"/>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Claude Code 完整教學 2026：進階 Prompt 技巧、費用最佳化、MCP 配置台灣指南",
+  "description": "Claude Code 2026 完整教學：進階 Prompt 工程技巧、CLAUDE.md 設定最佳實踐、費用控制策略（ccusage 監控）、MCP 伺服器配置、台灣開發者 5 個實戰場景。",
+  "author": {"@type": "Organization", "name": "AI Tools TW"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"},
+  "datePublished": "2026-05-23",
+  "dateModified": "2026-05-23",
+  "image": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=1200&q=80",
+  "url": "https://pink1119zz.github.io/ai-tools-tw/blog/claude-code-complete-guide-2026.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Claude Code 每個月費用大概多少？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code 的費用視用量而定：輕度使用（每日 20-50 次互動）約 $20-40/月；中度使用約 $50-100/月；重度 Vibe Coding 可達 $150-300/月。Anthropic Max $200/月訂閱提供 5 倍 API 用量，適合重度使用者。建議用 ccusage 或 claudoscope 監控每日消耗，設定 --max-tokens 上限控制成本。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "CLAUDE.md 要怎麼寫？有沒有範本？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CLAUDE.md 放在專案根目錄，讓 Claude Code 每次 Session 自動載入。建議包含：專案背景（一句話說明）、技術棧（語言/框架/版本）、程式碼風格規範、不可碰觸的檔案清單、常用指令（npm run dev 等）、測試規範、架構決策說明。越具體越好，避免模糊指示。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 支援哪些 MCP 伺服器？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code 支援任何遵循 MCP 協議的伺服器。常用的有：GitHub MCP（讀寫 issue/PR）、Filesystem MCP（安全檔案存取）、PostgreSQL MCP（直接查 DB）、Puppeteer MCP（瀏覽器自動化）、Slack/Notion MCP（工作流整合）。設定放在 ~/.claude/claude_desktop_config.json 的 mcpServers 區塊。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 和 Cursor / Windsurf 有什麼不同？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code 是純終端機 CLI 工具，無 GUI，適合喜歡 Terminal 工作流、需要腳本化或自動化的開發者。Cursor/Windsurf 是 IDE，提供視覺化介面、Tab 補全、Diff 預覽。Claude Code 的優勢是：任何編輯器都能配合使用、可整合進 CI/CD 管線、Git Hooks 自動化、MCP 生態最成熟。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Claude Code 可以在 Windows 上用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Claude Code 官方支援 macOS 和 Linux。Windows 用戶需透過 WSL2（Windows Subsystem for Linux）使用，體驗與 Linux 相近。建議安裝 Ubuntu 22.04 LTS WSL2 環境，再依官方文件安裝 Node.js 18+ 和 Claude Code npm 套件。"
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<nav class="nav"><div class="nav-inner"><a href="/ai-tools-tw/" class="nav-logo">AI Tools TW</a><div class="nav-links"><a href="/ai-tools-tw/blog/">評測</a><a href="https://autodev-ai.com" class="nav-cta" target="_blank" rel="noopener">客製化 →</a></div></div></nav>
+
+<article style="max-width:860px; margin:0 auto; padding:7rem 1.5rem 4rem;">
+
+<!-- Hero -->
+<div style="margin-bottom:2.5rem;">
+  <div style="display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1rem;">
+    <span style="background:rgba(168,85,247,0.15); color:#a855f7; padding:4px 12px; border-radius:20px; font-size:0.8rem; font-weight:600;">Claude Code</span>
+    <span style="background:rgba(34,197,94,0.15); color:#22c55e; padding:4px 12px; border-radius:20px; font-size:0.8rem; font-weight:600;">完整教學</span>
+    <span style="background:rgba(251,191,36,0.15); color:#f59e0b; padding:4px 12px; border-radius:20px; font-size:0.8rem; font-weight:600;">2026 最新</span>
+  </div>
+  <h1 style="font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; line-height:1.25; margin-bottom:1rem;">Claude Code 完整教學 2026：<br>進階 Prompt 技巧、費用最佳化、<br>MCP 配置台灣指南</h1>
+  <p style="font-size:1.05rem; color:var(--gray); line-height:1.7; margin-bottom:1.5rem;">你裝了 Claude Code，跑了幾次，覺得「還行」——但沒感受到傳說中的威力。問題通常不在工具，在用法。這篇從 CLAUDE.md 設計、進階 Prompt 架構、費用控制到 MCP 整合，把 Claude Code 2026 用到極致的方法全部拆開講。</p>
+  <div style="display:flex; gap:1rem; flex-wrap:wrap; font-size:0.85rem; color:var(--gray);">
+    <span>📅 2026-05-23</span>
+    <span>⏱ 閱讀約 12 分鐘</span>
+    <span>🏷 Claude Code・MCP・Prompt 工程・費用優化</span>
+  </div>
+</div>
+
+<!-- TOC -->
+<nav style="background:rgba(168,85,247,0.07); border:1px solid rgba(168,85,247,0.2); border-radius:12px; padding:1.5rem; margin-bottom:3rem;">
+  <div style="font-weight:700; margin-bottom:0.8rem; color:#a855f7;">📋 目錄</div>
+  <ol style="margin:0; padding-left:1.5rem; line-height:2; color:var(--gray);">
+    <li><a href="#install" style="color:inherit; text-decoration:none;">安裝與基本設定（2026 最新版）</a></li>
+    <li><a href="#claude-md" style="color:inherit; text-decoration:none;">CLAUDE.md 進階設計：讓 AI 真正懂你的專案</a></li>
+    <li><a href="#prompt-techniques" style="color:inherit; text-decoration:none;">進階 Prompt 技巧：10 個讓輸出品質飛升的方法</a></li>
+    <li><a href="#cost" style="color:inherit; text-decoration:none;">費用最佳化：ccusage 監控 + 省錢策略</a></li>
+    <li><a href="#mcp" style="color:inherit; text-decoration:none;">MCP 整合配置：GitHub、DB、Puppeteer 完整教學</a></li>
+    <li><a href="#workflow" style="color:inherit; text-decoration:none;">進階工作流：Git Hooks、CI/CD、多 Agent 協作</a></li>
+    <li><a href="#taiwan-cases" style="color:inherit; text-decoration:none;">台灣開發者 5 個實戰場景</a></li>
+    <li><a href="#compare" style="color:inherit; text-decoration:none;">vs Cursor / Windsurf / Gemini CLI 比較表</a></li>
+    <li><a href="#faq" style="color:inherit; text-decoration:none;">常見問題 FAQ</a></li>
+  </ol>
+</nav>
+
+<!-- Section 1: Install -->
+<section id="install">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">🚀 安裝與基本設定（2026 最新版）</h2>
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;">Claude Code 需要 Node.js 18+ 和有效的 Anthropic API Key。2026 年起，Claude Code 整合進 <strong>Anthropic Max 訂閱</strong>（$100/月 或 $200/月），訂閱者可直接使用無需另付 API 費用（有 rate limit）。</p>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1.5rem 0; font-family:monospace; font-size:0.9rem; color:#e2e8f0; overflow-x:auto;">
+    <div style="color:#64748b; margin-bottom:0.5rem;"># 安裝 Claude Code</div>
+    <div style="color:#4ade80;">npm install -g @anthropic-ai/claude-code</div>
+    <div style="margin-top:1rem; color:#64748b;"># 設定 API Key（建議寫進 ~/.bashrc 或 ~/.zshrc）</div>
+    <div style="color:#4ade80;">export ANTHROPIC_API_KEY="sk-ant-xxxx"</div>
+    <div style="margin-top:1rem; color:#64748b;"># 啟動（在你的專案目錄下）</div>
+    <div style="color:#4ade80;">cd ~/your-project && claude</div>
+    <div style="margin-top:1rem; color:#64748b;"># 進入 Max 訂閱模式（不消耗 API Token）</div>
+    <div style="color:#4ade80;">claude --login</div>
+  </div>
+
+  <div style="background:rgba(251,191,36,0.08); border-left:4px solid #f59e0b; padding:1rem 1.5rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+    <strong style="color:#f59e0b;">💡 2026 新功能：</strong> <span style="color:var(--gray);">Claude Code 支援 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">--model</code> 指定模型（claude-opus-4-6、claude-sonnet-4-6、claude-haiku-4）。日常開發推薦用 Sonnet 4.6（速度快、成本低）；複雜重構再切換 Opus 4.6。</span>
+  </div>
+</section>
+
+<!-- Section 2: CLAUDE.md -->
+<section id="claude-md" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">📄 CLAUDE.md 進階設計：讓 AI 真正懂你的專案</h2>
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;"><code style="background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:4px;">CLAUDE.md</code> 是 Claude Code 的靈魂文件。放在專案根目錄，每次啟動 Session 都自動載入。寫得好，Claude 就像接手你兩年的同事；寫得差，每次都要從頭解釋。</p>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">完整 CLAUDE.md 範本（後端 API 專案）</h3>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.85rem; color:#e2e8f0; overflow-x:auto; line-height:1.7;">
+    <div style="color:#94a3b8;"># CLAUDE.md — 專案指引</div>
+    <br>
+    <div style="color:#94a3b8;">## 專案背景</div>
+    <div>台灣電商訂單管理 API，Node.js + Express + PostgreSQL 16。</div>
+    <div>服務 3 家連鎖藥局，每日約 50,000 次 API 請求。</div>
+    <br>
+    <div style="color:#94a3b8;">## 技術棧</div>
+    <div>- Runtime: Node.js 22 LTS</div>
+    <div>- Framework: Express 5.x</div>
+    <div>- DB: PostgreSQL 16（TypeORM 0.3）</div>
+    <div>- Auth: JWT + Redis Session</div>
+    <div>- Test: Jest + Supertest</div>
+    <div>- CI/CD: GitHub Actions → Fly.io</div>
+    <br>
+    <div style="color:#94a3b8;">## 程式碼規範</div>
+    <div>- TypeScript strict mode，所有函式需有型別標注</div>
+    <div>- 每個 API endpoint 必須有對應的 Jest 整合測試</div>
+    <div>- 錯誤處理：統一使用 AppError class，不 throw 裸字串</div>
+    <div>- DB query：一律透過 Repository 層，不在 Controller 直接操作</div>
+    <br>
+    <div style="color:#94a3b8;">## 禁止觸碰（除非我明確說「修改 X 檔案」）</div>
+    <div>- src/migrations/* — 資料庫 migration 檔</div>
+    <div>- .env.production — 正式環境變數</div>
+    <div>- src/types/global.d.ts — 全域型別定義</div>
+    <br>
+    <div style="color:#94a3b8;">## 常用指令</div>
+    <div>- npm run dev — 啟動開發伺服器（port 3000）</div>
+    <div>- npm test — 執行所有測試</div>
+    <div>- npm run migrate — 執行待處理 migrations</div>
+    <br>
+    <div style="color:#94a3b8;">## 架構決策（ADR）</div>
+    <div>- 選用 TypeORM 而非 Prisma：因需動態查詢建構</div>
+    <div>- 不用 GraphQL：客戶端（藥局 POS 系統）不支援</div>
+    <div>- Redis 快取策略：訂單狀態 TTL 30s，產品資料 TTL 5min</div>
+  </div>
+
+  <div style="background:rgba(34,197,94,0.08); border-left:4px solid #22c55e; padding:1rem 1.5rem; border-radius:0 8px 8px 0; margin:1.5rem 0;">
+    <strong style="color:#22c55e;">🎯 進階技巧：多層 CLAUDE.md</strong>
+    <p style="color:var(--gray); margin:0.5rem 0 0; line-height:1.7;">子目錄也可以放 CLAUDE.md。例如 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">src/payments/CLAUDE.md</code> 專門說明金流模組的規範。Claude Code 進入該目錄時，會同時載入根目錄和子目錄的 CLAUDE.md，讓指引更精準。</p>
+  </div>
+</section>
+
+<!-- Section 3: Prompt Techniques -->
+<section id="prompt-techniques" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">🧠 進階 Prompt 技巧：10 個讓輸出品質飛升的方法</h2>
+
+  <!-- Tip 1 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 1：「先想再做」——強制規劃階段</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">在複雜任務前加上 <strong>「先列出你要修改哪些檔案、為什麼，等我確認再動手」</strong>。這能防止 Claude 直接衝進去改了一大堆你不想動的地方。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      ❌ 壞：「重構 UserService」<br>
+      ✅ 好：「分析 UserService 的設計問題，列出你計劃改動的檔案和理由，等我確認才動手。」
+    </div>
+  </div>
+
+  <!-- Tip 2 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 2：指定輸出格式</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">明確告訴 Claude 你要什麼格式的輸出。對程式碼修改說「只輸出需要改動的函式，不要輸出整個檔案」；對分析說「用條列式，每項不超過 20 字」。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      「找出 src/auth/ 下所有沒有錯誤處理的 async 函式，<br>
+      只列出檔案名稱 + 行號 + 函式名稱，不需要其他解釋。」
+    </div>
+  </div>
+
+  <!-- Tip 3 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 3：角色扮演設定（一次性 System Prompt）</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">用 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">/system</code> 指令設定當前 Session 的角色，比在每個 Prompt 重複說明更省 Token。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      /system 你是一個台灣電商後端高級工程師，<br>
+      熟悉 Node.js/PostgreSQL，回覆用繁體中文，<br>
+      程式碼遵循 CLAUDE.md 的規範。
+    </div>
+  </div>
+
+  <!-- Tip 4 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 4：Context 注入——把相關程式碼餵進去</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">用 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">@filename</code> 語法快速帶入檔案內容，或用 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">$(cat file.ts)</code> 手動注入。不要讓 Claude 自己去猜檔案結構。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      「參考 @src/orders/order.service.ts 的實作風格，<br>
+      為 src/payments/ 寫一個類似的 payment.service.ts。」
+    </div>
+  </div>
+
+  <!-- Tip 5 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 5：增量確認工作流（防止「暴走」）</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">大型任務切成小步驟，每步確認再繼續。用「完成後跟我說，等我說 OK 再繼續下一步」來控制節奏，避免一次改太多導致難以審查。</p>
+  </div>
+
+  <!-- Tip 6 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 6：TDD 驅動——先測試再實作</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">先叫 Claude 寫測試案例（你審查測試），再叫它「實作剛才那些測試」。這樣 Claude 的實作目標明確，輸出品質遠優於直接說「幫我實作功能 X」。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      Step 1：「為退款功能寫 Jest 測試，包含：正常退款、金額超過原始訂單、重複退款三個 cases。先只寫測試，不實作。」<br>
+      Step 2：（審查測試後）「OK，現在實作讓這些測試通過。」
+    </div>
+  </div>
+
+  <!-- Tip 7 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 7：要求解釋決策（加深理解）</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">在 Prompt 結尾加「並解釋你為什麼選擇這個方案，而不是其他替代方案」。不只讓你學習，也讓你發現 Claude 的假設是否符合你的需求。</p>
+  </div>
+
+  <!-- Tip 8 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 8：負面指示（告訴 Claude 不要做什麼）</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">「不要用 any 型別」、「不要改測試檔」、「不要安裝新的套件」——這些負面指示往往比正面指示更有效，能排除你最常遇到的問題。</p>
+  </div>
+
+  <!-- Tip 9 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 9：Bash Tool 搭配使用——讓 Claude 執行後驗證</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">允許 Claude Code 使用 Bash Tool，讓它自己跑 <code>npm test</code> 驗證修改是否通過。失敗時 Claude 會自動嘗試修正，形成「修改→測試→修正」的自動迴圈。</p>
+    <div style="background:#1a1a2e; border-radius:8px; padding:1rem; margin-top:0.75rem; font-family:monospace; font-size:0.85rem; color:#c084fc;">
+      「修復 payment.service.ts 的型別錯誤，修完後跑 npm test，<br>
+      確認所有測試通過，如果沒有自己修到通過為止。」
+    </div>
+  </div>
+
+  <!-- Tip 10 -->
+  <div style="background:rgba(99,102,241,0.08); border:1px solid rgba(99,102,241,0.2); border-radius:12px; padding:1.5rem; margin:1.5rem 0;">
+    <div style="font-weight:700; color:#818cf8; margin-bottom:0.5rem;">技巧 10：Compact 模式——管理長 Session 的 Context</div>
+    <p style="color:var(--gray); margin:0; line-height:1.7;">長時間工作後，用 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">/compact</code> 指令壓縮 Context，或用 <code style="background:rgba(255,255,255,0.1); padding:2px 6px; border-radius:4px;">/clear</code> 清空重新開始。Context 過長會導致回應品質下降且費用暴增，定期清理是關鍵習慣。</p>
+  </div>
+</section>
+
+<!-- CTA 1: DataCamp -->
+<div style="background:linear-gradient(135deg,#1e3a5f 0%,#0f2540 100%); border-radius:16px; padding:2rem; margin:2.5rem 0; text-align:center;">
+  <div style="font-size:1.5rem; margin-bottom:0.5rem;">📊</div>
+  <h3 style="color:#fff; margin:0 0 0.5rem; font-size:1.2rem;">想系統學習 AI / Python / 機器學習？</h3>
+  <p style="color:rgba(255,255,255,0.75); margin:0 0 1.25rem; font-size:0.95rem;">DataCamp 提供最完整的數據科學與 AI 課程路徑，從 Python 基礎到 LLM 應用開發，台灣學習者最多選擇。</p>
+  <a href="https://afflink.one/s/aavAC" rel="noopener sponsored" target="_blank"
+     style="display:inline-block; background:linear-gradient(90deg,#03ef62,#29c9ff); color:#000; font-weight:700; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-size:1rem;">
+    🚀 立即開始 DataCamp 免費試用 →
+  </a>
+</div>
+
+<!-- Section 4: Cost -->
+<section id="cost" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">💰 費用最佳化：ccusage 監控 + 省錢策略</h2>
+
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1.5rem;">Claude Code 費用的最大殺手是：<strong>1. Context 窗口被塞滿後每次都帶著大量歷史</strong>；<strong>2. 不必要的長輸出</strong>；<strong>3. 用 Opus 做簡單任務</strong>。掌握這三點，費用可以砍半。</p>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">方案選擇：API vs Max 訂閱</h3>
+
+  <div style="overflow-x:auto; margin:1.5rem 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.9rem;">
+      <thead>
+        <tr style="background:rgba(168,85,247,0.15);">
+          <th style="padding:0.75rem 1rem; text-align:left; border:1px solid rgba(255,255,255,0.1);">方案</th>
+          <th style="padding:0.75rem 1rem; text-align:left; border:1px solid rgba(255,255,255,0.1);">月費</th>
+          <th style="padding:0.75rem 1rem; text-align:left; border:1px solid rgba(255,255,255,0.1);">適合誰</th>
+          <th style="padding:0.75rem 1rem; text-align:left; border:1px solid rgba(255,255,255,0.1);">Cost/台幣</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">API Pay-as-you-go</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">依用量</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">輕度用戶，每月 &lt; $30</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">彈性</td>
+        </tr>
+        <tr>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">Claude Pro $20</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">$20/月</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">Claude.ai 網頁使用者，不含 Claude Code API</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">NT$650</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1); color:#4ade80;"><strong>Anthropic Max $100</strong></td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1); color:#4ade80;"><strong>$100/月</strong></td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">每月 API 消費約 $80-150，含 5x 用量</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">NT$3,250</td>
+        </tr>
+        <tr>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1); color:#f59e0b;"><strong>Anthropic Max $200</strong></td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1); color:#f59e0b;"><strong>$200/月</strong></td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">重度 Vibe Coding，每月 &gt; $200 API 用量</td>
+          <td style="padding:0.75rem 1rem; border:1px solid rgba(255,255,255,0.1);">NT$6,500</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">用 ccusage 監控費用</h3>
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;"><a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html" style="color:#a855f7;">ccusage</a> 是開源的 Claude Code 費用追蹤工具，讀取本地 Session 記錄，無需額外 API 就能看到每次對話的 Token 消耗和費用。</p>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.9rem; color:#e2e8f0; overflow-x:auto;">
+    <div style="color:#64748b;"># 安裝 ccusage</div>
+    <div style="color:#4ade80;">npm install -g ccusage</div>
+    <br>
+    <div style="color:#64748b;"># 查看今日費用</div>
+    <div style="color:#4ade80;">ccusage today</div>
+    <br>
+    <div style="color:#64748b;"># 查看本週費用報表</div>
+    <div style="color:#4ade80;">ccusage week</div>
+    <br>
+    <div style="color:#64748b;"># 設定每日費用警報（超過 $5 發出警告）</div>
+    <div style="color:#4ade80;">ccusage limit --daily 5</div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">5 個省錢技巧</h3>
+  <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:0.75rem; color:var(--gray); line-height:1.7;">
+    <li style="display:flex; gap:0.75rem;"><span style="color:#a855f7; font-size:1.2rem; flex-shrink:0;">①</span><span><strong>模型降級</strong>：日常問答用 claude-haiku-4（便宜 20 倍），複雜任務再換 Sonnet/Opus。<code>claude --model claude-haiku-4</code></span></li>
+    <li style="display:flex; gap:0.75rem;"><span style="color:#a855f7; font-size:1.2rem; flex-shrink:0;">②</span><span><strong>定期 /compact</strong>：每隔 30-60 分鐘壓縮 Context，避免帶著大量歷史重複計費。</span></li>
+    <li style="display:flex; gap:0.75rem;"><span style="color:#a855f7; font-size:1.2rem; flex-shrink:0;">③</span><span><strong>精確指定作業範圍</strong>：「修改 src/auth/auth.service.ts 第 45-80 行的 validateToken 函式」比「看一下我的 auth 模組」省 70% Token。</span></li>
+    <li style="display:flex; gap:0.75rem;"><span style="color:#a855f7; font-size:1.2rem; flex-shrink:0;">④</span><span><strong>用 .claudeignore</strong>：排除 node_modules、build、.git 等不需要 Claude 讀取的目錄。</span></li>
+    <li style="display:flex; gap:0.75rem;"><span style="color:#a855f7; font-size:1.2rem; flex-shrink:0;">⑤</span><span><strong>快取 Prompt 前置</strong>：把 CLAUDE.md 的常用內容盡量前置，充分利用 Anthropic 的 Prompt Caching（相同前綴不重複計費）。</span></li>
+  </ul>
+</section>
+
+<!-- Section 5: MCP -->
+<section id="mcp" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">🔌 MCP 整合配置：GitHub、DB、Puppeteer 完整教學</h2>
+
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;">MCP（Model Context Protocol）是 Claude Code 的超能力來源。透過 MCP 伺服器，Claude 可以直接操作 GitHub、查詢資料庫、控制瀏覽器，而不需要你複製貼上資料。</p>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">設定檔位置</h3>
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.9rem; color:#e2e8f0; overflow-x:auto;">
+    <div style="color:#64748b;"># 全域設定（所有專案都能用）</div>
+    <div style="color:#4ade80;">~/.claude/claude_desktop_config.json</div>
+    <br>
+    <div style="color:#64748b;"># 專案級設定（只有這個專案用）</div>
+    <div style="color:#4ade80;">./.claude/claude_desktop_config.json</div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">常用 MCP 伺服器配置範本</h3>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.85rem; color:#e2e8f0; overflow-x:auto; line-height:1.7;">
+    <div style="color:#94a3b8;">{</div>
+    <div style="padding-left:1.5rem; color:#94a3b8;">"mcpServers": {</div>
+    <div style="padding-left:3rem; color:#fbbf24;">"github": {</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"command": "npx",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"args": ["-y", "@modelcontextprotocol/server-github"],</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"env": {"GITHUB_PERSONAL_ACCESS_TOKEN": "ghp_xxxx"}</div>
+    <div style="padding-left:3rem; color:#fbbf24;">},</div>
+    <div style="padding-left:3rem; color:#c084fc; margin-top:0.5rem;">"postgres": {</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"command": "npx",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"args": ["-y", "@modelcontextprotocol/server-postgres",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"postgresql://user:pass@localhost:5432/mydb"]</div>
+    <div style="padding-left:3rem; color:#c084fc;">},</div>
+    <div style="padding-left:3rem; color:#38bdf8; margin-top:0.5rem;">"puppeteer": {</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"command": "npx",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"args": ["-y", "@modelcontextprotocol/server-puppeteer"]</div>
+    <div style="padding-left:3rem; color:#38bdf8;">},</div>
+    <div style="padding-left:3rem; color:#fb7185; margin-top:0.5rem;">"filesystem": {</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"command": "npx",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">"args": ["-y", "@modelcontextprotocol/server-filesystem",</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"/Users/you/projects"]</div>
+    <div style="padding-left:3rem; color:#fb7185;">}</div>
+    <div style="padding-left:1.5rem; color:#94a3b8;">}</div>
+    <div style="color:#94a3b8;">}</div>
+  </div>
+
+  <div style="display:grid; gap:1rem; margin:1.5rem 0; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    <div style="background:rgba(251,191,36,0.08); border:1px solid rgba(251,191,36,0.2); border-radius:12px; padding:1.25rem;">
+      <div style="font-weight:700; color:#fbbf24; margin-bottom:0.5rem;">🐙 GitHub MCP 用途</div>
+      <ul style="color:var(--gray); font-size:0.9rem; padding-left:1.25rem; margin:0; line-height:1.9;">
+        <li>直接讀取 PR / Issue 內容</li>
+        <li>讓 Claude 自動建立 PR 草稿</li>
+        <li>分析 commit 歷史找 bug 來源</li>
+        <li>批次更新 Issue labels</li>
+      </ul>
+    </div>
+    <div style="background:rgba(192,132,252,0.08); border:1px solid rgba(192,132,252,0.2); border-radius:12px; padding:1.25rem;">
+      <div style="font-weight:700; color:#c084fc; margin-bottom:0.5rem;">🐘 PostgreSQL MCP 用途</div>
+      <ul style="color:var(--gray); font-size:0.9rem; padding-left:1.25rem; margin:0; line-height:1.9;">
+        <li>Claude 直接查詢 schema 了解資料結構</li>
+        <li>協助撰寫複雜 SQL 並驗證</li>
+        <li>Performance 分析與索引建議</li>
+        <li>資料遷移腳本驗證</li>
+      </ul>
+    </div>
+    <div style="background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.2); border-radius:12px; padding:1.25rem;">
+      <div style="font-weight:700; color:#38bdf8; margin-bottom:0.5rem;">🎭 Puppeteer MCP 用途</div>
+      <ul style="color:var(--gray); font-size:0.9rem; padding-left:1.25rem; margin:0; line-height:1.9;">
+        <li>E2E 測試自動撰寫與執行</li>
+        <li>截圖比對 UI 回歸測試</li>
+        <li>讓 Claude 視覺化驗證前端改動</li>
+        <li>Web scraping 腳本生成</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- CTA 2: DigitalOcean -->
+<div style="background:linear-gradient(135deg,#0061ff 0%,#003f99 100%); border-radius:16px; padding:2rem; margin:2.5rem 0; text-align:center;">
+  <div style="font-size:1.5rem; margin-bottom:0.5rem;">☁️</div>
+  <h3 style="color:#fff; margin:0 0 0.5rem; font-size:1.2rem;">部署 MCP 伺服器需要穩定雲端主機？</h3>
+  <p style="color:rgba(255,255,255,0.8); margin:0 0 1.25rem; font-size:0.95rem;">DigitalOcean Droplet 從 $6/月起，適合架設 Claude Code MCP Server、私有 AI 工具、n8n 自動化工作流。新戶享 $200 免費點數（60 天）。</p>
+  <a href="https://m.do.co/c/6121a295f624" rel="noopener sponsored" target="_blank"
+     style="display:inline-block; background:linear-gradient(90deg,#fff,#e0e7ff); color:#0061ff; font-weight:700; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-size:1rem;">
+    🚀 獲得 $200 DigitalOcean 免費點數 →
+  </a>
+</div>
+
+<!-- Section 6: Workflow -->
+<section id="workflow" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">⚙️ 進階工作流：Git Hooks、CI/CD、多 Agent 協作</h2>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1rem 0 0.75rem; color:#c084fc;">Git Hooks 自動化</h3>
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;">在 <code style="background:rgba(255,255,255,0.08); padding:2px 8px; border-radius:4px;">.git/hooks/pre-commit</code> 加入 Claude Code，讓每次 commit 前自動審查：</p>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.85rem; color:#e2e8f0; overflow-x:auto; line-height:1.7;">
+    <div style="color:#64748b;">#!/bin/bash</div>
+    <div style="color:#64748b;"># .git/hooks/pre-commit</div>
+    <br>
+    <div style="color:#4ade80;">STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(ts|tsx|js|jsx)$')</div>
+    <br>
+    <div style="color:#fbbf24;">if [ -n "$STAGED_FILES" ]; then</div>
+    <div style="padding-left:1.5rem; color:#4ade80;">echo "$STAGED_FILES" | xargs claude --no-stream --print \</div>
+    <div style="padding-left:3rem; color:#4ade80;">-p "快速審查這些檔案的變更，只回報：型別錯誤、明顯 bug、缺少錯誤處理。格式：[嚴重度] 檔案:行號 — 問題描述"</div>
+    <div style="color:#fbbf24;">fi</div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">GitHub Actions 整合</h3>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.85rem; color:#e2e8f0; overflow-x:auto; line-height:1.7;">
+    <div style="color:#94a3b8;"># .github/workflows/claude-review.yml</div>
+    <div style="color:#fbbf24;">name: Claude Code Review</div>
+    <div style="color:#fbbf24;">on:</div>
+    <div style="padding-left:1.5rem; color:#4ade80;">pull_request:</div>
+    <div style="padding-left:3rem; color:#4ade80;">types: [opened, synchronize]</div>
+    <div style="color:#fbbf24;">jobs:</div>
+    <div style="padding-left:1.5rem; color:#c084fc;">review:</div>
+    <div style="padding-left:3rem; color:#4ade80;">runs-on: ubuntu-latest</div>
+    <div style="padding-left:3rem; color:#4ade80;">steps:</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">- uses: actions/checkout@v4</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">- run: npm install -g @anthropic-ai/claude-code</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">- run: |</div>
+    <div style="padding-left:6rem; color:#4ade80;">git diff origin/main...HEAD -- '*.ts' | claude --print \</div>
+    <div style="padding-left:7.5rem; color:#4ade80;">-p "審查這個 PR 的 TypeScript 變更，提供改善建議"</div>
+    <div style="padding-left:4.5rem; color:#4ade80;">env:</div>
+    <div style="padding-left:6rem; color:#4ade80;">ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}</div>
+  </div>
+
+  <h3 style="font-size:1.2rem; font-weight:700; margin:1.5rem 0 0.75rem; color:#c084fc;">多 Agent 並行工作流</h3>
+  <p style="line-height:1.8; color:var(--gray); margin-bottom:1rem;">2026 年的 Claude Code 支援 Sub-Agent 模式。讓一個 Claude 做「協調者」，同時派出多個 Claude 執行任務：</p>
+
+  <div style="background:#1a1a2e; border-radius:10px; padding:1.5rem; margin:1rem 0; font-family:monospace; font-size:0.85rem; color:#e2e8f0; overflow-x:auto; line-height:1.7;">
+    <div style="color:#64748b;"># 協調者 Prompt 範例</div>
+    <div style="color:#4ade80;">「我需要同時完成以下三件事：</div>
+    <div style="color:#4ade80;">1. 為 OrderService 撰寫單元測試</div>
+    <div style="color:#4ade80;">2. 為 PaymentService 補充 TypeDoc 文件</div>
+    <div style="color:#4ade80;">3. 分析 UserController 的效能瓶頸</div>
+    <div style="color:#4ade80;">請用 Task 工具平行執行這三件事，</div>
+    <div style="color:#4ade80;">完成後彙整結果報告給我。」</div>
+  </div>
+</section>
+
+<!-- Section 7: Taiwan Cases -->
+<section id="taiwan-cases" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">🇹🇼 台灣開發者 5 個實戰場景</h2>
+
+  <div style="display:flex; flex-direction:column; gap:1.5rem; margin-top:1.5rem;">
+
+    <!-- Case 1 -->
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <span style="font-size:1.5rem;">🏥</span>
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">場景 1：醫療 SaaS ─ HIPAA 合規程式碼審查</div>
+          <div style="font-size:0.85rem; color:var(--gray);">台北某醫療資訊新創，Node.js + PostgreSQL</div>
+        </div>
+      </div>
+      <p style="color:var(--gray); line-height:1.8; margin:0 0 0.75rem;">問題：後端 API 有個人健康資訊（PHI），但工程師不熟悉 HIPAA 的程式碼合規要求。</p>
+      <div style="background:#1a1a2e; border-radius:8px; padding:1rem; font-family:monospace; font-size:0.85rem; color:#c084fc; line-height:1.6;">
+        「審查 src/patients/ 目錄下所有 API endpoints，<br>
+        找出所有可能違反 HIPAA 的程式碼（logging PHI、<br>
+        未加密傳輸、缺少存取控制），<br>
+        給出具體修正建議和程式碼範例。」
+      </div>
+      <p style="color:#4ade80; font-size:0.9rem; margin:0.75rem 0 0;"><strong>成效：</strong>2 小時完成原本需要 2 天的合規審查，找出 7 個潛在違規點。</p>
+    </div>
+
+    <!-- Case 2 -->
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <span style="font-size:1.5rem;">🛒</span>
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">場景 2：電商平台 ─ LINE Bot 訂單自動化</div>
+          <div style="font-size:0.85rem; color:var(--gray);">台中某連鎖零售商，整合 LINE Pay + 訂單管理</div>
+        </div>
+      </div>
+      <p style="color:var(--gray); line-height:1.8; margin:0 0 0.75rem;">需求：讓 LINE Bot 能接受訂單、查詢狀態、觸發退款，整合現有的 PostgreSQL 訂單資料庫。</p>
+      <div style="background:#1a1a2e; border-radius:8px; padding:1rem; font-family:monospace; font-size:0.85rem; color:#c084fc; line-height:1.6;">
+        MCP 配置：postgres（讀訂單 DB）+ GitHub（管 PR）<br>
+        「根據 orders 和 products schema，<br>
+        設計一個 LINE Webhook handler，<br>
+        支援：查詢最近 5 筆訂單、更新訂單狀態、<br>
+        觸發退款流程。用 TypeScript + Express 實作。」
+      </div>
+      <p style="color:#4ade80; font-size:0.9rem; margin:0.75rem 0 0;"><strong>成效：</strong>Claude 直接讀取 DB schema 建構精確 TypeScript 型別，省去文件翻譯時間，3 天完成原本 2 週的開發量。</p>
+    </div>
+
+    <!-- Case 3 -->
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <span style="font-size:1.5rem;">🎮</span>
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">場景 3：獨立遊戲開發 ─ Unity 腳本重構</div>
+          <div style="font-size:0.85rem; color:var(--gray);">台南獨立遊戲開發者，Unity C# 手機遊戲</div>
+        </div>
+      </div>
+      <p style="color:var(--gray); line-height:1.8; margin:0 0 0.75rem;">問題：遊戲 MonoBehaviour 腳本爆炸性成長到 5,000 行，效能問題明顯，需要拆分重構。</p>
+      <div style="background:#1a1a2e; border-radius:8px; padding:1rem; font-family:monospace; font-size:0.85rem; color:#c084fc; line-height:1.6;">
+        「分析 Assets/Scripts/GameManager.cs，<br>
+        識別違反單一責任原則的程式碼區塊，<br>
+        提出重構計劃（不要直接改），<br>
+        說明如何拆成 4-6 個職責清晰的腳本，<br>
+        並預測對效能的改善幅度。」
+      </div>
+      <p style="color:#4ade80; font-size:0.9rem; margin:0.75rem 0 0;"><strong>成效：</strong>重構後幀率從平均 38FPS 提升到 58FPS，iOS 崩潰率下降 80%。</p>
+    </div>
+
+    <!-- Case 4 -->
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <span style="font-size:1.5rem;">💳</span>
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">場景 4：金融科技 ─ 自動化測試補全</div>
+          <div style="font-size:0.85rem; color:var(--gray);">新竹某 FinTech 新創，支付清算後端</div>
+        </div>
+      </div>
+      <p style="color:var(--gray); line-height:1.8; margin:0 0 0.75rem;">需求：金管會要求測試覆蓋率達 85%，現有覆蓋率只有 42%，要在 1 週內補全。</p>
+      <div style="background:#1a1a2e; border-radius:8px; padding:1rem; font-family:monospace; font-size:0.85rem; color:#c084fc; line-height:1.6;">
+        「執行 npm run test:coverage 取得覆蓋率報告，<br>
+        找出覆蓋率最低的 10 個函式，<br>
+        為每個函式寫至少 3 個 Jest 測試（正常流、<br>
+        邊界案例、錯誤案例），<br>
+        目標讓整體覆蓋率提升到 85%。」
+      </div>
+      <p style="color:#4ade80; font-size:0.9rem; margin:0.75rem 0 0;"><strong>成效：</strong>4 天（而非 1 週）達成 87% 覆蓋率，通過金管會審查。</p>
+    </div>
+
+    <!-- Case 5 -->
+    <div style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.5rem;">
+      <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+        <span style="font-size:1.5rem;">📚</span>
+        <div>
+          <div style="font-weight:700; font-size:1.05rem;">場景 5：EdTech 新創 ─ 全端 Feature 快速開發</div>
+          <div style="font-size:0.85rem; color:var(--gray);">台北 EdTech，Next.js 14 + Supabase</div>
+        </div>
+      </div>
+      <p style="color:var(--gray); line-height:1.8; margin:0 0 0.75rem;">需求：1 名工程師需要在 3 天內完成「學習進度追蹤 + 排行榜」功能，含前後端。</p>
+      <div style="background:#1a1a2e; border-radius:8px; padding:1rem; font-family:monospace; font-size:0.85rem; color:#c084fc; line-height:1.6;">
+        「根據現有的 Supabase schema（透過 postgres MCP），<br>
+        設計並實作學習進度追蹤功能：<br>
+        1. Supabase Edge Function 記錄課程完成事件<br>
+        2. Next.js Server Component 顯示個人進度<br>
+        3. Real-time 排行榜（用 Supabase Realtime）<br>
+        先列計劃再動手，每個步驟完成後告訴我。」
+      </div>
+      <p style="color:#4ade80; font-size:0.9rem; margin:0.75rem 0 0;"><strong>成效：</strong>2.5 天完成，含完整測試。原本估算需要 2 週。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA 3: Hahow -->
+<div style="background:linear-gradient(135deg,#ff6b6b 0%,#c0392b 100%); border-radius:16px; padding:2rem; margin:2.5rem 0; text-align:center;">
+  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🎓</div>
+  <h3 style="color:#fff; margin:0 0 0.5rem; font-size:1.2rem;">想系統學習 AI 開發與 Prompt 工程？</h3>
+  <p style="color:rgba(255,255,255,0.85); margin:0 0 1.25rem; font-size:0.95rem;">Hahow 好學校有台灣最多 AI 應用與程式設計課程，繁體中文授課，台灣講師，符合本地需求。</p>
+  <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" rel="noopener sponsored" target="_blank"
+     style="display:inline-block; background:linear-gradient(90deg,#fff,#ffe5e5); color:#c0392b; font-weight:700; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-size:1rem;">
+    🚀 瀏覽 Hahow AI 課程 →
+  </a>
+</div>
+
+<!-- Section 8: Compare -->
+<section id="compare" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">📊 vs Cursor / Windsurf / Gemini CLI 比較表</h2>
+
+  <div style="overflow-x:auto; margin:1.5rem 0;">
+    <table style="width:100%; border-collapse:collapse; font-size:0.88rem; min-width:600px;">
+      <thead>
+        <tr style="background:rgba(168,85,247,0.2);">
+          <th style="padding:0.75rem 1rem; text-align:left; border:1px solid rgba(255,255,255,0.1);">功能/工具</th>
+          <th style="padding:0.75rem 1rem; text-align:center; border:1px solid rgba(255,255,255,0.1); color:#a855f7;">Claude Code</th>
+          <th style="padding:0.75rem 1rem; text-align:center; border:1px solid rgba(255,255,255,0.1);">Cursor</th>
+          <th style="padding:0.75rem 1rem; text-align:center; border:1px solid rgba(255,255,255,0.1);">Windsurf</th>
+          <th style="padding:0.75rem 1rem; text-align:center; border:1px solid rgba(255,255,255,0.1);">Gemini CLI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">介面</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">Terminal CLI</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">IDE</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">IDE + Plugin</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">Terminal CLI</td>
+        </tr>
+        <tr>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">免費方案</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">❌（需 API Key）</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">✅ 有限制</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">✅ 有限制</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">✅ 1000次/日</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">MCP 整合</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐</td>
+        </tr>
+        <tr>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">CI/CD 整合</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#fbbf24;">⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#fbbf24;">⭐⭐</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">⭐⭐⭐⭐</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">GUI 視覺化</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#ef4444;">❌</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">✅ 完整</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">✅ Codemaps</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#ef4444;">❌</td>
+        </tr>
+        <tr>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">Tab 自動補全</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#ef4444;">❌</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">✅ 最強</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">✅ 良好</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#ef4444;">❌</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">Context 長度</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">200K tokens</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">模型依賴</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">模型依賴</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">1M tokens</td>
+        </tr>
+        <tr>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">最低月費</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">按量計費</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">$20/月</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">$20/月</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#4ade80;">免費</td>
+        </tr>
+        <tr style="background:rgba(255,255,255,0.03);">
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1);">最適合誰</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center; color:#c084fc;">後端/DevOps/腳本化</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">全端/IDE 重度用戶</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">多 IDE 工程師</td>
+          <td style="padding:0.7rem 1rem; border:1px solid rgba(255,255,255,0.1); text-align:center;">Google 生態用戶</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background:rgba(168,85,247,0.08); border:1px solid rgba(168,85,247,0.25); border-radius:12px; padding:1.5rem; margin-top:1.5rem;">
+    <div style="font-weight:700; color:#a855f7; margin-bottom:0.75rem;">🏆 AI Tools TW 建議</div>
+    <p style="color:var(--gray); line-height:1.8; margin:0;">不必二選一。最常見的組合是：<strong>Cursor（日常開發 + Tab 補全）+ Claude Code（複雜重構、CI/CD 整合、MCP 自動化）</strong>。Cursor 負責寫，Claude Code 負責查、測、審、自動化。兩者配合，效益遠超單用一個。</p>
+  </div>
+</section>
+
+<!-- CTA 4: Cloudways -->
+<div style="background:linear-gradient(135deg,#1a4f3a 0%,#0d2b1f 100%); border-radius:16px; padding:2rem; margin:2.5rem 0; text-align:center;">
+  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🖥️</div>
+  <h3 style="color:#fff; margin:0 0 0.5rem; font-size:1.2rem;">需要高效能雲端主機跑 AI 工作流？</h3>
+  <p style="color:rgba(255,255,255,0.8); margin:0 0 1.25rem; font-size:0.95rem;">Cloudways 托管雲端主機，按需擴容、SSD 高速存取，適合跑 n8n、Claude Code MCP Server、Dify 等 AI 服務。新用戶首 3 個月享優惠。</p>
+  <a href="https://vbtrax.com/track/clicks/9532/c627c2bc9b0126dafe8fec2bd32e9d452c6644ca63bcb0f90067b504641200a8cd3ea4e4566e9f663499abdb4aee7abb970d" rel="noopener sponsored" target="_blank"
+     style="display:inline-block; background:linear-gradient(90deg,#00c853,#b2ff59); color:#0d2b1f; font-weight:700; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-size:1rem;">
+    🚀 查看 Cloudways 方案 →
+  </a>
+</div>
+
+<!-- Section 9: FAQ -->
+<section id="faq" style="margin-top:3rem;">
+  <h2 style="font-size:1.6rem; font-weight:800; margin-bottom:1.5rem; padding-bottom:0.5rem; border-bottom:2px solid rgba(168,85,247,0.3);">❓ 常見問題 FAQ</h2>
+
+  <div style="display:flex; flex-direction:column; gap:1rem;">
+
+    <details style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.25rem; cursor:pointer;">
+      <summary style="font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+        <span>Claude Code 每個月費用大概多少？</span>
+        <span style="color:#a855f7; font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--gray); margin:1rem 0 0; line-height:1.8;">費用視用量而定：輕度使用（每日 20-50 次互動）約 $20-40/月；中度使用約 $50-100/月；重度 Vibe Coding 可達 $150-300/月。Anthropic Max $200/月訂閱提供 5 倍 API 用量，適合重度使用者。建議用 ccusage 或 claudoscope 監控每日消耗，設定 --max-tokens 上限控制成本。</p>
+    </details>
+
+    <details style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.25rem; cursor:pointer;">
+      <summary style="font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+        <span>CLAUDE.md 要怎麼寫？有沒有範本？</span>
+        <span style="color:#a855f7; font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--gray); margin:1rem 0 0; line-height:1.8;">CLAUDE.md 放在專案根目錄，讓 Claude Code 每次 Session 自動載入。建議包含：專案背景、技術棧與版本、程式碼風格規範、禁止觸碰的檔案清單、常用指令、測試規範、架構決策說明。越具體越好，避免模糊指示。本文第二節有完整範本可以直接複製使用。</p>
+    </details>
+
+    <details style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.25rem; cursor:pointer;">
+      <summary style="font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+        <span>Claude Code 支援哪些 MCP 伺服器？</span>
+        <span style="color:#a855f7; font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--gray); margin:1rem 0 0; line-height:1.8;">Claude Code 支援任何遵循 MCP 協議的伺服器。常用的有：GitHub MCP（讀寫 issue/PR）、Filesystem MCP（安全檔案存取）、PostgreSQL MCP（直接查 DB）、Puppeteer MCP（瀏覽器自動化）、Slack/Notion MCP（工作流整合）。設定放在 ~/.claude/claude_desktop_config.json 的 mcpServers 區塊。</p>
+    </details>
+
+    <details style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.25rem; cursor:pointer;">
+      <summary style="font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+        <span>Claude Code 和 Cursor / Windsurf 有什麼不同？</span>
+        <span style="color:#a855f7; font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--gray); margin:1rem 0 0; line-height:1.8;">Claude Code 是純終端機 CLI 工具，無 GUI，適合喜歡 Terminal 工作流、需要腳本化或自動化的開發者。Cursor/Windsurf 是 IDE，提供視覺化介面、Tab 補全、Diff 預覽。Claude Code 的優勢是：任何編輯器都能配合使用、可整合進 CI/CD 管線、Git Hooks 自動化、MCP 生態最成熟。</p>
+    </details>
+
+    <details style="background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.1); border-radius:12px; padding:1.25rem; cursor:pointer;">
+      <summary style="font-weight:700; list-style:none; display:flex; justify-content:space-between; align-items:center;">
+        <span>Claude Code 可以在 Windows 上用嗎？</span>
+        <span style="color:#a855f7; font-size:1.2rem;">+</span>
+      </summary>
+      <p style="color:var(--gray); margin:1rem 0 0; line-height:1.8;">Claude Code 官方支援 macOS 和 Linux。Windows 用戶需透過 WSL2（Windows Subsystem for Linux）使用，體驗與 Linux 相近。建議安裝 Ubuntu 22.04 LTS WSL2 環境，再依官方文件安裝 Node.js 18+ 和 Claude Code npm 套件。</p>
+    </details>
+
+  </div>
+</section>
+
+<!-- CTA 5: Gumroad -->
+<div style="background:linear-gradient(135deg,#ff90e8 0%,#ff3366 100%); border-radius:16px; padding:2rem; margin:2.5rem 0; text-align:center;">
+  <div style="font-size:1.5rem; margin-bottom:0.5rem;">🎁</div>
+  <h3 style="color:#fff; margin:0 0 0.5rem; font-size:1.2rem;">Claude Code 進階 Prompt 模板包 — 立即可用</h3>
+  <p style="color:rgba(255,255,255,0.9); margin:0 0 1.25rem; font-size:0.95rem;">50+ 個經過實戰驗證的 Claude Code Prompt 模板，涵蓋重構、測試、Code Review、MCP 設定。台灣工程師設計，直接套用。</p>
+  <a href="https://xiaofan8.gumroad.com/l/kknad" rel="noopener sponsored" target="_blank"
+     style="display:inline-block; background:linear-gradient(90deg,#fff,#fff0f5); color:#ff3366; font-weight:700; padding:0.75rem 2rem; border-radius:8px; text-decoration:none; font-size:1rem;">
+    🛍 取得 Claude Code Pack ($29) →
+  </a>
+</div>
+
+<!-- Internal Links -->
+<section style="margin-top:3rem; padding:2rem; background:rgba(255,255,255,0.03); border-radius:12px; border:1px solid rgba(255,255,255,0.08);">
+  <h3 style="font-size:1.1rem; font-weight:700; margin-bottom:1rem; color:#c084fc;">📚 延伸閱讀</h3>
+  <div style="display:grid; gap:0.75rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));">
+    <a href="/ai-tools-tw/blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      💰 ccusage + Claudoscope 費用追蹤工具評測
+    </a>
+    <a href="/ai-tools-tw/blog/opencode-open-source-claude-code-alternative-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      🔓 OpenCode：153K⭐ 開源 Claude Code 替代方案
+    </a>
+    <a href="/ai-tools-tw/blog/gemini-cli-review-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      🤖 Gemini CLI 評測：免費 1M Context 終端機 AI
+    </a>
+    <a href="/ai-tools-tw/blog/n8n-claude-code-advanced-workflow-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      ⚙️ n8n + Claude Code 進階教學
+    </a>
+    <a href="/ai-tools-tw/blog/windsurf-cascade-review-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      🏄 Windsurf Cascade 深度評測 2026
+    </a>
+    <a href="/ai-tools-tw/blog/cursor-agents-cloud-vm-review-2026.html" style="color:var(--gray); text-decoration:none; padding:0.75rem; background:rgba(255,255,255,0.05); border-radius:8px; border:1px solid rgba(255,255,255,0.08); transition:border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168,85,247,0.5)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.08)'">
+      ☁️ Cursor Cloud Agents 評測 2026
+    </a>
+  </div>
+</section>
+
+<!-- Breadcrumb / Nav -->
+<div style="margin-top:3rem; padding-top:2rem; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+  <a href="/ai-tools-tw/blog/" style="color:#a855f7; text-decoration:none; font-size:0.9rem;">← 所有評測</a>
+  <div style="font-size:0.85rem; color:var(--gray);">© 2026 AI Tools TW — 台灣 AI 工具評測站</div>
+</div>
+
+</article>
+</body>
+</html>
