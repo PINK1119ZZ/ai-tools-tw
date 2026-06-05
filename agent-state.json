@@ -1,7 +1,18 @@
 {
-  "lastUpdated": "2026-05-24T02:00:00+00:00",
+  "lastUpdated": "2026-06-05T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-06-05",
+      "action": "publish_article",
+      "title": "Claude 4 Sonnet vs Opus 全面評測 2026：定價、能力、與 GPT-5 完整比較｜台灣開發者指南",
+      "file": "blog/claude-4-sonnet-opus-review-2026.html",
+      "wordCount": 2600,
+      "topicSource": "nextPriority (Claude 4 Sonnet / Opus 全面評測 2026)",
+      "affiliates": ["datacamp", "digitalocean", "cloudways", "hahow", "gumroad"],
+      "internalLinks": ["claude-code-complete-guide-2026.html", "ai-coding-tools-comparison-2026-final.html", "cursor-agents-cloud-vm-review-2026.html", "gemini-cli-review-2026.html", "claude-code-cost-tracker-ccusage-claudoscope-2026.html"],
+      "notes": "Claude 4 系列完整評測：Sonnet 4.6（SWE-bench 76.2%/+ET 80.2%、Computer Use 94%、$3/$15、1M ctx、AIME 92.3%、財務代理 63.3%）vs Opus 4.7（SWE-bench 80.8%+、複雜 Agent 旗艦、$5/$25）。完整定價表（Haiku/Sonnet/Opus API + claude.ai 訂閱）、vs GPT-5 10 維度比較表（benchmark/定價/IDE整合/MCP）、Extended Thinking 使用策略、台灣 5 大場景（新創/電商/FinTech/SaaS/學術）、最終選購 verdict。5 個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
+    },
     {
       "date": "2026-05-24",
       "action": "publish_article",
@@ -181,7 +192,6 @@
     "blog/ai-coding-tools-comparison-2026-final.html"
   ],
   "nextPriority": [
-    "Claude 4 Sonnet / Opus 全面評測 2026 — 台灣開發者視角：定價、能力、與 GPT-5.4 完整比較",
     "AI 寫作工具比較 2026 — ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選"
   ],
   "directives": [],
