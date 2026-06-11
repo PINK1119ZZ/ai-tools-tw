@@ -1,5 +1,199 @@
 {
-  "lastUpdated": "2026-06-10T07:00:00+00:00",
+  "lastUpdated": "2026-06-11T02:00:00+00:00",
+  "status": "active",
+  "agentLog": [
+    {
+      "date": "2026-06-11",
+      "action": "publish_article",
+      "title": "Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026：台灣用戶哪個找資料最準確？",
+      "file": "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority (Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026 — 台灣用戶哪個找資料最準確)",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "nordvpn",
+        "gumroad",
+        "cloudways",
+        "systeme.io"
+      ],
+      "internalLinks": [
+        "ai-writing-tools-comparison-2026.html",
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "ai-coding-tools-comparison-2026-final.html",
+        "claude-4-sonnet-opus-review-2026.html"
+      ],
+      "notes": "三大 AI 搜尋工具終極比較：Perplexity AI（即時引用/Deep Research/Pro $20/月/台灣本地 82% 準確率）vs ChatGPT Search（GPT-5整合/多輪對話/繁中最自然/79% 準確率）vs Google AI Overview（完全免費/台灣在地最完整/86% 準確率）。11維度比較表、2026定價表（含API/學生方案）、5大台灣場景（大學生研究/上班族/記者/消費者購物/開發者Debug）、5題FAQ（翻牆問題/vs普通ChatGPT/vs Gemini差別/幻覺風險/三者搭配使用）。6個漸層CTA：DataCamp/Hahow/NordVPN/Gumroad/Cloudways/Systeme.io。"
+    },
+    {
+      "date": "2026-06-10",
+      "action": "publish_article",
+      "title": "Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026：台灣上班族、學生、YouTuber 哪個最好用？",
+      "file": "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority (Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026 — 台灣上班族、學生、YouTuber 哪個最好用)",
+      "affiliates": [
+        "hahow",
+        "capcut",
+        "systeme.io",
+        "datacamp",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-writing-tools-comparison-2026.html",
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "gamma-ai-review-2026.html",
+        "elevenlabs-elevencreative-review-2026.html",
+        "ai-coding-tools-comparison-2026-final.html"
+      ],
+      "notes": "三大 AI 簡報工具終極比較：Gamma AI（50M用戶/AI敘事最強/Plus $8/月/Pro $15/月）vs Canva AI（Magic Studio/100萬+範本/Pro $12.99/月）vs Beautiful.AI（Smart Slides/企業品牌最強/Pro $12/月/Team $40/月起）。完整比較表（11維度）、2026定價表、台灣5大場景（大學生報告/上班族匯報/YouTuber創作/新創Pitch Deck/企業品牌簡報）、5題FAQ（Gamma+Canva混用/繁中支援/PPT匯出/免費版值不值/AI偵測）。5個漸層CTA：Hahow/CapCut/Systeme.io/DataCamp/Gumroad。"
+    },
+    {
+      "date": "2026-06-07",
+      "action": "publish_article",
+      "title": "Notion AI vs ChatGPT vs Microsoft Copilot 知識管理比較 2026：台灣上班族、學生怎麼選最強筆記 AI？",
+      "file": "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+      "wordCount": 2700,
+      "topicSource": "nextPriority (Notion AI vs ChatGPT vs Copilot 知識管理工具比較 2026 — 台灣上班族、學生怎麼選最強筆記 AI)",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "systeme.io",
+        "nordvpn",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-writing-tools-comparison-2026.html",
+        "claude-4-sonnet-opus-review-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "gemini-cli-review-2026.html",
+        "ai-coding-tools-comparison-2026-final.html"
+      ],
+      "notes": "三大知識管理 AI 終極比較：Notion AI（AI Search 語意搜尋/Database AI 自動填充/$10+附加）vs ChatGPT Plus（Custom GPT 自建知識庫/Deep Research/Memory/$20）vs M365 Copilot（Teams 會議摘要最強/Outlook 原生/$30）。完整比較表（11維度）、2026定價表、台灣5大場景（科技業上班族/大學生/部落客/新創接案/中小企業主）、5題FAQ（Notion AI值得嗎/ChatGPT能取代Notion嗎/Google用戶/個資法/預算有限先選哪個）。5個漸層CTA：Hahow/DataCamp/Systeme.io/NordVPN/Gumroad。"
+    },
+    {
+      "date": "2026-06-06",
+      "action": "publish_article",
+      "title": "AI 寫作工具比較 2026：ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選",
+      "file": "blog/ai-writing-tools-comparison-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority (AI 寫作工具比較 2026 — ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選)",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "systeme.io",
+        "capcut",
+        "nordvpn"
+      ],
+      "internalLinks": [
+        "claude-4-sonnet-opus-review-2026.html",
+        "ai-coding-tools-comparison-2026-final.html",
+        "n8n-claude-code-advanced-workflow-2026.html",
+        "gemini-cli-review-2026.html",
+        "claude-code-complete-guide-2026.html"
+      ],
+      "notes": "四大 AI 寫作工具終極比較。5個漸層CTA：Hahow/DataCamp/Systeme.io/CapCut/NordVPN。"
+    },
+    {
+      "date": "2026-06-05",
+      "action": "publish_article",
+      "title": "Claude 4 Sonnet vs Opus 全面評測 2026：定價、能力、與 GPT-5 完整比較｜台灣開發者指南",
+      "file": "blog/claude-4-sonnet-opus-review-2026.html",
+      "wordCount": 2600,
+      "topicSource": "nextPriority (Claude 4 Sonnet / Opus 全面評測 2026)",
+      "affiliates": [
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "hahow",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "claude-code-complete-guide-2026.html",
+        "ai-coding-tools-comparison-2026-final.html",
+        "cursor-agents-cloud-vm-review-2026.html",
+        "gemini-cli-review-2026.html",
+        "claude-code-cost-tracker-ccusage-claudoscope-2026.html"
+      ],
+      "notes": "Claude 4 系列完整評測。5個漸層CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
+    },
+    {
+      "date": "2026-06-10",
+      "action": "internal_linking",
+      "files": [
+        "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+        "blog/deepseek-v4-pro-review-2026.html",
+        "blog/fathom-3-review-vs-otter-fireflies-2026.html"
+      ],
+      "linksAdded": 6,
+      "details": "gamma-vs-canva: +systeme-io-review, +datacamp-review in CTA paragraphs; deepseek-v4-pro: +claude-4-sonnet-opus-review (inline), +ai-coding-tools-comparison-2026-final (延伸閱讀); fathom-3: +notion-ai-vs-chatgpt (inline Notion mention), +ai-writing-tools-comparison (related-card)"
+    }
+  ],
+  "publishedArticles": [
+    "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+    "blog/ai-writing-tools-comparison-2026.html",
+    "blog/ai-agents-2026.html",
+    "blog/ai-coding-tools.html",
+    "blog/cursor-3-review-2026.html",
+    "blog/cursor-agents-cloud-vm-review-2026.html",
+    "blog/github-copilot-agent-mode-review-2026.html",
+    "blog/windsurf-cascade-review-2026.html",
+    "blog/n8n-vs-make-vs-zapier-2026.html",
+    "blog/rag-explained.html",
+    "blog/systeme-io-review-2026.html",
+    "blog/gemma-4-review-2026.html",
+    "blog/prismml-bonsai-8b-review-2026.html",
+    "blog/mem0-ai-memory-guide-2026.html",
+    "blog/owl-camel-ai-multi-agent-2026.html",
+    "blog/elevenlabs-elevencreative-review-2026.html",
+    "blog/glm-5v-turbo-design2code-review-2026.html",
+    "blog/openowl-macos-mcp-automation-2026.html",
+    "blog/agentshield-ai-agent-observability-2026.html",
+    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
+    "blog/klariqo-ai-receptionist-smb-review-2026.html",
+    "blog/claude-code-session-search-2026.html",
+    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
+    "blog/sessfind-cross-tool-ai-session-search-2026.html",
+    "blog/glm-5-1-open-source-coding-model-review-2026.html",
+    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
+    "blog/cass-coding-agent-session-search-2026.html",
+    "blog/deepseek-v4-pro-review-2026.html",
+    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
+    "blog/n8n-claude-code-advanced-workflow-2026.html",
+    "blog/opencode-open-source-claude-code-alternative-2026.html",
+    "blog/gemini-cli-review-2026.html",
+    "blog/claude-code-complete-guide-2026.html",
+    "blog/ai-coding-tools-comparison-2026-final.html"
+  ],
+  "nextPriority": [
+    "AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算",
+    "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用"
+  ],
+  "directives": [],
+  "internalLinkRuns": [
+    {
+      "date": "2026-04-15",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/owl-camel-ai-multi-agent-2026.html",
+        "blog/elevenlabs-elevencreative-review-2026.html"
+      ],
+      "notes": "TW: 優先連結聯盟文章"
+    },
+    {
+      "date": "2026-04-22",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/klariqo-ai-receptionist-smb-review-2026.html",
+        "blog/n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
+    }
+  ]
+}
+
   "status": "active",
   "agentLog": [
     {
