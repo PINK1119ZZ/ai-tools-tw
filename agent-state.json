@@ -1,7 +1,29 @@
 {
-  "lastUpdated": "2026-06-11T02:00:00+00:00",
+  "lastUpdated": "2026-06-12T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-06-12",
+      "action": "publish_article",
+      "title": "AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算？",
+      "file": "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+      "wordCount": 2700,
+      "topicSource": "nextPriority (AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算)",
+      "affiliates": [
+        "capcut",
+        "hahow",
+        "datacamp",
+        "nordvpn",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "elevenlabs-elevencreative-review-2026.html",
+        "gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+        "ai-writing-tools-comparison-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 影片生成工具終極比較：Sora（物理真實感第一/ChatGPT Plus $20/Storyboard 多鏡頭）vs Runway Gen-4（人物一致性最強/攝影機控制精準/Act One/$15-76/月）vs Kling AI 2.1（性價比第一/中文最佳/Lip Sync/最長3分鐘/$14/月）。11維度比較表、2026定價表（Sora Plus/Pro、Runway Standard/Pro/Unlimited、Kling Basic/Standard/Professional）、每百段成本估算（Kling $0.064 vs Runway $0.25/段）、台灣5大場景（YouTuber/短影音行銷/企業品牌/獨立電影/自動化影片工廠）、實戰工作流（YouTuber B-roll 流程/短影音快速生產）、5題FAQ（商業版權/資料安全/VPN需求/YouTube降流/三工具組合）。5個漸層CTA：CapCut/Hahow/DataCamp/NordVPN/Gumroad。"
+    },
     {
       "date": "2026-06-11",
       "action": "publish_article",
@@ -23,7 +45,7 @@
         "ai-coding-tools-comparison-2026-final.html",
         "claude-4-sonnet-opus-review-2026.html"
       ],
-      "notes": "三大 AI 搜尋工具終極比較：Perplexity AI（即時引用/Deep Research/Pro $20/月/台灣本地 82% 準確率）vs ChatGPT Search（GPT-5整合/多輪對話/繁中最自然/79% 準確率）vs Google AI Overview（完全免費/台灣在地最完整/86% 準確率）。11維度比較表、2026定價表（含API/學生方案）、5大台灣場景（大學生研究/上班族/記者/消費者購物/開發者Debug）、5題FAQ（翻牆問題/vs普通ChatGPT/vs Gemini差別/幻覺風險/三者搭配使用）。6個漸層CTA：DataCamp/Hahow/NordVPN/Gumroad/Cloudways/Systeme.io。"
+      "notes": "三大 AI 搜尋工具終極比較。6個漸層CTA：DataCamp/Hahow/NordVPN/Gumroad/Cloudways/Systeme.io。"
     },
     {
       "date": "2026-06-10",
@@ -46,7 +68,7 @@
         "elevenlabs-elevencreative-review-2026.html",
         "ai-coding-tools-comparison-2026-final.html"
       ],
-      "notes": "三大 AI 簡報工具終極比較：Gamma AI（50M用戶/AI敘事最強/Plus $8/月/Pro $15/月）vs Canva AI（Magic Studio/100萬+範本/Pro $12.99/月）vs Beautiful.AI（Smart Slides/企業品牌最強/Pro $12/月/Team $40/月起）。完整比較表（11維度）、2026定價表、台灣5大場景（大學生報告/上班族匯報/YouTuber創作/新創Pitch Deck/企業品牌簡報）、5題FAQ（Gamma+Canva混用/繁中支援/PPT匯出/免費版值不值/AI偵測）。5個漸層CTA：Hahow/CapCut/Systeme.io/DataCamp/Gumroad。"
+      "notes": "三大 AI 簡報工具終極比較。5個漸層CTA：Hahow/CapCut/Systeme.io/DataCamp/Gumroad。"
     },
     {
       "date": "2026-06-07",
@@ -54,14 +76,8 @@
       "title": "Notion AI vs ChatGPT vs Microsoft Copilot 知識管理比較 2026：台灣上班族、學生怎麼選最強筆記 AI？",
       "file": "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
       "wordCount": 2700,
-      "topicSource": "nextPriority (Notion AI vs ChatGPT vs Copilot 知識管理工具比較 2026 — 台灣上班族、學生怎麼選最強筆記 AI)",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "nordvpn",
-        "gumroad"
-      ],
+      "topicSource": "nextPriority",
+      "affiliates": ["hahow", "datacamp", "systeme.io", "nordvpn", "gumroad"],
       "internalLinks": [
         "ai-writing-tools-comparison-2026.html",
         "claude-4-sonnet-opus-review-2026.html",
@@ -69,53 +85,7 @@
         "gemini-cli-review-2026.html",
         "ai-coding-tools-comparison-2026-final.html"
       ],
-      "notes": "三大知識管理 AI 終極比較：Notion AI（AI Search 語意搜尋/Database AI 自動填充/$10+附加）vs ChatGPT Plus（Custom GPT 自建知識庫/Deep Research/Memory/$20）vs M365 Copilot（Teams 會議摘要最強/Outlook 原生/$30）。完整比較表（11維度）、2026定價表、台灣5大場景（科技業上班族/大學生/部落客/新創接案/中小企業主）、5題FAQ（Notion AI值得嗎/ChatGPT能取代Notion嗎/Google用戶/個資法/預算有限先選哪個）。5個漸層CTA：Hahow/DataCamp/Systeme.io/NordVPN/Gumroad。"
-    },
-    {
-      "date": "2026-06-06",
-      "action": "publish_article",
-      "title": "AI 寫作工具比較 2026：ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選",
-      "file": "blog/ai-writing-tools-comparison-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (AI 寫作工具比較 2026 — ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選)",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "capcut",
-        "nordvpn"
-      ],
-      "internalLinks": [
-        "claude-4-sonnet-opus-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "n8n-claude-code-advanced-workflow-2026.html",
-        "gemini-cli-review-2026.html",
-        "claude-code-complete-guide-2026.html"
-      ],
-      "notes": "四大 AI 寫作工具終極比較。5個漸層CTA：Hahow/DataCamp/Systeme.io/CapCut/NordVPN。"
-    },
-    {
-      "date": "2026-06-05",
-      "action": "publish_article",
-      "title": "Claude 4 Sonnet vs Opus 全面評測 2026：定價、能力、與 GPT-5 完整比較｜台灣開發者指南",
-      "file": "blog/claude-4-sonnet-opus-review-2026.html",
-      "wordCount": 2600,
-      "topicSource": "nextPriority (Claude 4 Sonnet / Opus 全面評測 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "claude-code-complete-guide-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "cursor-agents-cloud-vm-review-2026.html",
-        "gemini-cli-review-2026.html",
-        "claude-code-cost-tracker-ccusage-claudoscope-2026.html"
-      ],
-      "notes": "Claude 4 系列完整評測。5個漸層CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
+      "notes": "三大知識管理 AI 終極比較。5個漸層CTA：Hahow/DataCamp/Systeme.io/NordVPN/Gumroad。"
     },
     {
       "date": "2026-06-10",
@@ -130,6 +100,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
     "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
     "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
     "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
@@ -165,324 +136,13 @@
     "blog/opencode-open-source-claude-code-alternative-2026.html",
     "blog/gemini-cli-review-2026.html",
     "blog/claude-code-complete-guide-2026.html",
-    "blog/ai-coding-tools-comparison-2026-final.html"
+    "blog/ai-coding-tools-comparison-2026-final.html",
+    "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
-    "AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算",
-    "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用"
-  ],
-  "directives": [],
-  "internalLinkRuns": [
-    {
-      "date": "2026-04-15",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/owl-camel-ai-multi-agent-2026.html",
-        "blog/elevenlabs-elevencreative-review-2026.html"
-      ],
-      "notes": "TW: 優先連結聯盟文章"
-    },
-    {
-      "date": "2026-04-22",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/klariqo-ai-receptionist-smb-review-2026.html",
-        "blog/n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
-    }
-  ]
-}
-
-  "status": "active",
-  "agentLog": [
-    {
-      "date": "2026-06-10",
-      "action": "publish_article",
-      "title": "Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026：台灣上班族、學生、YouTuber 哪個最好用？",
-      "file": "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026 — 台灣上班族、學生、YouTuber 哪個最好用)",
-      "affiliates": [
-        "hahow",
-        "capcut",
-        "systeme.io",
-        "datacamp",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-        "gamma-ai-review-2026.html",
-        "elevenlabs-elevencreative-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html"
-      ],
-      "notes": "三大 AI 簡報工具終極比較：Gamma AI（50M用戶/AI敘事最強/Plus $8/月/Pro $15/月）vs Canva AI（Magic Studio/100萬+範本/Pro $12.99/月）vs Beautiful.AI（Smart Slides/企業品牌最強/Pro $12/月/Team $40/月起）。完整比較表（11維度）、2026定價表、台灣5大場景（大學生報告/上班族匯報/YouTuber創作/新創Pitch Deck/企業品牌簡報）、5題FAQ（Gamma+Canva混用/繁中支援/PPT匯出/免費版值不值/AI偵測）。5個漸層CTA：Hahow/CapCut/Systeme.io/DataCamp/Gumroad。"
-    },
-    {
-      "date": "2026-06-07",
-      "action": "publish_article",
-      "title": "Notion AI vs ChatGPT vs Microsoft Copilot 知識管理比較 2026：台灣上班族、學生怎麼選最強筆記 AI？",
-      "file": "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-      "wordCount": 2700,
-      "topicSource": "nextPriority (Notion AI vs ChatGPT vs Copilot 知識管理工具比較 2026 — 台灣上班族、學生怎麼選最強筆記 AI)",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "nordvpn",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "claude-4-sonnet-opus-review-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "gemini-cli-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html"
-      ],
-      "notes": "三大知識管理 AI 終極比較：Notion AI（AI Search 語意搜尋/Database AI 自動填充/$10+附加）vs ChatGPT Plus（Custom GPT 自建知識庫/Deep Research/Memory/$20）vs M365 Copilot（Teams 會議摘要最強/Outlook 原生/$30）。完整比較表（11維度）、2026定價表、台灣5大場景（科技業上班族/大學生/部落客/新創接案/中小企業主）、5題FAQ（Notion AI值得嗎/ChatGPT能取代Notion嗎/Google用戶/個資法/預算有限先選哪個）。5個漸層CTA：Hahow/DataCamp/Systeme.io/NordVPN/Gumroad。"
-    },
-    {
-      "date": "2026-06-06",
-      "action": "publish_article",
-      "title": "AI 寫作工具比較 2026：ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選",
-      "file": "blog/ai-writing-tools-comparison-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (AI 寫作工具比較 2026 — ChatGPT vs Claude vs Gemini vs Perplexity，台灣部落客、學生、上班族怎麼選)",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "capcut",
-        "nordvpn"
-      ],
-      "internalLinks": [
-        "claude-4-sonnet-opus-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "n8n-claude-code-advanced-workflow-2026.html",
-        "gemini-cli-review-2026.html",
-        "claude-code-complete-guide-2026.html"
-      ],
-      "notes": "四大 AI 寫作工具終極比較：ChatGPT（多功能/插件/腳本節奏）vs Claude（繁中最自然/長文最穩/SEO首選）vs Gemini（Google生態整合/Google Docs嵌入）vs Perplexity（即時引用來源/學術研究）。完整評分雷達（繁中自然度/長文一致性/創意/SEO）、2026定價表（Free/Plus/Advanced/Pro各方案）、台灣5大場景推薦（部落客/學生/上班族/YouTuber/電商）、3個黃金工作流、5題FAQ（SEO降權/繁中品質/學生免費方案）。5個漸層CTA：Hahow/DataCamp/Systeme.io/CapCut/NordVPN。"
-    },
-    {
-      "date": "2026-06-05",
-      "action": "publish_article",
-      "title": "Claude 4 Sonnet vs Opus 全面評測 2026：定價、能力、與 GPT-5 完整比較｜台灣開發者指南",
-      "file": "blog/claude-4-sonnet-opus-review-2026.html",
-      "wordCount": 2600,
-      "topicSource": "nextPriority (Claude 4 Sonnet / Opus 全面評測 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "claude-code-complete-guide-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "cursor-agents-cloud-vm-review-2026.html",
-        "gemini-cli-review-2026.html",
-        "claude-code-cost-tracker-ccusage-claudoscope-2026.html"
-      ],
-      "notes": "Claude 4 系列完整評測：Sonnet 4.6（SWE-bench 76.2%/+ET 80.2%、Computer Use 94%、$3/$15、1M ctx、AIME 92.3%、財務代理 63.3%）vs Opus 4.7（SWE-bench 80.8%+、複雜 Agent 旗艦、$5/$25）。完整定價表（Haiku/Sonnet/Opus API + claude.ai 訂閱）、vs GPT-5 10 維度比較表（benchmark/定價/IDE整合/MCP）、Extended Thinking 使用策略、台灣 5 大場景（新創/電商/FinTech/SaaS/學術）、最終選購 verdict。5 個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
-    },
-    {
-      "date": "2026-05-24",
-      "action": "publish_article",
-      "title": "AI Coding 工具比較 2026 終極指南：Windsurf vs Cursor vs Copilot vs Claude Code vs Gemini CLI 五大工具最終決戰",
-      "file": "blog/ai-coding-tools-comparison-2026-final.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (AI Coding 工具比較 2026 大更新 — 五大工具最終決戰)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "cursor-agents-cloud-vm-review-2026.html",
-        "windsurf-cascade-review-2026.html",
-        "github-copilot-agent-mode-review-2026.html",
-        "claude-code-complete-guide-2026.html",
-        "gemini-cli-review-2026.html",
-        "opencode-open-source-claude-code-alternative-2026.html"
-      ],
-      "notes": "五大工具終極比較指南：Windsurf（SWE-1.5 速度 14x、40+ IDE、Codemaps 視覺化）vs Cursor（Cloud VM 並行 Agent、BugBot PR 審查、Memories）vs GitHub Copilot（$10/月最佳 CP、Issue→PR 自動化、多模型切換）vs Claude Code（MCP 最豐富、CLAUDE.md 定制、複雜任務最強）vs Gemini CLI（完全免費 1000次/日、1M context、多模態）。完整比較表（11維度）、SWE-Bench Benchmark、2026 最新定價表、8個台灣開發者場景推薦、決策樹、6題 FAQ。5個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Gumroad/Hahow。"
-    },
-    {
-      "date": "2026-05-23",
-      "action": "publish_article",
-      "title": "Claude Code 完整教學 2026：進階 Prompt 技巧、費用最佳化、MCP 配置台灣指南",
-      "file": "blog/claude-code-complete-guide-2026.html",
-      "wordCount": 2900,
-      "topicSource": "nextPriority (Claude Code 完整教學 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "hahow",
-        "cloudways",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "claude-code-cost-tracker-ccusage-claudoscope-2026.html",
-        "opencode-open-source-claude-code-alternative-2026.html",
-        "gemini-cli-review-2026.html",
-        "n8n-claude-code-advanced-workflow-2026.html",
-        "windsurf-cascade-review-2026.html",
-        "cursor-agents-cloud-vm-review-2026.html"
-      ],
-      "notes": "Claude Code 2026 完整教學：安裝與設定、CLAUDE.md 進階設計（含後端 API 完整範本）、10 個進階 Prompt 技巧（規劃→執行、TDD 驅動、Context 注入、負面指示、Compact 模式）、費用最佳化（API vs Max 訂閱比較表、ccusage 監控、5 個省錢技巧）、MCP 整合（GitHub/PostgreSQL/Puppeteer/Filesystem 完整配置範本）、進階工作流（Git Hooks pre-commit、GitHub Actions CI/CD、多 Agent 並行）、5 個台灣實戰場景（醫療 HIPAA 合規/電商 LINE Bot/遊戲 Unity 重構/FinTech 測試補全/EdTech 全端開發）、vs Cursor/Windsurf/Gemini CLI 比較表、FAQ 5 題。5 個漸層 CTA：DataCamp/DigitalOcean/Hahow/Cloudways/Gumroad。"
-    },
-    {
-      "date": "2026-05-22",
-      "action": "publish_article",
-      "title": "Windsurf Cascade 深度評測 2026：Cognition 收購後大更新、SWE-1.5 速度 14x、Codemaps 視覺化、40+ IDE 支援完整指南",
-      "file": "blog/windsurf-cascade-review-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (Windsurf Cascade 深度評測 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "cursor-agents-cloud-vm-review-2026.html",
-        "github-copilot-agent-mode-review-2026.html",
-        "gemini-cli-review-2026.html",
-        "opencode-open-source-claude-code-alternative-2026.html",
-        "ai-coding-tools.html",
-        "claude-code-cost-tracker-ccusage-claudoscope-2026.html"
-      ],
-      "notes": "Windsurf Cascade 2026 深度評測：Cognition AI 2.5 億美元收購 Codeium（2025-12）後大升級、LogRocket 2026 AI Dev Tool 排名 #1。六大核心功能：Cascade 多檔案自主 Agent、SWE-1.5 自家模型（比 Claude Sonnet 快 14 倍，免費版可用）、Codemaps 視覺化代碼地圖（競品唯一）、Memories 跨 Session 記憶、40+ IDE Plugin（JetBrains/Xcode/Vim 全支援）、MCP 生態整合。2026-03 定價更新：Free/Pro $20/Teams $40/Max $200/Enterprise。vs Cursor Cloud Agents vs GitHub Copilot 完整比較表。5 個台灣實戰場景（醫療IntelliJ/電商VibeCoding/遊戲Xcode/FinTech Figma/EdTech獨立開發者）。5 個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
-    },
-    {
-      "date": "2026-05-21",
-      "action": "publish_article",
-      "title": "GitHub Copilot Agent Mode 評測 2026：Coding Agent 自動 Issue→PR、MCP 整合，vs Cursor Cloud Agents、Windsurf Cascade 完整比較",
-      "file": "blog/github-copilot-agent-mode-review-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority (GitHub Copilot Agent Mode 評測 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "cursor-agents-cloud-vm-review-2026.html",
-        "opencode-open-source-claude-code-alternative-2026.html",
-        "gemini-cli-review-2026.html",
-        "kimi-k2-6-open-weight-agent-review-2026.html",
-        "ai-coding-tools.html",
-        "n8n-claude-code-advanced-workflow-2026.html"
-      ],
-      "notes": "GitHub Copilot 2026 深度評測：兩大 Agent 形態（Copilot Coding Agent 非同步雲端 GitHub Actions + VS Code Agent Mode 本地同步執行）、MCP 整合（GitHub/DB/Figma/Jira）、多模型切換（GPT-5.4/Claude 4.x/Gemini 3.x/Grok）、Next Edit Suggestions。定價 $0/$10/$19/$39。vs Cursor Cloud Agents vs Windsurf Cascade 完整比較表，5 個台灣實戰場景（醫療SaaS/電商LINE Bot/獨立遊戲/金融科技/EdTech）。5 個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Hahow/Gumroad。"
-    },
-    {
-      "date": "2026-05-20",
-      "action": "publish_article",
-      "title": "Cursor Cloud Agents 評測 2026：雲端 VM 平行開發、BugBot 自動審 PR，30% 程式碼已由 AI 寫完",
-      "file": "blog/cursor-agents-cloud-vm-review-2026.html",
-      "wordCount": 2600,
-      "topicSource": "nextPriority (Cursor 4 評測 2026 — Background Agent、全新 UI、vs Windsurf 3 完整比較)",
-      "affiliates": [
-        "digitalocean",
-        "datacamp",
-        "cloudways",
-        "hahow",
-        "nordvpn"
-      ],
-      "internalLinks": [
-        "cursor-3-review-2026.html",
-        "opencode-open-source-claude-code-alternative-2026.html",
-        "gemini-cli-review-2026.html",
-        "kimi-k2-6-open-weight-agent-review-2026.html",
-        "n8n-claude-code-advanced-workflow-2026.html",
-        "ai-coding-tools.html"
-      ],
-      "notes": "Cursor 2026 Cloud Agents 深度評測（2026-02-24 發布）：雲端 VM 隔離執行、Multi-Repo 跨倉庫作業、自動測試+錄影 Demo、BugBot 自動 Code Review、Memories 跨 Session 記憶。六個定價方案（Hobby 免費/$20/$60/$200 Ultra / $40 Teams）。vs Windsurf Cascade（40+ IDE 支援）vs GitHub Copilot（$10/月最便宜）完整比較表。5 個台灣實戰場景（醫療/電商/LINE Bot/手遊/SaaS 測試覆蓋）。5 個漸層 CTA：DigitalOcean/DataCamp/Cloudways/Hahow/NordVPN。"
-    },
-    {
-      "date": "2026-05-06",
-      "action": "publish_article",
-      "title": "Gemini CLI 評測 2026：免費 1M Context 終端機 AI，與 Claude Code / OpenCode 完整比較，台灣開發者教學",
-      "file": "blog/gemini-cli-review-2026.html",
-      "wordCount": 2300,
-      "topicSource": "nextPriority (Gemini CLI 深度評測 2026)",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "gumroad",
-        "hahow"
-      ],
-      "internalLinks": [
-        "opencode-open-source-claude-code-alternative-2026.html",
-        "claude-code-cost-tracker-ccusage-claudoscope-2026.html",
-        "kimi-k2-6-open-weight-agent-review-2026.html",
-        "ai-coding-tools.html",
-        "n8n-claude-code-advanced-workflow-2026.html"
-      ],
-      "notes": "Gemini CLI 深度評測：Google 官方開源 CLI，免費 1000 次/日（Flash）/ 50 次（Pro），1M token context，多模態輸入（圖片/PDF），MCP 整合，Google 生態原生支援。vs Claude Code / OpenCode 完整比較表。5 個台灣實戰場景（醫療/電商/Google Sheets/遊戲/GCP）。5 個漸層 CTA：DataCamp/DigitalOcean/Cloudways/Gumroad/Hahow。"
-    },
-    {
-      "date": "2026-06-10",
-      "action": "internal_linking",
-      "files": [
-        "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-        "blog/deepseek-v4-pro-review-2026.html",
-        "blog/fathom-3-review-vs-otter-fireflies-2026.html"
-      ],
-      "linksAdded": 6,
-      "details": "gamma-vs-canva: +systeme-io-review, +datacamp-review in CTA paragraphs; deepseek-v4-pro: +claude-4-sonnet-opus-review (inline), +ai-coding-tools-comparison-2026-final (延伸閱讀); fathom-3: +notion-ai-vs-chatgpt (inline Notion mention), +ai-writing-tools-comparison (related-card)"
-    }
-  ],
-  "publishedArticles": [
-    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-    "blog/ai-writing-tools-comparison-2026.html",
-    "blog/ai-agents-2026.html",
-    "blog/ai-coding-tools.html",
-    "blog/cursor-3-review-2026.html",
-    "blog/cursor-agents-cloud-vm-review-2026.html",
-    "blog/github-copilot-agent-mode-review-2026.html",
-    "blog/windsurf-cascade-review-2026.html",
-    "blog/n8n-vs-make-vs-zapier-2026.html",
-    "blog/rag-explained.html",
-    "blog/systeme-io-review-2026.html",
-    "blog/gemma-4-review-2026.html",
-    "blog/prismml-bonsai-8b-review-2026.html",
-    "blog/mem0-ai-memory-guide-2026.html",
-    "blog/owl-camel-ai-multi-agent-2026.html",
-    "blog/elevenlabs-elevencreative-review-2026.html",
-    "blog/glm-5v-turbo-design2code-review-2026.html",
-    "blog/openowl-macos-mcp-automation-2026.html",
-    "blog/agentshield-ai-agent-observability-2026.html",
-    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
-    "blog/klariqo-ai-receptionist-smb-review-2026.html",
-    "blog/claude-code-session-search-2026.html",
-    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
-    "blog/sessfind-cross-tool-ai-session-search-2026.html",
-    "blog/glm-5-1-open-source-coding-model-review-2026.html",
-    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
-    "blog/cass-coding-agent-session-search-2026.html",
-    "blog/deepseek-v4-pro-review-2026.html",
-    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
-    "blog/n8n-claude-code-advanced-workflow-2026.html",
-    "blog/opencode-open-source-claude-code-alternative-2026.html",
-    "blog/gemini-cli-review-2026.html",
-    "blog/claude-code-complete-guide-2026.html",
-    "blog/ai-coding-tools-comparison-2026-final.html"
-  ],
-  "nextPriority": [
-    "Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026 — 台灣用戶哪個找資料最準確",
-    "AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算"
+    "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用",
+    "ChatGPT vs Claude vs Gemini 2026 最新版本完整比較 — 台灣用戶怎麼選",
+    "AI 圖片生成工具比較 2026：Midjourney vs DALL-E 3 vs Stable Diffusion — 台灣設計師選哪個"
   ],
   "directives": [],
   "internalLinkRuns": [
