@@ -1,7 +1,33 @@
 {
-  "lastUpdated": "2026-06-12T02:00:00+00:00",
+  "lastUpdated": "2026-06-13T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-06-13",
+      "action": "publish_article",
+      "title": "ChatGPT vs Claude vs Gemini 2026 最新版本完整比較：台灣用戶怎麼選最強 AI 助理？",
+      "file": "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority (ChatGPT vs Claude vs Gemini 2026 最新版本完整比較 — 台灣用戶怎麼選)",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-writing-tools-comparison-2026.html",
+        "perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+        "claude-4-sonnet-opus-review-2026.html",
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "ai-coding-tools-comparison-2026-final.html",
+        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+        "claude-code-complete-guide-2026.html",
+        "systeme-io-review-2026.html"
+      ],
+      "notes": "三大 AI 助理 2026 終極比較：GPT-5 vs Claude Sonnet 4.6 vs Gemini 2.5 Pro。完整涵蓋：版本總覽（ChatGPT GPT-5.4/Claude Sonnet 4.6/Gemini 2.5 Pro）、定價比較表（免費/Plus/Pro/Advanced/$20/月）、8項Benchmark數據對決（SWE-bench/AIME/MMLU/HumanEval/GPQA/MMMU/C-Eval）、繁中品質深度評測（在地知識/語感/台灣用語）、寫作場景比較表（7種場景）、編程能力（外科手術式修改 vs 大膽重構 vs Google生態）、搜尋能力（Gemini台灣在地最強）、多模態比較表（圖像/語音/影片/PDF）、台灣6大場景（自媒體/上班族/工程師/學生/行銷人員/創業者）、三欄式最終建議卡片。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。"
+    },
     {
       "date": "2026-06-12",
       "action": "publish_article",
@@ -22,7 +48,7 @@
         "ai-writing-tools-comparison-2026.html",
         "n8n-vs-make-vs-zapier-2026.html"
       ],
-      "notes": "三大 AI 影片生成工具終極比較：Sora（物理真實感第一/ChatGPT Plus $20/Storyboard 多鏡頭）vs Runway Gen-4（人物一致性最強/攝影機控制精準/Act One/$15-76/月）vs Kling AI 2.1（性價比第一/中文最佳/Lip Sync/最長3分鐘/$14/月）。11維度比較表、2026定價表（Sora Plus/Pro、Runway Standard/Pro/Unlimited、Kling Basic/Standard/Professional）、每百段成本估算（Kling $0.064 vs Runway $0.25/段）、台灣5大場景（YouTuber/短影音行銷/企業品牌/獨立電影/自動化影片工廠）、實戰工作流（YouTuber B-roll 流程/短影音快速生產）、5題FAQ（商業版權/資料安全/VPN需求/YouTube降流/三工具組合）。5個漸層CTA：CapCut/Hahow/DataCamp/NordVPN/Gumroad。"
+      "notes": "三大 AI 影片生成工具終極比較。5個漸層CTA：CapCut/Hahow/DataCamp/NordVPN/Gumroad。"
     },
     {
       "date": "2026-06-11",
@@ -30,76 +56,23 @@
       "title": "Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026：台灣用戶哪個找資料最準確？",
       "file": "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority (Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026 — 台灣用戶哪個找資料最準確)",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "nordvpn",
-        "gumroad",
-        "cloudways",
-        "systeme.io"
-      ],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "claude-4-sonnet-opus-review-2026.html"
-      ],
-      "notes": "三大 AI 搜尋工具終極比較。6個漸層CTA：DataCamp/Hahow/NordVPN/Gumroad/Cloudways/Systeme.io。"
+      "topicSource": "nextPriority",
+      "affiliates": ["datacamp", "hahow", "nordvpn", "gumroad", "cloudways", "systeme.io"],
+      "notes": "三大 AI 搜尋工具終極比較。6個漸層CTA。"
     },
     {
       "date": "2026-06-10",
       "action": "publish_article",
-      "title": "Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026：台灣上班族、學生、YouTuber 哪個最好用？",
+      "title": "Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026",
       "file": "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority (Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026 — 台灣上班族、學生、YouTuber 哪個最好用)",
-      "affiliates": [
-        "hahow",
-        "capcut",
-        "systeme.io",
-        "datacamp",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-        "gamma-ai-review-2026.html",
-        "elevenlabs-elevencreative-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html"
-      ],
-      "notes": "三大 AI 簡報工具終極比較。5個漸層CTA：Hahow/CapCut/Systeme.io/DataCamp/Gumroad。"
-    },
-    {
-      "date": "2026-06-07",
-      "action": "publish_article",
-      "title": "Notion AI vs ChatGPT vs Microsoft Copilot 知識管理比較 2026：台灣上班族、學生怎麼選最強筆記 AI？",
-      "file": "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-      "wordCount": 2700,
       "topicSource": "nextPriority",
-      "affiliates": ["hahow", "datacamp", "systeme.io", "nordvpn", "gumroad"],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "claude-4-sonnet-opus-review-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "gemini-cli-review-2026.html",
-        "ai-coding-tools-comparison-2026-final.html"
-      ],
-      "notes": "三大知識管理 AI 終極比較。5個漸層CTA：Hahow/DataCamp/Systeme.io/NordVPN/Gumroad。"
-    },
-    {
-      "date": "2026-06-10",
-      "action": "internal_linking",
-      "files": [
-        "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-        "blog/deepseek-v4-pro-review-2026.html",
-        "blog/fathom-3-review-vs-otter-fireflies-2026.html"
-      ],
-      "linksAdded": 6,
-      "details": "gamma-vs-canva: +systeme-io-review, +datacamp-review in CTA paragraphs; deepseek-v4-pro: +claude-4-sonnet-opus-review (inline), +ai-coding-tools-comparison-2026-final (延伸閱讀); fathom-3: +notion-ai-vs-chatgpt (inline Notion mention), +ai-writing-tools-comparison (related-card)"
+      "affiliates": ["hahow", "capcut", "systeme.io", "datacamp", "gumroad"],
+      "notes": "三大 AI 簡報工具終極比較。5個漸層CTA。"
     }
   ],
   "publishedArticles": [
+    "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
     "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
     "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
     "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
@@ -140,9 +113,9 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
+    "AI 圖片生成工具比較 2026：Midjourney vs DALL-E 3 vs Stable Diffusion — 台灣設計師選哪個",
     "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用",
-    "ChatGPT vs Claude vs Gemini 2026 最新版本完整比較 — 台灣用戶怎麼選",
-    "AI 圖片生成工具比較 2026：Midjourney vs DALL-E 3 vs Stable Diffusion — 台灣設計師選哪個"
+    "免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具完整評測"
   ],
   "directives": [],
   "internalLinkRuns": [
