@@ -1,7 +1,29 @@
 {
-  "lastUpdated": "2026-06-14T02:00:00+00:00",
+  "lastUpdated": "2026-06-15T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-06-15",
+      "action": "publish_article",
+      "title": "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用？",
+      "file": "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+        "ai-writing-tools-comparison-2026.html"
+      ],
+      "notes": "三大 AI 會議記錄工具終極比較。中文辨識/定價/CRM整合/隱私/5大台灣場景。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。FAQ 5條，比較表格2個，tool-card 3個，verdict-grid 6格。"
+    },
     {
       "date": "2026-06-14",
       "action": "publish_article",
@@ -47,7 +69,7 @@
         "claude-code-complete-guide-2026.html",
         "systeme-io-review-2026.html"
       ],
-      "notes": "三大 AI 助理 2026 終極比較：GPT-5 vs Claude Sonnet 4.6 vs Gemini 2.5 Pro。完整涵蓋：版本總覽（ChatGPT GPT-5.4/Claude Sonnet 4.6/Gemini 2.5 Pro）、定價比較表（免費/Plus/Pro/Advanced/$20/月）、8項Benchmark數據對決（SWE-bench/AIME/MMLU/HumanEval/GPQA/MMMU/C-Eval）、繁中品質深度評測（在地知識/語感/台灣用語）、寫作場景比較表（7種場景）、編程能力（外科手術式修改 vs 大膽重構 vs Google生態）、搜尋能力（Gemini台灣在地最強）、多模態比較表（圖像/語音/影片/PDF）、台灣6大場景（自媒體/上班族/工程師/學生/行銷人員/創業者）、三欄式最終建議卡片。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。"
+      "notes": "三大 AI 助理 2026 終極比較：GPT-5 vs Claude Sonnet 4.6 vs Gemini 2.5 Pro。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。"
     },
     {
       "date": "2026-06-12",
@@ -55,19 +77,13 @@
       "title": "AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算？",
       "file": "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
       "wordCount": 2700,
-      "topicSource": "nextPriority (AI 影片生成工具比較 2026：Sora vs Runway vs Kling — 台灣 YouTuber 選哪個最划算)",
+      "topicSource": "nextPriority",
       "affiliates": [
         "capcut",
         "hahow",
         "datacamp",
         "nordvpn",
         "gumroad"
-      ],
-      "internalLinks": [
-        "elevenlabs-elevencreative-review-2026.html",
-        "gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-        "ai-writing-tools-comparison-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
       ],
       "notes": "三大 AI 影片生成工具終極比較。5個漸層CTA：CapCut/Hahow/DataCamp/NordVPN/Gumroad。"
     },
@@ -87,25 +103,10 @@
         "systeme.io"
       ],
       "notes": "三大 AI 搜尋工具終極比較。6個漸層CTA。"
-    },
-    {
-      "date": "2026-06-10",
-      "action": "publish_article",
-      "title": "Gamma AI vs Canva AI vs Beautiful.AI 簡報工具比較 2026",
-      "file": "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "hahow",
-        "capcut",
-        "systeme.io",
-        "datacamp",
-        "gumroad"
-      ],
-      "notes": "三大 AI 簡報工具終極比較。5個漸層CTA。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
     "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
     "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
     "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
@@ -148,7 +149,6 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
-    "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom — 台灣遠距工作者哪個最好用",
     "免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具完整評測"
   ],
   "directives": [],
