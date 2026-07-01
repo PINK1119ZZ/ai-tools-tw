@@ -1,7 +1,35 @@
 {
-  "lastUpdated": "2026-06-15T02:00:00+00:00",
+  "lastUpdated": "2026-07-01T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-07-01",
+      "action": "publish_article",
+      "title": "免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具完整評測",
+      "file": "blog/free-ai-tools-taiwan-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "claude-4-sonnet-opus-review-2026.html",
+        "claude-code-complete-guide-2026.html",
+        "perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+        "gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+        "ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
+        "ai-writing-tools-comparison-2026.html",
+        "ai-coding-tools-comparison-2026-final.html"
+      ],
+      "notes": "10 款免費 AI 工具完整評測：ChatGPT/Claude/Gemini/Perplexity/Canva/CapCut/Notion AI/Gamma/ElevenLabs/Ideogram。比較表格2個、tool-card 10個、verdict-grid 6格（依場景推薦）、升級建議表、FAQ 5條。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。"
+    },
     {
       "date": "2026-06-15",
       "action": "publish_article",
@@ -51,23 +79,13 @@
       "title": "ChatGPT vs Claude vs Gemini 2026 最新版本完整比較：台灣用戶怎麼選最強 AI 助理？",
       "file": "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
       "wordCount": 2900,
-      "topicSource": "nextPriority (ChatGPT vs Claude vs Gemini 2026 最新版本完整比較 — 台灣用戶怎麼選)",
+      "topicSource": "nextPriority",
       "affiliates": [
         "datacamp",
         "hahow",
         "digitalocean",
         "cloudways",
         "gumroad"
-      ],
-      "internalLinks": [
-        "ai-writing-tools-comparison-2026.html",
-        "perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
-        "claude-4-sonnet-opus-review-2026.html",
-        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-        "ai-coding-tools-comparison-2026-final.html",
-        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-        "claude-code-complete-guide-2026.html",
-        "systeme-io-review-2026.html"
       ],
       "notes": "三大 AI 助理 2026 終極比較：GPT-5 vs Claude Sonnet 4.6 vs Gemini 2.5 Pro。5個漸層CTA：DataCamp/Hahow/DigitalOcean/Cloudways/Gumroad。"
     },
@@ -86,26 +104,10 @@
         "gumroad"
       ],
       "notes": "三大 AI 影片生成工具終極比較。5個漸層CTA：CapCut/Hahow/DataCamp/NordVPN/Gumroad。"
-    },
-    {
-      "date": "2026-06-11",
-      "action": "publish_article",
-      "title": "Perplexity AI vs ChatGPT Search vs Google AI Overview 搜尋 AI 比較 2026：台灣用戶哪個找資料最準確？",
-      "file": "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "nordvpn",
-        "gumroad",
-        "cloudways",
-        "systeme.io"
-      ],
-      "notes": "三大 AI 搜尋工具終極比較。6個漸層CTA。"
     }
   ],
   "publishedArticles": [
+    "blog/free-ai-tools-taiwan-2026.html",
     "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
     "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
     "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
@@ -149,7 +151,9 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
-    "免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具完整評測"
+    "AI 生產力工具推薦 2026：上班族每天必用的 10 款 AI 工具完整指南",
+    "ChatGPT Plus 值得買嗎 2026？免費版 vs 付費版完整比較，台灣用戶升級建議",
+    "Claude Code 完整教學 2026：從安裝到進階用法，台灣開發者實戰指南"
   ],
   "directives": [],
   "internalLinkRuns": [
