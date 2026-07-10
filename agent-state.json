@@ -1,7 +1,29 @@
 {
-  "lastUpdated": "2026-07-09T02:00:00+00:00",
+  "lastUpdated": "2026-07-10T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-07-10",
+      "action": "publish_article",
+      "title": "AI 影片剪輯工具推薦 2026：CapCut vs Runway vs Adobe Premiere AI 台灣 YouTuber 完整指南",
+      "file": "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+      "wordCount": 2850,
+      "topicSource": "nextPriority",
+      "affiliates": [
+        "capcut",
+        "hahow",
+        "datacamp",
+        "digitalocean"
+      ],
+      "internalLinks": [
+        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+        "ai-marketing-tools-2026.html",
+        "ai-productivity-tools-2026.html",
+        "free-ai-tools-taiwan-2026.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html"
+      ],
+      "notes": "三大 AI 影片剪輯工具終極比較：CapCut（短影音剪輯神器、免費+中文介面）、Runway（AI 生成式影片先鋒、Text-to-Video）、Adobe Premiere AI（專業旗艦、業界標準）。包含核心差異速覽表、三工具深度評測卡、11 維度完整比較表、6 大使用場景推薦網格、3 個實戰工作流、學習資源推薦、FAQ 8 條、終極推薦決策表。4 個漸層 CTA：CapCut/Hahow/DataCamp/DigitalOcean。高商業意圖關鍵字：AI 影片剪輯、CapCut 評測、Runway AI、Adobe Premiere AI、YouTuber 工具、影片製作 AI 2026。"
+    },
     {
       "date": "2026-07-09",
       "action": "publish_article",
@@ -126,6 +148,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
     "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
     "blog/ai-marketing-tools-2026.html",
     "blog/chatgpt-plus-worth-it-2026.html",
@@ -175,8 +198,7 @@
   ],
   "nextPriority": [
     "AI 客服工具推薦 2026：Intercom vs Zendesk vs Freshdesk AI 完整比較",
-    "AI 音樂生成工具評測 2026：Suno vs Udio vs Soundraw 台灣創作者指南",
-    "AI 影片剪輯工具推薦 2026：CapCut vs Runway vs Adobe Premiere AI 台灣 YouTuber 完整指南"
+    "AI 音樂生成工具評測 2026：Suno vs Udio vs Soundraw 台灣創作者指南"
   ],
   "directives": [],
   "internalLinkRuns": [
