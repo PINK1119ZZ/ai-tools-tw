@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-07-18T02:00:00+00:00",
+  "lastUpdated": "2026-07-23T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-07-23",
+      "action": "publish_article",
+      "title": "AI 文案寫作工具推薦 2026：ChatGPT vs Jasper vs Copy.ai 台灣內容創作者完整比較",
+      "file": "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["hahow", "systeme.io", "datacamp", "digitalocean"],
+      "internalLinks": [
+        "ai-writing-tools-comparison-2026.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+        "ai-marketing-tools-2026.html",
+        "chatgpt-plus-worth-it-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 文案寫作工具深度評測：ChatGPT（繁中品質最佳/靈活度最高/免費入門首選）、Jasper AI（品牌語音功能最強/SEO整合最完整/品牌行銷團隊首選）、Copy.ai（生成速度最快/免費方案最慷慨/社群小編和電商賣家首選）。包含核心差異速覽表、三工具深度評測卡（含評分/優缺點/定價）、11維度完整比較表、6大使用場景推薦、年度費用試算、FAQ 8條、終極推薦決策表。4個漸層CTA：Hahow（AI課程）/Systeme.io（行銷漏斗）/DataCamp（數據AI課程）/DigitalOcean（雲端主機）。高商業意圖關鍵字：AI文案工具、ChatGPT寫作、Jasper AI評測、Copy.ai評測、AI內容創作、台灣行銷工具 2026。"
+    },
     {
       "date": "2026-07-18",
       "action": "publish_article",
@@ -17,7 +34,7 @@
         "free-ai-tools-taiwan-2026.html",
         "ai-productivity-tools-2026.html"
       ],
-      "notes": "補全並發布原本截斷的 AI 音樂生成工具評測文章。三大工具深度評測：Suno v4（中文歌詞最佳/免費入門首選）、Udio（音質業界頂尖/音樂人首選）、Soundraw（商業授權最穩/YouTuber 廣告用途）。包含核心差異速覽表、三工具深度評測卡（含評分/優缺點/定價）、11 維度完整比較表、6 大使用場景推薦、年度總成本試算、FAQ 8 條、終極推薦決策網格。4 個漸層 CTA：Hahow（音樂創作課程）/ CapCut（AI 剪輯配合）/ DataCamp（AI 學習）/ NordVPN（隱私保護）。高商業意圖關鍵字：AI 音樂生成、Suno 評測、Udio 評測、Soundraw 評測、AI 作曲、台灣創作者、背景音樂 2026。"
+      "notes": "補全並發布原本截斷的 AI 音樂生成工具評測文章。三大工具深度評測：Suno v4（中文歌詞最佳/免費入門首選）、Udio（音質業界頂尖/音樂人首選）、Soundraw（商業授權最穩/YouTuber 廣告用途）。"
     },
     {
       "date": "2026-07-12",
@@ -26,20 +43,8 @@
       "file": "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "hahow",
-        "systeme.io",
-        "cloudways",
-        "datacamp"
-      ],
-      "internalLinks": [
-        "ai-productivity-tools-2026.html",
-        "ai-marketing-tools-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
-        "systeme-io-review-2026.html"
-      ],
-      "notes": "三大 AI 客服平台深度評測：Intercom（對話式體驗最強/Fin AI 85%準確率/SaaS新創首選）、Zendesk AI（票務系統業界標準/全管道整合/企業級報表）、Freshdesk AI（性價比之王/Free永久免費/LINE整合最簡單）。包含三工具深度評測卡、11維度完整比較表、5大台灣場景選購建議（電商/SaaS新創/中大型企業/B2B/實體店面）、年度總成本試算、FAQ 8條、終極推薦決策。4個漸層CTA：Hahow/Systeme.io/Cloudways/DataCamp。高商業意圖關鍵字：AI客服工具、Intercom評測、Zendesk AI、Freshdesk AI、台灣客服系統、LINE客服整合 2026。"
+      "affiliates": ["hahow", "systeme.io", "cloudways", "datacamp"],
+      "notes": "三大 AI 客服平台深度評測。"
     },
     {
       "date": "2026-07-10",
@@ -48,20 +53,8 @@
       "file": "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
       "wordCount": 2850,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "capcut",
-        "hahow",
-        "datacamp",
-        "digitalocean"
-      ],
-      "internalLinks": [
-        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-        "ai-marketing-tools-2026.html",
-        "ai-productivity-tools-2026.html",
-        "free-ai-tools-taiwan-2026.html",
-        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html"
-      ],
-      "notes": "三大 AI 影片剪輯工具終極比較：CapCut（短影音剪輯神器、免費+中文介面）、Runway（AI 生成式影片先鋒、Text-to-Video）、Adobe Premiere AI（專業旗艦、業界標準）。包含核心差異速覽表、三工具深度評測卡、11 維度完整比較表、6 大使用場景推薦網格、3 個實戰工作流、學習資源推薦、FAQ 8 條、終極推薦決策表。4 個漸層 CTA：CapCut/Hahow/DataCamp/DigitalOcean。高商業意圖關鍵字：AI 影片剪輯、CapCut 評測、Runway AI、Adobe Premiere AI、YouTuber 工具、影片製作 AI 2026。"
+      "affiliates": ["capcut", "hahow", "datacamp", "digitalocean"],
+      "notes": "三大 AI 影片剪輯工具終極比較。"
     },
     {
       "date": "2026-07-09",
@@ -70,20 +63,8 @@
       "file": "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
       "wordCount": 3100,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "hahow",
-        "systeme.io",
-        "datacamp",
-        "capcut",
-        "nordvpn"
-      ],
-      "internalLinks": [
-        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-        "ai-productivity-tools-2026.html",
-        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
-        "ai-writing-tools-comparison-2026.html"
-      ],
-      "notes": "三大個人知識管理工具完整比較：Notion AI（雲端協作+AI原生）、Obsidian（本地Markdown+雙向連結生態）、Logseq（開源大綱筆記）。包含核心差異速覽表、三工具深度評測卡、11維度完整比較表、6大使用場景推薦網格、AI整合實戰比較、年度總成本試算表、FAQ 8條、終極推薦決策指南。5個漸層CTA：Hahow/Systeme.io/DataCamp/CapCut/NordVPN。高商業意圖關鍵字：個人知識庫、第二大腦、PKM、筆記軟體、雙向連結。"
+      "affiliates": ["hahow", "systeme.io", "datacamp", "capcut", "nordvpn"],
+      "notes": "三大個人知識管理工具完整比較。"
     },
     {
       "date": "2026-07-08",
@@ -92,20 +73,8 @@
       "file": "blog/ai-marketing-tools-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "systeme.io",
-        "capcut",
-        "hahow",
-        "datacamp",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-productivity-tools-2026.html",
-        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
-        "ai-writing-tools-comparison-2026.html",
-        "free-ai-tools-taiwan-2026.html"
-      ],
-      "notes": "8 款 AI 行銷工具完整評測。5 個漸層 CTA：Systeme.io/CapCut/Hahow/DataCamp/Gumroad。"
+      "affiliates": ["systeme.io", "capcut", "hahow", "datacamp", "gumroad"],
+      "notes": "8 款 AI 行銷工具完整評測。"
     },
     {
       "date": "2026-07-05",
@@ -116,39 +85,10 @@
       "topicSource": "nextPriority",
       "affiliates": ["hahow", "gumroad", "digitalocean", "systeme.io", "capcut"],
       "notes": "ChatGPT Plus 升級指南完整評測。"
-    },
-    {
-      "date": "2026-07-04",
-      "action": "publish_article",
-      "title": "AI 生產力工具推薦 2026：上班族每天必用的 10 款 AI 工具完整指南",
-      "file": "blog/ai-productivity-tools-2026.html",
-      "wordCount": 3200,
-      "topicSource": "nextPriority",
-      "affiliates": ["hahow", "datacamp", "digitalocean", "systeme.io", "gumroad"],
-      "notes": "10 款上班族必備 AI 生產力工具完整評測。"
-    },
-    {
-      "date": "2026-07-01",
-      "action": "publish_article",
-      "title": "免費 AI 工具推薦 2026：10 個台灣用戶最值得用的免費 AI 工具完整評測",
-      "file": "blog/free-ai-tools-taiwan-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways", "gumroad"],
-      "notes": "10 款免費 AI 工具完整評測。"
-    },
-    {
-      "date": "2026-06-15",
-      "action": "publish_article",
-      "title": "AI 會議記錄工具比較 2026：Otter vs Fireflies vs Fathom",
-      "file": "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways", "gumroad"],
-      "notes": "三大 AI 會議記錄工具終極比較。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
     "blog/ai-music-generator-suno-vs-udio-vs-soundraw-2026.html",
     "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
     "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
@@ -200,9 +140,9 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
+    "AI 翻譯工具推薦 2026：DeepL vs Google 翻譯 vs ChatGPT 完整比較",
     "AI 簡報工具推薦 2026：Gamma vs Beautiful.ai vs Canva AI 台灣上班族完整比較",
-    "Claude vs GPT-4o vs Gemini 1.5 Pro 2026：哪個 AI 最適合台灣用戶？",
-    "AI 翻譯工具推薦 2026：DeepL vs Google 翻譯 vs ChatGPT 完整比較"
+    "Claude vs GPT-4o vs Gemini 1.5 Pro 2026：哪個 AI 最適合台灣用戶？"
   ],
   "directives": [],
   "internalLinkRuns": [
