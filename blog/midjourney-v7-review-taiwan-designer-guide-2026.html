@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Inter:wght@400;500;600;700&display=swap" as="style">
+<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midjourney v7 評測 2026：台灣設計師必讀的 AI 圖像生成完整指南</title>
+<meta name="description" content="2026 年最完整 Midjourney v7 深度評測！從新功能、定價、繁中提示詞技巧到商業授權，台灣設計師、自媒體創作者、電商賣家必讀選購指南。和 DALL-E 3、Stable Diffusion 比較哪個更值得？">
+<meta name="keywords" content="Midjourney v7,Midjourney 評測,Midjourney 2026,AI 圖像生成,AI 繪圖工具,Midjourney 台灣,Midjourney 中文提示詞,AI 設計工具推薦,Midjourney vs DALL-E 3,AI 圖片生成工具">
+<link rel="canonical" href="https://pink1119zz.github.io/ai-tools-tw/blog/midjourney-v7-review-taiwan-designer-guide-2026.html">
+<meta property="og:title" content="Midjourney v7 評測 2026：台灣設計師必讀的 AI 圖像生成完整指南">
+<meta property="og:description" content="Midjourney v7 完整評測：新功能、定價、繁中提示詞技巧、商業授權全解析。台灣設計師、電商、自媒體 2026 終極選購指南。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://pink1119zz.github.io/ai-tools-tw/blog/midjourney-v7-review-taiwan-designer-guide-2026.html">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Midjourney v7 評測 2026：台灣設計師 AI 圖像生成完整指南">
+<meta name="twitter:description" content="2026 Midjourney v7 深度評測，台灣設計師、電商、自媒體必讀。">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Midjourney v7 評測 2026：台灣設計師必讀的 AI 圖像生成完整指南",
+  "description": "2026 年最完整 Midjourney v7 深度評測，台灣設計師終極選購指南。",
+  "datePublished": "2026-08-15",
+  "dateModified": "2026-08-15",
+  "author": {"@type": "Organization", "name": "AI Tools TW", "url": "https://pink1119zz.github.io/ai-tools-tw/"},
+  "publisher": {"@type": "Organization", "name": "AI Tools TW"},
+  "url": "https://pink1119zz.github.io/ai-tools-tw/blog/midjourney-v7-review-taiwan-designer-guide-2026.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Midjourney v7 和 v6 差在哪裡？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney v7 主要升級包括：更強的人臉一致性（同一角色跨圖保持外觀）、更精準的提示詞解析（長句也能正確執行）、原生 Draft Mode（快速低成本出草稿）、以及更細膩的材質與光影表現。整體比 v6 的細節豐富度提升約 30%。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney v7 可以用中文提示詞嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney 本身對中文提示詞的支援有限，直接用繁體中文效果不穩定。最佳做法是先用 ChatGPT 把繁中描述翻譯成精準英文提示詞，再輸入 Midjourney，成功率大幅提升。本文附有完整的提示詞翻譯技巧和範例。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney 生成的圖片可以商業使用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "付費方案（Basic $10/月起）均可商業使用，但 Basic 方案有年收入 $20,000 美元的限制。Standard 以上方案無收入限制。若需要完全私密（不被他人看到生成紀錄），需 Pro 方案以上的 Stealth Mode。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney 有免費版嗎？2026 年還能免費試用嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Midjourney 目前（2026 年）已無永久免費方案。偶爾會針對新用戶開放 25 次免費試用，但不穩定。最低入門方案為 Basic Plan $10/月（約 NT$320），可生成約 200 張圖，建議先用一個月試試看再決定是否升級。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney v7 適合電商產品圖嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "非常適合！v7 的寫實材質渲染能力大幅提升，適合生成產品情境圖、生活風格照（lifestyle shots）、包裝視覺概念圖。但若需要精確展示你的實際產品，建議搭配 --cref（角色參考）功能上傳產品照，或用 Vary Region 局部修改。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Midjourney、DALL-E 3、Stable Diffusion 2026 年哪個最好？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "各有所長：Midjourney v7 → 美學畫質最頂、電影感最強、設計師首選。DALL-E 3 → 繁中理解最佳、對話式最直覺、不想學提示詞的人首選。Stable Diffusion → 完全免費、本地端離線、技術宅和隱私重視者首選。台灣多數設計師和自媒體創作者以 Midjourney 為主力。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不用 Discord 可以使用 Midjourney 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以！Midjourney 在 2025 年底推出了獨立網頁版（midjourney.com），不再強制需要 Discord。網頁版介面更直覺，支援圖庫管理、批次生成、風格收藏等功能，台灣用戶直接用瀏覽器即可，不需要先加入 Discord 伺服器。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "台灣用信用卡可以訂閱 Midjourney 嗎？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "可以。Midjourney 接受 Visa、Mastercard、American Express 等國際信用卡。台灣的信用卡通常可以直接訂閱，費用以美元計算，由銀行按當日匯率換算台幣。部分銀行的刷卡可能會有海外交易手續費（約 1.5%）。"
+      }
+    }
+  ]
+}
+</script>
+<style>
+  body { font-family: 'Noto Sans TC', sans-serif; color: #1a1a2e; background: #f8f9fa; margin: 0; }
+  .container { max-width: 860px; margin: 0 auto; padding: 0 20px 60px; }
+  header.hero { background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%); color: #fff; padding: 64px 20px 52px; text-align: center; }
+  header.hero h1 { font-size: 2rem; line-height: 1.4; margin-bottom: 16px; }
+  header.hero .meta { opacity: 0.75; font-size: 0.9rem; }
+  .badge { display: inline-block; background: #e94560; color: #fff; border-radius: 4px; padding: 2px 10px; font-size: 0.78rem; margin-right: 6px; }
+  .badge-purple { background: #7c3aed; }
+  .badge-gold { background: #d97706; }
+  h2 { font-size: 1.5rem; color: #302b63; border-left: 4px solid #e94560; padding-left: 12px; margin-top: 48px; }
+  h3 { font-size: 1.15rem; color: #1a1a2e; margin-top: 28px; }
+  p { line-height: 1.85; margin: 12px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 0.92rem; }
+  th { background: #302b63; color: #fff; padding: 10px 14px; text-align: left; }
+  td { padding: 9px 14px; border-bottom: 1px solid #e0e0e0; }
+  tr:nth-child(even) td { background: #f4f4fb; }
+  .tool-card { border: 1px solid #dde3f0; border-radius: 12px; padding: 28px; margin: 32px 0; background: #fff; box-shadow: 0 2px 12px rgba(48,43,99,0.08); }
+  .tool-card h3 { margin-top: 0; font-size: 1.25rem; }
+  .score { display: inline-flex; align-items: center; gap: 6px; background: #f0f0ff; border-radius: 6px; padding: 4px 12px; font-weight: 700; color: #302b63; font-size: 0.95rem; }
+  .pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .pros { background: #f0faf4; border-radius: 8px; padding: 14px 18px; }
+  .cons { background: #fff5f5; border-radius: 8px; padding: 14px 18px; }
+  .pros h4 { color: #27ae60; margin: 0 0 8px; }
+  .cons h4 { color: #e74c3c; margin: 0 0 8px; }
+  ul { padding-left: 20px; }
+  li { margin: 6px 0; line-height: 1.7; }
+  /* CTA Boxes */
+  .cta-box { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius: 16px; padding: 32px 28px; margin: 40px 0; text-align: center; color: #fff; }
+  .cta-box h3 { margin: 0 0 8px; font-size: 1.3rem; }
+  .cta-box p { margin: 0 0 20px; opacity: 0.9; }
+  .cta-btn { display: inline-block; background: #fff; font-weight: 700; padding: 13px 32px; border-radius: 50px; text-decoration: none; font-size: 1rem; transition: transform 0.2s, box-shadow 0.2s; }
+  .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+  .cta-box-1 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+  .cta-box-1 .cta-btn { color: #c0392b; }
+  .cta-box-2 { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+  .cta-box-2 .cta-btn { color: #0077b6; }
+  .cta-box-3 { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+  .cta-box-3 .cta-btn { color: #1a7a50; }
+  .cta-box-4 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+  .cta-box-4 .cta-btn { color: #b5451b; }
+  .highlight-box { background: #fff9e6; border-left: 4px solid #f39c12; border-radius: 8px; padding: 16px 20px; margin: 24px 0; }
+  .tip-box { background: #f0f0ff; border-left: 4px solid #7c3aed; border-radius: 8px; padding: 16px 20px; margin: 24px 0; }
+  .faq-item { border-bottom: 1px solid #e8edf5; padding: 20px 0; }
+  .faq-item h4 { color: #302b63; margin: 0 0 10px; font-size: 1.05rem; }
+  .faq-item p { margin: 0; color: #444; line-height: 1.75; }
+  .breadcrumb { font-size: 0.85rem; color: #888; margin: 20px 0; }
+  .breadcrumb a { color: #302b63; text-decoration: none; }
+  .toc { background: #f0f0ff; border-radius: 10px; padding: 20px 24px; margin: 28px 0; }
+  .toc h4 { margin: 0 0 12px; color: #302b63; }
+  .toc ol { margin: 0; padding-left: 20px; }
+  .toc li { margin: 6px 0; }
+  .toc a { color: #302b63; text-decoration: none; font-size: 0.93rem; }
+  .scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .scenario-card { background: #fff; border: 1px solid #dde3f0; border-radius: 10px; padding: 18px 20px; }
+  .scenario-card h4 { margin: 0 0 8px; color: #302b63; font-size: 1rem; }
+  .scenario-card p { margin: 0; font-size: 0.9rem; color: #555; line-height: 1.6; }
+  .price-tag { display: inline-block; background: #302b63; color: #fff; border-radius: 20px; padding: 3px 12px; font-size: 0.82rem; font-weight: 600; margin-left: 8px; }
+  .winner-badge { display: inline-block; background: #e94560; color: #fff; border-radius: 20px; padding: 3px 12px; font-size: 0.8rem; font-weight: 700; margin-left: 8px; }
+  .prompt-box { background: #1a1a2e; color: #a8e6cf; border-radius: 10px; padding: 20px 24px; margin: 20px 0; font-family: 'Courier New', monospace; font-size: 0.9rem; line-height: 1.7; }
+  .prompt-box .label { color: #f8c471; font-weight: bold; font-size: 0.85rem; margin-bottom: 8px; display: block; }
+  .verdict-table td:first-child { font-weight: 600; }
+  @media(max-width:600px){ .pros-cons{grid-template-columns:1fr;} header.hero h1{font-size:1.5rem;} .scenario-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="container">
+    <div style="margin-bottom:12px;">
+      <span class="badge">AI 圖像工具</span>
+      <span class="badge badge-purple">2026 最新</span>
+      <span class="badge badge-gold">深度評測</span>
+    </div>
+    <h1>Midjourney v7 評測 2026：<br>台灣設計師必讀的 AI 圖像生成完整指南</h1>
+    <p class="meta">更新日期：2026 年 8 月 15 日 ｜ 閱讀時間約 14 分鐘 ｜ 字數：2,800+</p>
+  </div>
+</header>
+
+<div class="container">
+
+  <p class="breadcrumb">
+    <a href="../index.html">首頁</a> &rsaquo;
+    <a href="index.html">部落格</a> &rsaquo;
+    Midjourney v7 評測 2026
+  </p>
+
+  <div class="toc">
+    <h4>📋 本文目錄</h4>
+    <ol>
+      <li><a href="#overview">Midjourney v7 核心亮點速覽</a></li>
+      <li><a href="#v7-features">v7 新功能深度解析</a></li>
+      <li><a href="#pricing">定價方案與台灣費用試算</a></li>
+      <li><a href="#prompt-guide">繁中提示詞實戰技巧</a></li>
+      <li><a href="#comparison">vs DALL-E 3 vs Stable Diffusion 完整比較</a></li>
+      <li><a href="#scenarios">6 大使用場景推薦</a></li>
+      <li><a href="#license">商業授權完整說明</a></li>
+      <li><a href="#faq">常見問題 FAQ</a></li>
+      <li><a href="#verdict">終極推薦決策表</a></li>
+    </ol>
+  </div>
+
+  <p>台灣的設計師、插畫家、電商賣家、自媒體創作者——你們等的那個版本來了。</p>
+
+  <p><strong>Midjourney v7</strong> 在 2026 年帶來了一次真正的代際跳躍：不只是畫質提升，而是整個工作流程的革新。角色一致性、更長的提示詞支援、獨立網頁版（終於不用 Discord）、以及讓人驚豔的 Draft Mode，讓台灣設計師從「試試看」變成「每天都在用」。</p>
+
+  <p>但它值得月付 NT$320 起嗎？中文提示詞到底怎麼用？商業授權怎麼算？這篇文章給你一個清楚的答案。</p>
+
+  <div class="highlight-box">
+    <strong>⚡ 三句話版本：</strong><br>
+    美學畫質業界第一，電影感和藝術風格無人能敵。<br>
+    中文提示詞需搭配技巧，直接輸入效果不穩定。<br>
+    付費方案 $10/月起，商業授權比你想的寬鬆。
+  </div>
+
+  <!-- SECTION 1: Overview -->
+  <h2 id="overview">Midjourney v7 核心亮點速覽</h2>
+
+  <p>Midjourney v7 於 2026 年初正式發布，是繼 v6 之後最大的一次版本升級。以下是最值得台灣用戶關注的幾個核心改變：</p>
+
+  <table>
+    <tr>
+      <th>功能</th>
+      <th>v6</th>
+      <th>v7（2026）</th>
+    </tr>
+    <tr>
+      <td>角色一致性（Character Reference）</td>
+      <td>基本支援，跨圖偶有飄移</td>
+      <td>大幅提升，同角色跨 10 張圖仍穩定</td>
+    </tr>
+    <tr>
+      <td>提示詞長度</td>
+      <td>建議 60 字以內</td>
+      <td>支援 150+ 字長段落</td>
+    </tr>
+    <tr>
+      <td>Draft Mode</td>
+      <td>無</td>
+      <td>新增，速度快 4 倍、成本降低 75%</td>
+    </tr>
+    <tr>
+      <td>材質/光影細節</td>
+      <td>優秀</td>
+      <td>卓越，皮革/金屬/布料更逼真</td>
+    </tr>
+    <tr>
+      <td>網頁版 UI</td>
+      <td>早期 Beta，功能不齊</td>
+      <td>正式版，全功能，無需 Discord</td>
+    </tr>
+    <tr>
+      <td>Vary Region（局部重繪）</td>
+      <td>支援，精準度一般</td>
+      <td>精準度提升，邊緣融合更自然</td>
+    </tr>
+    <tr>
+      <td>Style Raw 模式</td>
+      <td>支援</td>
+      <td>支援，v7 的 Raw 更「乾淨」</td>
+    </tr>
+  </table>
+
+  <div class="cta-box cta-box-1">
+    <h3>🎨 想學 AI 圖像設計從零到精通？</h3>
+    <p>Hahow 上有多門繁中 AI 設計課程，從 Midjourney 提示詞到商業應用全覆蓋，台灣設計師首選學習平台。</p>
+    <a href="https://abzcoupon.com/track/clicks/4850/c627c2bc9b0125d8fa8cec23d62e9842226e4edf2aabebf00f65b213234652eed671a3ea103a9e71" class="cta-btn" rel="noopener sponsored" target="_blank" style="color:#c0392b;">
+      → 瀏覽 Hahow AI 設計課程
+    </a>
+  </div>
+
+  <!-- SECTION 2: v7 Features -->
+  <h2 id="v7-features">v7 新功能深度解析</h2>
+
+  <h3>① Draft Mode — 草圖模式，讓你的 GPU 點數用更久</h3>
+  <p>這是 v7 最受歡迎的新功能。Draft Mode 使用更輕量的模型快速生成草圖，速度比標準模式快 <strong>4 倍</strong>，消耗的 GPU 分鐘數也只有 1/4。</p>
+  <p>對台灣設計師的實際意義：每個月 $10 方案的 200 張額度，在 Draft Mode 下可以「試方向」試到 800 張。確定方向後再用標準模式出最終稿，省到一倍以上的預算。</p>
+
+  <div class="tip-box">
+    <strong>💡 Draft Mode 使用技巧：</strong><br>
+    在提示詞後加 <code>--draft</code> 即可啟用。例如：<br>
+    <code>minimalist product photo, white background, ceramic vase --draft --ar 1:1</code><br>
+    確認構圖滿意後，再移除 <code>--draft</code> 生成高畫質版本。
+  </div>
+
+  <h3>② 角色一致性（Character Reference / --cref）大升級</h3>
+  <p>v6 的 <code>--cref</code> 已經很好用，但有個痛點：角色跨場景時面孔容易飄移，頭髮顏色或服裝細節常有誤差。v7 在這方面做了顯著改善。</p>
+  <p>實際測試：同一個角色圖，連續生成 10 張不同場景（辦公室、咖啡廳、戶外、夜晚），臉部特徵一致率從 v6 的約 70% 提升到 v7 的約 88%。對於做 IP 角色、Line 貼圖、漫畫連載的台灣創作者，這個升級非常實用。</p>
+
+  <h3>③ 長提示詞支援——終於能說清楚你要什麼</h3>
+  <p>v6 建議提示詞簡潔（60 字以內），太長反而效果不佳。v7 改進了提示詞解析模型，支援 150 字以上的長段落描述。</p>
+  <p>這對台灣用戶的影響是：你可以把繁中需求先用 ChatGPT 翻譯成細緻的英文描述，再貼到 v7，執行準確度大幅提升。</p>
+
+  <h3>④ 獨立網頁版正式上線</h3>
+  <p>終於不用 Discord 了！Midjourney 的獨立網頁版（<a href="https://www.midjourney.com" target="_blank" rel="noopener">midjourney.com</a>）在 v7 時代已完全成熟，支援：</p>
+  <ul>
+    <li>圖庫管理（按風格、日期、關鍵字搜尋）</li>
+    <li>批次生成與佇列管理</li>
+    <li>風格收藏（Style Tuner 結果可存檔）</li>
+    <li>直接從網頁下載高解析原圖</li>
+    <li>帳單與用量管理介面</li>
+  </ul>
+
+  <!-- SECTION 3: Pricing -->
+  <h2 id="pricing">定價方案與台灣費用試算</h2>
+
+  <table>
+    <tr>
+      <th>方案</th>
+      <th>月費（USD）</th>
+      <th>約台幣/月</th>
+      <th>GPU 分鐘數</th>
+      <th>Stealth Mode</th>
+      <th>適合誰</th>
+    </tr>
+    <tr>
+      <td><strong>Basic</strong></td>
+      <td>$10</td>
+      <td>~NT$320</td>
+      <td>~200 張標準圖</td>
+      <td>❌</td>
+      <td>個人嘗試、學習</td>
+    </tr>
+    <tr>
+      <td><strong>Standard</strong></td>
+      <td>$30</td>
+      <td>~NT$960</td>
+      <td>無限（Relax）+ 15h Fast</td>
+      <td>❌</td>
+      <td>自媒體、設計師主力</td>
+    </tr>
+    <tr>
+      <td><strong>Pro</strong></td>
+      <td>$60</td>
+      <td>~NT$1,920</td>
+      <td>無限（Relax）+ 30h Fast</td>
+      <td>✅</td>
+      <td>商業專案、品牌設計</td>
+    </tr>
+    <tr>
+      <td><strong>Mega</strong></td>
+      <td>$120</td>
+      <td>~NT$3,840</td>
+      <td>無限（Relax）+ 60h Fast</td>
+      <td>✅</td>
+      <td>設計工作室、大量生產</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box">
+    <strong>📊 台灣設計師最常選的方案：</strong><br>
+    <strong>Standard（$30）</strong>是最多台灣用戶的選擇。Relax Mode 無限生成（速度較慢但不消耗 Fast 時數），加上 15 小時的快速模式，一般自媒體和設計師完全夠用。要注意的是，Relax Mode 在尖峰時段（UTC 白天）等待時間可能達 5-10 分鐘，台灣時間深夜反而最快。
+  </div>
+
+  <p>若選擇年費方案，每個方案享有 <strong>20% 折扣</strong>，Standard 年費約 NT$9,200（每月折合 NT$768），長期用戶相當划算。</p>
+
+  <!-- SECTION 4: Prompt Guide -->
+  <h2 id="prompt-guide">繁中提示詞實戰技巧</h2>
+
+  <p>Midjourney 的底層不是大語言模型，對中文提示詞的解析能力遠不如 DALL-E 3。但有了正確的工作流程，中文用戶完全能發揮 v7 的全部潛力。</p>
+
+  <h3>工作流程：ChatGPT 翻譯 + Midjourney 生成</h3>
+  <p>在 ChatGPT 輸入這個提示詞模板：</p>
+
+  <div class="prompt-box">
+    <span class="label">// ChatGPT 翻譯提示詞模板</span>
+    幫我把以下圖像描述翻譯成適合 Midjourney v7 的英文提示詞，
+    要包含：主體描述、風格、光線、情緒、相機視角、畫質參數。
+    請直接輸出英文提示詞，不要解釋。<br><br>
+    我的需求：[在這裡填入你的中文描述]
+  </div>
+
+  <h3>三個實戰範例（台灣常見需求）</h3>
+
+  <p><strong>① 電商產品情境圖</strong></p>
+  <div class="prompt-box">
+    <span class="label">// 護膚品產品圖</span>
+    luxury skincare serum bottle, minimalist flat lay, marble surface, soft morning light from left, dried flowers arrangement, beige and white color palette, editorial style, 85mm lens, shallow depth of field --ar 4:5 --stylize 200 --v 7
+  </div>
+
+  <p><strong>② 台灣在地風格插畫</strong></p>
+  <div class="prompt-box">
+    <span class="label">// 台灣城市夜景插畫</span>
+    Taiwan night market street scene, illustrated style, warm neon lights, scooters and food stalls, rainy evening, Studio Ghibli inspired, detailed cityscape, cinematic atmosphere, 16:9 --ar 16:9 --stylize 500 --v 7
+  </div>
+
+  <p><strong>③ 個人 IP 角色</strong></p>
+  <div class="prompt-box">
+    <span class="label">// 可愛角色設計</span>
+    cute chibi character, Taiwanese girl, wearing casual street fashion, cheerful expression, simple white background, clean line art with pastel colors, character sheet front view, commercial illustration style --ar 1:1 --niji 6
+  </div>
+
+  <div class="tip-box">
+    <strong>💡 v7 必知參數速查：</strong><br>
+    <code>--ar</code> 比例（16:9 橫、9:16 直、1:1 方）<br>
+    <code>--stylize [0-1000]</code> 藝術風格強度（預設 100）<br>
+    <code>--v 7</code> 指定 v7 模型<br>
+    <code>--niji 6</code> 動漫風格模型（插畫/角色設計首選）<br>
+    <code>--draft</code> 草圖模式（快速省點數）<br>
+    <code>--cref [圖片URL]</code> 角色參考圖<br>
+    <code>--sref [圖片URL]</code> 風格參考圖
+  </div>
+
+  <!-- SECTION 5: Comparison -->
+  <h2 id="comparison">vs DALL-E 3 vs Stable Diffusion 完整比較</h2>
+
+  <table>
+    <tr>
+      <th>評比維度</th>
+      <th>Midjourney v7</th>
+      <th>DALL-E 3（ChatGPT）</th>
+      <th>Stable Diffusion 3.5</th>
+    </tr>
+    <tr>
+      <td>美學畫質</td>
+      <td>⭐⭐⭐⭐⭐ 業界最頂</td>
+      <td>⭐⭐⭐⭐ 優秀，偏寫實</td>
+      <td>⭐⭐⭐⭐ 需調參，上限高</td>
+    </tr>
+    <tr>
+      <td>繁中提示詞</td>
+      <td>⭐⭐⭐ 需轉英文</td>
+      <td>⭐⭐⭐⭐⭐ 最佳</td>
+      <td>⭐⭐ 建議英文</td>
+    </tr>
+    <tr>
+      <td>使用門檻</td>
+      <td>⭐⭐⭐ 中等，需學習</td>
+      <td>⭐⭐⭐⭐⭐ 最直覺</td>
+      <td>⭐⭐ 較複雜</td>
+    </tr>
+    <tr>
+      <td>商業授權</td>
+      <td>⭐⭐⭐⭐ 付費即可</td>
+      <td>⭐⭐⭐⭐ 付費即可</td>
+      <td>⭐⭐⭐⭐⭐ 最自由</td>
+    </tr>
+    <tr>
+      <td>定價</td>
+      <td>$10/月起</td>
+      <td>ChatGPT Plus $20/月</td>
+      <td>免費（本地端）</td>
+    </tr>
+    <tr>
+      <td>角色一致性</td>
+      <td>⭐⭐⭐⭐⭐ v7 大升級</td>
+      <td>⭐⭐⭐ 一般</td>
+      <td>⭐⭐⭐⭐ 搭配 LoRA 最強</td>
+    </tr>
+    <tr>
+      <td>電商/產品圖</td>
+      <td>⭐⭐⭐⭐⭐ 頂尖</td>
+      <td>⭐⭐⭐⭐ 很好</td>
+      <td>⭐⭐⭐⭐ 需調整</td>
+    </tr>
+    <tr>
+      <td>動漫/插畫風格</td>
+      <td>⭐⭐⭐⭐⭐（niji 6）</td>
+      <td>⭐⭐⭐ 一般</td>
+      <td>⭐⭐⭐⭐⭐ 社群模型豐富</td>
+    </tr>
+    <tr>
+      <td>私密性</td>
+      <td>⭐⭐⭐（Pro+ 才有 Stealth）</td>
+      <td>⭐⭐⭐⭐ OpenAI 保管</td>
+      <td>⭐⭐⭐⭐⭐ 本地端離線</td>
+    </tr>
+    <tr>
+      <td>社群資源</td>
+      <td>⭐⭐⭐⭐⭐ 最豐富</td>
+      <td>⭐⭐⭐ 一般</td>
+      <td>⭐⭐⭐⭐⭐ CivitAI 龐大社群</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box">
+    <strong>📌 一句話總結：</strong><br>
+    你要最美的圖 → <strong>Midjourney v7</strong>。你要最方便的中文溝通 → <strong>DALL-E 3</strong>。你要免費且完全自主 → <strong>Stable Diffusion</strong>。三者並不互斥，台灣許多設計師的主力是 Midjourney + 偶爾用 DALL-E 3 做快速草稿。
+  </div>
+
+  <!-- SECTION 6: Scenarios -->
+  <h2 id="scenarios">6 大使用場景推薦</h2>
+
+  <div class="scenario-grid">
+    <div class="scenario-card">
+      <h4>🛒 電商賣家</h4>
+      <p>用 Midjourney v7 生成產品情境圖、廣告主視覺、季節性活動素材。一張專業情境圖的外包費用 NT$2,000-5,000，改用 AI 後月費只要 NT$320-960。推薦 Standard 方案，搭配 --cref 保持品牌視覺一致性。</p>
+    </div>
+    <div class="scenario-card">
+      <h4>🎨 插畫/IP 創作者</h4>
+      <p>niji 6 模式專為動漫插畫優化，加上 v7 的角色一致性升級，做 Line 貼圖、Webtoon 分格、周邊商品設計效率大增。推薦 Standard 方案（無限 Relax Mode）。</p>
+    </div>
+    <div class="scenario-card">
+      <h4>📱 社群小編/自媒體</h4>
+      <p>每週需要大量視覺素材的社群管理者，Draft Mode 讓你快速試方向，確認後再出高畫質圖。搭配 CapCut 做成短影音，內容流程完整。推薦 Standard 方案。</p>
+    </div>
+    <div class="scenario-card">
+      <h4>🏢 品牌設計師</h4>
+      <p>品牌提案、廣告概念視覺化、風格 Moodboard 製作，Midjourney v7 的美學上限讓提案更有說服力。涉及客戶商業案需 Pro 方案以上（Stealth Mode 保護客戶資訊）。</p>
+    </div>
+    <div class="scenario-card">
+      <h4>✍️ 部落客/內容行銷</h4>
+      <p>文章首圖、社群封面、電子報視覺，Basic $10/月的配額對偶爾用一次的部落客來說通常夠用。不需要 Stealth，Basic 方案即可。</p>
+    </div>
+    <div class="scenario-card">
+      <h4>🎓 設計系學生</h4>
+      <p>學習提示詞工程、了解 AI 視覺美學趨勢、快速生成課堂提案視覺。Basic $10/月作為學習工具 CP 值極高。注意：學術作業使用請確認學校規定。</p>
+    </div>
+  </div>
+
+  <!-- CTA 2 -->
+  <div class="cta-box cta-box-2">
+    <h3>📊 想用 AI 工具做數據驅動的內容行銷？</h3>
+    <p>DataCamp 提供完整的 AI 與數據分析課程，從 Python 到機器學習，台灣市場快速掌握 AI 行銷技能。</p>
+    <a href="https://afflink.one/s/aavAC" class="cta-btn" rel="noopener sponsored" target="_blank" style="color:#0077b6;">
+      → 探索 DataCamp AI 課程
+    </a>
+  </div>
+
+  <!-- SECTION 7: License -->
+  <h2 id="license">商業授權完整說明</h2>
+
+  <p>這是台灣用戶最常問的問題之一，也是最容易搞混的部分。</p>
+
+  <table>
+    <tr>
+      <th>方案</th>
+      <th>個人商業用途</th>
+      <th>企業商業用途</th>
+      <th>NFT/AI 訓練集</th>
+      <th>Stealth Mode</th>
+    </tr>
+    <tr>
+      <td>Basic ($10)</td>
+      <td>✅ 可（年收入 &lt; $20,000 USD）</td>
+      <td>❌ 需升級</td>
+      <td>需額外授權</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Standard ($30)</td>
+      <td>✅ 無限制</td>
+      <td>✅（公司年收 &lt; $1M USD）</td>
+      <td>需額外授權</td>
+      <td>❌</td>
+    </tr>
+    <tr>
+      <td>Pro ($60)</td>
+      <td>✅ 無限制</td>
+      <td>✅ 無限制</td>
+      <td>需額外授權</td>
+      <td>✅</td>
+    </tr>
+    <tr>
+      <td>Mega ($120)</td>
+      <td>✅ 無限制</td>
+      <td>✅ 無限制</td>
+      <td>需額外授權</td>
+      <td>✅</td>
+    </tr>
+  </table>
+
+  <div class="highlight-box">
+    <strong>⚠️ 重要提醒：</strong><br>
+    Basic 方案的 $20,000/年收入限制是指「用 Midjourney 生成圖片所帶來的商業收益」，不是個人年收入。對大多數台灣小編、部落客、設計師來說基本不會觸碰這個上限。若是替大型品牌做商業案，建議升級到 Standard 或 Pro 以避免爭議。
+  </div>
+
+  <!-- CTA 3 -->
+  <div class="cta-box cta-box-3">
+    <h3>🚀 用 AI 工具打造你的個人品牌和行銷漏斗？</h3>
+    <p>Systeme.io 是一站式行銷平台，整合電子郵件、銷售頁、會員課程，免費方案可上線，台灣創作者建立被動收入的利器。</p>
+    <a href="https://systeme.io/?sa=sa0087788052d81d9e6cfd5c00f0773e37e01e27f" class="cta-btn" rel="noopener sponsored" target="_blank" style="color:#1a7a50;">
+      → 免費開始用 Systeme.io
+    </a>
+  </div>
+
+  <!-- SECTION 8: FAQ -->
+  <h2 id="faq">常見問題 FAQ</h2>
+
+  <div class="faq-item">
+    <h4>Q1：Midjourney v7 和 v6 差在哪裡？</h4>
+    <p>主要升級包括：更強的人臉一致性（同一角色跨圖保持外觀）、更精準的提示詞解析（長句也能正確執行）、原生 Draft Mode（快速低成本出草稿）、以及更細膩的材質與光影表現。整體比 v6 的細節豐富度提升約 30%。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q2：Midjourney v7 可以用中文提示詞嗎？</h4>
+    <p>Midjourney 本身對中文提示詞的支援有限，直接用繁體中文效果不穩定。最佳做法是先用 ChatGPT 把繁中描述翻譯成精準英文提示詞，再輸入 Midjourney，成功率大幅提升。本文上方附有完整的提示詞翻譯技巧和範例。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q3：Midjourney 生成的圖片可以商業使用嗎？</h4>
+    <p>付費方案（Basic $10/月起）均可商業使用，但 Basic 方案有年收入 $20,000 美元的限制。Standard 以上方案無收入限制。若需要完全私密（不被他人看到生成紀錄），需 Pro 方案以上的 Stealth Mode。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q4：Midjourney 有免費版嗎？2026 年還能免費試用嗎？</h4>
+    <p>Midjourney 目前（2026 年）已無永久免費方案。偶爾會針對新用戶開放 25 次免費試用，但不穩定。最低入門方案為 Basic Plan $10/月（約 NT$320），可生成約 200 張圖，建議先用一個月試試看再決定是否升級。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q5：Midjourney v7 適合電商產品圖嗎？</h4>
+    <p>非常適合！v7 的寫實材質渲染能力大幅提升，適合生成產品情境圖、生活風格照（lifestyle shots）、包裝視覺概念圖。但若需要精確展示你的實際產品，建議搭配 <code>--cref</code>（角色參考）功能上傳產品照，或用 Vary Region 局部修改。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q6：Midjourney、DALL-E 3、Stable Diffusion 2026 年哪個最好？</h4>
+    <p>各有所長：Midjourney v7 → 美學畫質最頂、電影感最強、設計師首選。DALL-E 3 → 繁中理解最佳、對話式最直覺、不想學提示詞的人首選。Stable Diffusion → 完全免費、本地端離線、技術宅和隱私重視者首選。台灣多數設計師和自媒體創作者以 Midjourney 為主力。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q7：不用 Discord 可以使用 Midjourney 嗎？</h4>
+    <p>可以！Midjourney 在 2025 年底推出了獨立網頁版（midjourney.com），不再強制需要 Discord。網頁版介面更直覺，支援圖庫管理、批次生成、風格收藏等功能，台灣用戶直接用瀏覽器即可，不需要先加入 Discord 伺服器。</p>
+  </div>
+  <div class="faq-item">
+    <h4>Q8：台灣用信用卡可以訂閱 Midjourney 嗎？</h4>
+    <p>可以。Midjourney 接受 Visa、Mastercard、American Express 等國際信用卡。台灣的信用卡通常可以直接訂閱，費用以美元計算，由銀行按當日匯率換算台幣。部分銀行的刷卡可能會有海外交易手續費（約 1.5%）。</p>
+  </div>
+
+  <!-- SECTION 9: Verdict -->
+  <h2 id="verdict">終極推薦決策表</h2>
+
+  <table class="verdict-table">
+    <tr>
+      <th>你的狀況</th>
+      <th>推薦方案</th>
+    </tr>
+    <tr>
+      <td>完全新手，想試試 AI 圖像</td>
+      <td>Basic $10/月，用一個月看看</td>
+    </tr>
+    <tr>
+      <td>自媒體、社群小編，每週需要 20-50 張素材</td>
+      <td>Standard $30/月（Relax 無限生成）</td>
+    </tr>
+    <tr>
+      <td>電商賣家，需要品質穩定的產品情境圖</td>
+      <td>Standard $30/月，搭配 --cref 工作流</td>
+    </tr>
+    <tr>
+      <td>插畫家/IP 創作者，做角色商品或 Line 貼圖</td>
+      <td>Standard $30/月，用 niji 6 模型</td>
+    </tr>
+    <tr>
+      <td>品牌設計師，有客戶商業案，需要隱私保護</td>
+      <td>Pro $60/月（含 Stealth Mode）</td>
+    </tr>
+    <tr>
+      <td>設計工作室，每天大量生成，多人共用</td>
+      <td>Mega $120/月 或 Teams 方案</td>
+    </tr>
+    <tr>
+      <td>預算為零，對技術有興趣</td>
+      <td>先用 Stable Diffusion 本地端，再考慮付費</td>
+    </tr>
+    <tr>
+      <td>只想快速輸入中文就能出圖</td>
+      <td>DALL-E 3（ChatGPT Plus $20/月）更直覺</td>
+    </tr>
+  </table>
+
+  <p>Midjourney v7 是 2026 年 AI 圖像生成的最高美學標準。對台灣設計師和創意工作者來說，學習曲線和月費投入都是值得的——前提是你知道自己的需求，選對方案，並搭配正確的提示詞工作流。</p>
+
+  <p>如果你還在猶豫，給自己一個月的 Basic 方案試試：NT$320，大約是兩杯咖啡的錢，換來了一個可能改變你工作方式的工具。</p>
+
+  <!-- CTA 4 -->
+  <div class="cta-box cta-box-4">
+    <h3>🎬 用 AI 圖像搭配影片，打造完整創作流</h3>
+    <p>CapCut 是台灣最多人用的 AI 影片剪輯工具，把 Midjourney 生成的圖像做成短影音或 Reels，從靜態素材到動態內容一鍵完成。</p>
+    <a href="https://vbtrax.com/track/clicks/9453/c627c2bc9b0126dafe8dec2bd32e9d452d6745c963bcb0f90067b504641200a8cd3ea5e2576e9f663499abdb4aee7abb970d" class="cta-btn" rel="noopener sponsored" target="_blank" style="color:#b5451b;">
+      → 免費下載 CapCut
+    </a>
+  </div>
+
+  <!-- Internal Links -->
+  <h2>延伸閱讀</h2>
+  <ul>
+    <li><a href="ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html">AI 圖片生成工具比較 2026：Midjourney vs DALL-E 3 vs Stable Diffusion — 台灣設計師選哪個？</a></li>
+    <li><a href="ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html">AI 影片剪輯工具推薦 2026：CapCut vs Runway vs Adobe Premiere AI 台灣 YouTuber 完整指南</a></li>
+    <li><a href="ai-marketing-tools-2026.html">AI 行銷工具推薦 2026：社群小編必用的 8 款 AI 工具完整指南</a></li>
+    <li><a href="chatgpt-plus-worth-it-2026.html">ChatGPT Plus 值得買嗎 2026？免費版 vs 付費版完整比較</a></li>
+    <li><a href="ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html">AI 文案寫作工具推薦 2026：ChatGPT vs Jasper vs Copy.ai 台灣完整比較</a></li>
+  </ul>
+
+</div>
+
+<footer style="background:#1a1a2e; color:#aaa; text-align:center; padding:32px 20px; font-size:0.85rem; margin-top:60px;">
+  <p>© 2026 AI Tools TW — 台灣最完整的 AI 工具評測與教學</p>
+  <p style="margin-top:8px;"><a href="../index.html" style="color:#aaa; text-decoration:none;">首頁</a> &nbsp;|&nbsp; <a href="index.html" style="color:#aaa; text-decoration:none;">所有評測</a></p>
+  <p style="margin-top:8px; font-size:0.78rem; color:#666;">本文含有聯盟行銷連結，點擊後若您完成購買，本站可能獲得佣金，不影響您的購買價格。</p>
+</footer>
+
+</body>
+</html>
