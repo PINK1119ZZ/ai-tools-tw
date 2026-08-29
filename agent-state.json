@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-08-28T02:00:00+00:00",
+  "lastUpdated": "2026-08-29T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-08-29",
+      "action": "publish_article",
+      "title": "AI 法律工具推薦 2026：Harvey AI vs Clio vs ContractPodAi 台灣接案族合約必備",
+      "file": "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["datacamp", "cloudways", "hahow", "systeme.io"],
+      "internalLinks": [
+        "ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-productivity-tools-2026.html",
+        "systeme-io-review-2026.html"
+      ],
+      "notes": "三大 AI 法律工具深度評測：Harvey AI（企業法務/律師事務所御用/英文合約分析業界最高/法律案例研究/企業方案需報價/亞太支援有限）、Clio Duo（法律事務所管理平台/內建 AI 助理/計費時間自動化/案件管理/Essentials $79/人/月/14天免費試用）、ContractPodAi（企業 CLM 全流程/AI 條款提取準確率90%+/合約風險評分/Salesforce+SAP整合/多語言含繁中/企業方案需報價）。含10維度比較表、6大使用場景（個人接案族/台灣律所/外商法務/製造業採購/科技新創/電商外貿）、定價年費台灣視角試算（個人/律所/企業）、台灣特有注意事項（著作人格權不可讓與/PDPA合規/台灣付款方式）、ChatGPT合約審查提示詞範例、8則FAQ、終極決策表。4個漸層CTA：DataCamp（AI/數據課程）/Cloudways（雲端主機）/Hahow（法律課程）/Systeme.io（行銷漏斗）。重點結論：Harvey/ContractPodAi偏企業，個人接案族最高CP值方案是ChatGPT Plus+一次性律師範本審核。目標關鍵字：AI法律工具、Harvey AI評測、Clio評測、ContractPodAi評測、AI合約審查、合約審查工具2026、台灣接案族合約、法律AI軟體。"
+    },
     {
       "date": "2026-08-28",
       "action": "publish_article",
@@ -314,8 +331,8 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
-    "AI HR 工具推薦 2026：BambooHR vs Workday vs Rippling 台灣企業完整比較",
-    "AI 法律工具推薦 2026：Harvey AI vs Clio vs ContractPodAi 台灣接案族合約必備"
+    "AI 簡報工具推薦 2026：Gamma vs Beautiful.AI vs Canva AI 台灣職場人完整比較",
+    "AI 電商工具推薦 2026：Shopify AI vs WooCommerce vs Squarespace 台灣賣家完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
