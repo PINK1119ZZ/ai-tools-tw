@@ -1,7 +1,22 @@
 {
-  "lastUpdated": "2026-09-03T02:00:00+00:00",
+  "lastUpdated": "2026-09-04T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-04",
+      "action": "publish_article",
+      "title": "AI 聊天機器人平台推薦 2026：Chatbase vs Tidio vs ManyChat 台灣電商中小企業完整比較",
+      "file": "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority",
+      "affiliates": ["datacamp", "systeme.io", "cloudways", "hahow"],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+        "ai-marketing-tools-2026.html"
+      ],
+      "notes": "三大 AI 聊天機器人平台深度評測：Chatbase（RAG知識庫冠軍/PDF+URL+Notion匯入/GPT-4o+Claude3.5可選/5分鐘上線/Free 20訊息→Hobby $19→Standard $99→Pro $399/月）、Tidio（電商整合最強/Lyro AI電商情境調優/WooCommerce+Shopify Plugin/訂單追蹤+棄購挽回/Live Chat+手機APP/Free 50對話→Starter $29→Growth $59→Plus $749/月）、ManyChat（社群行銷自動化冠軍/IG留言觸發DM/FB Messenger/WhatsApp/Flow Builder拖拉式/AI Step Beta/Free 1K聯絡人→Pro $15起/月）。含10維度比較表、6大使用場景（WooCommerce電商/服務業FAQ/IG服飾帶貨/實體店/跨境/零預算新手）、定價年費台灣視角試算（4情境NT$換算）、AI技術深度解析（Chatbase RAG/Tidio Lyro主動出擊/ManyChat AI Step Beta）、台灣特別注意事項（LINE不支援/PDPA合規/付款方式/Meta政策風險）、8則FAQ（ManyChat台灣效益/免費方案夠用嗎/三個同時用/繁體中文設定/聯絡人計費/WooCommerce坑/替代方案/是否提升銷售額）、終極決策表。4個漸層CTA：DataCamp（AI Chatbot開發技術）/Systeme.io（行銷漏斗）/Cloudways（WooCommerce主機）/Hahow（AI行銷自動化課程）。目標關鍵字：AI聊天機器人、Chatbase評測、Tidio評測、ManyChat評測、聊天機器人平台推薦2026、台灣AI客服、LINE聊天機器人、電商聊天機器人、AI客服工具、Chatbot推薦。"
+    },
     {
       "date": "2026-09-03",
       "action": "publish_article",
@@ -120,6 +135,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
     "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
     "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
     "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
@@ -194,7 +210,7 @@
     "blog/claude-4-sonnet-opus-review-2026.html"
   ],
   "nextPriority": [
-    "AI 聊天機器人平台推薦 2026：Chatbase vs Tidio vs ManyChat 台灣電商中小企業完整比較"
+    "AI 影像辨識工具推薦 2026：Google Vision AI vs AWS Rekognition vs Azure Computer Vision 台灣企業完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
