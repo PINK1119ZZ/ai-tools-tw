@@ -1,7 +1,29 @@
 {
-  "lastUpdated": "2026-09-05T02:00:00+00:00",
+  "lastUpdated": "2026-09-06T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-06",
+      "action": "publish_article",
+      "title": "AI 語音辨識工具推薦 2026：Google Speech-to-Text vs AWS Transcribe vs Azure Speech Service 台灣企業完整比較",
+      "file": "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": [
+        "datacamp",
+        "digitalocean",
+        "hahow",
+        "systeme.io"
+      ],
+      "internalLinks": [
+        "ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
+        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html"
+      ],
+      "notes": "三大雲端 AI 語音辨識平台深度評測：Google Speech-to-Text v2（Chirp 2 USM 模型/繁中 CER 最低/即時串流延遲 200-300ms/台灣彰化節點 asia-east1/說話者分離最多5人/語音活動偵測 VAD/自動標點數字格式化/$0.006/15秒）、AWS Transcribe（批量異步轉錄性價比最高/說話者分離最多10人/PII 自動遮蔽合規/Custom Vocabulary+CLM/Call Analytics 情感分析/SRT+VTT 字幕直接輸出/$0.024/分鐘批量）、Azure Speech Service（Custom Speech 領域微調最完整/免費層每月5小時最高/Microsoft Teams 原生整合/台語 TTS beta 支援/Pronunciation Assessment 教育 App 唯一選擇/中英混雜自動語言偵測/$0.016/分鐘標準）。含10維度比較表、6大使用場景（電話客服中心即時輔助/視訊會議自動轉錄/影片自動上字幕/醫療問診 EMR/語言學習發音評分/IoT 語音控制）、定價年費台灣視角試算4情境（NT$換算、小型客服/影片字幕批量/會議轉錄SaaS/新創MVP）、台灣特別注意事項（繁中 vs 簡中/台語現況/PDPA 合規/節點比較/發票稅務）、8則FAQ（繁中準確率數據/LINE整合/舊錄音轉錄/Whisper 開源替代/Custom Speech 訓練資料量/音訊格式/多語言拓展/無程式碼方案）、終極決策表8情境。4個漸層CTA：DataCamp（AI/ML課程）/DigitalOcean（$200額度VPS）/Hahow（AI課程平台）/Systeme.io（行銷漏斗）。目標關鍵字：AI語音辨識工具、Google Speech-to-Text評測、AWS Transcribe評測、Azure Speech Service評測、語音轉文字API、台灣語音辨識、繁體中文語音辨識、即時字幕、STT工具比較2026。"
+    },
     {
       "date": "2026-09-05",
       "action": "publish_article",
@@ -212,6 +234,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
     "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
     "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
     "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
@@ -288,7 +311,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 語音辨識工具推薦 2026：Google Speech-to-Text vs AWS Transcribe vs Azure Speech Service 台灣企業完整比較"
+    "AI 語音合成工具推薦 2026：ElevenLabs vs Azure Neural TTS vs Google Text-to-Speech 台灣企業完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
