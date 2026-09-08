@@ -1,7 +1,31 @@
 {
-  "lastUpdated": "2026-09-07T02:00:00+00:00",
+  "lastUpdated": "2026-09-08T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-08",
+      "action": "publish_article",
+      "title": "AI 內容行銷工具推薦 2026：Jasper AI vs Copy.ai vs Writesonic 台灣行銷人完整比較",
+      "file": "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+      "wordCount": 2900,
+      "topicSource": "new — high commercial intent, underserved in TW market",
+      "affiliates": [
+        "hahow",
+        "systeme.io",
+        "datacamp",
+        "digitalocean",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
+        "ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
+        "ai-marketing-tools-2026.html",
+        "ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "systeme-io-review-2026.html"
+      ],
+      "notes": "三大 AI 內容行銷工具深度評測：Jasper AI（Brand Voice品牌語氣最強/Claude 3.5+GPT-4o混合/50+模板/Surfer SEO整合/Jasper Art DALL-E 3/Knowledge Base/Creator $39→Pro $59→Business客製/年付Creator≈NT$15,120）、Copy.ai（GTM AI Platform行銷自動化最強/GPT-4o主力/Workflows自動化工作流/90+模板/HubSpot+Salesforce原生整合/Infobase知識庫/Free→Starter $36→Advanced $186→Enterprise/年付Starter≈NT$13,920）、Writesonic（高CP值全方位/GPT-4o+Claude 3.5+即時搜尋/AI Article Writer 6.0 SEO一鍵生成/Chatsonic/Botsonic AI客服機器人/100+模板/25語言/Free→Individual $16→Standard $79/年付Individual≈NT$6,180）。含10維度比較表、6大使用場景（台灣電商文案/行銷代理商品牌管理/B2B行銷銷售自動化/個人部落客SEO量產/新創冷啟動/跨境多語言）、台灣視角年費試算4情境（NT$換算）、底層AI模型深度比較（Jasper多模型Fine-tuning/Copy.ai GPT-4o工作流優化/Writesonic即時搜尋整合）、SEO功能深度比較、台灣注意事項（繁中vs簡中Prompt指定/付款發票/著作權AI揭露/WordPress/LINE/蝦皮整合/PDPA個資）、8則FAQ（繁中品質/免費方案/Google降權/同時用三個/人工修改比例/免費替代/台灣本地工具/社群貼文）、終極決策表8情境。5個漸層CTA：Hahow（AI行銷課程）/Systeme.io（行銷漏斗）/DataCamp（AI數據分析課程）/DigitalOcean（$200額度VPS）/Gumroad Claude Code Pack $29。目標關鍵字：AI內容行銷工具、Jasper AI評測、Copy.ai評測、Writesonic評測、AI寫作工具比較2026、AI文案工具、AI內容生成、AI行銷工具推薦、台灣行銷工具、SEO寫作AI。"
+    },
     {
       "date": "2026-09-07",
       "action": "publish_article",
@@ -242,6 +266,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
     "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
     "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
     "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
@@ -320,7 +345,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 自動化客服平台推薦 2026：Intercom AI vs Zendesk AI vs Freshdesk AI 台灣中小企業完整比較"
+    "AI 直播工具推薦 2026：StreamYard vs Restream vs OBS AI 台灣直播主完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
