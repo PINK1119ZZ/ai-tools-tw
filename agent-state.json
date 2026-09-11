@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-09-10T02:00:00+00:00",
+  "lastUpdated": "2026-09-11T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-11",
+      "action": "publish_article",
+      "title": "AI 簡報工具推薦 2026：Gamma vs Canva AI vs Beautiful.AI vs Tome 台灣商務人士完整深度比較",
+      "file": "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 深度版",
+      "affiliates": ["hahow", "systeme.io", "cloudways", "capcut", "datacamp"],
+      "internalLinks": [
+        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+        "gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "四大 AI 簡報工具深度評測：Gamma（AI生成速度最快45秒/GPT-4驅動/繁中優秀/AI圖片內嵌/簡報分析追蹤/Web分享/Free 400積分→Plus $8→Pro $15/月）、Canva AI Magic Design（3000+模板/Magic Write文案/Magic Animate動畫/DALL-E 3+SD圖片/Magic Resize多尺寸/Brand Kit/Canva Live互動/Free→Pro $15→Teams $10/人/月）、Beautiful.AI（Smart Slides智慧排版引擎永不走樣/DesignerBot AI初稿/360+Smart模板/簡報分析/Team Libraries品牌庫/無免費方案/Pro $12→Team $40/人/月）、Tome（GPT-4故事敘事結構/DALL-E 3圖片/Embedded Content嵌入媒體/Narrate Mode語音說明/Web-first分享/Free 500積分→Pro $8→Business $20/月）。含10維度比較表、6大使用場景（新創募資Pitch/週報月報/客戶提案業務Pitch/社群行銷/教育課程/預算有限個人）、定價年費台灣視角試算（NT$換算2情境：個人接案族/5人行銷團隊）、8種情境終極決策表、8則FAQ（繁中支援/PPT匯出/蝦皮賣家/版權問題/AI取代設計師/多工具組合/台灣本土工具/免費方案）。5個漸層CTA：Hahow（AI工具學習課程）/Systeme.io（行銷漏斗）/Cloudways（雲端主機）/CapCut（AI剪輯）/DataCamp（AI技能）。目標關鍵字：AI簡報工具、Gamma AI評測、Canva AI簡報、Beautiful AI評測、Tome AI評測、AI自動生成簡報、AI PPT工具推薦2026、台灣簡報工具比較。"
+    },
     {
       "date": "2026-09-10",
       "action": "publish_article",
@@ -283,6 +300,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
     "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
     "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
     "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
@@ -363,7 +381,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 簡報工具推薦 2026：Gamma vs Canva AI vs Beautiful.AI 台灣商務人士完整比較（深度版）"
+    "AI 寫作工具深度推薦 2026：Notion AI vs Google Docs AI vs Microsoft 365 Copilot 台灣上班族完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
