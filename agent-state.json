@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-09-11T02:00:00+00:00",
+  "lastUpdated": "2026-09-12T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-12",
+      "action": "publish_article",
+      "title": "AI 寫作工具深度推薦 2026：Notion AI vs Google Docs AI vs Microsoft 365 Copilot 台灣上班族完整比較",
+      "file": "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["hahow", "digitalocean", "datacamp", "systeme.io", "gumroad"],
+      "internalLinks": [
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html"
+      ],
+      "notes": "三大 AI 寫作助理深度評測：Notion AI（AI Knowledge Base知識庫整合/Claude 3.5 Sonnet+GPT-4o可切換/AI Q&A跨頁面引用/資料庫Autofill自動填寫/Connector接Slack+GDrive+GitHub/繁中最自然/Free→Plus $12→Business $18→Enterprise洽談/年付Plus≈NT$4,608）、Google Docs AI Gemini（Help me write/Refine選取改寫/Summarize/Ask Gemini文件問答/Sheets Smart Fill公式建議/Slides自動生成/Meet會議摘要/即時協作+AI同步/Business Standard $12/人/月）、Microsoft 365 Copilot（Word草稿+Rewrite+引用跨OneDrive/Excel自然語言分析+Python整合/PowerPoint從文件生成投影片+Speaker Coach/Teams即時摘要+Recap/Outlook草擬+Coaching/GPT-4o+Phi-4混合/Copilot Studio自訂AI代理/M365個人$6.99→Business Standard $12.5+Copilot附加$30/人/月）。含10維度比較表、AI模型深度比較（繁中語境/上下文窗口/即時聯網/隱私）、6大台灣使用場景（中小企業上班族/自由工作者/學生論文/行銷內容創作/政府機關/Google Workspace重度用戶）、台灣定價年費試算4情境（個人/5人/20人/100人NT$換算）、8則FAQ（著作權法/資料安全/繁中排名/ChatGPT比較/多工具並用/學生方案/注音輸入/替代方案）、終極決策表8情境。5個漸層CTA：Hahow（AI工具課程）/DigitalOcean（$200雲端額度）/DataCamp（AI數據技能）/Systeme.io（行銷漏斗）/Gumroad Claude Code Pack $29。目標關鍵字：AI寫作工具、Notion AI評測、Google Docs AI、Microsoft 365 Copilot、AI寫作助理、Gemini Docs、AI文件工具、台灣AI工具2026、上班族AI工具、AI辦公室助手。"
+    },
     {
       "date": "2026-09-11",
       "action": "publish_article",
@@ -300,6 +317,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
     "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
     "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
     "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
@@ -381,7 +399,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 寫作工具深度推薦 2026：Notion AI vs Google Docs AI vs Microsoft 365 Copilot 台灣上班族完整比較"
+    "AI 翻譯工具深度推薦 2026：DeepL Pro vs Google Translate API vs ChatGPT 台灣企業多語言完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
