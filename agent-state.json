@@ -1,7 +1,26 @@
 {
-  "lastUpdated": "2026-09-12T02:00:00+00:00",
+  "lastUpdated": "2026-09-13T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-13",
+      "action": "publish_article",
+      "title": "AI 程式學習工具推薦 2026：GitHub Copilot vs Cursor vs Replit AI 台灣程式設計師完整比較",
+      "file": "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
+      "wordCount": 2900,
+      "topicSource": "new — high commercial intent, underserved angle in TW market",
+      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways", "gumroad"],
+      "internalLinks": [
+        "claude-code-complete-guide-2026.html",
+        "github-copilot-agent-mode-review-2026.html",
+        "cursor-3-review-2026.html",
+        "ai-coding-tools-comparison-2026-final.html",
+        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-language-learning-tools-duolingo-max-vs-chatgpt-vs-babbel-2026.html"
+      ],
+      "notes": "三大 AI 程式輔助工具深度評測：GitHub Copilot（GPT-4o+Claude 3.7+Gemini 2.5 Pro多模型/Agent GA/Code Review/CLI/Free→Pro $10→Pro+ $19→Business $19→Enterprise $39/學生免費/VSCode+JetBrains+Xcode整合）、Cursor AI（Composer多檔Agent最強/Tab補全預測下一步/​@Codebase語意索引/​@Web即時聯網/.cursorrules自訂規則/Claude 3.7+GPT-4o+Gemini多模型/Free→Pro $20→Business $40/VSCode fork完整擴充套件相容）、Replit AI（零配置雲端環境/Replit Agent自然語言建 App/50+語言/一鍵部署/Multiplayer協作教學/Free→Hacker $25→Pro $40/Teams Education免費）。含10維度比較表、6大使用場景（完全新手/企業開發者/進階複雜專案/接案族MVP/教學環境/非開發者驗證想法）、定價台灣試算NT$換算4情境、台灣注意事項（資料隱私/付款發票/繁中技巧/台灣技術棧Laravel+Vue.js+ECPay+LINE Bot）、8則FAQ（報帳/著作權/三工具同時用/學生免費/AI是否取代工程師/Replit Agent非開發者/fast request不夠用/台灣本土工具）、終極決策表8情境。5個漸層CTA：DataCamp（AI程式學習）/Hahow（台灣程式課程）/DigitalOcean（$200雲端額度）/Cloudways（雲端主機）/Gumroad Claude Code Pack $29。目標關鍵字：AI程式學習工具、GitHub Copilot評測、Cursor AI評測、Replit AI評測、AI輔助程式設計、台灣程式設計師工具推薦2026、AI coding工具、學程式AI助手、程式設計AI比較。"
+    },
     {
       "date": "2026-09-12",
       "action": "publish_article",
@@ -10,14 +29,7 @@
       "wordCount": 2800,
       "topicSource": "nextPriority",
       "affiliates": ["hahow", "digitalocean", "datacamp", "systeme.io", "gumroad"],
-      "internalLinks": [
-        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
-        "ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
-        "chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html"
-      ],
-      "notes": "三大 AI 寫作助理深度評測：Notion AI（AI Knowledge Base知識庫整合/Claude 3.5 Sonnet+GPT-4o可切換/AI Q&A跨頁面引用/資料庫Autofill自動填寫/Connector接Slack+GDrive+GitHub/繁中最自然/Free→Plus $12→Business $18→Enterprise洽談/年付Plus≈NT$4,608）、Google Docs AI Gemini（Help me write/Refine選取改寫/Summarize/Ask Gemini文件問答/Sheets Smart Fill公式建議/Slides自動生成/Meet會議摘要/即時協作+AI同步/Business Standard $12/人/月）、Microsoft 365 Copilot（Word草稿+Rewrite+引用跨OneDrive/Excel自然語言分析+Python整合/PowerPoint從文件生成投影片+Speaker Coach/Teams即時摘要+Recap/Outlook草擬+Coaching/GPT-4o+Phi-4混合/Copilot Studio自訂AI代理/M365個人$6.99→Business Standard $12.5+Copilot附加$30/人/月）。含10維度比較表、AI模型深度比較（繁中語境/上下文窗口/即時聯網/隱私）、6大台灣使用場景（中小企業上班族/自由工作者/學生論文/行銷內容創作/政府機關/Google Workspace重度用戶）、台灣定價年費試算4情境（個人/5人/20人/100人NT$換算）、8則FAQ（著作權法/資料安全/繁中排名/ChatGPT比較/多工具並用/學生方案/注音輸入/替代方案）、終極決策表8情境。5個漸層CTA：Hahow（AI工具課程）/DigitalOcean（$200雲端額度）/DataCamp（AI數據技能）/Systeme.io（行銷漏斗）/Gumroad Claude Code Pack $29。目標關鍵字：AI寫作工具、Notion AI評測、Google Docs AI、Microsoft 365 Copilot、AI寫作助理、Gemini Docs、AI文件工具、台灣AI工具2026、上班族AI工具、AI辦公室助手。"
+      "notes": "三大 AI 寫作助理深度評測。"
     },
     {
       "date": "2026-09-11",
@@ -25,16 +37,9 @@
       "title": "AI 簡報工具推薦 2026：Gamma vs Canva AI vs Beautiful.AI vs Tome 台灣商務人士完整深度比較",
       "file": "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 深度版",
+      "topicSource": "nextPriority",
       "affiliates": ["hahow", "systeme.io", "cloudways", "capcut", "datacamp"],
-      "internalLinks": [
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "四大 AI 簡報工具深度評測：Gamma（AI生成速度最快45秒/GPT-4驅動/繁中優秀/AI圖片內嵌/簡報分析追蹤/Web分享/Free 400積分→Plus $8→Pro $15/月）、Canva AI Magic Design（3000+模板/Magic Write文案/Magic Animate動畫/DALL-E 3+SD圖片/Magic Resize多尺寸/Brand Kit/Canva Live互動/Free→Pro $15→Teams $10/人/月）、Beautiful.AI（Smart Slides智慧排版引擎永不走樣/DesignerBot AI初稿/360+Smart模板/簡報分析/Team Libraries品牌庫/無免費方案/Pro $12→Team $40/人/月）、Tome（GPT-4故事敘事結構/DALL-E 3圖片/Embedded Content嵌入媒體/Narrate Mode語音說明/Web-first分享/Free 500積分→Pro $8→Business $20/月）。含10維度比較表、6大使用場景（新創募資Pitch/週報月報/客戶提案業務Pitch/社群行銷/教育課程/預算有限個人）、定價年費台灣視角試算（NT$換算2情境：個人接案族/5人行銷團隊）、8種情境終極決策表、8則FAQ（繁中支援/PPT匯出/蝦皮賣家/版權問題/AI取代設計師/多工具組合/台灣本土工具/免費方案）。5個漸層CTA：Hahow（AI工具學習課程）/Systeme.io（行銷漏斗）/Cloudways（雲端主機）/CapCut（AI剪輯）/DataCamp（AI技能）。目標關鍵字：AI簡報工具、Gamma AI評測、Canva AI簡報、Beautiful AI評測、Tome AI評測、AI自動生成簡報、AI PPT工具推薦2026、台灣簡報工具比較。"
+      "notes": "四大 AI 簡報工具深度評測。"
     },
     {
       "date": "2026-09-10",
@@ -44,14 +49,7 @@
       "wordCount": 2800,
       "topicSource": "nextPriority",
       "affiliates": ["capcut", "hahow", "datacamp", "digitalocean", "systeme.io"],
-      "internalLinks": [
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
-        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-        "ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html"
-      ],
-      "notes": "三大 AI 直播工具深度評測：StreamYard（AI Replay 精華剪輯/AI Captions 繁中 92%/AI Noise Removal/Brand Kit 品牌包裝/10 人連麥/9+ 平台/Free→Basic $39→Professional $79→Business $299/月年付）、Restream（30+ 平台同播最廣/Chat Aggregation 全平台聊天合併/RTMP 轉推兼容 OBS/AI Captions 30+ 語言/Smart Scheduling/Standard $16→Professional $41→Premium $83/月）、OBS Studio AI 外掛（obs-localvocal Whisper Large V3 本機繁中字幕/obs-backgroundremoval AI 去背無綠幕/NVIDIA Broadcast RTX Voice 降噪/Advanced Scene Switcher/StreamFX/obs-multi-rtmp/完全免費）。5 個 CTA：CapCut/Hahow/DataCamp/DigitalOcean/Systeme.io。"
+      "notes": "三大 AI 直播工具深度評測。"
     },
     {
       "date": "2026-09-08",
@@ -59,23 +57,9 @@
       "title": "AI 內容行銷工具推薦 2026：Jasper AI vs Copy.ai vs Writesonic 台灣行銷人完整比較",
       "file": "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
       "wordCount": 2900,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "hahow",
-        "systeme.io",
-        "datacamp",
-        "digitalocean",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
-        "ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-        "ai-marketing-tools-2026.html",
-        "ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "systeme-io-review-2026.html"
-      ],
-      "notes": "三大 AI 內容行銷工具深度評測：Jasper AI（Brand Voice品牌語氣最強/Claude 3.5+GPT-4o混合/50+模板/Surfer SEO整合/Jasper Art DALL-E 3/Knowledge Base/Creator $39→Pro $59→Business客製/年付Creator≈NT$15,120）、Copy.ai（GTM AI Platform行銷自動化最強/GPT-4o主力/Workflows自動化工作流/90+模板/HubSpot+Salesforce原生整合/Infobase知識庫/Free→Starter $36→Advanced $186→Enterprise/年付Starter≈NT$13,920）、Writesonic（高CP值全方位/GPT-4o+Claude 3.5+即時搜尋/AI Article Writer 6.0 SEO一鍵生成/Chatsonic/Botsonic AI客服機器人/100+模板/25語言/Free→Individual $16→Standard $79/年付Individual≈NT$6,180）。含10維度比較表、6大使用場景（台灣電商文案/行銷代理商品牌管理/B2B行銷銷售自動化/個人部落客SEO量產/新創冷啟動/跨境多語言）、台灣視角年費試算4情境（NT$換算）、底層AI模型深度比較（Jasper多模型Fine-tuning/Copy.ai GPT-4o工作流優化/Writesonic即時搜尋整合）、SEO功能深度比較、台灣注意事項（繁中vs簡中Prompt指定/付款發票/著作權AI揭露/WordPress/LINE/蝦皮整合/PDPA個資）、8則FAQ（繁中品質/免費方案/Google降權/同時用三個/人工修改比例/免費替代/台灣本地工具/社群貼文）、終極決策表8情境。5個漸層CTA：Hahow（AI行銷課程）/Systeme.io（行銷漏斗）/DataCamp（AI數據分析課程）/DigitalOcean（$200額度VPS）/Gumroad Claude Code Pack $29。目標關鍵字：AI內容行銷工具、Jasper AI評測、Copy.ai評測、Writesonic評測、AI寫作工具比較2026、AI文案工具、AI內容生成、AI行銷工具推薦、台灣行銷工具、SEO寫作AI。"
+      "topicSource": "new",
+      "affiliates": ["hahow", "systeme.io", "datacamp", "digitalocean", "gumroad"],
+      "notes": "三大 AI 內容行銷工具深度評測。"
     },
     {
       "date": "2026-09-07",
@@ -84,22 +68,8 @@
       "file": "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "hahow",
-        "systeme.io"
-      ],
-      "internalLinks": [
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
-        "ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
-        "ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html"
-      ],
-      "notes": "三大 AI TTS 工具深度評測：ElevenLabs（Flash v2.5 超低延遲75ms/Multilingual v2 29語言/Instant Voice Cloning 1分鐘樣本/Professional Voice Cloning 30分鐘樣本/Voice Library 3000+音色/Speech-to-Speech/Dubbing Studio/Projects長文朗讀/Free 10K→Starter $5→Creator $22→Pro $99→Scale $330→Business $1320/月）、Azure Neural TTS（400+語音119語言/HsiaoChen+YunJhe台灣口音優化/SSML Style情緒控制/Custom Neural Voice 30秒訓練審核制/即時串流低延遲/Azure OpenAI TTS HD/台語Beta/Free 50萬字元Neural/超出$16/百萬/HD $30/百萬）、Google Text-to-Speech（380+語音50+語言/Chirp 3 HD 2026大幅升級/Studio語音錄音室品質/Multi-speaker多角色對話/Google Workspace整合/台灣彰化節點延遲最低30-50ms/Free標準400萬/Wavenet 100萬/Chirp HD $30/百萬/Studio $160/百萬）。含10維度比較表、6大使用場景（YouTube配音/企業電話IVR/線上課程有聲教材/Podcast高頻生產/遊戲APP語音角色/跨境電商多語言客服）、台灣視角年費試算4情境（NT$換算：個人YouTuber/中型企業IVR/線上課程平台/遊戲APP開發商）、台灣特別注意事項（聲音複製台灣法律/繁中vs簡中坑/付款方式與發票/LINE Bot整合/蝦皮電商/Teams整合）、8則FAQ（繁中準確率/50萬字元夠用多久/繁中哪個道地/名人聲音複製法律/三個同時用/開源替代/台灣本土TTS/音頻版權問題）、終極決策表8情境。4個漸層CTA：DataCamp（AI語音應用開發課程）/DigitalOcean（$200額度VPS）/Hahow（AI課程平台）/Systeme.io（行銷漏斗）。目標關鍵字：AI語音合成工具、ElevenLabs評測、Azure Neural TTS、Google Text-to-Speech、TTS工具比較2026、AI配音、語音合成推薦、文字轉語音、Voice Clone、AI語音台灣。"
+      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io"],
+      "notes": "三大 AI TTS 工具深度評測。"
     },
     {
       "date": "2026-09-06",
@@ -108,20 +78,8 @@
       "file": "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "hahow",
-        "systeme.io"
-      ],
-      "internalLinks": [
-        "ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html"
-      ],
-      "notes": "三大雲端 AI 語音辨識平台深度評測：Google Speech-to-Text v2（Chirp 2 USM 模型/繁中 CER 最低/即時串流延遲 200-300ms/台灣彰化節點 asia-east1/說話者分離最多5人/語音活動偵測 VAD/自動標點數字格式化/$0.006/15秒）、AWS Transcribe（批量異步轉錄性價比最高/說話者分離最多10人/PII 自動遮蔽合規/Custom Vocabulary+CLM/Call Analytics 情感分析/SRT+VTT 字幕直接輸出/$0.024/分鐘批量）、Azure Speech Service（Custom Speech 領域微調最完整/免費層每月5小時最高/Microsoft Teams 原生整合/台語 TTS beta 支援/Pronunciation Assessment 教育 App 唯一選擇/中英混雜自動語言偵測/$0.016/分鐘標準）。"
+      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io"],
+      "notes": "三大雲端 AI 語音辨識平台深度評測。"
     },
     {
       "date": "2026-09-05",
@@ -130,19 +88,8 @@
       "file": "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "digitalocean",
-        "datacamp",
-        "cloudways",
-        "hahow"
-      ],
-      "internalLinks": [
-        "ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
-        "ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html"
-      ],
-      "notes": "三大雲端 AI 影像辨識平台深度評測：Google Cloud Vision AI / AWS Rekognition / Azure Computer Vision。"
+      "affiliates": ["digitalocean", "datacamp", "cloudways", "hahow"],
+      "notes": "三大雲端 AI 影像辨識平台深度評測。"
     },
     {
       "date": "2026-09-04",
@@ -151,18 +98,8 @@
       "file": "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "systeme.io",
-        "cloudways",
-        "hahow"
-      ],
-      "internalLinks": [
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-marketing-tools-2026.html"
-      ],
-      "notes": "三大 AI 聊天機器人平台深度評測：Chatbase / Tidio / ManyChat。"
+      "affiliates": ["datacamp", "systeme.io", "cloudways", "hahow"],
+      "notes": "三大 AI 聊天機器人平台深度評測。"
     },
     {
       "date": "2026-09-03",
@@ -170,14 +107,9 @@
       "title": "AI 虛擬主播工具推薦 2026：HeyGen vs Synthesia vs D-ID 台灣直播電商完整比較",
       "file": "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
       "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "capcut",
-        "datacamp",
-        "systeme.io",
-        "digitalocean"
-      ],
-      "notes": "三大 AI 虛擬主播工具深度評測：HeyGen / Synthesia / D-ID。"
+      "topicSource": "new",
+      "affiliates": ["capcut", "datacamp", "systeme.io", "digitalocean"],
+      "notes": "三大 AI 虛擬主播工具深度評測。"
     },
     {
       "date": "2026-09-02",
@@ -185,13 +117,8 @@
       "title": "AI 廣告投放工具推薦 2026：Google PMax vs Meta Advantage+ vs TikTok Smart 台灣電商完整比較",
       "file": "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
       "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "systeme.io",
-        "hahow",
-        "capcut",
-        "datacamp"
-      ],
+      "topicSource": "new",
+      "affiliates": ["systeme.io", "hahow", "capcut", "datacamp"],
       "notes": "三大 AI 廣告投放工具深度評測。"
     },
     {
@@ -201,13 +128,7 @@
       "file": "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "digitalocean",
-        "datacamp",
-        "nordvpn",
-        "hahow",
-        "cloudways"
-      ],
+      "affiliates": ["digitalocean", "datacamp", "nordvpn", "hahow", "cloudways"],
       "notes": "三大 AI 資安工具深度評測。"
     },
     {
@@ -216,13 +137,8 @@
       "title": "AI 資料分析工具推薦 2026：Tableau AI vs Power BI vs Google Looker Studio 台灣數據分析師完整比較",
       "file": "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
       "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "digitalocean",
-        "cloudways"
-      ],
+      "topicSource": "new",
+      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways"],
       "notes": "三大 AI 資料分析工具深度評測。"
     },
     {
@@ -232,12 +148,7 @@
       "file": "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "cloudways",
-        "ultahost",
-        "systeme.io",
-        "datacamp"
-      ],
+      "affiliates": ["cloudways", "ultahost", "systeme.io", "datacamp"],
       "notes": "三大 AI 電商平台深度評測。"
     },
     {
@@ -247,12 +158,7 @@
       "file": "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "cloudways",
-        "hahow",
-        "systeme.io"
-      ],
+      "affiliates": ["datacamp", "cloudways", "hahow", "systeme.io"],
       "notes": "三大 AI 法律工具深度評測。"
     },
     {
@@ -262,12 +168,7 @@
       "file": "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "cloudways",
-        "systeme.io"
-      ],
+      "affiliates": ["hahow", "datacamp", "cloudways", "systeme.io"],
       "notes": "三大 AI HR 工具深度評測。"
     },
     {
@@ -277,12 +178,7 @@
       "file": "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "systeme.io",
-        "hahow",
-        "cloudways"
-      ],
+      "affiliates": ["datacamp", "systeme.io", "hahow", "cloudways"],
       "notes": "三大 AI 會計工具深度評測。"
     },
     {
@@ -291,13 +187,8 @@
       "title": "AI CRM 工具推薦 2026：HubSpot AI vs Salesforce Einstein vs Pipedrive AI 台灣中小企業完整比較",
       "file": "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
       "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "systeme.io",
-        "datacamp",
-        "cloudways",
-        "hahow"
-      ],
+      "topicSource": "new",
+      "affiliates": ["systeme.io", "datacamp", "cloudways", "hahow"],
       "notes": "三大 AI CRM 工具深度評測。"
     },
     {
@@ -307,22 +198,19 @@
       "file": "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "systeme.io",
-        "digitalocean"
-      ],
+      "affiliates": ["datacamp", "hahow", "systeme.io", "digitalocean"],
       "notes": "三大 AI 專案管理工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
     "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
     "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
     "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
     "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
     "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
     "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
     "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
     "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
     "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
@@ -399,342 +287,8 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 翻譯工具深度推薦 2026：DeepL Pro vs Google Translate API vs ChatGPT 台灣企業多語言完整比較"
-  ],
-  "directives": [],
-  "internalLinkRuns": [
-    {
-      "date": "2026-04-15",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/owl-camel-ai-multi-agent-2026.html",
-        "blog/elevenlabs-elevencreative-review-2026.html"
-      ],
-      "notes": "TW: 優先連結聯盟文章"
-    },
-    {
-      "date": "2026-04-22",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/klariqo-ai-receptionist-smb-review-2026.html",
-        "blog/n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
-    }
-  ]
-}
-  "status": "active",
-  "agentLog": [
-    {
-      "date": "2026-09-06",
-      "action": "publish_article",
-      "title": "AI 語音辨識工具推薦 2026：Google Speech-to-Text vs AWS Transcribe vs Azure Speech Service 台灣企業完整比較",
-      "file": "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "digitalocean",
-        "hahow",
-        "systeme.io"
-      ],
-      "internalLinks": [
-        "ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html"
-      ],
-      "notes": "三大雲端 AI 語音辨識平台深度評測：Google Speech-to-Text v2（Chirp 2 USM 模型/繁中 CER 最低/即時串流延遲 200-300ms/台灣彰化節點 asia-east1/說話者分離最多5人/語音活動偵測 VAD/自動標點數字格式化/$0.006/15秒）、AWS Transcribe（批量異步轉錄性價比最高/說話者分離最多10人/PII 自動遮蔽合規/Custom Vocabulary+CLM/Call Analytics 情感分析/SRT+VTT 字幕直接輸出/$0.024/分鐘批量）、Azure Speech Service（Custom Speech 領域微調最完整/免費層每月5小時最高/Microsoft Teams 原生整合/台語 TTS beta 支援/Pronunciation Assessment 教育 App 唯一選擇/中英混雜自動語言偵測/$0.016/分鐘標準）。含10維度比較表、6大使用場景（電話客服中心即時輔助/視訊會議自動轉錄/影片自動上字幕/醫療問診 EMR/語言學習發音評分/IoT 語音控制）、定價年費台灣視角試算4情境（NT$換算、小型客服/影片字幕批量/會議轉錄SaaS/新創MVP）、台灣特別注意事項（繁中 vs 簡中/台語現況/PDPA 合規/節點比較/發票稅務）、8則FAQ（繁中準確率數據/LINE整合/舊錄音轉錄/Whisper 開源替代/Custom Speech 訓練資料量/音訊格式/多語言拓展/無程式碼方案）、終極決策表8情境。4個漸層CTA：DataCamp（AI/ML課程）/DigitalOcean（$200額度VPS）/Hahow（AI課程平台）/Systeme.io（行銷漏斗）。目標關鍵字：AI語音辨識工具、Google Speech-to-Text評測、AWS Transcribe評測、Azure Speech Service評測、語音轉文字API、台灣語音辨識、繁體中文語音辨識、即時字幕、STT工具比較2026。"
-    },
-    {
-      "date": "2026-09-05",
-      "action": "publish_article",
-      "title": "AI 影像辨識工具推薦 2026：Google Vision AI vs AWS Rekognition vs Azure Computer Vision 台灣企業完整比較",
-      "file": "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
-      "wordCount": 2900,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "digitalocean",
-        "datacamp",
-        "cloudways",
-        "hahow"
-      ],
-      "internalLinks": [
-        "ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
-        "ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html"
-      ],
-      "notes": "三大雲端 AI 影像辨識平台深度評測：Google Cloud Vision AI（OCR繁中最強/Product Search/AutoML Vision/台灣節點/1.50/K）、AWS Rekognition（FaceSearch 1:N最強/Kinesis串流即時分析/Content Moderation/Custom Labels/PPE偵測）、Azure Computer Vision（Florence基礎模型/Custom Vision ONNX匯出離線推論/Read API多頁PDF/Face API 30K免費/背景移除）。含10維度比較表、6大使用場景（電商商品圖/製造業品管/文件數位化/零售人流/KYC/新創PoC）、台灣視角年費試算4情境、台灣注意事項（PDPA人臉合規/AWS無台灣節點/Azure Limited Access/繁中訓練建議）、8則FAQ、終極決策表8情境。4個漸層CTA：DigitalOcean/DataCamp/Cloudways/Hahow。目標關鍵字：AI影像辨識工具、Google Vision AI評測、AWS Rekognition評測、Azure Computer Vision評測、電腦視覺工具推薦2026、台灣AI影像分析。"
-    },
-    {
-      "date": "2026-09-04",
-      "action": "publish_article",
-      "title": "AI 聊天機器人平台推薦 2026：Chatbase vs Tidio vs ManyChat 台灣電商中小企業完整比較",
-      "file": "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-      "wordCount": 2900,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "systeme.io",
-        "cloudways",
-        "hahow"
-      ],
-      "internalLinks": [
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-marketing-tools-2026.html"
-      ],
-      "notes": "三大 AI 聊天機器人平台深度評測：Chatbase（RAG知識庫冠軍/PDF+URL+Notion匯入/GPT-4o+Claude3.5可選/5分鐘上線/Free 20訊息→Hobby $19→Standard $99→Pro $399/月）、Tidio（電商整合最強/Lyro AI電商情境調優/WooCommerce+Shopify Plugin/訂單追蹤+棄購挽回/Live Chat+手機APP/Free 50對話→Starter $29→Growth $59→Plus $749/月）、ManyChat（社群行銷自動化冠軍/IG留言觸發DM/FB Messenger/WhatsApp/Flow Builder拖拉式/AI Step Beta/Free 1K聯絡人→Pro $15起/月）。含10維度比較表、6大使用場景（WooCommerce電商/服務業FAQ/IG服飾帶貨/實體店/跨境/零預算新手）、定價年費台灣視角試算（4情境NT$換算）、AI技術深度解析（Chatbase RAG/Tidio Lyro主動出擊/ManyChat AI Step Beta）、台灣特別注意事項（LINE不支援/PDPA合規/付款方式/Meta政策風險）、8則FAQ（ManyChat台灣效益/免費方案夠用嗎/三個同時用/繁體中文設定/聯絡人計費/WooCommerce坑/替代方案/是否提升銷售額）、終極決策表。4個漸層CTA：DataCamp（AI Chatbot開發技術）/Systeme.io（行銷漏斗）/Cloudways（WooCommerce主機）/Hahow（AI行銷自動化課程）。目標關鍵字：AI聊天機器人、Chatbase評測、Tidio評測、ManyChat評測、聊天機器人平台推薦2026、台灣AI客服、LINE聊天機器人、電商聊天機器人、AI客服工具、Chatbot推薦。"
-    },
-    {
-      "date": "2026-09-03",
-      "action": "publish_article",
-      "title": "AI 虛擬主播工具推薦 2026：HeyGen vs Synthesia vs D-ID 台灣直播電商完整比較",
-      "file": "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
-      "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "capcut",
-        "datacamp",
-        "systeme.io",
-        "digitalocean"
-      ],
-      "internalLinks": [
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-        "ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-        "ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-        "ai-marketing-tools-2026.html",
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html"
-      ],
-      "notes": "三大 AI 虛擬主播工具深度評測：HeyGen（Avatar 3.0/繁體中文最強/Streaming API 直播串流/Photo Avatar/Voice Clone/Translate 40+語言/台灣直播電商首選/$29-$199/月）、Synthesia（160+ Avatar/SCORM LMS輸出/企業培訓L&D最強/多元DEI合規/SOC2 GDPR/$18-$59/月）、D-ID（API整合最開放/Photo Talking Head/Agents互動對話頭像/LINE Bot整合/最低入門價$5.9/月）。含10維度比較表、6大使用場景（蝦皮MOMO直播電商/企業培訓/YouTube自動化/開發者API整合/跨境電商多語版/預算有限新手）、定價年費台灣視角試算（NT$換算4情境）、AI功能深度解析（Avatar 3.0 Neural Rendering/Synthesia SCORM輸出/D-ID Agents API互動）、台灣注意事項（付款方式/肖像權/AI生成內容揭露/蝦皮直播規範/OBS串流整合）、8則FAQ、終極決策表。4個漸層CTA：CapCut（AI影片剪輯）/DataCamp（AI實戰課程）/Systeme.io（行銷漏斗）/DigitalOcean（雲端主機$200額度）。目標關鍵字：AI虛擬主播、HeyGen評測、Synthesia評測、D-ID評測、AI數位分身、AI頭像影片、虛擬主播工具2026、台灣直播電商AI、AI Avatar工具、AI主播生成。"
-    },
-    {
-      "date": "2026-09-02",
-      "action": "publish_article",
-      "title": "AI 廣告投放工具推薦 2026：Google PMax vs Meta Advantage+ vs TikTok Smart 台灣電商完整比較",
-      "file": "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-      "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "systeme.io",
-        "hahow",
-        "capcut",
-        "datacamp"
-      ],
-      "internalLinks": [
-        "ai-marketing-tools-2026.html",
-        "ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-        "ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
-        "systeme-io-review-2026.html"
-      ],
-      "notes": "三大 AI 廣告投放工具深度評測。"
-    },
-    {
-      "date": "2026-09-01",
-      "action": "publish_article",
-      "title": "AI 資安工具推薦 2026：CrowdStrike vs SentinelOne vs Microsoft Defender 台灣企業完整比較",
-      "file": "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
-      "wordCount": 2900,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "digitalocean",
-        "datacamp",
-        "nordvpn",
-        "hahow",
-        "cloudways"
-      ],
-      "notes": "三大 AI 資安工具深度評測。"
-    },
-    {
-      "date": "2026-08-31",
-      "action": "publish_article",
-      "title": "AI 資料分析工具推薦 2026：Tableau AI vs Power BI vs Google Looker Studio 台灣數據分析師完整比較",
-      "file": "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
-      "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "digitalocean",
-        "cloudways"
-      ],
-      "notes": "三大 AI 資料分析工具深度評測。"
-    },
-    {
-      "date": "2026-08-30",
-      "action": "publish_article",
-      "title": "AI 電商工具推薦 2026：Shopify AI vs WooCommerce vs Squarespace 台灣賣家完整比較",
-      "file": "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "cloudways",
-        "ultahost",
-        "systeme.io",
-        "datacamp"
-      ],
-      "notes": "三大 AI 電商平台深度評測。"
-    },
-    {
-      "date": "2026-08-29",
-      "action": "publish_article",
-      "title": "AI 法律工具推薦 2026：Harvey AI vs Clio vs ContractPodAi 台灣接案族合約必備",
-      "file": "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "cloudways",
-        "hahow",
-        "systeme.io"
-      ],
-      "notes": "三大 AI 法律工具深度評測。"
-    },
-    {
-      "date": "2026-08-28",
-      "action": "publish_article",
-      "title": "AI HR 工具推薦 2026：BambooHR vs Workday vs Rippling 台灣企業完整比較",
-      "file": "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "cloudways",
-        "systeme.io"
-      ],
-      "notes": "三大 AI HR 工具深度評測。"
-    },
-    {
-      "date": "2026-08-27",
-      "action": "publish_article",
-      "title": "AI 會計工具推薦 2026：FreshBooks vs QuickBooks Self-Employed vs Zoho Books 台灣接案族完整比較",
-      "file": "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "systeme.io",
-        "hahow",
-        "cloudways"
-      ],
-      "notes": "三大 AI 會計工具深度評測。"
-    },
-    {
-      "date": "2026-08-25",
-      "action": "publish_article",
-      "title": "AI CRM 工具推薦 2026：HubSpot AI vs Salesforce Einstein vs Pipedrive AI 台灣中小企業完整比較",
-      "file": "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-      "wordCount": 2800,
-      "topicSource": "new — high commercial intent, underserved in TW market",
-      "affiliates": [
-        "systeme.io",
-        "datacamp",
-        "cloudways",
-        "hahow"
-      ],
-      "notes": "三大 AI CRM 工具深度評測。"
-    },
-    {
-      "date": "2026-08-24",
-      "action": "publish_article",
-      "title": "AI 專案管理工具推薦 2026：Asana vs Monday.com vs ClickUp 台灣團隊完整比較",
-      "file": "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "systeme.io",
-        "digitalocean"
-      ],
-      "notes": "三大 AI 專案管理工具深度評測。"
-    }
-  ],
-  "publishedArticles": [
-    "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
-    "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-    "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
-    "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-    "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
-    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
-    "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-    "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
-    "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
-    "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
-    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-2026.html",
-    "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-    "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
-    "blog/ai-finance-tools-quickbooks-vs-wave-vs-xero-2026.html",
-    "blog/ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-    "blog/ai-code-review-tools-github-copilot-vs-coderabbit-vs-qodo-2026.html",
-    "blog/ai-language-learning-tools-duolingo-max-vs-chatgpt-vs-babbel-2026.html",
-    "blog/ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-    "blog/ai-english-writing-tools-grammarly-vs-quillbot-vs-chatgpt-2026.html",
-    "blog/midjourney-v7-review-taiwan-designer-guide-2026.html",
-    "blog/ai-email-tools-superhuman-vs-shortwave-vs-gmail-ai-2026.html",
-    "blog/ai-resume-tools-resume-io-vs-kickresume-vs-chatgpt-2026.html",
-    "blog/ai-translation-tools-deepl-vs-google-vs-chatgpt-2026.html",
-    "blog/ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
-    "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
-    "blog/ai-music-generator-suno-vs-udio-vs-soundraw-2026.html",
-    "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-    "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-    "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
-    "blog/ai-marketing-tools-2026.html",
-    "blog/chatgpt-plus-worth-it-2026.html",
-    "blog/ai-productivity-tools-2026.html",
-    "blog/free-ai-tools-taiwan-2026.html",
-    "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
-    "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
-    "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
-    "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-    "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
-    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-    "blog/ai-writing-tools-comparison-2026.html",
-    "blog/ai-agents-2026.html",
-    "blog/ai-coding-tools.html",
-    "blog/cursor-3-review-2026.html",
-    "blog/cursor-agents-cloud-vm-review-2026.html",
-    "blog/github-copilot-agent-mode-review-2026.html",
-    "blog/windsurf-cascade-review-2026.html",
-    "blog/n8n-vs-make-vs-zapier-2026.html",
-    "blog/rag-explained.html",
-    "blog/systeme-io-review-2026.html",
-    "blog/gemma-4-review-2026.html",
-    "blog/prismml-bonsai-8b-review-2026.html",
-    "blog/mem0-ai-memory-guide-2026.html",
-    "blog/owl-camel-ai-multi-agent-2026.html",
-    "blog/elevenlabs-elevencreative-review-2026.html",
-    "blog/glm-5v-turbo-design2code-review-2026.html",
-    "blog/openowl-macos-mcp-automation-2026.html",
-    "blog/agentshield-ai-agent-observability-2026.html",
-    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
-    "blog/klariqo-ai-receptionist-smb-review-2026.html",
-    "blog/claude-code-session-search-2026.html",
-    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
-    "blog/sessfind-cross-tool-ai-session-search-2026.html",
-    "blog/glm-5-1-open-source-coding-model-review-2026.html",
-    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
-    "blog/cass-coding-agent-session-search-2026.html",
-    "blog/deepseek-v4-pro-review-2026.html",
-    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
-    "blog/n8n-claude-code-advanced-workflow-2026.html",
-    "blog/opencode-open-source-claude-code-alternative-2026.html",
-    "blog/gemini-cli-review-2026.html",
-    "blog/claude-code-complete-guide-2026.html",
-    "blog/ai-coding-tools-comparison-2026-final.html",
-    "blog/claude-4-sonnet-opus-review-2026.html",
-    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
-  ],
-  "nextPriority": [
-    "AI 語音合成工具推薦 2026：ElevenLabs vs Azure Neural TTS vs Google Text-to-Speech 台灣企業完整比較"
+    "AI 個人理財工具推薦 2026：MoneyLion vs Albert vs Cleo AI 台灣用戶理財完整比較",
+    "AI 電子郵件行銷工具推薦 2026：Mailchimp AI vs ActiveCampaign vs ConvertKit 台灣電商完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
