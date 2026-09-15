@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-09-14T02:00:00+00:00",
+  "lastUpdated": "2026-09-15T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-15",
+      "action": "publish_article",
+      "title": "AI 電子郵件行銷工具推薦 2026：Mailchimp AI vs ActiveCampaign vs ConvertKit 台灣電商完整比較",
+      "file": "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["systeme.io", "hahow", "datacamp", "digitalocean", "cloudways"],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "systeme-io-review-2026.html",
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html"
+      ],
+      "notes": "三大 AI 電子郵件行銷工具深度評測：Mailchimp AI（Intuit Assist AI行銷助理/Subject Line Optimizer/Send Time Optimization/Predictive Segmentation/AI圖片生成DALL-E整合/Free 500人→Essentials $13→Standard $20→Premium $350/1,200萬用戶）、ActiveCampaign（Predictive Sending AI個人化時段/Predictive Content同一封信自動替換區塊/Win Probability銷售預測/Sentiment Analysis情緒分析/850+觸發條件/CRM+EDM一體/Starter $19→Plus $49→Professional $79→Enterprise $145/18萬+企業）、ConvertKit-Kit（AI Subject Line Tester 0-100分/AI Newsletter Writer Beta/Creator Network創作者互推/10,000人免費/Commerce數位產品0%手續費/Paid Newsletter付費訂閱/Newsletter Free→Creator $25→Creator Pro $50/60萬+創作者）。含EDM ROI 42:1數據、AI功能盤點（智慧發送/個人化內容/行為觸發自動化/預測分析）、6大使用場景（台灣Shopify電商/B2B業務/內容創作者/線上課程/進階自動化/預算有限個人創業者）、台灣注意事項（GDPR雙重確認/付款發票/LINE整合雙軌策略/垃圾信避免/開信率基準）、不同名單規模5段定價試算、8則FAQ（中文發送效果/台灣EDM中文/小名單建議/自動化差距/Kit改名/LINE整合/開信率低處理/Mailchimp遷移）。5個漸層CTA：Systeme.io（行銷漏斗）/Hahow（數位行銷課程）/DataCamp（行銷數據分析）/DigitalOcean（$200雲端額度）/Cloudways（雲端主機）。目標關鍵字：AI電子郵件行銷工具、Mailchimp評測、ActiveCampaign評測、ConvertKit評測、EDM工具推薦2026、電郵行銷自動化、台灣電商行銷工具、AI EDM。"
+    },
     {
       "date": "2026-09-14",
       "action": "publish_article",
@@ -221,6 +238,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
     "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
     "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
     "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
@@ -306,8 +324,8 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 電子郵件行銷工具推薦 2026：Mailchimp AI vs ActiveCampaign vs ConvertKit 台灣電商完整比較",
-    "AI 健康管理工具推薦 2026：Noom AI vs Whoop vs Oura AI 台灣健康族完整比較"
+    "AI 健康管理工具推薦 2026：Noom AI vs Whoop vs Oura AI 台灣健康族完整比較",
+    "AI 影片行銷工具推薦 2026：Vidyard vs Loom vs Wistia 台灣業務行銷完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
