@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-09-16T02:00:00+00:00",
+  "lastUpdated": "2026-09-17T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-17",
+      "action": "publish_article",
+      "title": "AI 影片行銷工具推薦 2026：Vidyard vs Loom vs Wistia 台灣業務行銷完整比較",
+      "file": "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority",
+      "affiliates": ["capcut", "hahow", "systeme.io", "datacamp", "digitalocean"],
+      "internalLinks": [
+        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html"
+      ],
+      "notes": "三大 AI 影片行銷工具深度評測：Vidyard（AI Avatar 個人化影片批量生成/Video Analytics CRM 追蹤/Vidyard Rooms 虛擬銷售室/Chrome Extension 嵌入 Gmail/AI Script Generator/CTA 預約按鈕/Free 25 支→Pro $29→Teams $89→Business 客製/個人化影片回覆率提升 8 倍）、Loom（一鍵螢幕+臉部錄製/AI 字幕+摘要+自動分章/Loom AI 自動剪輯停頓/Reactions 時間點留言/Atlassian Jira+Confluence 整合/AI 草擬後續 Email/Starter 免費 25 支 5 分鐘→Business $15/人/月→Business+ $25/9.75 億被 Atlassian 收購）、Wistia（Channels 品牌影片頻道/Heatmap 秒級觀看熱圖/AI 章節+SEO 摘要/Lead Gen 表單嵌入/A/B 測試縮圖/影片轉 Podcast 一鍵上架 Spotify/Free 10 支→Plus $19→Pro $79→Advanced $319/品牌不被競品干擾）。含3大數據統計（8倍回覆率/64%消費者/86%行銷人）、10維度比較表（定位/免費方案/AI功能/CRM整合/觀看分析/品牌自訂/Lead Gen/SEO/上手難易/最適用對象）、6大使用場景（B2B業務開發/遠端工程師團隊/數位行銷代理商/線上課程創作者/電商賣家產品教學/企業內部教育訓練）、台灣注意事項（語言支援/付款發票/CDN速度/資料隱私/台灣工具整合）、8情境終極決策表、8則FAQ（AI Avatar運作原理/Loom vs Zoom差異/Wistia vs YouTube/三工具同時用/台灣業務用奇怪嗎/資安問題/YouTuber適用性/台灣本土工具）。5個漸層CTA：CapCut AI（影片剪輯）/Hahow（影片行銷課程）/Systeme.io（銷售漏斗）/DataCamp（行銷數據分析）/DigitalOcean（$200雲端額度）。目標關鍵字：AI影片行銷工具、Vidyard評測、Loom評測、Wistia評測、影片行銷工具推薦2026、AI影片錄製、台灣業務工具、非同步影片溝通、影片行銷平台。"
+    },
     {
       "date": "2026-09-16",
       "action": "publish_article",
@@ -255,6 +272,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
     "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
     "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
     "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
@@ -342,7 +360,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 影片行銷工具推薦 2026：Vidyard vs Loom vs Wistia 台灣業務行銷完整比較"
+    "AI 社群媒體排程工具推薦 2026：Buffer vs Hootsuite vs Sprout Social 台灣行銷人完整比較"
   ],
   "directives": [],
   "internalLinkRuns": [
