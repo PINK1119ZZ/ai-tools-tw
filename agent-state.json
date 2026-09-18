@@ -1,7 +1,30 @@
 {
-  "lastUpdated": "2026-09-17T02:00:00+00:00",
+  "lastUpdated": "2026-09-18T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-09-18",
+      "action": "publish_article",
+      "title": "AI Podcast 工具推薦 2026：Descript vs Adobe Podcast vs Podcastle 台灣 Podcaster 完整比較",
+      "file": "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
+      "wordCount": 2800,
+      "topicSource": "new — high commercial intent, underserved in TW market (台灣 Podcast 市場 180% 成長)",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "capcut",
+        "systeme.io",
+        "digitalocean"
+      ],
+      "internalLinks": [
+        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+        "ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
+        "ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html"
+      ],
+      "notes": "三大 AI Podcast 製作工具深度評測：Descript（文字稿剪輯革命/Overdub語音克隆中文Beta/Studio Sound降噪/Remove Filler Words/AI Chapters/短影片生成/Green Screen/Free→Hobbyist $12/月年繳→Creator $20→Business $40）、Adobe Podcast Enhance Speech（音質業界第一/免費1小時/月/Mic Check環境分析/瀏覽器錄製各軌獨立/Adobe CC整合/Remix AI音樂配長）、Podcastle（Magic Dust降噪/AI轉錄/Revoice AI配音/文字稿剪輯/遠端錄製/20+平台自動分發/Audiogram/Free→Solo $9/月年繳→Pro $19）。含3大數據統計（台灣Podcast 180%成長/12,000頻道/後製3h→30m）、10維度比較表（降噪音質/剪輯/遠端錄製/繁中轉錄/語音克隆/影片Podcast/多平台分發/上手難易/免費方案/性價比）、6大使用場景（新手零預算/影片Podcast YouTuber/手機錄音族/遠端訪談/企業品牌Podcast/Adobe CC用戶）、台灣注意事項（繁中轉錄準確率/付款發票/SoundOn+Firstory整合/台語客語工作流程/資料隱私）、8情境終極決策表、8則FAQ（中文Overdub效果/Adobe免費限制/SoundOn分發/三工具同時用/麥克風省了嗎/台灣付款/Filler Words台語/實際節省時間）。5個漸層CTA：DataCamp（AI技能）/Hahow（Podcast課程）/CapCut（短影片）/Systeme.io（Podcast變現）/DigitalOcean（$200雲端）。目標關鍵字：AI Podcast工具、Descript評測、Adobe Podcast評測、Podcastle評測、Podcast製作工具推薦2026、AI降噪、台灣Podcast工具、Podcast剪輯軟體、語音AI工具。"
+    },
     {
       "date": "2026-09-17",
       "action": "publish_article",
@@ -9,7 +32,13 @@
       "file": "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": ["capcut", "hahow", "systeme.io", "datacamp", "digitalocean"],
+      "affiliates": [
+        "capcut",
+        "hahow",
+        "systeme.io",
+        "datacamp",
+        "digitalocean"
+      ],
       "internalLinks": [
         "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
         "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
@@ -26,7 +55,13 @@
       "file": "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "systeme.io", "digitalocean", "cloudways"],
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "systeme.io",
+        "digitalocean",
+        "cloudways"
+      ],
       "internalLinks": [
         "ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
         "ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
@@ -43,7 +78,13 @@
       "file": "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["systeme.io", "hahow", "datacamp", "digitalocean", "cloudways"],
+      "affiliates": [
+        "systeme.io",
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways"
+      ],
       "internalLinks": [
         "n8n-vs-make-vs-zapier-2026.html",
         "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
@@ -60,7 +101,13 @@
       "file": "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "systeme.io", "digitalocean", "cloudways"],
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "systeme.io",
+        "digitalocean",
+        "cloudways"
+      ],
       "internalLinks": [
         "ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
         "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
@@ -78,7 +125,13 @@
       "file": "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
       "wordCount": 2900,
       "topicSource": "new — high commercial intent, underserved angle in TW market",
-      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways", "gumroad"],
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways",
+        "gumroad"
+      ],
       "internalLinks": [
         "claude-code-complete-guide-2026.html",
         "github-copilot-agent-mode-review-2026.html",
@@ -97,7 +150,13 @@
       "file": "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["hahow", "digitalocean", "datacamp", "systeme.io", "gumroad"],
+      "affiliates": [
+        "hahow",
+        "digitalocean",
+        "datacamp",
+        "systeme.io",
+        "gumroad"
+      ],
       "notes": "三大 AI 寫作助理深度評測。"
     },
     {
@@ -107,7 +166,13 @@
       "file": "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["hahow", "systeme.io", "cloudways", "capcut", "datacamp"],
+      "affiliates": [
+        "hahow",
+        "systeme.io",
+        "cloudways",
+        "capcut",
+        "datacamp"
+      ],
       "notes": "四大 AI 簡報工具深度評測。"
     },
     {
@@ -117,7 +182,13 @@
       "file": "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["capcut", "hahow", "datacamp", "digitalocean", "systeme.io"],
+      "affiliates": [
+        "capcut",
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "systeme.io"
+      ],
       "notes": "三大 AI 直播工具深度評測。"
     },
     {
@@ -127,7 +198,13 @@
       "file": "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
       "wordCount": 2900,
       "topicSource": "new",
-      "affiliates": ["hahow", "systeme.io", "datacamp", "digitalocean", "gumroad"],
+      "affiliates": [
+        "hahow",
+        "systeme.io",
+        "datacamp",
+        "digitalocean",
+        "gumroad"
+      ],
       "notes": "三大 AI 內容行銷工具深度評測。"
     },
     {
@@ -137,7 +214,12 @@
       "file": "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io"],
+      "affiliates": [
+        "datacamp",
+        "digitalocean",
+        "hahow",
+        "systeme.io"
+      ],
       "notes": "三大 AI TTS 工具深度評測。"
     },
     {
@@ -147,7 +229,12 @@
       "file": "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io"],
+      "affiliates": [
+        "datacamp",
+        "digitalocean",
+        "hahow",
+        "systeme.io"
+      ],
       "notes": "三大雲端 AI 語音辨識平台深度評測。"
     },
     {
@@ -157,7 +244,12 @@
       "file": "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": ["digitalocean", "datacamp", "cloudways", "hahow"],
+      "affiliates": [
+        "digitalocean",
+        "datacamp",
+        "cloudways",
+        "hahow"
+      ],
       "notes": "三大雲端 AI 影像辨識平台深度評測。"
     },
     {
@@ -167,7 +259,12 @@
       "file": "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "systeme.io", "cloudways", "hahow"],
+      "affiliates": [
+        "datacamp",
+        "systeme.io",
+        "cloudways",
+        "hahow"
+      ],
       "notes": "三大 AI 聊天機器人平台深度評測。"
     },
     {
@@ -177,7 +274,12 @@
       "file": "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
       "wordCount": 2800,
       "topicSource": "new",
-      "affiliates": ["capcut", "datacamp", "systeme.io", "digitalocean"],
+      "affiliates": [
+        "capcut",
+        "datacamp",
+        "systeme.io",
+        "digitalocean"
+      ],
       "notes": "三大 AI 虛擬主播工具深度評測。"
     },
     {
@@ -187,7 +289,12 @@
       "file": "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
       "wordCount": 2800,
       "topicSource": "new",
-      "affiliates": ["systeme.io", "hahow", "capcut", "datacamp"],
+      "affiliates": [
+        "systeme.io",
+        "hahow",
+        "capcut",
+        "datacamp"
+      ],
       "notes": "三大 AI 廣告投放工具深度評測。"
     },
     {
@@ -197,7 +304,13 @@
       "file": "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
       "wordCount": 2900,
       "topicSource": "nextPriority",
-      "affiliates": ["digitalocean", "datacamp", "nordvpn", "hahow", "cloudways"],
+      "affiliates": [
+        "digitalocean",
+        "datacamp",
+        "nordvpn",
+        "hahow",
+        "cloudways"
+      ],
       "notes": "三大 AI 資安工具深度評測。"
     },
     {
@@ -207,7 +320,12 @@
       "file": "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
       "wordCount": 2800,
       "topicSource": "new",
-      "affiliates": ["datacamp", "hahow", "digitalocean", "cloudways"],
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways"
+      ],
       "notes": "三大 AI 資料分析工具深度評測。"
     },
     {
@@ -217,7 +335,12 @@
       "file": "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["cloudways", "ultahost", "systeme.io", "datacamp"],
+      "affiliates": [
+        "cloudways",
+        "ultahost",
+        "systeme.io",
+        "datacamp"
+      ],
       "notes": "三大 AI 電商平台深度評測。"
     },
     {
@@ -227,7 +350,12 @@
       "file": "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "cloudways", "hahow", "systeme.io"],
+      "affiliates": [
+        "datacamp",
+        "cloudways",
+        "hahow",
+        "systeme.io"
+      ],
       "notes": "三大 AI 法律工具深度評測。"
     },
     {
@@ -237,7 +365,12 @@
       "file": "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["hahow", "datacamp", "cloudways", "systeme.io"],
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "cloudways",
+        "systeme.io"
+      ],
       "notes": "三大 AI HR 工具深度評測。"
     },
     {
@@ -247,7 +380,12 @@
       "file": "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "systeme.io", "hahow", "cloudways"],
+      "affiliates": [
+        "datacamp",
+        "systeme.io",
+        "hahow",
+        "cloudways"
+      ],
       "notes": "三大 AI 會計工具深度評測。"
     },
     {
@@ -257,7 +395,12 @@
       "file": "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
       "wordCount": 2800,
       "topicSource": "new",
-      "affiliates": ["systeme.io", "datacamp", "cloudways", "hahow"],
+      "affiliates": [
+        "systeme.io",
+        "datacamp",
+        "cloudways",
+        "hahow"
+      ],
       "notes": "三大 AI CRM 工具深度評測。"
     },
     {
@@ -267,11 +410,17 @@
       "file": "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
       "wordCount": 2800,
       "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "systeme.io", "digitalocean"],
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "systeme.io",
+        "digitalocean"
+      ],
       "notes": "三大 AI 專案管理工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
     "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
     "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
     "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
@@ -360,7 +509,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 社群媒體排程工具推薦 2026：Buffer vs Hootsuite vs Sprout Social 台灣行銷人完整比較"
+    "AI 社群媒體排程工具推薦 2026：Buffer vs Hootsuite vs Sprout Social 台灣行銷人完整比較（Buffer vs Later 已有，本次改寫為 Buffer vs Hootsuite vs Sprout Social 更深度版本）"
   ],
   "directives": [],
   "internalLinkRuns": [
