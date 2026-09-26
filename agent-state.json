@@ -1,5 +1,212 @@
 {
-  "lastUpdated": "2026-09-23T07:00:00+00:00",
+  "lastUpdated": "2026-09-26T02:00:00+00:00",
+  "status": "active",
+  "agentLog": [
+    {
+      "date": "2026-09-26",
+      "action": "publish_article",
+      "title": "AI 3D 設計工具推薦 2026：Blender AI vs Cinema 4D vs Spline 台灣設計師完整比較",
+      "file": "blog/ai-3d-design-tools-blender-ai-vs-cinema4d-vs-spline-2026.html",
+      "wordCount": 2950,
+      "topicSource": "nextPriority — 延續平面/影音設計工具系列，進入 3D 視覺設計主題，鎖定台灣品牌設計師、電商視覺、動態設計師",
+      "affiliates": ["hahow", "datacamp", "digitalocean", "systeme.io", "cloudways", "gumroad"],
+      "internalLinks": [
+        "ai-graphic-design-tools-illustrator-ai-vs-coreldraw-vs-affinity-designer-2026.html",
+        "ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
+        "ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
+        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
+        "midjourney-v7-review-taiwan-designer-guide-2026.html"
+      ],
+      "notes": "三大 AI 3D 設計工具深度評測：Blender 4.4 AI（AI Mesh Generator Beta 繁中 79%/Geometry Nodes AI 自然語言建節點圖/AI Denoising 渲染速度 8-10 倍提升/Blender Diffusion 社群外掛/Auto Rigging AI 升級版 Rigify/完全免費 GPL 授權/Blender Taiwan FB 2 萬人社群/電商產品渲染從 4h 壓縮至 30m）、Cinema 4D 2026 Maxon One（Scene Nodes AI 廣告場景準備縮短 55%/AI Denoiser Redshift 6-8 倍加速/Character Solver AI 類 Motion Capture/AI Material Generator 電商材質生成縮短 70%/Smart Render Region 出圖品質+35%/Maxon One 包含 ZBrush+Redshift+Red Giant+Cineware/Cinema 4D 單獨 US$59.99/月→Maxon One US$99.99/月年繳/台灣 NT$1,950-3,250/廣告業台灣就業市場需求最高）、Spline AI（AI Generate 15 秒生成 3D/AI 3D Text 繁中 85% 覆蓋率/AI Style Transfer 20-40 秒風格轉換/AI Texture Paint 自然語言材質/Web Export 原生 React/Vue 嵌入唯一支援/即時多人協作/Free→Pro US$12/月 年繳 US$9/Teams US$29/人→台灣 NT$0-390/非技術背景最快上手）。含 3 大數據統計（340 萬+月活/68% 電商 3D 視覺/5.2 倍 AI 建模速度）、10 維度比較表（AI 建模生成/渲染品質/學習難度/繁中介面/網頁互動 3D/AE 整合/台灣定價/多人協作/台灣就業需求/電商產品視覺）、6 大場景（廣告代理商動態設計師/獨立遊戲開發者/網頁 UI UX 設計師/台灣電商賣家/設計系學生/建築室內設計視覺化）、台灣定價 3 情境 3 年試算（個人接案/廣告代理 5 人/學生零預算）、台灣注意事項（發票付款/硬體需求 GPU 建議/繁體中文字體/蝦皮 Pchome MOMO 電商規格/LINE 貼圖製作/資料隱私 Spline 雲端）、8 情境終極決策表、8 則 FAQ（Blender GPL 商業授權說明/C4D 教育版限制/Spline 3D 匯出相容性/三工具組合推薦/台灣中文課程資源/Mac M4 Silicon 渲染支援/AI 生成版權問題/零基礎 1 個月學習路徑）。6 個漸層 CTA：Hahow（設計課程）/DataCamp（AI 數位創作技能）/DigitalOcean（$200 雲端 GPU 算力）/Systeme.io（3D 設計技能變被動收入）/Cloudways（作品集主機）/Gumroad Claude Code Pack $29（AI 工作流自動化）。目標關鍵字：AI 3D設計工具、Blender AI評測、Cinema 4D評測、Spline AI評測、3D設計軟體推薦2026、AI三維建模、台灣設計師工具、Blender免費3D、3D動態設計、AI建模軟體比較。"
+    },
+    {
+      "date": "2026-09-23",
+      "action": "publish_article",
+      "title": "AI 圖像設計工具推薦 2026：Adobe Illustrator AI vs CorelDRAW AI vs Affinity Designer 台灣設計師完整比較",
+      "file": "blog/ai-graphic-design-tools-illustrator-ai-vs-coreldraw-vs-affinity-designer-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority — 延續影音創作工具系列，進入平面設計工具主題，鎖定台灣品牌設計師和 Freelancer 市場",
+      "affiliates": ["hahow", "datacamp", "systeme.io", "digitalocean", "gumroad"],
+      "internalLinks": [
+        "ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
+        "ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
+        "midjourney-v7-review-taiwan-designer-guide-2026.html",
+        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
+        "ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html"
+      ],
+      "notes": "三大 AI 平面設計工具深度評測。"
+    },
+    {
+      "date": "2026-09-22",
+      "action": "publish_article",
+      "title": "AI 影音剪輯工具推薦 2026：Adobe Premiere Pro AI vs DaVinci Resolve AI vs Final Cut Pro 台灣影片創作者完整比較",
+      "file": "blog/ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續影音系列（Podcast→影片行銷→專業剪輯），鎖定台灣 YouTuber 和影片創作者市場",
+      "affiliates": ["datacamp", "hahow", "capcut", "digitalocean", "systeme.io"],
+      "notes": "三大 AI 專業影片剪輯工具深度評測。"
+    },
+    {
+      "date": "2026-09-21",
+      "action": "publish_article",
+      "title": "AI 輿情分析報告工具推薦 2026：Meltwater vs Cision vs Prowly 台灣 PR 公關完整比較",
+      "file": "blog/ai-pr-media-monitoring-tools-meltwater-vs-cision-vs-prowly-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io", "cloudways"],
+      "notes": "三大 AI PR 輿情分析工具深度評測。"
+    },
+    {
+      "date": "2026-09-19",
+      "action": "publish_article",
+      "title": "AI 社群媒體排程工具推薦 2026：Buffer vs Hootsuite vs Sprout Social 台灣行銷人深度比較",
+      "file": "blog/ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority",
+      "affiliates": ["systeme.io", "hahow", "datacamp", "digitalocean", "capcut"],
+      "notes": "三大 AI 社群媒體排程工具深度評測。"
+    },
+    {
+      "date": "2026-09-18",
+      "action": "publish_article",
+      "title": "AI Podcast 工具推薦 2026：Descript vs Adobe Podcast vs Podcastle 台灣 Podcaster 完整比較",
+      "file": "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
+      "wordCount": 2800,
+      "topicSource": "new",
+      "affiliates": ["datacamp", "hahow", "capcut", "systeme.io", "digitalocean"],
+      "notes": "三大 AI Podcast 製作工具深度評測。"
+    }
+  ],
+  "publishedArticles": [
+    "blog/ai-3d-design-tools-blender-ai-vs-cinema4d-vs-spline-2026.html",
+    "blog/ai-graphic-design-tools-illustrator-ai-vs-coreldraw-vs-affinity-designer-2026.html",
+    "blog/ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
+    "blog/ai-pr-media-monitoring-tools-meltwater-vs-cision-vs-prowly-2026.html",
+    "blog/ai-social-media-monitoring-tools-brandwatch-vs-mention-vs-talkwalker-2026.html",
+    "blog/ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
+    "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
+    "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
+    "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
+    "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+    "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
+    "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
+    "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
+    "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
+    "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
+    "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+    "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
+    "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
+    "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
+    "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
+    "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
+    "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
+    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
+    "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
+    "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
+    "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
+    "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
+    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-2026.html",
+    "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+    "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
+    "blog/ai-finance-tools-quickbooks-vs-wave-vs-xero-2026.html",
+    "blog/ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
+    "blog/ai-code-review-tools-github-copilot-vs-coderabbit-vs-qodo-2026.html",
+    "blog/ai-language-learning-tools-duolingo-max-vs-chatgpt-vs-babbel-2026.html",
+    "blog/ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
+    "blog/ai-english-writing-tools-grammarly-vs-quillbot-vs-chatgpt-2026.html",
+    "blog/midjourney-v7-review-taiwan-designer-guide-2026.html",
+    "blog/ai-email-tools-superhuman-vs-shortwave-vs-gmail-ai-2026.html",
+    "blog/ai-resume-tools-resume-io-vs-kickresume-vs-chatgpt-2026.html",
+    "blog/ai-translation-tools-deepl-vs-google-vs-chatgpt-2026.html",
+    "blog/ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
+    "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
+    "blog/ai-music-generator-suno-vs-udio-vs-soundraw-2026.html",
+    "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+    "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+    "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
+    "blog/ai-marketing-tools-2026.html",
+    "blog/chatgpt-plus-worth-it-2026.html",
+    "blog/ai-productivity-tools-2026.html",
+    "blog/free-ai-tools-taiwan-2026.html",
+    "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
+    "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
+    "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+    "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+    "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+    "blog/ai-writing-tools-comparison-2026.html",
+    "blog/ai-agents-2026.html",
+    "blog/ai-coding-tools.html",
+    "blog/cursor-3-review-2026.html",
+    "blog/cursor-agents-cloud-vm-review-2026.html",
+    "blog/github-copilot-agent-mode-review-2026.html",
+    "blog/windsurf-cascade-review-2026.html",
+    "blog/n8n-vs-make-vs-zapier-2026.html",
+    "blog/rag-explained.html",
+    "blog/systeme-io-review-2026.html",
+    "blog/gemma-4-review-2026.html",
+    "blog/prismml-bonsai-8b-review-2026.html",
+    "blog/mem0-ai-memory-guide-2026.html",
+    "blog/owl-camel-ai-multi-agent-2026.html",
+    "blog/elevenlabs-elevencreative-review-2026.html",
+    "blog/glm-5v-turbo-design2code-review-2026.html",
+    "blog/openowl-macos-mcp-automation-2026.html",
+    "blog/agentshield-ai-agent-observability-2026.html",
+    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
+    "blog/klariqo-ai-receptionist-smb-review-2026.html",
+    "blog/claude-code-session-search-2026.html",
+    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
+    "blog/sessfind-cross-tool-ai-session-search-2026.html",
+    "blog/glm-5-1-open-source-coding-model-review-2026.html",
+    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
+    "blog/cass-coding-agent-session-search-2026.html",
+    "blog/deepseek-v4-pro-review-2026.html",
+    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
+    "blog/n8n-claude-code-advanced-workflow-2026.html",
+    "blog/opencode-open-source-claude-code-alternative-2026.html",
+    "blog/gemini-cli-review-2026.html",
+    "blog/claude-code-complete-guide-2026.html",
+    "blog/ai-coding-tools-comparison-2026-final.html",
+    "blog/claude-4-sonnet-opus-review-2026.html",
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
+  ],
+  "nextPriority": [
+    "AI 字幕工具推薦 2026：VEED.IO vs Kapwing vs Captions AI 台灣影音創作者完整比較（延續影音創作系列，聚焦字幕生成/翻譯/多語言短影音創作工具，鎖定台灣 TikTok/YouTube 短影音市場）"
+  ],
+  "directives": [],
+  "internalLinkRuns": [
+    {
+      "date": "2026-04-15",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/owl-camel-ai-multi-agent-2026.html",
+        "blog/elevenlabs-elevencreative-review-2026.html"
+      ],
+      "notes": "TW: 優先連結聯盟文章"
+    },
+    {
+      "date": "2026-04-22",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/klariqo-ai-receptionist-smb-review-2026.html",
+        "blog/n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
+    },
+    {
+      "date": "2026-09-23",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/deepseek-v4-pro-review-2026.html",
+        "blog/claude-4-sonnet-opus-review-2026.html",
+        "blog/vibe-coding-tools-comparison-2026.html"
+      ],
+      "notes": "TW: deepseek-v4 文中 OpenCode 提及文字加入評測連結；claude-4 場景一新增 OpenCode 開源替代方案連結（節省 $20/月工具訂閱）；vibe-coding Intent 段落自然加入 Gemini CLI 評測連結（免費 AI 終端機工具）"
+    }
+  ]
+}
   "status": "active",
   "agentLog": [
     {
