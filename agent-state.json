@@ -1,7 +1,30 @@
 {
-  "lastUpdated": "2026-10-06T02:00:00+00:00",
+  "lastUpdated": "2026-10-08T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-08",
+      "action": "publish_article",
+      "title": "AI 知識管理工具推薦 2026：Notion AI vs Roam Research vs Mem AI 台灣知識工作者完整比較",
+      "file": "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續業務/協作工具系列，聚焦 AI 驅動的知識管理工具，鎖定台灣知識工作者、研究員、顧問、學生市場",
+      "affiliates": ["datacamp", "hahow", "systeme.io", "digitalocean", "gumroad", "nordvpn"],
+      "internalLinks": [
+        "notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
+        "ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
+        "ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
+        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
+        "notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+        "systeme-io-review-2026.html",
+        "rag-explained.html",
+        "claude-code-complete-guide-2026.html",
+        "gemini-cli-review-2026.html"
+      ],
+      "notes": "三大 AI 知識管理工具深度評測：Notion AI（協作知識庫/資料庫 Autofill/Ask AI 跨頁問答/Notion Calendar AI/翻譯與語氣調整/Plus US$12+AI US$10/月/繁中完整/6000+ 整合/台灣新創主流）、Roam Research（雙向連結思維網路/Block References 學術引用/Daily Notes 每日記錄入口/Roam Depot 插件/Graph View 知識圖譜/US$15/月 學生折扣/英文介面/學習曲線最陡/個人 PKM 首選）、Mem AI（AI 自動整理免結構化/Ask Mem 跨筆記語義問答/Smart Search/Collections 自動分類/Mem X 主動型 AI 摘要/Quick Capture 手機快速記錄/Free 500則/Pro US$14.99 年繳 NT$275/月/CP 值最高/繁中 AI 輸出需調整）。10 維度評分表（AI問答精準度/知識圖譜/繁中支援/協作/新手友好/手機記錄/整合生態/資料庫/隱私/CP值）、6 大場景（台灣新創 Notion/學術研究員 Roam/忙碌高管 Mem/內容創作者 Notion/自由工作者 Mem Free→Pro/重度 PKM Roam）、三工具搭配策略、2026 趨勢（RAG/AI Agent整合/隱私主權）、台灣定價三情境、8 FAQ（Notion AI vs ChatGPT/Roam 新手適合性/Mem 繁中品質/Notion 能否取代 Roam/替代方案/API 整合/Mem Free值得試/知識管理助 AI 工作）、8 情境終極決策表。6 個漸層 CTA：DataCamp（知識管理+數據課程）/Hahow（知識管理方法論課程）/Systeme.io（知識變現行銷漏斗）/DigitalOcean（自架知識管理系統 Outline/Appflowy）/Gumroad Claude Code Pack（知識管理自動化腳本）/NordVPN（公共 Wi-Fi 保護）。目標關鍵字：AI知識管理工具、Notion AI評測、Roam Research評測、Mem AI評測、第二大腦工具2026、PKM工具推薦、AI筆記工具比較、台灣知識工作者工具、知識管理軟體、AI筆記整理。"
+    },
     {
       "date": "2026-10-06",
       "action": "publish_article",
@@ -17,7 +40,7 @@
         "n8n-vs-make-vs-zapier-2026.html",
         "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html"
       ],
-      "notes": "三大 AI Chatbot 客服工具深度評測：Intercom AI（Fin AI Agent 自動解決率 68%/GPT-4o 微調私有知識庫/Fin AI Copilot 即時建議回覆縮短首回 42%/AI 摘要與情緒分析/Proactive Outbound Messaging 行為觸發/多通路 Web+Email+WhatsApp+LINE+IG+FB+SMS/Workflows 視覺化自動化/Starter US$29/Pro US$85/座席/Premium US$132/座席/Fin AI US$0.99/次解決 未解決免費/500+ 整合生態 Shopify HubSpot Salesforce/繁中完整/LINE 2026 年新增原生整合/無統一發票）、Drift AI（B2B 對話行銷先驅/Salesloft 收購 2023/AI Chatbot 智慧路由 Playbook/ABM 帳戶識別整合 6sense Demandbase Bombora/Sales AI Email 後續跟進縮短 70%/Real-time Notifications 即時 Slack 推送/Conversation Intelligence 競品提及率痛點分析/Video Meetings AI 摘要/Premium US$2,500/月起 NT$81,250 台灣中小企業難負擔/Advanced US$5,000/Enterprise 客製/無繁中介面/無 LINE 整合/需 RevOps 管理員）、Crisp（法國新創 2015/免費 2 座席永久可用/AI MagicReply 情境建議回覆節省 60% 輸入/CrispyBird AI Chatbot 解決率 35-45%/多通路 Web+Email+WhatsApp+IG+FB+LINE Webhook/Shared Inbox 共享收件箱/內建 Help Center 知識庫 Chatbot 自動引用/Campaigns Unlimited 方案含/CRM 整合 HubSpot Salesforce Zapier 6000+/Free NT$0 2 座席/Pro €25 NT$830 AI MagicReply 4 座席/Unlimited €95 NT$3,154 無限座席 AI 分析 Campaigns/5 分鐘快速整合/繁中支援不錯/LINE 需手動 Webhook）。4 大數據統計（AI Chatbot 全球平均自動解決率 68% Intercom/對話行銷 MQL 轉化率提升 50% Drift/72% 台灣 B2C 消費者期待即時客服/電商採用 AI Chatbot 客服成本降 38%）、10 維度比較表（AI Chatbot 自動解決率/繁中支援/對話行銷潛客識別/多通路整合/真人客服輔助 Copilot/整合生態/知識庫管理/報表分析/入門難度/起始月費）、6 大場景（台灣中型電商 月訂單 3000-10000 推薦 Intercom Pro+Fin AI/B2B SaaS ARR NT$3000萬+ 英語系推薦 Drift Premium/小型電商個人品牌月訂單<500 推薦 Crisp Free→Pro/台灣本地 SaaS 新創 推薦 Intercom Starter→Pro/企業教育訓練課程平台 推薦 Intercom Pro+Fin AI/自由工作者顧問 推薦 Crisp Free+Systeme.io）、3 情境定價試算（個人品牌 Crisp Free NT$0/5 人電商 Crisp Unlimited NT$37,848 vs Intercom NT$377,796/20 人 B2B SaaS Intercom NT$65,000 vs Drift NT$81,250）、台灣注意事項（LINE 整合 Intercom 原生最簡 Crisp 需 Webhook Drift 不支援/統一發票三者均無需英文 Invoice/PDPA 合規三者均 GDPR Intercom+Drift DPA 可申請/繁中 AI 輸出 Intercom 最自然 Crisp 可用偶有簡體 Drift 英文為主）、8 情境終極決策表、8 則 FAQ（Intercom vs Crisp 最大差異/Drift 定價替代方案/Fin AI 按次費用計算/Crisp Free 限制/Chatbot 搭配行銷漏斗最佳組合/台灣其他 AI Chatbot 方案 Tidio HubSpot Chatwoot Botpress/Intercom vs Zendesk AI/n8n Make 整合方式）。6 個漸層 CTA：Cloudways（自建 AI Chatbot 後端主機 $50）/DigitalOcean（自架 Chatwoot Botpress n8n $200 額度）/Hahow（客服流程數位行銷課程）/Systeme.io（Chatbot 潛客接行銷漏斗）/DataCamp（數據驅動提升 AI 客服）/Gumroad Claude Code Pack $29（Chatbot 工作流自動化腳本）。目標關鍵字：AI客服Chatbot工具、Intercom AI評測、Drift評測、Crisp評測、AI對話行銷工具2026、台灣電商客服工具、SaaS客服自動化、Chatbot客服推薦、AI潛在客戶培育、對話行銷台灣。"
+      "notes": "三大 AI Chatbot 客服工具深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-05",
@@ -25,15 +48,8 @@
       "title": "AI 線上表單工具推薦 2026：Typeform AI vs Tally vs Google Forms AI 台灣行銷人與研究者完整比較",
       "file": "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
       "wordCount": 3000,
-      "topicSource": "nextPriority — 延續業務/協作工具系列，聚焦 AI 驅動的線上表單與問卷工具，鎖定台灣行銷研究、用戶訪談、客戶反饋收集市場",
+      "topicSource": "nextPriority",
       "affiliates": ["hahow", "datacamp", "systeme.io", "cloudways", "digitalocean", "gumroad"],
-      "internalLinks": [
-        "ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
-        "ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
-        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
       "notes": "三大 AI 表單工具深度評測（詳見前次 agentLog）。"
     },
     {
@@ -44,7 +60,7 @@
       "wordCount": 2700,
       "topicSource": "nextPriority",
       "affiliates": ["hahow", "datacamp", "systeme.io", "cloudways", "gumroad", "nordvpn"],
-      "notes": "三大 AI 協作白板工具深度評測（詳見前次 agentLog）。"
+      "notes": "三大 AI 協作白板工具深度評測。"
     },
     {
       "date": "2026-10-03",
@@ -54,7 +70,7 @@
       "wordCount": 2600,
       "topicSource": "nextPriority",
       "affiliates": ["hahow", "systeme.io", "datacamp", "capcut", "cloudways", "gumroad"],
-      "notes": "三大 AI 簡報工具深度評測（詳見前次 agentLog）。"
+      "notes": "三大 AI 簡報工具深度評測。"
     },
     {
       "date": "2026-09-30",
@@ -105,19 +121,10 @@
       "topicSource": "nextPriority",
       "affiliates": ["datacamp", "hahow", "capcut", "digitalocean", "systeme.io"],
       "notes": "三大 AI 專業影片剪輯工具深度評測。"
-    },
-    {
-      "date": "2026-09-21",
-      "action": "publish_article",
-      "title": "AI 輿情分析報告工具推薦 2026：Meltwater vs Cision vs Prowly 台灣 PR 公關完整比較",
-      "file": "blog/ai-pr-media-monitoring-tools-meltwater-vs-cision-vs-prowly-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "digitalocean", "hahow", "systeme.io", "cloudways"],
-      "notes": "三大 AI PR 輿情分析工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
     "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
     "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
     "blog/ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
@@ -219,7 +226,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 知識管理與筆記工具推薦 2026：Notion AI vs Roam Research vs Mem AI 台灣知識工作者完整比較（延續業務/協作工具系列，聚焦 AI 驅動的個人知識管理與團隊 Wiki，鎖定台灣知識工作者、研究員、顧問、學生市場）"
+    "AI 會議 AI 記錄與摘要工具推薦 2026：Otter.ai vs Fireflies vs Fathom AI 進階版深度比較（延續業務/協作工具系列，聚焦 AI 驅動的會議記錄自動化，鎖定台灣遠距工作者、業務、PM、顧問市場）"
   ],
   "directives": [],
   "internalLinkRuns": [
