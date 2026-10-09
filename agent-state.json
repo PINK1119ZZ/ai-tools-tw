@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2026-10-08T02:00:00+00:00",
+  "lastUpdated": "2026-10-09T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-09",
+      "action": "publish_article",
+      "title": "AI 會議 Intelligence 工具推薦 2026：tl;dv vs Avoma vs Grain — 銷售教練、對話分析與會議 BI 深度比較",
+      "file": "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority — 延續業務/協作工具系列進階版，聚焦 AI 驅動的 Conversation Intelligence 與銷售績效分析，有別於已有的 Otter/Fireflies/Fathom 基礎記錄工具比較，鎖定台灣業務主管、CS Lead、Presales 市場",
+      "affiliates": ["datacamp", "hahow", "cloudways", "digitalocean", "systeme.io", "gumroad"],
+      "internalLinks": [
+        "ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html"
+      ],
+      "notes": "三大 AI 會議 Intelligence 工具深度評測：tl;dv（AI Agent 跨會議自然語言查詢/免費版最慷慨/Highlight Reel/30+ 語言/Pro US$29 Business US$79/Slack Notion Jira 整合/上手最快）、Avoma（Conversation Intelligence 最完整/Talk Ratio 說話比分析/AI Sales Coaching 主動標記需輔導片段/Deal Risk Alert 偵測商機流失信號/AI Follow-up Email 草稿/Meeting Agenda Co-pilot/Salesforce HubSpot 雙向深度同步/Starter US$19 Business US$59 Enterprise US$79+）、Grain（Highlight 剪輯業界最佳一鍵生成品牌影片/AI Story 播放清單/Coach Mode/Whisper 中文辨識最穩定/Starter 25通話免費 Business US$19）。核心差異定位：tl;dv=AI 跨會議 BI 查詢、Avoma=完整銷售績效平台、Grain=會議 Highlight 影片資產。10 維度評分表（AI摘要/Conversation Intelligence/AI Coaching/Deal Risk/CRM整合深度/Highlight剪輯/跨會議AI查詢/繁中辨識/上手容易度/CP值）、台灣定價試算（5 人團隊 ROI 試算節省 50 工時/月）、6 大場景（5 人 B2B 業務tl;dv/15人+業務主管Avoma/行銷見證影片Grain/個人顧問tl;dv免費/CS團隊Avoma Starter/業務培訓Grain+tl;dv）、8 情境終極決策表。6 個漸層 CTA：DataCamp（AI數據分析課程）/Hahow（業務技巧線上課程）/Cloudways（自架CRM與業務自動化伺服器）/DigitalOcean（自架n8n業務自動化）/Systeme.io（建立業務銷售漏斗）/Gumroad Claude Code Pack（CRM自動化腳本）。目標關鍵字：AI會議Intelligence、tl;dv評測、Avoma評測、Grain評測、AI銷售教練、Conversation Intelligence工具、會議分析工具台灣、Revenue Intelligence、AI業務工具2026。"
+    },
     {
       "date": "2026-10-08",
       "action": "publish_article",
@@ -23,7 +39,7 @@
         "claude-code-complete-guide-2026.html",
         "gemini-cli-review-2026.html"
       ],
-      "notes": "三大 AI 知識管理工具深度評測：Notion AI（協作知識庫/資料庫 Autofill/Ask AI 跨頁問答/Notion Calendar AI/翻譯與語氣調整/Plus US$12+AI US$10/月/繁中完整/6000+ 整合/台灣新創主流）、Roam Research（雙向連結思維網路/Block References 學術引用/Daily Notes 每日記錄入口/Roam Depot 插件/Graph View 知識圖譜/US$15/月 學生折扣/英文介面/學習曲線最陡/個人 PKM 首選）、Mem AI（AI 自動整理免結構化/Ask Mem 跨筆記語義問答/Smart Search/Collections 自動分類/Mem X 主動型 AI 摘要/Quick Capture 手機快速記錄/Free 500則/Pro US$14.99 年繳 NT$275/月/CP 值最高/繁中 AI 輸出需調整）。10 維度評分表（AI問答精準度/知識圖譜/繁中支援/協作/新手友好/手機記錄/整合生態/資料庫/隱私/CP值）、6 大場景（台灣新創 Notion/學術研究員 Roam/忙碌高管 Mem/內容創作者 Notion/自由工作者 Mem Free→Pro/重度 PKM Roam）、三工具搭配策略、2026 趨勢（RAG/AI Agent整合/隱私主權）、台灣定價三情境、8 FAQ（Notion AI vs ChatGPT/Roam 新手適合性/Mem 繁中品質/Notion 能否取代 Roam/替代方案/API 整合/Mem Free值得試/知識管理助 AI 工作）、8 情境終極決策表。6 個漸層 CTA：DataCamp（知識管理+數據課程）/Hahow（知識管理方法論課程）/Systeme.io（知識變現行銷漏斗）/DigitalOcean（自架知識管理系統 Outline/Appflowy）/Gumroad Claude Code Pack（知識管理自動化腳本）/NordVPN（公共 Wi-Fi 保護）。目標關鍵字：AI知識管理工具、Notion AI評測、Roam Research評測、Mem AI評測、第二大腦工具2026、PKM工具推薦、AI筆記工具比較、台灣知識工作者工具、知識管理軟體、AI筆記整理。"
+      "notes": "三大 AI 知識管理工具深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-06",
@@ -31,15 +47,8 @@
       "title": "AI 客服 Chatbot 工具推薦 2026：Intercom AI vs Drift vs Crisp 台灣電商與 SaaS 業者完整比較",
       "file": "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
       "wordCount": 3000,
-      "topicSource": "nextPriority — 延續業務/協作工具系列，聚焦 AI 驅動的客服 Chatbot 與對話行銷，鎖定台灣電商、SaaS、新創、B2B 業者的客服自動化與潛在客戶培育市場",
+      "topicSource": "nextPriority",
       "affiliates": ["cloudways", "digitalocean", "hahow", "systeme.io", "datacamp", "gumroad"],
-      "internalLinks": [
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
-        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html"
-      ],
       "notes": "三大 AI Chatbot 客服工具深度評測（詳見前次 agentLog）。"
     },
     {
@@ -111,19 +120,10 @@
       "topicSource": "nextPriority",
       "affiliates": ["hahow", "datacamp", "systeme.io", "digitalocean", "gumroad"],
       "notes": "三大 AI 平面設計工具深度評測。"
-    },
-    {
-      "date": "2026-09-22",
-      "action": "publish_article",
-      "title": "AI 影音剪輯工具推薦 2026：Adobe Premiere Pro AI vs DaVinci Resolve AI vs Final Cut Pro 台灣影片創作者完整比較",
-      "file": "blog/ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": ["datacamp", "hahow", "capcut", "digitalocean", "systeme.io"],
-      "notes": "三大 AI 專業影片剪輯工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
     "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
     "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
     "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
@@ -226,7 +226,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 會議 AI 記錄與摘要工具推薦 2026：Otter.ai vs Fireflies vs Fathom AI 進階版深度比較（延續業務/協作工具系列，聚焦 AI 驅動的會議記錄自動化，鎖定台灣遠距工作者、業務、PM、顧問市場）"
+    "AI 招募與人才篩選工具推薦 2026：HireVue vs Pymetrics vs Paradox AI — 台灣 HR 科技完整比較（延續業務/HR 工具系列，聚焦 AI 驅動的招募自動化與候選人評估，鎖定台灣 HR、獵頭、新創招募負責人市場）"
   ],
   "directives": [],
   "internalLinkRuns": [
