@@ -1,33 +1,49 @@
 {
-  "lastUpdated": "2026-10-14T02:00:00+00:00",
+  "lastUpdated": "2026-10-17T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-17",
+      "action": "publish_article",
+      "title": "AI 客戶成功工具推薦 2026：Gainsight AI vs Totango vs ChurnZero — 台灣 SaaS 企業客戶留存、Health Score 與 AI 流失預測完整比較",
+      "file": "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 客戶成功自動化、NRR 提升、流失預測與 QBR 自動化，鎖定台灣 SaaS 客戶成功主管、CS Team Lead 與 B2B 訂閱制服務業",
+      "affiliates": ["systeme.io", "datacamp", "hahow", "digitalocean", "cloudways", "nordvpn"],
+      "internalLinks": [
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
+        "ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html"
+      ],
+      "notes": "三大 AI 客戶成功平台深度評測：Gainsight AI（AI Predictive Churn Model 準確率 83-87%/Horizon AI QBR 自動生成節省 CSM 4-6 小時/Journey Orchestrator 自動化旅程/AI Sentiment Analysis 支援票情緒分析/Expansion Intelligence/People Maps 組織關係圖譜/Salesforce 深度整合/Enterprise US$5,000+/月）、Totango（SuccessBLOC 模組化架構/Spark AI 帳號優先級摘要/AI Churn Signal Detection 21 維度/HubSpot+Salesforce 雙棲整合/Segment/Mixpanel 整合 2-4 週上線/Growth US$899/月）、ChurnZero（ChurnScore AI 視覺化訓練介面 4-6 小時上線/Real-Time Alerts 100+ 觸發條件毫秒響應/AI Play Builder 50+ 模板/In-App Messaging AI NPS 回應率+34%/Customer Journey AI Insights/LINE Notify Webhook 整合/Launch US$799/月）。10 維度評分表、6 大台灣場景（Seed/A 輪新創/B 輪成長期/大型 SaaS 外商/訂閱制電商/Enterprise CS/教育科技）、7 情境終極決策表、FAQ 4 題。6 個漸層 CTA：Systeme.io/DataCamp/Hahow/DigitalOcean/Cloudways/NordVPN。目標關鍵字：客戶成功工具/Gainsight 評測/ChurnZero 台灣/Totango 中文/流失率降低/NRR 提升/Health Score 台灣 SaaS/CS 自動化。"
+    },
+    {
+      "date": "2026-10-16",
+      "action": "publish_article",
+      "title": "AI 行銷自動化工具推薦 2026：HubSpot Marketing Hub AI vs Marketo Engage vs ActiveCampaign — 台灣行銷人 Lead Nurturing 與 AI 個人化行銷完整比較",
+      "file": "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority",
+      "affiliates": ["systeme.io", "datacamp", "hahow", "digitalocean", "cloudways", "nordvpn"],
+      "notes": "三大 AI 行銷自動化平台深度評測（詳見前次 agentLog）。"
+    },
     {
       "date": "2026-10-14",
       "action": "publish_article",
       "title": "AI 電子簽名工具推薦 2026：DocuSign AI vs Adobe Acrobat Sign vs PandaDoc — 台灣企業合約自動化與電子簽署完整比較",
       "file": "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 合約分析、自動填寫、簽署流程自動化，鎖定台灣法務、業務、採購與 HR 部門",
-      "affiliates": ["systeme.io", "digitalocean", "hahow", "datacamp", "nordvpn", "cloudways"],
-      "internalLinks": [
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
-        "ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
-        "ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
-        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html"
-      ],
-      "notes": "三大 AI 電子簽名平台深度評測：DocuSign AI（AI Contract Analysis 自動標記風險條款/繁中 87% 準確率/Maestro 視覺化審批流/Smart Fields 自動填寫/eNotary 遠端公證/Insight Engine 跨合約庫搜尋/Business Pro US$65/用戶/CLM 報價制）、Adobe Acrobat Sign（AI Assistant 自然語言問 PDF/智慧表單識別 94% 準確率/M365 深度整合 Word→Teams→SharePoint/Liquid Mode 手機重排版/Bulk Send 1,000 人/FedRAMP High eIDAS SOC2/Acrobat Pro US$29.99）、PandaDoc（AI Document Creator/Smart Content 智慧庫/CPQ 多項目報價計算/Document Analytics 追蹤閱讀行為/Workflow 觸發 CRM 更新/Business US$49 CP 值最高）。10 維度評分表、6 大台灣場景（上市製造業法務 DocuSign CLM/SaaS 新創業務 PandaDoc/法律事務所 Adobe Sign/HR 批量員工合約 DocuSign/顧問公司自由工作者 PandaDoc Starter/政府學校 Adobe FedRAMP）、7 情境終極決策表。6 個漸層 CTA：Systeme.io/DigitalOcean/Hahow/DataCamp/NordVPN/Cloudways。目標關鍵字：DocuSign 評測/Adobe Acrobat Sign/PandaDoc/電子簽名工具台灣/合約自動化 AI/CLM 合約管理系統/台灣電子簽章法。"
+      "notes": "三大 AI 電子簽名平台深度評測。"
     },
     {
       "date": "2026-10-13",
       "action": "publish_article",
-      "title": "AI 企業通訊工具推薦 2026：Microsoft Teams AI vs Slack AI vs Google Chat — 台灣混合辦公與 AI 工作流自動化完整比較",
+      "title": "AI 企業通訊工具推薦 2026：Microsoft Teams AI vs Slack AI vs Google Chat",
       "file": "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
       "wordCount": 2900,
-      "topicSource": "nextPriority",
-      "affiliates": ["digitalocean", "cloudways", "hahow", "datacamp", "systeme.io", "nordvpn"],
-      "notes": "三大 AI 企業通訊協作平台深度評測（詳見前次 agentLog）。"
+      "notes": "三大 AI 企業通訊協作平台深度評測。"
     },
     {
       "date": "2026-10-12",
@@ -76,25 +92,11 @@
       "file": "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
       "wordCount": 3000,
       "notes": "三大 AI Chatbot 客服工具深度評測。"
-    },
-    {
-      "date": "2026-10-05",
-      "action": "publish_article",
-      "title": "AI 線上表單工具推薦 2026：Typeform AI vs Tally vs Google Forms AI",
-      "file": "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
-      "wordCount": 3000,
-      "notes": "三大 AI 表單工具深度評測。"
-    },
-    {
-      "date": "2026-10-04",
-      "action": "publish_article",
-      "title": "AI 協作白板工具推薦 2026：Miro AI vs Mural vs FigJam AI",
-      "file": "blog/ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
-      "wordCount": 2700,
-      "notes": "三大 AI 協作白板工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
+    "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
     "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
     "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
     "blog/ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
@@ -203,7 +205,255 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 數位行銷自動化工具推薦 2026：HubSpot Marketing Hub AI vs Marketo Engage vs ActiveCampaign — 台灣行銷人 Lead Nurturing 與 AI 個人化行銷完整比較（延續職場/企業工具系列，聚焦 AI 行銷自動化、Lead Scoring、個人化 Email 序列與 CRO，鎖定台灣行銷主管、數位行銷經理與 B2B 業務開發）"
+    "AI 社群管理工具推薦 2026：Sprinklr AI vs Khoros vs Salesforce Social Studio — 台灣品牌企業社群傾聽、危機處理與 AI 客戶互動完整比較（延續職場/企業工具系列，聚焦 AI 社群傾聽、品牌危機預警、跨平台社群客服自動化與 UGC 內容管理，鎖定台灣品牌行銷主管、社群經理與企業 PR 團隊）"
+  ],
+  "directives": [],
+  "internalLinkRuns": [
+    {
+      "date": "2026-04-15",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/owl-camel-ai-multi-agent-2026.html",
+        "blog/elevenlabs-elevencreative-review-2026.html"
+      ],
+      "notes": "TW: 優先連結聯盟文章"
+    },
+    {
+      "date": "2026-04-22",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/klariqo-ai-receptionist-smb-review-2026.html",
+        "blog/n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
+    },
+    {
+      "date": "2026-09-23",
+      "action": "internal_link_optimization",
+      "articlesEdited": [
+        "blog/deepseek-v4-pro-review-2026.html",
+        "blog/claude-4-sonnet-opus-review-2026.html",
+        "blog/vibe-coding-tools-comparison-2026.html"
+      ],
+      "notes": "TW: deepseek-v4 文中 OpenCode 提及文字加入評測連結；claude-4 場景一新增 OpenCode 開源替代方案連結；vibe-coding Intent 段落加入 Gemini CLI 評測連結"
+    }
+  ]
+}
+  "status": "active",
+  "agentLog": [
+    {
+      "date": "2026-10-16",
+      "action": "publish_article",
+      "title": "AI 行銷自動化工具推薦 2026：HubSpot Marketing Hub AI vs Marketo Engage vs ActiveCampaign — 台灣行銷人 Lead Nurturing 與 AI 個人化行銷完整比較",
+      "file": "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 行銷自動化、Lead Scoring、個人化 Email 序列與 CRO，鎖定台灣行銷主管、數位行銷經理與 B2B 業務開發",
+      "affiliates": ["systeme.io", "datacamp", "hahow", "digitalocean", "cloudways", "nordvpn"],
+      "internalLinks": [
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+        "ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html"
+      ],
+      "notes": "三大 AI 行銷自動化平台深度評測：HubSpot Marketing Hub AI（Breeze Copilot AI 內容生成/Breeze AI Predictive Lead Scoring 準確率 +31%/Smart Content 個人化 Email/Breeze Social Agent/AI SEO 建議/CRM 一體化/繁中介面友善/Professional US$890/月）、Marketo Engage（Adobe Sensei Predictive Content 點擊率 +23%/RTP 即時網站個人化/Engagement Programs 多軌道/AI Lead Scoring 歷史資料驅動/ABM 目標帳戶行銷/Salesforce 雙向同步/Select US$1,795/月）、ActiveCampaign（Predictive Sending 開信率 +14%/Predictive Content/Automation AI 建議/Win Probability/Site Tracking/Shopify WooCommerce 整合/LINE 透過 Zapier n8n 串接/Professional US$149/月 CP 值最高）。10 維度評分表、6 大台灣場景（B2B SaaS 新創/上市製造業/電商品牌/課程創業者/行銷代理商/B2B 顧問公司）、7 情境終極決策表、FAQ 4 題。6 個漸層 CTA：Systeme.io/DataCamp/Hahow/DigitalOcean/Cloudways/NordVPN。目標關鍵字：行銷自動化工具/HubSpot 評測/Marketo 台灣/ActiveCampaign 中文/Lead Nurturing 工具/AI Email 行銷/B2B 行銷自動化台灣。"
+    },
+    {
+      "date": "2026-10-14",
+      "action": "publish_article",
+      "title": "AI 電子簽名工具推薦 2026：DocuSign AI vs Adobe Acrobat Sign vs PandaDoc — 台灣企業合約自動化與電子簽署完整比較",
+      "file": "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 合約分析、自動填寫、簽署流程自動化，鎖定台灣法務、業務、採購與 HR 部門",
+      "affiliates": ["systeme.io", "digitalocean", "hahow", "datacamp", "nordvpn", "cloudways"],
+      "notes": "三大 AI 電子簽名平台深度評測（詳見前次 agentLog）。"
+    },
+    {
+      "date": "2026-10-13",
+      "action": "publish_article",
+      "title": "AI 企業通訊工具推薦 2026：Microsoft Teams AI vs Slack AI vs Google Chat — 台灣混合辦公與 AI 工作流自動化完整比較",
+      "file": "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority",
+      "affiliates": ["digitalocean", "cloudways", "hahow", "datacamp", "systeme.io", "nordvpn"],
+      "notes": "三大 AI 企業通訊協作平台深度評測（詳見前次 agentLog）。"
+    },
+    {
+      "date": "2026-10-12",
+      "action": "publish_article",
+      "title": "AI 學習管理系統推薦 2026：Docebo AI vs TalentLMS vs Cornerstone OnDemand",
+      "file": "blog/ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
+      "wordCount": 2800,
+      "notes": "三大 AI LMS 深度評測。"
+    },
+    {
+      "date": "2026-10-11",
+      "action": "publish_article",
+      "title": "AI 績效管理工具推薦 2026：Lattice AI vs Culture Amp vs 15Five",
+      "file": "blog/ai-performance-management-tools-lattice-vs-culture-amp-vs-15five-2026.html",
+      "wordCount": 2800,
+      "notes": "三大 AI 績效管理工具深度評測。"
+    },
+    {
+      "date": "2026-10-10",
+      "action": "publish_article",
+      "title": "AI 招募工具推薦 2026：HireVue vs Pymetrics vs Paradox AI",
+      "file": "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
+      "wordCount": 2800,
+      "notes": "三大 AI 招募工具深度評測。"
+    },
+    {
+      "date": "2026-10-09",
+      "action": "publish_article",
+      "title": "AI 會議 Intelligence 工具推薦 2026：tl;dv vs Avoma vs Grain",
+      "file": "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
+      "wordCount": 2900,
+      "notes": "三大 AI 會議 Intelligence 工具深度評測。"
+    },
+    {
+      "date": "2026-10-08",
+      "action": "publish_article",
+      "title": "AI 知識管理工具推薦 2026：Notion AI vs Roam Research vs Mem AI",
+      "file": "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
+      "wordCount": 2800,
+      "notes": "三大 AI 知識管理工具深度評測。"
+    },
+    {
+      "date": "2026-10-06",
+      "action": "publish_article",
+      "title": "AI 客服 Chatbot 工具推薦 2026：Intercom AI vs Drift vs Crisp",
+      "file": "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
+      "wordCount": 3000,
+      "notes": "三大 AI Chatbot 客服工具深度評測。"
+    },
+    {
+      "date": "2026-10-05",
+      "action": "publish_article",
+      "title": "AI 線上表單工具推薦 2026：Typeform AI vs Tally vs Google Forms AI",
+      "file": "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
+      "wordCount": 3000,
+      "notes": "三大 AI 表單工具深度評測。"
+    },
+    {
+      "date": "2026-10-04",
+      "action": "publish_article",
+      "title": "AI 協作白板工具推薦 2026：Miro AI vs Mural vs FigJam AI",
+      "file": "blog/ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
+      "wordCount": 2700,
+      "notes": "三大 AI 協作白板工具深度評測。"
+    }
+  ],
+  "publishedArticles": [
+    "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+    "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
+    "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
+    "blog/ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
+    "blog/ai-performance-management-tools-lattice-vs-culture-amp-vs-15five-2026.html",
+    "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
+    "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
+    "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
+    "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
+    "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
+    "blog/ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
+    "blog/ai-presentation-tools-prezi-ai-vs-pitch-vs-slides-ai-2026.html",
+    "blog/ai-screen-recording-tools-loom-vs-screencast-matic-vs-camtasia-ai-2026.html",
+    "blog/ai-subtitle-tools-veed-vs-kapwing-vs-captions-ai-2026.html",
+    "blog/ai-3d-design-tools-blender-ai-vs-cinema4d-vs-spline-2026.html",
+    "blog/ai-graphic-design-tools-illustrator-ai-vs-coreldraw-vs-affinity-designer-2026.html",
+    "blog/ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
+    "blog/ai-pr-media-monitoring-tools-meltwater-vs-cision-vs-prowly-2026.html",
+    "blog/ai-social-media-monitoring-tools-brandwatch-vs-mention-vs-talkwalker-2026.html",
+    "blog/ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
+    "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
+    "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
+    "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
+    "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+    "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
+    "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
+    "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
+    "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
+    "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
+    "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
+    "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
+    "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
+    "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
+    "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
+    "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
+    "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
+    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
+    "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
+    "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
+    "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
+    "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
+    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-2026.html",
+    "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+    "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
+    "blog/ai-finance-tools-quickbooks-vs-wave-vs-xero-2026.html",
+    "blog/ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
+    "blog/ai-code-review-tools-github-copilot-vs-coderabbit-vs-qodo-2026.html",
+    "blog/ai-language-learning-tools-duolingo-max-vs-chatgpt-vs-babbel-2026.html",
+    "blog/ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
+    "blog/ai-english-writing-tools-grammarly-vs-quillbot-vs-chatgpt-2026.html",
+    "blog/midjourney-v7-review-taiwan-designer-guide-2026.html",
+    "blog/ai-email-tools-superhuman-vs-shortwave-vs-gmail-ai-2026.html",
+    "blog/ai-resume-tools-resume-io-vs-kickresume-vs-chatgpt-2026.html",
+    "blog/ai-translation-tools-deepl-vs-google-vs-chatgpt-2026.html",
+    "blog/ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
+    "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
+    "blog/ai-music-generator-suno-vs-udio-vs-soundraw-2026.html",
+    "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+    "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+    "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
+    "blog/ai-marketing-tools-2026.html",
+    "blog/chatgpt-plus-worth-it-2026.html",
+    "blog/ai-productivity-tools-2026.html",
+    "blog/free-ai-tools-taiwan-2026.html",
+    "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
+    "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
+    "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
+    "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
+    "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
+    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
+    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
+    "blog/ai-writing-tools-comparison-2026.html",
+    "blog/ai-agents-2026.html",
+    "blog/ai-coding-tools.html",
+    "blog/cursor-3-review-2026.html",
+    "blog/cursor-agents-cloud-vm-review-2026.html",
+    "blog/github-copilot-agent-mode-review-2026.html",
+    "blog/windsurf-cascade-review-2026.html",
+    "blog/n8n-vs-make-vs-zapier-2026.html",
+    "blog/rag-explained.html",
+    "blog/systeme-io-review-2026.html",
+    "blog/gemma-4-review-2026.html",
+    "blog/prismml-bonsai-8b-review-2026.html",
+    "blog/mem0-ai-memory-guide-2026.html",
+    "blog/owl-camel-ai-multi-agent-2026.html",
+    "blog/elevenlabs-elevencreative-review-2026.html",
+    "blog/glm-5v-turbo-design2code-review-2026.html",
+    "blog/openowl-macos-mcp-automation-2026.html",
+    "blog/agentshield-ai-agent-observability-2026.html",
+    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
+    "blog/klariqo-ai-receptionist-smb-review-2026.html",
+    "blog/claude-code-session-search-2026.html",
+    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
+    "blog/sessfind-cross-tool-ai-session-search-2026.html",
+    "blog/glm-5-1-open-source-coding-model-review-2026.html",
+    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
+    "blog/cass-coding-agent-session-search-2026.html",
+    "blog/deepseek-v4-pro-review-2026.html",
+    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
+    "blog/n8n-claude-code-advanced-workflow-2026.html",
+    "blog/opencode-open-source-claude-code-alternative-2026.html",
+    "blog/gemini-cli-review-2026.html",
+    "blog/claude-code-complete-guide-2026.html",
+    "blog/ai-coding-tools-comparison-2026-final.html",
+    "blog/claude-4-sonnet-opus-review-2026.html",
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
+  ],
+  "nextPriority": [
+    "AI 客戶成功工具推薦 2026：Gainsight AI vs Totango vs ChurnZero — 台灣 SaaS 企業客戶留存、Health Score 與 AI 流失預測完整比較（延續職場/企業工具系列，聚焦 AI 客戶成功自動化、NRR 提升、流失預測與 QBR 自動化，鎖定台灣 SaaS 客戶成功主管、CS Team Lead 與 B2B 訂閱制服務業）"
   ],
   "directives": [],
   "internalLinkRuns": [
