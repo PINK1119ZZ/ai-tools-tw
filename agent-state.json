@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-10-20T02:00:00+00:00",
+  "lastUpdated": "2026-10-21T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-21",
+      "action": "publish_article",
+      "title": "AI 電商倉儲物流工具推薦 2026：ShipBob vs ShipStation vs Flexport AI — 台灣電商品牌 AI 倉儲自動化、出貨最佳化與跨境物流成本管控完整比較",
+      "file": "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 倉儲揀貨自動化、多倉庫庫存分配、智慧出貨路由與跨境報關，鎖定台灣電商運營主管、物流決策者與跨境賣家",
+      "affiliates": ["cloudways", "digitalocean", "datacamp", "hahow", "systeme.io", "nordvpn"],
+      "internalLinks": [
+        "ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
+        "ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
+        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
+        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 電商物流平台深度評測：ShipBob（D2C 品牌 3PL 首選/全球 40+ 倉庫/OID AI 倉庫分配演算法自動分倉省運費/AI Demand Forecasting 整合 Shopify+Amazon+TikTok Shop 90 天需求預測/Smart Routing Engine 200ms 即時選最省快遞商/Returns Automation 退貨 1-2 天處理/70+ 平台整合/無月費 Pay-as-you-go/每件 $9-12 全包含美國倉+出貨+UPS Ground/不支援台灣本地或東南亞倉）、ShipStation（多通路出貨管理 SaaS 標竿/AI Rate Advisor 50+ 快遞商比較省 17% 運費/Automation Rules 200 條規則引擎/AI Branded Tracking Pages WISMO 減少 35%/Split Shipment AI 拆單決策/Address Validation AI 退件率降低 2.5%/100+ 平台整合含蝦皮半自動/Starter $9.99/月至 Enterprise $229.99/月/月出貨 2,000 件 Gold $99.99/件均攤 $0.05/不提供倉儲服務）、Flexport AI（數位貨代 AI 全鏈整合/AI Customs Classification HS Code 準確率 97.3%/AI Duty Calculator 整合 Section 301+CBAM+東南亞優惠稅率/Supply Chain Visibility AI 全鏈即時追蹤 72 小時延誤預警/Ocean Freight AI Booking 20+ 海運公司比對省 $350-800/趟/Document Automation 商業發票+包裝清單+原產地證明+FDA Prior Notice 一鍵生成錯誤率降 85%/Carbon Footprint ESG 報告/台北辦事處中文支援/Section 321 低價值清關整合/平台費 $99-499/月+貨代服務費 $250-600/趟）。10 維度評分（ShipBob 77/ShipStation 70/Flexport AI 58），6 大台灣場景（Shopify D2C 美妝出口美國/蝦皮+momo+Shopify 多平台自有倉庫/傳統製造業轉型跨境電商/3C 周邊美日澳市場/有機食品 FDA 合規出口/新創電商月出貨 200 件以下），月出貨 2,000 件物流成本試算（ShipBob $17,880=件均 $8.94/ShipStation+3PL $18,100=件均 $9.05），7 情境終極決策表，FAQ 4 題（ShipBob 台灣補貨流程/ShipStation 台灣本地快遞/Flexport vs 傳統報關行/2026 美國關稅應對）。6 個漸層 CTA：Cloudways/DigitalOcean/DataCamp/Hahow/Systeme.io/NordVPN。目標關鍵字：電商物流工具/ShipBob 評測/ShipStation 台灣/Flexport AI 跨境/倉儲自動化/跨境物流成本。"
+    },
     {
       "date": "2026-10-20",
       "action": "publish_article",
@@ -10,15 +27,7 @@
       "wordCount": 2800,
       "topicSource": "nextPriority — 延續電商工具系列，聚焦零售媒體廣告投放、商品頁廣告曝光、AI 出價最佳化與跨平台歸因，鎖定台灣電商廣告投手、品牌行銷主管與 D2C 品牌廣告預算配置",
       "affiliates": ["cloudways", "digitalocean", "datacamp", "systeme.io", "hahow", "nordvpn"],
-      "internalLinks": [
-        "ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
-        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
-        "ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "三大 AI 零售媒體廣告平台深度評測：Criteo Commerce Max（全球最大零售媒體網路 225+ 零售商夥伴/Shopper Graph 7.25 億月活購物者/跨裝置歸因準確率 92%/AI Predictive Bidding 每 10 毫秒更新/Dynamic Creative Optimization/台灣 momo RMA 整合/美國 Walmart+Target+Costco 版位/最低月預算 US$5,000）、CitrusAd（零售商自建 Retail Media Network 首選 SaaS/白標完整客製化/RTB 引擎+Budget Pacing AI/Attribution Engine 四種歸因模型/8-12 週上線/廣告收入 100% 自留無需與 Criteo 拆分/Publicis Groupe 收購加持/年費 US$120,000-500,000+）、Sponsored Products（Amazon Auto Targeting+Dynamic Bidding+Bid+智慧加碼/momo RMA AI 智慧出價美妝 ROAS 4.2x/蝦皮 Shopee Ads AI ROAS 目標出價最低日 NT$50/跨境東南亞廣告）。10 維度評分比較表（AI 出價自動化/跨平台歸因/台灣市場整合/入門門檻/平均 ROAS/受眾資料/後台易用性/跨境電商/報表分析/CP 值），6 大台灣場景（美妝中型品牌/3C 出口美國/寵物新創/零售商建自有廣告平台/東南亞拓銷/快消全通路），月 NT$50 萬 ROAS 試算（策略 A 全押蝦皮 3.5x/策略 B 全押 momo 4.2x/策略 C 多平台組合 4.6x），終極選型決策表 7 情境，FAQ 4 題（Criteo vs momo RMA 直投差別/歸因視窗設定/小品牌預算配置/跨平台管理工具）。6 個漸層 CTA：Cloudways/DigitalOcean/DataCamp/Systeme.io/Hahow/NordVPN。目標關鍵字：零售媒體廣告/Criteo 評測/台灣電商廣告/momo 廣告投放/蝦皮廣告 ROAS/站內廣告 AI 出價。"
+      "notes": "三大 AI 零售媒體廣告平台深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-19",
@@ -26,17 +35,7 @@
       "title": "AI 電商個人化推薦工具推薦 2026：Dynamic Yield vs Nosto vs Bloomreach — 台灣電商品牌 AI 個人化推薦、搜尋優化與購物旅程自動化完整比較",
       "file": "blog/ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 商品推薦引擎、個人化搜尋、Email 個人化與電商 CRO，鎖定台灣電商行銷主管、品牌電商負責人與 D2C 品牌",
-      "affiliates": ["cloudways", "systeme.io", "datacamp", "hahow", "digitalocean", "nordvpn"],
-      "internalLinks": [
-        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
-        "ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "三大 AI 電商個人化推薦引擎深度評測：Dynamic Yield（全通路個人化業界標竿/Affinity Profiles 即時行為輪廓 Cookie-less/Experience OS A/B 多變量測試 Auto-Optimize/Omnichannel Web+App+Email+Kiosk/Dynamic Ads 個人化廣告素材/Mastercard 收購後金融電商整合/Enterprise US$60,000-200,000+/年）、Nosto（Shopify 生態系最佳/72 小時上線無需工程師/Visual Discovery 以圖搜圖/14 種 AI 推薦模板/Category Merchandising/AI Studio GenAI 商品描述客製化/Klaviyo+Mailchimp 整合/Essential US$599/月）、Bloomreach（Discovery NLP 搜尋零結果率降低 60-80%/Merchandising Rules 行銷人員混合設定/Engagement CDP 即時資料延遲<1秒/Weblayers 個人化彈窗/Scenarios 行銷自動化序列/Loomi AI 自然語言分群/台灣代理商支援 LINE 整合/年費 US$50,000-150,000+）。10 維度評分表（推薦精準度/AI 搜尋/Email 整合/上手容易度/A/B 測試/CDP全通路/台灣中文/Shopify 整合/CP 值/ROI 速度）、6 大台灣場景（Shopify 中型時尚美妝/中大型零售連鎖 OMO/跨國品牌台灣分站/D2C 訂閱制電商/3C 遊戲周邊高意圖搜尋/新創電商低預算）、7 情境終極決策表、ROI 試算（月 UV 5 萬美妝品牌：Nosto 月增 NT$345,600/ROI 19.2 倍/1.5 個月回收）、FAQ 4 題（繁中 NLP/LINE 整合/Cookie-less/替代方案）。6 個漸層 CTA：Cloudways/Systeme.io/DataCamp/Hahow/DigitalOcean/NordVPN。目標關鍵字：電商個人化推薦/Dynamic Yield 評測/Nosto 台灣/Bloomreach 中文/AI 商品推薦引擎/電商 CRO 工具/個人化搜尋台灣電商。"
+      "notes": "三大 AI 電商個人化推薦引擎深度評測。"
     },
     {
       "date": "2026-10-18",
@@ -44,9 +43,7 @@
       "title": "AI 社群管理工具推薦 2026：Sprinklr AI vs Khoros vs Salesforce Social Studio — 台灣品牌企業社群傾聽、危機處理與 AI 客戶互動完整比較",
       "file": "blog/ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 延續職場/企業工具系列，聚焦 AI 社群傾聽、品牌危機預警、跨平台社群客服自動化與 UGC 內容管理，鎖定台灣品牌行銷主管、社群經理與企業 PR 團隊",
-      "affiliates": ["nordvpn", "cloudways", "datacamp", "systeme.io", "hahow", "digitalocean"],
-      "notes": "三大 AI 社群管理平台深度評測（詳見前次 agentLog）。"
+      "notes": "三大 AI 社群管理平台深度評測。"
     },
     {
       "date": "2026-10-17",
@@ -54,8 +51,6 @@
       "title": "AI 客戶成功工具推薦 2026：Gainsight AI vs Totango vs ChurnZero — 台灣 SaaS 企業客戶留存、Health Score 與 AI 流失預測完整比較",
       "file": "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority",
-      "affiliates": ["systeme.io", "datacamp", "hahow", "digitalocean", "cloudways", "nordvpn"],
       "notes": "三大 AI 客戶成功平台深度評測。"
     },
     {
@@ -97,25 +92,10 @@
       "file": "blog/ai-performance-management-tools-lattice-vs-culture-amp-vs-15five-2026.html",
       "wordCount": 2800,
       "notes": "三大 AI 績效管理工具深度評測。"
-    },
-    {
-      "date": "2026-10-10",
-      "action": "publish_article",
-      "title": "AI 招募工具推薦 2026：HireVue vs Pymetrics vs Paradox AI",
-      "file": "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 招募工具深度評測。"
-    },
-    {
-      "date": "2026-10-09",
-      "action": "publish_article",
-      "title": "AI 會議 Intelligence 工具推薦 2026：tl;dv vs Avoma vs Grain",
-      "file": "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 會議 Intelligence 工具深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
     "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
     "blog/ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
     "blog/ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
@@ -229,7 +209,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 電商倉儲物流工具推薦 2026：ShipBob vs ShipStation vs Flexport AI — 台灣電商品牌 AI 倉儲自動化、出貨最佳化與跨境物流成本管控完整比較（延續電商工具系列，聚焦 AI 倉儲揀貨自動化、多倉庫庫存分配、智慧出貨路由與跨境報關，鎖定台灣電商運營主管、物流決策者與跨境賣家）"
+    "AI 電商客服自動化工具推薦 2026：Gorgias AI vs Re:amaze vs Richpanel — 台灣電商品牌 AI 客服自動化、退換貨處理與全通路客服整合完整比較（延續電商工具系列，聚焦 Shopify 電商客服 AI 自動回覆、退換貨流程機器人、Instagram/Facebook 訊息自動化與 CX 數據分析，鎖定台灣 D2C 品牌客服主管與電商運營團隊）"
   ],
   "directives": [],
   "internalLinkRuns": [
