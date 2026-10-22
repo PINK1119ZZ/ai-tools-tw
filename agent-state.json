@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-10-21T02:00:00+00:00",
+  "lastUpdated": "2026-10-22T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-22",
+      "action": "publish_article",
+      "title": "AI 電商客服工具推薦 2026：Gorgias AI vs Re:amaze vs Richpanel — 台灣電商品牌 AI 客服自動化、退換貨處理與全通路客服整合完整比較",
+      "file": "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
+      "wordCount": 2800,
+      "topicSource": "nextPriority — 延續電商工具系列，聚焦 Shopify 電商客服 AI 自動回覆、退換貨流程機器人、LINE/Instagram/Facebook 訊息自動化與 CX 數據分析，鎖定台灣 D2C 品牌客服主管與電商運營團隊",
+      "affiliates": ["digitalocean", "cloudways", "datacamp", "hahow", "capcut", "systeme.io", "nordvpn", "ultahost"],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
+        "ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html"
+      ],
+      "notes": "三大 AI 電商客服平台深度評測：Gorgias AI（Shopify 原生整合最深 10/10/AI Agent 68% 自動化率/28 秒首回應/退換貨全流程自主完成/Revenue Statistics 量化客服 ROI/8,000+ 品牌/Basic $60/月含 300 票/Pro $360/月含 2,000 票/Advanced $900/月含 5,000 票/不支援 LINE 官方帳號/蝦皮需 webhook 橋接）、Re:amaze（官方 LINE 整合台灣品牌優勢/多品牌無上限管理 Pro 起/無票數限制按人頭計費/Cues 行為觸發訊息提升轉換/Chatbot Builder 無需寫程式/AI 分票準確率 88%/Basic $29/Pro $49/Plus $69 per seat/3 人 Pro = $147/月 NT$57,000/年/WooCommerce+BigCommerce 整合深/LINE API 整合有延遲但可用）、Richpanel（Customer Self-Service Portal 顧客自助退換貨 40-60% 轉移/AI Sidekick 處理時間縮短 45%/退貨原因 SKU 分析/無限客服帳號/500 件 $99/1,500 件 $199/3,000 件 $349/LINE 需 API 自定義）。10 維度評分（Re:amaze 79/Gorgias 75/Richpanel 74），5 大台灣場景（Shopify D2C 美妝出日韓 → Gorgias/多品牌電商集團+LINE → Re:amaze/3C 高退換貨率 → Richpanel/新創 1-2 人客服 → Re:amaze Basic/B2B 製造業轉電商+ERP → Re:amaze Plus 或 Richpanel Enterprise），月諮詢 3,000 件成本試算（Gorgias ROI +NT$20,400/Re:amaze +NT$19,900/Richpanel +NT$19,200），7 情境終極決策表，FAQ 4 題（蝦皮整合/LINE 穩定性/Richpanel 設定時間/新興工具）。6 個聯盟 CTA：DigitalOcean+Cloudways/DataCamp+Hahow/CapCut+Systeme.io/NordVPN+UltaHost。目標關鍵字：電商客服工具/Gorgias 評測/Re:amaze 台灣/Richpanel 自助服務/電商客服自動化/AI 客服機器人。"
+    },
     {
       "date": "2026-10-21",
       "action": "publish_article",
@@ -209,7 +226,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
   ],
   "nextPriority": [
-    "AI 電商客服自動化工具推薦 2026：Gorgias AI vs Re:amaze vs Richpanel — 台灣電商品牌 AI 客服自動化、退換貨處理與全通路客服整合完整比較（延續電商工具系列，聚焦 Shopify 電商客服 AI 自動回覆、退換貨流程機器人、Instagram/Facebook 訊息自動化與 CX 數據分析，鎖定台灣 D2C 品牌客服主管與電商運營團隊）"
+    "AI 電商庫存管理工具推薦 2026：Cin7 AI vs Skubana vs Linnworks — 台灣電商品牌 AI 庫存預測、多倉庫同步與跨平台訂單管理完整比較（延續電商工具系列，聚焦 AI 需求預測與補貨自動化、多倉庫庫存分配、Shopify+蝦皮+momo 跨平台庫存同步，鎖定台灣電商營運主管與倉儲管理負責人）"
   ],
   "directives": [],
   "internalLinkRuns": [
