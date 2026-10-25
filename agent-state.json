@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2026-10-23T02:00:00+00:00",
+  "lastUpdated": "2026-10-25T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-25",
+      "action": "publish_article",
+      "title": "AI 電商定價工具推薦 2026：Prisync vs Wiser vs BlackCurve — 台灣電商動態定價、競品監控與利潤最佳化完整比較",
+      "file": "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
+      "wordCount": 2900,
+      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 競品爬蟲監控、動態調價規則引擎、Shopify+蝦皮跨平台定價同步，鎖定台灣電商品牌主管與定價決策者",
+      "affiliates": ["cloudways", "digitalocean", "datacamp", "hahow", "nordvpn", "systeme.io", "capcut", "gumroad", "ultahost"],
+      "internalLinks": [
+        "ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
+        "ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 電商定價策略平台深度評測：Prisync（競品爬蟲覆蓋 1,200+ 平台/蝦皮基礎監控/Shopify 原生雙向同步調價延遲<3分鐘/365天歷史定價分析/市場定位百分位報告/規則引擎條件式調價/Starter $59 100SKU/Professional $129 1,000SKU每12小時50條規則/Premium $229 5,000SKU每6小時無限規則/Enterprise 客製每4小時API）、Wiser（蝦皮 Flash Sale 原生監控每15分鐘唯一支援/ML 需求彈性預測需90天數據/MAP 合規截圖存證多通路品牌必備/全通路情報含 Lazada+Tokopedia+momo+PChome/促銷情報解析競品策略可視化/Growth $499/Professional $999/Enterprise 客製）、BlackCurve（Margin-First AI 演算法利潤優先而非搶最低價/Price Architecture 管理複雜定價層級/Elasticity Insights AI 模擬最優毛利點/SAP Business One+Dynamics 365 ERP 整合/蝦皮無原生需工程開發橋接 NT$50,000-120,000/Starter £299 1,000SKU/Growth £599 10,000SKU/Scale £1,199 50,000SKU/Enterprise 客製）。10 維度評分（Wiser 82/Prisync 72/BlackCurve 71），6 大台灣場景（Shopify 自有品牌推薦 Prisync/蝦皮大賣家推薦 Wiser/多通路品牌+MAP 推薦 Wiser Professional/高 SKU 時尚電商推薦 BlackCurve/製造業 DTC 推薦 BlackCurve Scale 或 Wiser Enterprise/新創<500件推薦 Prisync Starter），月出貨 2,000 件 TCO 試算（Prisync NT$9,850/Wiser NT$44,500/BlackCurve NT$39,100，Prisync ROI 最穩定），7 情境終極決策表，FAQ 4 題（蝦皮 Flash Sale 監控/毛利改善時程/ERP 整合/Shopify+蝦皮並行選擇）。6 個漸層 CTA：Cloudways+DigitalOcean/DataCamp+Hahow/NordVPN+Systeme.io/CapCut+Gumroad/UltaHost/Cloudways+DigitalOcean+Systeme.io。目標關鍵字：AI定價工具/動態定價/Prisync評測/Wiser電商/BlackCurve定價/競品價格監控/電商定價策略/Shopify定價工具/蝦皮動態定價/AI定價最佳化。"
+    },
     {
       "date": "2026-10-23",
       "action": "publish_article",
@@ -17,7 +33,7 @@
         "n8n-vs-make-vs-zapier-2026.html",
         "ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html"
       ],
-      "notes": "三大 AI 電商庫存管理平台深度評測：Cin7 AI（製造到零售全鏈整合最強/B2B 批發入口獨家功能/AI Demand Forecasting 30 天 ±12% 誤差/Smart Reorder MOQ+多供應商優先/無限倉庫儲位/POS+電商+B2B 共享庫存/蝦皮整合需 SKULabs $150/月/Standard $349 起/Pro $599/Advanced $999/WMS 模組另 $200-400）、Skubana Extensiv（Intelligent Routing Engine 200ms AI 選倉省 $1.2-2.8/單/Predictive Purchasing 新品類似 SKU 估算/1,200+ 3PL 整合獨家生態系/Split Shipment AI 拆單最佳化/TikTok Shop 原生整合/蝦皮需 Channable $200/月/Growth $500/Professional $1,000/Enterprise 客製）、Linnworks（Intelligence 模組 Velocity Alerts+Reorder Recommendations+Dead Stock 識別/Automation Rules 500 條無程式/Listing Management 跨通路商品清單一元管理/Returns Management AI 退貨分類/歐洲 Amazon+eBay+Lazada 最強/Standard $449 含無限通路）。10 維度評分（Cin7 77/Skubana 76/Linnworks 75），6 大台灣場景，月出貨 2,000 件 TCO 試算（Cin7 NT$37,800/Skubana NT$31,500 淨效益最高/Linnworks NT$24,600），7 情境終極決策表，FAQ 4 題（DEAR vs Cin7/ERP 整合成本/AI 預測數據需求/多幣別）。6 個聯盟 CTA：Cloudways+DigitalOcean/DataCamp+Hahow/Systeme.io+NordVPN/CapCut+Gumroad/UltaHost/Cloudways+DigitalOcean+Systeme.io。目標關鍵字：AI庫存管理工具/Cin7評測/Skubana台灣/Linnworks評測/電商庫存管理軟體/多倉庫庫存同步/AI需求預測/跨平台庫存整合。"
+      "notes": "三大 AI 電商庫存管理平台深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-22",
@@ -35,16 +51,9 @@
       "title": "AI 電商倉儲物流工具推薦 2026：ShipBob vs ShipStation vs Flexport AI — 台灣電商品牌 AI 倉儲自動化、出貨最佳化與跨境物流成本管控完整比較",
       "file": "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 倉儲揀貨自動化、多倉庫庫存分配、智慧出貨路由與跨境報關，鎖定台灣電商運營主管、物流決策者與跨境賣家",
+      "topicSource": "nextPriority",
       "affiliates": ["cloudways", "digitalocean", "datacamp", "hahow", "systeme.io", "nordvpn"],
-      "internalLinks": [
-        "ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
-        "ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
-        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "三大 AI 電商物流平台深度評測：ShipBob（D2C 品牌 3PL 首選/全球 40+ 倉庫/OID AI 倉庫分配演算法自動分倉省運費/AI Demand Forecasting 整合 Shopify+Amazon+TikTok Shop 90 天需求預測/Smart Routing Engine 200ms 即時選最省快遞商/Returns Automation 退貨 1-2 天處理/70+ 平台整合/無月費 Pay-as-you-go/每件 $9-12 全包含美國倉+出貨+UPS Ground/不支援台灣本地或東南亞倉）、ShipStation（多通路出貨管理 SaaS 標竿/AI Rate Advisor 50+ 快遞商比較省 17% 運費/Automation Rules 200 條規則引擎/AI Branded Tracking Pages WISMO 減少 35%/Split Shipment AI 拆單決策/Address Validation AI 退件率降低 2.5%/100+ 平台整合含蝦皮半自動/Starter $9.99/月至 Enterprise $229.99/月/月出貨 2,000 件 Gold $99.99/件均攤 $0.05/不提供倉儲服務）、Flexport AI（數位貨代 AI 全鏈整合/AI Customs Classification HS Code 準確率 97.3%/AI Duty Calculator 整合 Section 301+CBAM+東南亞優惠稅率/Supply Chain Visibility AI 全鏈即時追蹤 72 小時延誤預警/Ocean Freight AI Booking 20+ 海運公司比對省 $350-800/趟/Document Automation 商業發票+包裝清單+原產地證明+FDA Prior Notice 一鍵生成錯誤率降 85%/Carbon Footprint ESG 報告/台北辦事處中文支援/Section 321 低價值清關整合/平台費 $99-499/月+貨代服務費 $250-600/趟）。10 維度評分（ShipBob 77/ShipStation 70/Flexport AI 58），6 大台灣場景（Shopify D2C 美妝出口美國/蝦皮+momo+Shopify 多平台自有倉庫/傳統製造業轉型跨境電商/3C 周邊美日澳市場/有機食品 FDA 合規出口/新創電商月出貨 200 件以下），月出貨 2,000 件物流成本試算（ShipBob $17,880=件均 $8.94/ShipStation+3PL $18,100=件均 $9.05），7 情境終極決策表，FAQ 4 題（ShipBob 台灣補貨流程/ShipStation 台灣本地快遞/Flexport vs 傳統報關行/2026 美國關稅應對）。6 個漸層 CTA：Cloudways/DigitalOcean/DataCamp/Hahow/Systeme.io/NordVPN。目標關鍵字：電商物流工具/ShipBob 評測/ShipStation 台灣/Flexport AI 跨境/倉儲自動化/跨境物流成本。"
+      "notes": "三大 AI 電商物流平台深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-20",
@@ -52,7 +61,7 @@
       "title": "AI 電商搜尋廣告工具推薦 2026：Criteo vs CitrusAd vs Sponsored Products — 台灣電商品牌零售媒體廣告、站內廣告投放與 AI 商品廣告 ROI 最佳化完整比較",
       "file": "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
       "wordCount": 2800,
-      "topicSource": "nextPriority — 延續電商工具系列，聚焦零售媒體廣告投放、商品頁廣告曝光、AI 出價最佳化與跨平台歸因，鎖定台灣電商廣告投手、品牌行銷主管與 D2C 品牌廣告預算配置",
+      "topicSource": "nextPriority",
       "affiliates": ["cloudways", "digitalocean", "datacamp", "systeme.io", "hahow", "nordvpn"],
       "notes": "三大 AI 零售媒體廣告平台深度評測（詳見前次 agentLog）。"
     },
@@ -122,6 +131,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
     "blog/ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
     "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
     "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
@@ -234,10 +244,11 @@
     "blog/claude-code-complete-guide-2026.html",
     "blog/ai-coding-tools-comparison-2026-final.html",
     "blog/claude-4-sonnet-opus-review-2026.html",
-    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html"
+    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
+    "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
   ],
   "nextPriority": [
-    "AI 電商定價策略工具推薦 2026：Prisync vs Wiser vs BlackCurve — 台灣電商品牌 AI 動態定價、競品價格監控與利潤最佳化完整比較（延續電商工具系列，聚焦 AI 競品爬蟲監控、動態調價規則引擎、Shopify+蝦皮跨平台定價同步，鎖定台灣電商品牌主管與定價決策者）"
+    "AI 電商 CX 評分與 NPS 工具推薦 2026：Medallia vs Qualtrics XM vs Delighted — 台灣電商品牌 AI 客戶體驗評分、NPS 自動追蹤與購後滿意度分析完整比較（延續電商工具系列，聚焦 AI 驅動的客戶體驗測量、跨通路 NPS 收集自動化、Shopify+蝦皮購後問卷觸發，鎖定台灣電商品牌體驗主管與客戶洞察決策者）"
   ],
   "directives": [],
   "internalLinkRuns": [
