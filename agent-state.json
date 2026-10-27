@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2026-10-26T02:00:00+00:00",
+  "lastUpdated": "2026-10-27T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-27",
+      "action": "publish_article",
+      "title": "AI 電商評論管理工具推薦 2026：Yotpo vs Okendo vs Stamped — 台灣電商品牌 AI 評論收集、UGC 視覺展示與評分 SEO 自動化完整比較",
+      "file": "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
+      "wordCount": 2850,
+      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 驅動評論收集、UGC 展示、Star Rating SEO 自動化，鎖定台灣電商口碑管理主管與 SEO 決策者",
+      "affiliates": ["datacamp", "hahow", "cloudways", "digitalocean", "systeme.io", "nordvpn", "capcut", "gumroad", "ultahost"],
+      "internalLinks": [
+        "ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
+        "ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 電商評論管理平台深度評測：Yotpo（AI Smart Filters 主題分類/Review Insights 繁中 82%/AI Review Response 草稿省客服 60% 時間/Visual UGC IG 自動標記/忠誠度模組/Google 認證合作夥伴 24h 同步/Premium 約 NT$6,000–12,000/月/企業首選/綜合評分 87）、Okendo（互動式分步問卷完成率+2.4x/Attributes AI 服飾美妝 SKU 屬性建議/Klaviyo 深度整合觸發 Flow/Surveys 第一方數據模組/reviewAspect Schema 支援長尾 SEO/Google 認證合作夥伴/Growth $119/月約 NT$3,570/成長品牌首選/綜合評分 84）、Stamped（免費方案完整中文範本/Q&A SEO 問答模組/NPS 內建/Rewards 積分留評激勵/Premium $59 約 NT$1,770 CP 值最高/Google Shopping Feed 手動 XML 設定/AI 繁中準確率 65% 相對弱/SMB 首選/綜合評分 76）。6 個漸層 CTA：DataCamp+Hahow/Cloudways+DigitalOcean/Systeme.io+NordVPN/CapCut+Gumroad/UltaHost/Cloudways+DigitalOcean+Systeme.io。目標關鍵字：AI評論管理工具/Yotpo評測/Okendo評測/Stamped評測/電商評論工具/UGC工具/Shopify評論/Google Shopping評分/Star Rating SEO/台灣電商評論/購後問卷/評論收集自動化。"
+    },
     {
       "date": "2026-10-26",
       "action": "publish_article",
@@ -16,7 +32,7 @@
         "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
         "n8n-vs-make-vs-zapier-2026.html"
       ],
-      "notes": "三大 AI 電商 CX 評分與 NPS 平台深度評測：Medallia（全通路 AI 體驗管理/NLP 繁中 89%/Predictive Churn Alerts 14 天前預警/Experience Signals 全觸點/Action Planning 閉環工單/Digital 網站行為 widget/蝦皮需 API 橋接 NT$80,000-150,000/年費 NT$120 萬起/企業首選/綜合評分 88）、Qualtrics XM（Stats iQ+Text iQ+Predict iQ 三引擎/LINE 問卷台灣市場轉換率+2.3x/Shopify 原生 App/XM Directory 跨觸點統一客戶 ID/CustomerXM+EX+BX+PX 四支柱/Frontline Feedback 客服即時查詢/NT$45,000+/月/中大型品牌首選/綜合評分 85）、Delighted（5 分鐘 Shopify 串接/7 種問卷 NPS+CSAT+CES+5-Star+Smileys+Thumbs+eNPS/AI Themes 自動萃取 10 大主題繁中 75%/Slack 即時 Detractor 通知/Email 嵌入式一行評分回覆率 35%/Benchmarks 行業平均 NPS 對比/Free-$224/月 5 方案/SMB 首選/綜合評分 76）。10 維度評分，6 大台灣場景（Shopify 新創/中型 Shopify/Shopify+蝦皮需 LINE/多品牌集團/OMO 全通路/免費驗證），月出貨 3,000 件 ROI 試算（Delighted NT$2,200/月 回收 1 個月/Qualtrics NT$45,000/月 回收 8 個月/Medallia NT$100,000+/月 回收 18 個月），7 情境終極決策表，FAQ 4 題（蝦皮 NPS 發送/問卷觸發時機/台灣平均 NPS/Delighted 與 Qualtrics 關係）。6 個漸層 CTA：DataCamp+Hahow/Cloudways+DigitalOcean/Systeme.io+NordVPN/CapCut+Gumroad/UltaHost/Cloudways+DigitalOcean+Systeme.io。目標關鍵字：AI客戶體驗工具/NPS工具/Medallia評測/Qualtrics XM/Delighted NPS/電商NPS/客戶滿意度/CSAT工具/購後問卷/AI體驗管理/台灣電商CX。"
+      "notes": "三大 AI 電商 CX 評分與 NPS 平台深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-10-25",
@@ -99,25 +115,10 @@
       "file": "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
       "wordCount": 2800,
       "notes": "三大 AI 電子簽名平台深度評測。"
-    },
-    {
-      "date": "2026-10-13",
-      "action": "publish_article",
-      "title": "AI 企業通訊工具推薦 2026：Microsoft Teams AI vs Slack AI vs Google Chat",
-      "file": "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 企業通訊協作平台深度評測。"
-    },
-    {
-      "date": "2026-10-12",
-      "action": "publish_article",
-      "title": "AI 學習管理系統推薦 2026：Docebo AI vs TalentLMS vs Cornerstone OnDemand",
-      "file": "blog/ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI LMS 深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
     "blog/ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
     "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
     "blog/ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
@@ -236,7 +237,7 @@
     "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
   ],
   "nextPriority": [
-    "AI 電商評論管理工具推薦 2026：Yotpo vs Okendo vs Stamped — 台灣電商品牌 AI 評論收集、UGC 視覺展示與評分 SEO 自動化完整比較（延續電商工具系列，聚焦 AI 驅動的購後評論觸發、Star Rating 結構化資料 SEO、Google Shopping 評分同步，鎖定台灣電商品牌口碑管理主管與 SEO 優化決策者）"
+    "AI 電商忠誠度工具推薦 2026：Smile.io vs LoyaltyLion vs Yotpo Loyalty — 台灣電商品牌 AI 積分計畫、回購激勵與會員分級自動化完整比較（延續電商工具系列，聚焦 AI 驅動忠誠度飛輪、Shopify 積分點數整合、LINE 會員綁定，鎖定台灣電商品牌留客策略與 CRM 決策者）"
   ],
   "directives": [],
   "internalLinkRuns": [
