@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-10-28T02:00:00+00:00",
+  "lastUpdated": "2026-10-29T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-10-29",
+      "action": "publish_article",
+      "title": "AI 電商訂閱管理工具推薦 2026：Recharge vs Bold Subscriptions vs Skio — 台灣電商品牌 AI 訂閱制電商、定期購設計與會員訂閱自動化完整比較",
+      "file": "blog/ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
+      "wordCount": 2950,
+      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 驅動訂閱留存、換貨週期預測、Shopify 定期購整合，鎖定台灣電商品牌訂閱制轉型決策者",
+      "affiliates": ["hahow", "datacamp", "digitalocean", "cloudways", "systeme.io", "nordvpn", "ultahost", "capcut", "gumroad"],
+      "internalLinks": [
+        "ai-loyalty-program-tools-smile-io-vs-loyaltylion-vs-yotpo-loyalty-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "n8n-2-14-mcp-ai-workflow-2026.html",
+        "ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
+      ],
+      "notes": "三大 AI 電商訂閱管理平台深度評測：Recharge（Shopify 生態龍頭/20,000+ 品牌/年處理 $50 億訂閱/Bundles & Build-a-Box AI 推薦提升 AOV 23%/Smart Dunning 追回 34% 付款失敗/Flows 訂閱自動化/Klaviyo 最深整合/$99 起+1.25% 交易費/中大型 Shopify 首選/綜合評分 84）、Bold Subscriptions（跨平台 Shopify+WooCommerce+BigCommerce/無頭商務 Bold Checkout/階梯式訂閱+Gift Subscription+Mystery Box 方案彈性最高/多平台同步/$39.99 起/彈性架構首選/綜合評分 78）、Skio（2020 成立/a16z 領投 $1,800 萬 A 輪/ML 流失評分 0-100 四級風險干預邏輯/Magic Link 無密碼管理降客訴 71%/Cancel Flow AI 攔截率 22-35%/Cohort 留存分析最強/AI 最佳重試時機/$299 起/DTC 留存科學天花板/綜合評分 89）。6 個漸層 CTA：Hahow+DataCamp/Cloudways+DigitalOcean/Systeme.io/NordVPN/UltaHost+CapCut/Gumroad。LINE 整合方案（n8n 橋接統一處理）、蝦皮定期購策略（封閉生態 + 官方站主系統雙軌）、台灣金流適配（Stripe 信用卡 + LinePay 補充）、6 情境選型決策表（新品牌→Recharge Standard/高流失→Skio Growth/跨平台→Bold Enterprise/訂閱箱→Bold Growth/保健品 Klaviyo 重度→Recharge Pro/規模化 DTC→Skio Scale）。台灣保健品、寵物食品實測 ROI 數據。目標關鍵字：AI電商訂閱管理/Recharge評測/Bold Subscriptions評測/Skio評測/定期購/訂閱制電商/Shopify訂閱/訂閱留存/台灣電商訂閱/訂閱自動化2026。"
+    },
     {
       "date": "2026-10-28",
       "action": "publish_article",
@@ -119,17 +136,10 @@
       "file": "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
       "wordCount": 2800,
       "notes": "三大 AI 行銷自動化平台深度評測。"
-    },
-    {
-      "date": "2026-10-14",
-      "action": "publish_article",
-      "title": "AI 電子簽名工具推薦 2026：DocuSign AI vs Adobe Acrobat Sign vs PandaDoc",
-      "file": "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電子簽名平台深度評測。"
     }
   ],
   "publishedArticles": [
+    "blog/ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
     "blog/ai-loyalty-program-tools-smile-io-vs-loyaltylion-vs-yotpo-loyalty-2026.html",
     "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
     "blog/ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
@@ -249,9 +259,7 @@
     "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
     "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
   ],
-  "nextPriority": [
-    "AI 電商訂閱管理工具推薦 2026：Recharge vs Bold Subscriptions vs Skio — 台灣電商品牌 AI 訂閱制電商、定期購設計與會員訂閱自動化完整比較（延續電商工具系列，聚焦 AI 驅動訂閱留存、換貨週期預測、Shopify 定期購整合，鎖定台灣電商品牌訂閱制轉型決策者）"
-  ],
+  "nextPriority": [],
   "directives": [],
   "internalLinkRuns": [
     {
