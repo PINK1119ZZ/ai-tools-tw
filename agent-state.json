@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-11-05T02:00:00+00:00",
+  "lastUpdated": "2026-11-06T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-06",
+      "action": "publish_article",
+      "title": "AI 銷售智能工具推薦 2026：Apollo.io vs Seamless.ai vs Clay — 台灣 B2B 業務開發、潛客自動化與個人化外銷完整比較",
+      "file": "blog/ai-sales-intelligence-tools-apollo-io-vs-seamless-ai-vs-clay-2026.html",
+      "wordCount": 2800,
+      "topicSource": "自選新主題 — AI 銷售智能工具在台灣 B2B 業務開發（SaaS 外銷、製造業 OEM、新創找投資人）市場需求大，現有文章未覆蓋此細分領域，繁中競爭幾乎空白，三大平台（Apollo.io/Seamless.ai/Clay）切入點清晰，搜尋量高",
+      "affiliates": [
+        "datacamp",
+        "hahow",
+        "digitalocean",
+        "cloudways",
+        "systeme.io",
+        "nordvpn",
+        "ultahost",
+        "capcut",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
+        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html"
+      ],
+      "notes": "三大 AI 銷售智能工具深度評測：Apollo.io（2.75 億聯絡人/7,300 萬公司/65+ 篩選維度含技術棧+融資輪次+招募職缺/Apollo AI Writer 個人化開場白 CTR 提升 28-40%/Intent Data 買家意圖訊號/一站式 Basic $49 起/中小 B2B 業務首選/綜合評分 88）、Seamless.ai（即時驗證電話準確率 ~90%/Chrome Extension LinkedIn 一鍵擷取/直撥電話覆蓋比 Apollo 多 20-30%/電話銷售北美中小企業首選/$147 起/綜合評分 81）、Clay（75+ 數據來源聚合/Claygent AI Agent 自動研究/Waterfall Enrichment Email 命中率 92%/Claude+GPT 深度個人化文案/高單價複雜銷售首選/$149 起/綜合評分 86）。6 個漸層 CTA：DataCamp+Hahow（銷售技能課程）/DigitalOcean+Cloudways（CRM 主機）/Systeme.io（銷售漏斗）/NordVPN+UltaHost（安全主機）/CapCut（影片開發信）/Gumroad（Claude Code Pack）。台灣 SaaS 外銷日本策略（Wantedly 個人化/DX 推進室長）、製造業歐洲 OEM 開發流程、新創找 VC 用 Crunchbase+Clay 策略、域名聲譽保護 4 步驟、Apollo+HubSpot/Clay+Instantly/Apollo+n8n 三大工具堆疊方案、6 情境選型決策表、FAQ 5 題。目標關鍵字：AI銷售工具/Apollo.io評測/Seamless.ai評測/Clay評測/B2B銷售自動化/Cold Email工具/銷售智能/潛客自動化/台灣B2B業務/外銷開發工具2026。"
+    },
     {
       "date": "2026-11-05",
       "action": "publish_article",
@@ -9,23 +36,9 @@
       "file": "blog/ai-voice-agent-tools-bland-ai-vs-vapi-vs-retell-ai-2026.html",
       "wordCount": 2900,
       "topicSource": "自選新主題 — AI 語音 Agent（Voice AI）在台灣市場繁中評測幾乎空白，2026 年語音 AI 市場爆發（電商/診所/補習班），三大平台（Bland AI/Vapi/Retell AI）切入點清晰，搜尋量上升快，競品少",
-      "affiliates": [
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "nordvpn",
-        "ultahost",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
-        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html"
-      ],
-      "notes": "三大 AI 語音 Agent 平台深度評測：Bland AI（高並發外撥/1,000 通並發/Turbo 模式 350-500ms/Pathways 視覺化對話流程/批量 CSV 撥號/知識庫整合/Webhook 動作/$0.09-0.06/分/催款外撥企業首選/綜合評分 85）、Vapi（BYO LLM+TTS/Azure 台灣普通話語音最自然/Function Calling/Squad Multi-Agent/Server URL Webhook/Web 電話嵌入/$0.05+LLM+TTS/工程師首選/綜合評分 88）、Retell AI（10 分鐘上線/免費方案 10 分鐘/內建台灣普通話/A/B 測試/通話情緒分析 Dashboard/$29-99/月/診所補習班房仲首選/綜合評分 83）。6 個漸層 CTA：DigitalOcean+Cloudways（語音後端 VPS）/Hahow+DataCamp（AI 自動化課程）/Systeme.io（通話後行銷漏斗）/NordVPN+UltaHost（安全隱私）/Gumroad（Claude Code Pack）/最終三合一 CTA。台灣部署實務 4 大注意事項（本地號碼申請/個資法合規/繁中語音優化/成本控制）。年度成本估算表（月 500 通入站/月 2,000 通外撥三平台對比）。6 情境選型決策表（電商 API 整合→Vapi/診所預約→Retell/催款外撥→Bland/補習班招生→Retell/SaaS 試用轉換→Bland/自建語音產品→Vapi）。FAQ 5 題（全程中文/客戶觀感/台語識別/訂單取消/Twilio 必要性）。競品補充：ElevenLabs Conversational AI/PlayAI/Livekit Agents。目標關鍵字：AI語音Agent/Voice AI工具/Bland AI評測/Vapi評測/Retell AI評測/AI電話客服/AI語音自動化/台灣AI客服/語音機器人/電話AI 2026。"
+      "affiliates": ["digitalocean","cloudways","hahow","datacamp","systeme.io","nordvpn","ultahost","gumroad"],
+      "internalLinks": ["ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html","ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html","n8n-vs-make-vs-zapier-2026.html","ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html"],
+      "notes": "三大 AI 語音 Agent 平台深度評測（詳見前次 agentLog）。"
     },
     {
       "date": "2026-11-04",
@@ -198,6 +211,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-sales-intelligence-tools-apollo-io-vs-seamless-ai-vs-clay-2026.html",
     "blog/ai-voice-agent-tools-bland-ai-vs-vapi-vs-retell-ai-2026.html",
     "blog/ai-photo-editing-tools-luminar-neo-vs-lightroom-ai-vs-canva-photo-2026.html",
     "blog/ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
