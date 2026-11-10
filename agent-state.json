@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-11-09T02:00:00+00:00",
+  "lastUpdated": "2026-11-10T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-10",
+      "action": "publish_article",
+      "title": "AI 會計記帳工具推薦 2026：Xero vs QuickBooks Online vs FreshBooks — 台灣小型企業、自由工作者與電商賣家報稅自動化完整比較",
+      "file": "blog/ai-accounting-tools-xero-vs-quickbooks-online-vs-freshbooks-2026.html",
+      "wordCount": 2900,
+      "topicSource": "自選新主題 — AI 會計記帳工具在台灣小型企業、自由工作者與電商賣家報稅需求大（營業稅、所得稅申報），電商多平台對帳需求（蝦皮、momo、Shopify 自動匯入），現有文章未深度評測此三大國際平台的台灣適用性，繁中評測競爭少，搜尋量穩定（會計軟體、記帳工具），與已發電商工具系列互補（庫存、客服、訂閱之後的財務環節）",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "systeme.io",
+        "nordvpn",
+        "ultahost",
+        "capcut",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
+        "ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
+        "ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html"
+      ],
+      "notes": "三大 AI 會計記帳工具深度評測：Xero（Smart Categories AI 分類學習準確率 90%+/21,000+ 銀行自動同步含台灣主要銀行/電商整合生態完整 Shopify+Amazon+eBay/多幣別 160+ 自動匯率更新/Hubdoc 發票 OCR/Practice Manager 會計師協作模式/Early $15/Growing $42/台灣電商多平台首選/綜合評分 88）、QuickBooks Online（Auto-Categorization 準確率 85%/Receipt Capture OCR 90%+ 繁中 70-80%/Shopify+Amazon 原生整合/Accountant Access 免費邀請會計師/Simple Start $35/Essentials $65/跨境電商首選/綜合評分 82）、FreshBooks（專案時間追蹤計費/專業發票範本/客戶入口網站/自動付款提醒/台灣銀行整合極少/電商整合薄弱/Lite $19/Plus $33/自由工作者友善/綜合評分 72）。6 個漸層 CTA：Hahow+DataCamp（會計與數據分析課程）/DigitalOcean+Cloudways（主機）/Systeme.io/NordVPN+UltaHost/CapCut/Gumroad。台灣七大情境選型決策表（多平台電商→Xero Growing/Shopify 跨境→QBO Essentials/自由工作者→FreshBooks Plus/小型服務業→Xero Early/製造業貿易商→Xero Growing/新創公司→Xero Growing 或 QBO Plus/會計師事務所→Xero Practice Manager）。三大整合方案：Xero+n8n+台灣電子發票 API（蝦皮/momo 自動化）、QuickBooks+Shopify+Stripe（跨境一站式）、FreshBooks+PayPal/Stripe+Google Sheets（自由工作者極簡）。FAQ 5 題（台灣會計準則與營業稅申報適用性/台灣銀行自動同步/電商平台整合/多使用者協作權限/是否仍需聘請會計師）。目標關鍵字：AI會計記帳工具/Xero評測/QuickBooks Online評測/FreshBooks評測/會計軟體/記帳工具/台灣小型企業會計/電商記帳/營業稅申報/自由工作者記帳/AI財務管理2026。"
+    },
     {
       "date": "2026-11-09",
       "action": "publish_article",
@@ -33,235 +60,35 @@
       "title": "AI 簡報設計工具推薦 2026：Pitch vs Beautiful.ai vs Visme — 台灣創意專業、教育訓練與品牌行銷簡報製作完整比較",
       "file": "blog/ai-presentation-design-tools-pitch-vs-beautiful-ai-vs-visme-2026.html",
       "wordCount": 2950,
-      "topicSource": "自選新主題 — AI 簡報設計工具在台灣創意專業（設計代理商/品牌顧問）、教育訓練講師與品牌行銷團隊市場需求極大，現有文章僅涵蓋 Gamma/Canva/Beautiful.ai/Tome 初階工具評測，缺少專業協作與一站式視覺平台深度分析，三大平台（Pitch/Beautiful.ai/Visme）切入點清晰，繁中競爭少",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "digitalocean",
-        "capcut",
-        "systeme.io",
-        "nordvpn",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
-        "ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-brand-identity-tools-looka-vs-brandmark-vs-tailor-brands-2026.html"
-      ],
-      "notes": "三大 AI 簡報設計平台深度評測：Pitch（Figma-like 即時多人編輯最多 50 人/AI Smart Layouts 8-12 種版型推薦保持設計自由度/Brand Kit Pro Logo 自動抽取品牌色票+字型配對/Presenter Mode AI 講稿提示+計時器+觀眾問答同步/Slack+Notion+Figma+Google Drive 雙向整合/Free/$8/$16 起/設計代理商創意團隊品牌顧問首選/綜合評分 89）、Beautiful.ai（Smart Slides 自動排版引擎即時調整版型字級間距對齊/DesignAI Auto-Adapt 新增投影片自動匹配前後頁風格/Voice Narration AI 內建 25+ 聲音風格/1,200+ 專業模板業務提案教育訓練產品發布投資簡報/60+ 預設動畫效果/Pro $12/企業培訓講師 HR 業務人員產品經理首選/綜合評分 84）、Visme（All-in-One Visual Platform 簡報+信息圖表+社群貼圖+電子書+動態影片+互動文檔/Brand Wizard AI 上傳 Logo 自動生成品牌資產包/Interactive Presentations 嵌入影片動態圖表問卷調查 3D 模型地圖/Data Visualization AI 連接 Google Sheets 自動推薦圖表類型/Content Hub 集中管理標籤分類版本控制權限管理/Basic $12.25/品牌行銷團隊內容行銷人員社群小編首選/綜合評分 87）。6 個漸層 CTA：Hahow（設計行銷課程）/DataCamp（數據視覺化）/CapCut（簡報影片剪輯）/DigitalOcean（簡報分享網站）/Systeme.io（行銷漏斗）/NordVPN（隱私保護）/Gumroad（Claude Code Pack）。台灣教育訓練講師完整流程（Notion 課程規劃→Beautiful.ai 自動排版→Mentimeter/Kahoot 互動元素→ElevenLabs 繁中語音→CapCut 字幕剪輯→Teachable/Hahow 上架）、品牌行銷團隊內容產線（HubSpot 企劃→Visme 一站式素材產出→Brand Wizard 一致性檢查→Buffer 社群發布→Analytics 數據追蹤→自動化跟進）、繁中字型處理方案（Google Fonts Noto Sans TC/思源黑體/jf open 粉圓）、台灣企業整合場景（Google Workspace/Microsoft 365/Zoom/Slack）、6 情境選型決策表（設計代理商→Pitch Business+Figma/教育訓練講師→Beautiful.ai Pro/品牌行銷團隊→Visme Pro+HubSpot/新創融資簡報→Pitch Pro/企業季度報告→Visme Pro+Google Sheets/學校教師→Beautiful.ai 教育優惠）、FAQ 6 題（離線編輯/數據隱私/製作速度實測/PowerPoint 匯入/教育優惠/融資簡報選型）。目標關鍵字：AI簡報工具/Pitch評測/Beautiful.ai評測/Visme評測/AI簡報設計/簡報製作工具/台灣簡報工具/教育訓練簡報/品牌行銷簡報/AI設計工具2026。"
+      "notes": "略（詳見前次 agentLog）"
     },
     {
       "date": "2026-11-06",
       "action": "publish_article",
-      "title": "AI 銷售智能工具推薦 2026：Apollo.io vs Seamless.ai vs Clay — 台灣 B2B 業務開發、潛客自動化與個人化外銷完整比較",
+      "title": "AI 銷售智能工具推薦 2026：Apollo.io vs Seamless.ai vs Clay",
       "file": "blog/ai-sales-intelligence-tools-apollo-io-vs-seamless-ai-vs-clay-2026.html",
       "wordCount": 2800,
-      "topicSource": "自選新主題 — AI 銷售智能工具在台灣 B2B 業務開發（SaaS 外銷、製造業 OEM、新創找投資人）市場需求大，現有文章未覆蓋此細分領域，繁中競爭幾乎空白，三大平台（Apollo.io/Seamless.ai/Clay）切入點清晰，搜尋量高",
-      "affiliates": [
-        "datacamp",
-        "hahow",
-        "digitalocean",
-        "cloudways",
-        "systeme.io",
-        "nordvpn",
-        "ultahost",
-        "capcut",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "n8n-vs-make-vs-zapier-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-        "ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html"
-      ],
-      "notes": "三大 AI 銷售智能工具深度評測：Apollo.io（2.75 億聯絡人/7,300 萬公司/65+ 篩選維度含技術棧+融資輪次+招募職缺/Apollo AI Writer 個人化開場白 CTR 提升 28-40%/Intent Data 買家意圖訊號/一站式 Basic $49 起/中小 B2B 業務首選/綜合評分 88）、Seamless.ai（即時驗證電話準確率 ~90%/Chrome Extension LinkedIn 一鍵擷取/直撥電話覆蓋比 Apollo 多 20-30%/電話銷售北美中小企業首選/$147 起/綜合評分 81）、Clay（75+ 數據來源聚合/Claygent AI Agent 自動研究/Waterfall Enrichment Email 命中率 92%/Claude+GPT 深度個人化文案/高單價複雜銷售首選/$149 起/綜合評分 86）。6 個漸層 CTA：DataCamp+Hahow（銷售技能課程）/DigitalOcean+Cloudways（CRM 主機）/Systeme.io（銷售漏斗）/NordVPN+UltaHost（安全主機）/CapCut（影片開發信）/Gumroad（Claude Code Pack）。台灣 SaaS 外銷日本策略（Wantedly 個人化/DX 推進室長）、製造業歐洲 OEM 開發流程、新創找 VC 用 Crunchbase+Clay 策略、域名聲譽保護 4 步驟、Apollo+HubSpot/Clay+Instantly/Apollo+n8n 三大工具堆疊方案、6 情境選型決策表、FAQ 5 題。目標關鍵字：AI銷售工具/Apollo.io評測/Seamless.ai評測/Clay評測/B2B銷售自動化/Cold Email工具/銷售智能/潛客自動化/台灣B2B業務/外銷開發工具2026。"
+      "notes": "略"
     },
     {
       "date": "2026-11-05",
       "action": "publish_article",
-      "title": "AI 語音 Agent 工具推薦 2026：Bland AI vs Vapi vs Retell AI — 台灣電商、診所、服務業 AI 電話客服、預約自動化完整比較",
+      "title": "AI 語音 Agent 工具推薦 2026：Bland AI vs Vapi vs Retell AI",
       "file": "blog/ai-voice-agent-tools-bland-ai-vs-vapi-vs-retell-ai-2026.html",
       "wordCount": 2900,
-      "topicSource": "自選新主題 — AI 語音 Agent（Voice AI）在台灣市場繁中評測幾乎空白，2026 年語音 AI 市場爆發（電商/診所/補習班），三大平台（Bland AI/Vapi/Retell AI）切入點清晰，搜尋量上升快，競品少",
-      "affiliates": ["digitalocean","cloudways","hahow","datacamp","systeme.io","nordvpn","ultahost","gumroad"],
-      "internalLinks": ["ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html","ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html","n8n-vs-make-vs-zapier-2026.html","ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html"],
-      "notes": "三大 AI 語音 Agent 平台深度評測（詳見前次 agentLog）。"
+      "notes": "略"
     },
     {
       "date": "2026-11-04",
       "action": "publish_article",
-      "title": "AI 照片編輯工具推薦 2026：Luminar Neo vs Lightroom AI vs Canva AI Photo Editor — 台灣攝影師、電商賣家與自媒體創作者完整比較",
+      "title": "AI 照片編輯工具推薦 2026：Luminar Neo vs Lightroom AI vs Canva AI Photo Editor",
       "file": "blog/ai-photo-editing-tools-luminar-neo-vs-lightroom-ai-vs-canva-photo-2026.html",
       "wordCount": 2850,
-      "topicSource": "自選新主題 — AI 照片編輯工具在台灣攝影師（婚攝/人像）、電商賣家（蝦皮/momo 商品去背）與自媒體創作者市場需求大，現有文章未覆蓋此細分領域，繁中競爭少，三大平台（Luminar Neo/Adobe Lightroom AI/Canva AI）切入點清晰",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "systeme.io",
-        "nordvpn",
-        "ultahost",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-        "ai-brand-identity-tools-looka-vs-brandmark-vs-tailor-brands-2026.html",
-        "ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
-        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
-        "ai-short-video-tools-opus-clip-vs-pictory-vs-munch-2026.html"
-      ],
-      "notes": "三大 AI 照片編輯工具深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-11-03",
-      "action": "publish_article",
-      "title": "AI 建站工具推薦 2026：Framer AI vs Webflow AI vs Wix AI — 台灣個人品牌、自由工作者與小型電商官網建立完整比較",
-      "file": "blog/ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
-      "wordCount": 2800,
-      "topicSource": "自選新主題 — AI 建站工具在台灣個人品牌與小型電商市場需求大，三大平台（Framer/Webflow/Wix）在現有文章中均未深度評測，切入點清晰，搜尋量高且繁中競爭少",
-      "affiliates": ["digitalocean","cloudways","hahow","datacamp","systeme.io","ultahost","nordvpn","gumroad"],
-      "internalLinks": ["ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html","ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html","ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html","n8n-vs-make-vs-zapier-2026.html"],
-      "notes": "三大 AI 建站平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-11-01",
-      "action": "publish_article",
-      "title": "AI 品牌設計工具推薦 2026：Looka vs Brandmark vs Tailor Brands — 台灣新創、自由工作者 Logo 與品牌識別完整比較",
-      "file": "blog/ai-brand-identity-tools-looka-vs-brandmark-vs-tailor-brands-2026.html",
-      "wordCount": 2600,
-      "topicSource": "自選新主題 — AI Logo/品牌識別工具是台灣新創與電商賣家高頻搜尋主題，現有文章未覆蓋，切入點清晰",
-      "affiliates": ["hahow","datacamp","systeme.io","digitalocean","nordvpn","ultahost","gumroad"],
-      "internalLinks": ["ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html","ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html","ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html","systeme-io-review-2026.html","ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html"],
-      "notes": "三大 AI 品牌識別工具深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-31",
-      "action": "publish_article",
-      "title": "AI 網紅行銷工具推薦 2026：Modash vs Influencity vs Upfluence — 台灣品牌 KOL 搜尋、真實粉絲分析與網紅合作自動化完整比較",
-      "file": "blog/ai-influencer-marketing-tools-modash-vs-influencity-vs-upfluence-2026.html",
-      "wordCount": 2700,
-      "notes": "三大 AI 網紅行銷平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-30",
-      "action": "publish_article",
-      "title": "AI 電商廣告創意工具推薦 2026：AdCreative.ai vs Pencil vs Smartly.io",
-      "file": "blog/ai-ad-creative-tools-adcreative-ai-vs-pencil-vs-smartly-io-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 廣告創意自動化平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-29",
-      "action": "publish_article",
-      "title": "AI 電商訂閱管理工具推薦 2026：Recharge vs Bold Subscriptions vs Skio",
-      "file": "blog/ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
-      "wordCount": 2950,
-      "notes": "三大 AI 電商訂閱管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-28",
-      "action": "publish_article",
-      "title": "AI 電商忠誠度工具推薦 2026：Smile.io vs LoyaltyLion vs Yotpo Loyalty",
-      "file": "blog/ai-loyalty-program-tools-smile-io-vs-loyaltylion-vs-yotpo-loyalty-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商忠誠度平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-27",
-      "action": "publish_article",
-      "title": "AI 電商評論管理工具推薦 2026：Yotpo vs Okendo vs Stamped",
-      "file": "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
-      "wordCount": 2850,
-      "notes": "三大 AI 電商評論管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-26",
-      "action": "publish_article",
-      "title": "AI 電商 CX 評分與 NPS 工具推薦 2026：Medallia vs Qualtrics XM vs Delighted",
-      "file": "blog/ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商 CX 評分與 NPS 平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-25",
-      "action": "publish_article",
-      "title": "AI 電商定價工具推薦 2026：Prisync vs Wiser vs BlackCurve",
-      "file": "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商定價策略平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-23",
-      "action": "publish_article",
-      "title": "AI 電商庫存管理工具推薦 2026：Cin7 AI vs Skubana vs Linnworks",
-      "file": "blog/ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商庫存管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-22",
-      "action": "publish_article",
-      "title": "AI 電商客服工具推薦 2026：Gorgias AI vs Re:amaze vs Richpanel",
-      "file": "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商客服平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-21",
-      "action": "publish_article",
-      "title": "AI 電商倉儲物流工具推薦 2026：ShipBob vs ShipStation vs Flexport AI",
-      "file": "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商物流平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-20",
-      "action": "publish_article",
-      "title": "AI 電商搜尋廣告工具推薦 2026：Criteo vs CitrusAd vs Sponsored Products",
-      "file": "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 零售媒體廣告平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-19",
-      "action": "publish_article",
-      "title": "AI 電商個人化推薦工具推薦 2026：Dynamic Yield vs Nosto vs Bloomreach",
-      "file": "blog/ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商個人化推薦引擎深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-18",
-      "action": "publish_article",
-      "title": "AI 社群管理工具推薦 2026：Sprinklr AI vs Khoros vs Salesforce Social Studio",
-      "file": "blog/ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 社群管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-17",
-      "action": "publish_article",
-      "title": "AI 客戶成功工具推薦 2026：Gainsight AI vs Totango vs ChurnZero",
-      "file": "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 客戶成功平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-16",
-      "action": "publish_article",
-      "title": "AI 行銷自動化工具推薦 2026：HubSpot Marketing Hub AI vs Marketo Engage vs ActiveCampaign",
-      "file": "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 行銷自動化平台深度評測（詳見前次 agentLog）。"
+      "notes": "略"
     }
   ],
   "publishedArticles": [
+    "blog/ai-accounting-tools-xero-vs-quickbooks-online-vs-freshbooks-2026.html",
     "blog/ai-survey-tools-typeform-ai-vs-surveymonkey-vs-google-forms-ai-2026.html",
     "blog/ai-presentation-design-tools-pitch-vs-beautiful-ai-vs-visme-2026.html",
     "blog/ai-sales-intelligence-tools-apollo-io-vs-seamless-ai-vs-clay-2026.html",
@@ -389,7 +216,6 @@
     "blog/claude-code-complete-guide-2026.html",
     "blog/ai-coding-tools-comparison-2026-final.html",
     "blog/claude-4-sonnet-opus-review-2026.html",
-    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
     "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
   ],
   "nextPriority": [],
@@ -411,378 +237,6 @@
       "date": "2026-09-23",
       "action": "internal_link_optimization",
       "articlesEdited": ["blog/deepseek-v4-pro-review-2026.html","blog/claude-4-sonnet-opus-review-2026.html","blog/vibe-coding-tools-comparison-2026.html"],
-      "notes": "TW: deepseek-v4 文中 OpenCode 提及文字加入評測連結；claude-4 場景一新增 OpenCode 開源替代方案連結；vibe-coding Intent 段落加入 Gemini CLI 評測連結"
-    }
-  ]
-}
-
-  "status": "active",
-  "agentLog": [
-    {
-      "date": "2026-11-03",
-      "action": "publish_article",
-      "title": "AI 建站工具推薦 2026：Framer AI vs Webflow AI vs Wix AI — 台灣個人品牌、自由工作者與小型電商官網建立完整比較",
-      "file": "blog/ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
-      "wordCount": 2800,
-      "topicSource": "自選新主題 — AI 建站工具在台灣個人品牌與小型電商市場需求大，三大平台（Framer/Webflow/Wix）在現有文章中均未深度評測，切入點清晰，搜尋量高且繁中競爭少",
-      "affiliates": [
-        "digitalocean",
-        "cloudways",
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "ultahost",
-        "nordvpn",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-        "ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "三大 AI 建站平台深度評測：Framer AI（AI Site Generator 30–60 秒/Motion AI 動畫自動生成/Responsive AI 三裝置同步/Brand Kit Logo 顏色抽取/Lighthouse Performance 92 業界最高/Free/$5/$15/$30/$85 起/設計師/個人品牌/攝影師首選/綜合評分 88）、Webflow AI（AI Companion/Layout Generator/Copywriter/Image Alt Generator/CMS AI 批量生成/Logic AI Beta/SEO 控制最細：動態 meta tag 模板/301 redirect 管理/Clean URL/代碼可匯出 HTML+CSS+JS/代理商接案首選/Free/$14/$23/$39/綜合評分 85）、Wix AI（20–40 秒最快/繁中介面最完整/AI Text Creator/內建 DALL·E 3 圖片生成/Wix SEO Wiz 引導式/Wix Stores 電商/Wix Payments Visa/JCB/中小業主零門檻首選/Free/$17/$29/$36/$159/綜合評分 82）。8 個漸層 CTA：DigitalOcean+Cloudways（網站主機）/Hahow+DataCamp（線上課程）/Systeme.io（行銷漏斗）/UltaHost+NordVPN/DigitalOcean+Cloudways（重複最終CTA）/Gumroad（Claude Code Pack）。台灣電商 ECPay/LINE Pay 整合說明、WordPress vs AI建站工具選型分析、Lighthouse 三平台速度實測對比、六大情境選型決策表（攝影師→Framer/部落客→Webflow/手作電商→Wix/餐廳→Wix/SaaS官網→Framer或Webflow/代理商→Webflow）、5 則 FAQ（台灣SEO/代碼匯出/信用卡付款/速度測試/2026年是否需要設計師）。目標關鍵字：AI建站工具/Framer AI評測/Webflow AI評測/Wix AI評測/AI網站建立/無程式碼建站/台灣建站工具/AI官網建立/個人品牌網站/建站工具推薦2026。"
-    },
-    {
-      "date": "2026-11-01",
-      "action": "publish_article",
-      "title": "AI 品牌設計工具推薦 2026：Looka vs Brandmark vs Tailor Brands — 台灣新創、自由工作者 Logo 與品牌識別完整比較",
-      "file": "blog/ai-brand-identity-tools-looka-vs-brandmark-vs-tailor-brands-2026.html",
-      "wordCount": 2600,
-      "topicSource": "自選新主題 — AI Logo/品牌識別工具是台灣新創與電商賣家高頻搜尋主題，現有文章未覆蓋，切入點清晰",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "systeme.io",
-        "digitalocean",
-        "nordvpn",
-        "ultahost",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-        "ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "systeme-io-review-2026.html",
-        "ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html"
-      ],
-      "notes": "三大 AI 品牌識別工具深度評測：Looka（高品質 AI Logo/Brand Kit 300+ 素材/SVG+EPS+PDF/Social Media Kit/名片+T-shirt+Zoom 背景/Brand Guidelines 自動生成/$20-96 一次性/台灣電商新創首選/綜合評分 87）、Brandmark（極簡歐美設計美學/AI Color Science 競品配色分析/Logogeek Score 三維自動評分/Google Fonts 繁中可用/設計師品味型用戶首選/Basic $25/綜合評分 80）、Tailor Brands（月費 $3.99 起/Logo+網站建立器+名片一站式/美國 LLC 公司登記整合/訂閱制停訂失去存取權/台灣適用性較低/綜合評分 76）。6 個漸層 CTA：Hahow（品牌設計課程）/DataCamp/Systeme.io/DigitalOcean/NordVPN+UltaHost/Gumroad Claude Code Pack。台灣 TIPO 商標申請 AI 生成 Logo 注意事項、查重流程、繁中字型解方（思源黑體+Canva+Fiverr 微調）、支付方式說明、6 情境選型決策表（電商/SaaS/餐飲/Freelancer/實體零售/跨境電商）、5 則 FAQ。目標關鍵字：AI品牌設計工具/Looka評測/Brandmark評測/Tailor Brands評測/AI Logo產生器/台灣新創品牌設計/Logo設計工具/AI商標設計/品牌識別AI2026。"
-    },
-    {
-      "date": "2026-10-31",
-      "action": "publish_article",
-      "title": "AI 網紅行銷工具推薦 2026：Modash vs Influencity vs Upfluence — 台灣品牌 KOL 搜尋、真實粉絲分析與網紅合作自動化完整比較",
-      "file": "blog/ai-influencer-marketing-tools-modash-vs-influencity-vs-upfluence-2026.html",
-      "wordCount": 2700,
-      "topicSource": "新主題 — 台灣 KOL 行銷市場需求大，電商工具系列延伸到網紅行銷選型，覆蓋 Instagram/TikTok/YouTube 三平台，鎖定台灣電商品牌行銷主管與 D2C 品牌決策者",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "digitalocean",
-        "cloudways",
-        "systeme.io",
-        "capcut",
-        "nordvpn",
-        "ultahost",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-ad-creative-tools-adcreative-ai-vs-pencil-vs-smartly-io-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
-        "ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "三大 AI 網紅行銷平台深度評測：Modash（2.5 億 KOL 資料庫/250+ 篩選維度/FFC 假粉偵測準確率 94%/Lookalike Search/Campaign Tracking 自動彙整/$99 起/中小品牌首選/綜合評分 86）、Influencity（AI 匹配引擎 Match Score/ROI 預測 ±15% 誤差/Audience Overlap 受眾重疊分析獨家/Campaign Manager 端對端合約流程/$168 起/中型品牌與代理商首選/綜合評分 83）、Upfluence（Shopify/WooCommerce 深度整合/從客戶找 KOL 轉換率高 40-60%/聯盟行銷原生追蹤自動結算/ROAS 8.4 台灣保健品實測/AI Brief 生成/$478 起/D2C 電商首選/綜合評分 88）。6 個漸層 CTA：Hahow+DataCamp/DigitalOcean+Cloudways/Systeme.io/CapCut+NordVPN/UltaHost/Gumroad。台灣 Dcard 缺口說明、蝦皮直播 KOL 補充方案、Facebook API 限制分析、LINE 整合 n8n 橋接技巧、TikTok Shop 台灣直播現況。6 情境選型決策表（新創→Modash Starter/多 Campaign→Influencity Professional/Shopify 聯盟→Upfluence Growth/代理商→Influencity Business/大型品牌→Modash Enterprise/D2C 大使→Upfluence Scale）。目標關鍵字：AI網紅行銷工具/Modash評測/Influencity評測/Upfluence評測/KOL行銷/假粉偵測/網紅ROI/台灣KOL/Instagram網紅/TikTok行銷/influencer marketing 2026。"
-    },
-    {
-      "date": "2026-10-30",
-      "action": "publish_article",
-      "title": "AI 電商廣告創意工具推薦 2026：AdCreative.ai vs Pencil vs Smartly.io — 台灣電商品牌 AI 廣告素材生成、動態廣告自動化與 ROAS 最佳化完整比較",
-      "file": "blog/ai-ad-creative-tools-adcreative-ai-vs-pencil-vs-smartly-io-2026.html",
-      "wordCount": 2800,
-      "topicSource": "nextPriority — 延續電商工具系列，聚焦 AI 廣告素材自動生成、影片廣告效果預測與大規模動態創意最佳化，鎖定台灣電商行銷人與廣告投手",
-      "affiliates": [
-        "hahow",
-        "datacamp",
-        "cloudways",
-        "digitalocean",
-        "systeme.io",
-        "nordvpn",
-        "ultahost",
-        "capcut",
-        "gumroad"
-      ],
-      "internalLinks": [
-        "ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
-        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-        "ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
-        "n8n-vs-make-vs-zapier-2026.html",
-        "n8n-2-14-mcp-ai-workflow-2026.html",
-        "ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html"
-      ],
-      "notes": "三大 AI 廣告創意自動化平台深度評測：AdCreative.ai（60 秒生成 100 張靜態廣告圖/Creative Score 0-100 預測轉換率/Creative Insights Pro 連接 Meta 歷史數據/Text AI 繁中文案/競品分析反推素材風格/$21 起/中小電商 CP 值王/綜合評分 83），Pencil（Win Rate Prediction 勝率 78% 準確/Storyboard AI 輸入 URL 自動生成分鏡/Auto Edit 多規格剪輯/Hook Variants 10+ 種開場測試 CTR 提升 22-40%/DTC 影片廣告首選/$119 起/綜合評分 80），Smartly.io（DCO 動態創意最佳化即時組合/ROAS 從 3.2 提升 4.8/Automated Ads 規則引擎/Creative Intelligence 跨平台素材洞察/500+ 模板/企業客製報價/大型跨通路品牌首選/綜合評分 88）。6 個漸層 CTA：Hahow+DataCamp/Cloudways+DigitalOcean/Systeme.io/NordVPN+UltaHost/CapCut+Gumroad。momo 素材適配方案（手動匯出 resize + n8n 自動化橋接）、蝦皮廣告素材說明、6 情境選型決策表、Q&A 4 題。目標關鍵字：AI廣告創意工具/AdCreative.ai評測/Pencil廣告工具/Smartly.io評測/AI廣告素材生成/動態創意最佳化/DCO廣告/台灣電商廣告/廣告ROAS最佳化/AI廣告自動化2026。"
-    },
-    {
-      "date": "2026-10-29",
-      "action": "publish_article",
-      "title": "AI 電商訂閱管理工具推薦 2026：Recharge vs Bold Subscriptions vs Skio — 台灣電商品牌 AI 訂閱制電商、定期購設計與會員訂閱自動化完整比較",
-      "file": "blog/ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
-      "wordCount": 2950,
-      "notes": "三大 AI 電商訂閱管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-28",
-      "action": "publish_article",
-      "title": "AI 電商忠誠度工具推薦 2026：Smile.io vs LoyaltyLion vs Yotpo Loyalty — 台灣電商品牌 AI 積分計畫、回購激勵與會員分級自動化完整比較",
-      "file": "blog/ai-loyalty-program-tools-smile-io-vs-loyaltylion-vs-yotpo-loyalty-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商忠誠度平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-27",
-      "action": "publish_article",
-      "title": "AI 電商評論管理工具推薦 2026：Yotpo vs Okendo vs Stamped — 台灣電商品牌 AI 評論收集、UGC 視覺展示與評分 SEO 自動化完整比較",
-      "file": "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
-      "wordCount": 2850,
-      "notes": "三大 AI 電商評論管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-26",
-      "action": "publish_article",
-      "title": "AI 電商 CX 評分與 NPS 工具推薦 2026：Medallia vs Qualtrics XM vs Delighted — 台灣電商品牌 AI 客戶體驗評分、NPS 自動追蹤與購後滿意度分析完整比較",
-      "file": "blog/ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商 CX 評分與 NPS 平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-25",
-      "action": "publish_article",
-      "title": "AI 電商定價工具推薦 2026：Prisync vs Wiser vs BlackCurve — 台灣電商動態定價、競品監控與利潤最佳化完整比較",
-      "file": "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商定價策略平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-23",
-      "action": "publish_article",
-      "title": "AI 電商庫存管理工具推薦 2026：Cin7 AI vs Skubana vs Linnworks — 台灣電商多平台庫存同步、AI 需求預測與跨倉管理完整比較",
-      "file": "blog/ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
-      "wordCount": 2900,
-      "notes": "三大 AI 電商庫存管理平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-22",
-      "action": "publish_article",
-      "title": "AI 電商客服工具推薦 2026：Gorgias AI vs Re:amaze vs Richpanel — 台灣電商品牌 AI 客服自動化、退換貨處理與全通路客服整合完整比較",
-      "file": "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商客服平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-21",
-      "action": "publish_article",
-      "title": "AI 電商倉儲物流工具推薦 2026：ShipBob vs ShipStation vs Flexport AI — 台灣電商品牌 AI 倉儲自動化、出貨最佳化與跨境物流成本管控完整比較",
-      "file": "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商物流平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-20",
-      "action": "publish_article",
-      "title": "AI 電商搜尋廣告工具推薦 2026：Criteo vs CitrusAd vs Sponsored Products — 台灣電商品牌零售媒體廣告、站內廣告投放與 AI 商品廣告 ROI 最佳化完整比較",
-      "file": "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 零售媒體廣告平台深度評測（詳見前次 agentLog）。"
-    },
-    {
-      "date": "2026-10-19",
-      "action": "publish_article",
-      "title": "AI 電商個人化推薦工具推薦 2026：Dynamic Yield vs Nosto vs Bloomreach — 台灣電商品牌 AI 個人化推薦、搜尋優化與購物旅程自動化完整比較",
-      "file": "blog/ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 電商個人化推薦引擎深度評測。"
-    },
-    {
-      "date": "2026-10-18",
-      "action": "publish_article",
-      "title": "AI 社群管理工具推薦 2026：Sprinklr AI vs Khoros vs Salesforce Social Studio — 台灣品牌企業社群傾聽、危機處理與 AI 客戶互動完整比較",
-      "file": "blog/ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 社群管理平台深度評測。"
-    },
-    {
-      "date": "2026-10-17",
-      "action": "publish_article",
-      "title": "AI 客戶成功工具推薦 2026：Gainsight AI vs Totango vs ChurnZero — 台灣 SaaS 企業客戶留存、Health Score 與 AI 流失預測完整比較",
-      "file": "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 客戶成功平台深度評測。"
-    },
-    {
-      "date": "2026-10-16",
-      "action": "publish_article",
-      "title": "AI 行銷自動化工具推薦 2026：HubSpot Marketing Hub AI vs Marketo Engage vs ActiveCampaign",
-      "file": "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-      "wordCount": 2800,
-      "notes": "三大 AI 行銷自動化平台深度評測。"
-    }
-  ],
-  "publishedArticles": [
-    "blog/ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
-    "blog/ai-short-video-tools-opus-clip-vs-pictory-vs-munch-2026.html",
-    "blog/ai-brand-identity-tools-looka-vs-brandmark-vs-tailor-brands-2026.html",
-    "blog/ai-influencer-marketing-tools-modash-vs-influencity-vs-upfluence-2026.html",
-    "blog/ai-ad-creative-tools-adcreative-ai-vs-pencil-vs-smartly-io-2026.html",
-    "blog/ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
-    "blog/ai-loyalty-program-tools-smile-io-vs-loyaltylion-vs-yotpo-loyalty-2026.html",
-    "blog/ai-review-management-tools-yotpo-vs-okendo-vs-stamped-2026.html",
-    "blog/ai-cx-nps-tools-medallia-vs-qualtrics-xm-vs-delighted-2026.html",
-    "blog/ai-pricing-strategy-tools-prisync-vs-wiser-vs-blackcurve-2026.html",
-    "blog/ai-inventory-management-tools-cin7-vs-skubana-vs-linnworks-2026.html",
-    "blog/ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html",
-    "blog/ai-retail-media-advertising-tools-criteo-vs-citrusad-vs-sponsored-products-2026.html",
-    "blog/ai-ecommerce-personalization-tools-dynamic-yield-vs-nosto-vs-bloomreach-2026.html",
-    "blog/ai-social-management-tools-sprinklr-ai-vs-khoros-vs-salesforce-social-studio-2026.html",
-    "blog/ai-customer-success-tools-gainsight-ai-vs-totango-vs-churnzero-2026.html",
-    "blog/ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
-    "blog/ai-esignature-tools-docusign-ai-vs-adobe-acrobat-sign-vs-pandadoc-2026.html",
-    "blog/ai-collaboration-tools-microsoft-teams-ai-vs-slack-ai-vs-google-chat-2026.html",
-    "blog/ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
-    "blog/ai-performance-management-tools-lattice-vs-culture-amp-vs-15five-2026.html",
-    "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
-    "blog/ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
-    "blog/ai-knowledge-management-tools-notion-ai-vs-roam-research-vs-mem-ai-2026.html",
-    "blog/ai-chatbot-tools-intercom-ai-vs-drift-vs-crisp-2026.html",
-    "blog/ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html",
-    "blog/ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
-    "blog/ai-presentation-tools-prezi-ai-vs-pitch-vs-slides-ai-2026.html",
-    "blog/ai-screen-recording-tools-loom-vs-screencast-matic-vs-camtasia-ai-2026.html",
-    "blog/ai-subtitle-tools-veed-vs-kapwing-vs-captions-ai-2026.html",
-    "blog/ai-3d-design-tools-blender-ai-vs-cinema4d-vs-spline-2026.html",
-    "blog/ai-graphic-design-tools-illustrator-ai-vs-coreldraw-vs-affinity-designer-2026.html",
-    "blog/ai-video-editing-pro-tools-premiere-vs-davinci-vs-finalcut-2026.html",
-    "blog/ai-pr-media-monitoring-tools-meltwater-vs-cision-vs-prowly-2026.html",
-    "blog/ai-social-media-monitoring-tools-brandwatch-vs-mention-vs-talkwalker-2026.html",
-    "blog/ai-social-media-scheduling-tools-buffer-vs-hootsuite-vs-sprout-social-2026.html",
-    "blog/ai-podcast-tools-descript-vs-adobe-podcast-vs-podcastle-2026.html",
-    "blog/ai-video-marketing-tools-vidyard-vs-loom-vs-wistia-2026.html",
-    "blog/ai-health-management-tools-noom-ai-vs-whoop-vs-oura-ai-2026.html",
-    "blog/ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
-    "blog/ai-personal-finance-tools-moneylion-vs-albert-vs-cleo-ai-2026.html",
-    "blog/ai-coding-learning-tools-github-copilot-vs-cursor-vs-replit-ai-2026.html",
-    "blog/ai-writing-assistant-notion-ai-vs-google-docs-ai-vs-microsoft-365-copilot-2026.html",
-    "blog/ai-presentation-tools-gamma-vs-canva-ai-vs-beautiful-ai-vs-tome-2026.html",
-    "blog/ai-live-streaming-tools-streamyard-vs-restream-vs-obs-ai-2026.html",
-    "blog/ai-content-marketing-tools-jasper-vs-copyai-vs-writesonic-2026.html",
-    "blog/ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
-    "blog/ai-speech-recognition-tools-google-speech-vs-aws-transcribe-vs-azure-speech-2026.html",
-    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
-    "blog/ai-chatbot-platform-chatbase-vs-tidio-vs-manychat-2026.html",
-    "blog/ai-avatar-tools-heygen-vs-synthesia-vs-did-2026.html",
-    "blog/ai-ad-tools-google-pmax-vs-meta-advantage-plus-vs-tiktok-smart-2026.html",
-    "blog/ai-security-tools-crowdstrike-vs-sentinelone-vs-microsoft-defender-2026.html",
-    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-studio-2026.html",
-    "blog/ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
-    "blog/ai-legal-tools-harvey-ai-vs-clio-vs-contractpodai-2026.html",
-    "blog/ai-hr-tools-bamboohr-vs-workday-vs-rippling-2026.html",
-    "blog/ai-accounting-tools-freshbooks-vs-quickbooks-self-employed-vs-zoho-books-2026.html",
-    "blog/ai-data-analytics-tools-tableau-vs-powerbi-vs-looker-2026.html",
-    "blog/ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
-    "blog/ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
-    "blog/ai-finance-tools-quickbooks-vs-wave-vs-xero-2026.html",
-    "blog/ai-social-media-tools-buffer-vs-hootsuite-vs-later-2026.html",
-    "blog/ai-code-review-tools-github-copilot-vs-coderabbit-vs-qodo-2026.html",
-    "blog/ai-language-learning-tools-duolingo-max-vs-chatgpt-vs-babbel-2026.html",
-    "blog/ai-design-tools-canva-ai-vs-adobe-firefly-vs-figma-ai-2026.html",
-    "blog/ai-english-writing-tools-grammarly-vs-quillbot-vs-chatgpt-2026.html",
-    "blog/midjourney-v7-review-taiwan-designer-guide-2026.html",
-    "blog/ai-email-tools-superhuman-vs-shortwave-vs-gmail-ai-2026.html",
-    "blog/ai-resume-tools-resume-io-vs-kickresume-vs-chatgpt-2026.html",
-    "blog/ai-translation-tools-deepl-vs-google-vs-chatgpt-2026.html",
-    "blog/ai-seo-tools-surfer-vs-jasper-vs-chatgpt-2026.html",
-    "blog/ai-copywriting-tools-chatgpt-vs-jasper-vs-copyai-2026.html",
-    "blog/ai-music-generator-suno-vs-udio-vs-soundraw-2026.html",
-    "blog/ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
-    "blog/ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
-    "blog/notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
-    "blog/ai-marketing-tools-2026.html",
-    "blog/chatgpt-plus-worth-it-2026.html",
-    "blog/ai-productivity-tools-2026.html",
-    "blog/free-ai-tools-taiwan-2026.html",
-    "blog/ai-meeting-recorder-otter-vs-fireflies-vs-fathom-2026.html",
-    "blog/ai-image-generator-midjourney-vs-dalle3-vs-stable-diffusion-2026.html",
-    "blog/chatgpt-vs-claude-vs-gemini-2026-complete-comparison.html",
-    "blog/ai-video-generator-sora-vs-runway-vs-kling-2026.html",
-    "blog/perplexity-vs-chatgpt-search-vs-google-ai-overview-2026.html",
-    "blog/gamma-vs-canva-ai-vs-beautiful-ai-presentation-2026.html",
-    "blog/notion-ai-vs-chatgpt-vs-copilot-knowledge-management-2026.html",
-    "blog/ai-writing-tools-comparison-2026.html",
-    "blog/ai-agents-2026.html",
-    "blog/ai-coding-tools.html",
-    "blog/cursor-3-review-2026.html",
-    "blog/cursor-agents-cloud-vm-review-2026.html",
-    "blog/github-copilot-agent-mode-review-2026.html",
-    "blog/windsurf-cascade-review-2026.html",
-    "blog/n8n-vs-make-vs-zapier-2026.html",
-    "blog/rag-explained.html",
-    "blog/systeme-io-review-2026.html",
-    "blog/gemma-4-review-2026.html",
-    "blog/prismml-bonsai-8b-review-2026.html",
-    "blog/mem0-ai-memory-guide-2026.html",
-    "blog/owl-camel-ai-multi-agent-2026.html",
-    "blog/elevenlabs-elevencreative-review-2026.html",
-    "blog/glm-5v-turbo-design2code-review-2026.html",
-    "blog/openowl-macos-mcp-automation-2026.html",
-    "blog/agentshield-ai-agent-observability-2026.html",
-    "blog/claude-code-cost-tracker-ccusage-claudoscope-2026.html",
-    "blog/klariqo-ai-receptionist-smb-review-2026.html",
-    "blog/claude-code-session-search-2026.html",
-    "blog/n8n-2-14-mcp-ai-workflow-2026.html",
-    "blog/sessfind-cross-tool-ai-session-search-2026.html",
-    "blog/glm-5-1-open-source-coding-model-review-2026.html",
-    "blog/dify-v1-6-mcp-two-way-integration-2026.html",
-    "blog/cass-coding-agent-session-search-2026.html",
-    "blog/deepseek-v4-pro-review-2026.html",
-    "blog/kimi-k2-6-open-weight-agent-review-2026.html",
-    "blog/n8n-claude-code-advanced-workflow-2026.html",
-    "blog/opencode-open-source-claude-code-alternative-2026.html",
-    "blog/gemini-cli-review-2026.html",
-    "blog/claude-code-complete-guide-2026.html",
-    "blog/ai-coding-tools-comparison-2026-final.html",
-    "blog/claude-4-sonnet-opus-review-2026.html",
-    "blog/ai-vision-tools-google-vision-vs-aws-rekognition-vs-azure-computer-vision-2026.html",
-    "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html"
-  ],
-  "nextPriority": [],
-  "directives": [],
-  "internalLinkRuns": [
-    {
-      "date": "2026-04-15",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/owl-camel-ai-multi-agent-2026.html",
-        "blog/elevenlabs-elevencreative-review-2026.html"
-      ],
-      "notes": "TW: 優先連結聯盟文章"
-    },
-    {
-      "date": "2026-04-22",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/klariqo-ai-receptionist-smb-review-2026.html",
-        "blog/n8n-vs-make-vs-zapier-2026.html"
-      ],
-      "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
-    },
-    {
-      "date": "2026-09-23",
-      "action": "internal_link_optimization",
-      "articlesEdited": [
-        "blog/deepseek-v4-pro-review-2026.html",
-        "blog/claude-4-sonnet-opus-review-2026.html",
-        "blog/vibe-coding-tools-comparison-2026.html"
-      ],
       "notes": "TW: deepseek-v4 文中 OpenCode 提及文字加入評測連結；claude-4 場景一新增 OpenCode 開源替代方案連結；vibe-coding Intent 段落加入 Gemini CLI 評測連結"
     }
   ]
