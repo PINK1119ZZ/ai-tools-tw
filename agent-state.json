@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-11-13T02:00:00+00:00",
+  "lastUpdated": "2026-11-14T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-14",
+      "action": "publish_article",
+      "title": "AI 電子發票與金流工具推薦 2026：綠界 ECPay vs TapPay vs 藍新 NewebPay — 台灣電商收款、發票自動化與對帳完整比較",
+      "file": "blog/ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html",
+      "wordCount": 2700,
+      "topicSource": "自選新主題 — 台灣電商收款與電子發票是高搜尋、低繁中深度評測的在地題材，三大平台（綠界一站式/TapPay 站內付/藍新＋ezPay）切入點清晰，與已發會計、電商、訂閱、物流系列互補（收款與合規環節），站內尚無此題",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "ultahost",
+        "nordvpn",
+        "systeme.io",
+        "gumroad",
+        "capcut"
+      ],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html",
+        "ai-subscription-management-tools-recharge-vs-bold-vs-skio-2026.html",
+        "ai-accounting-tools-xero-vs-quickbooks-online-vs-freshbooks-2026.html",
+        "ai-ecommerce-logistics-tools-shipbob-vs-shipstation-vs-flexport-ai-2026.html"
+      ],
+      "notes": "三大台灣金流與電子發票平台深度評測：綠界 ECPay（第三方支付/一般賣家信用卡 2.75% 未稅加營業稅約 2.89% 另收每筆含稅 1 元處理費/特約 1.85%–2.75% 需設定費 5,000 與年費 13,000 起/自家 B2B＋B2C 電子發票 API 含 PHP Python C# SDK/超商物流內建/站內付 2.0/中小電商首選/綜合評分 88）、TapPay（支付閘道＋代收付/站內付不離開官網/一個 API 串十餘家收單銀行/Apple Pay Google Pay LINE Pay 街口/Cherri X 風控/iPhone 卡緊收/無內建物流與發票需另接/Shopify 原生風格/轉換率優先品牌首選/綜合評分 84）、藍新 NewebPay（老牌第三方支付逾 30 萬商戶/信用卡約 2.75% 起依量體議價/智付通收款頁免建站/同集團 ezPay 發票但簽約主體分開/捐款金流市佔領先/備援金流首選/綜合評分 82）。6 個漸層 CTA：Hahow＋DataCamp/DigitalOcean＋Cloudways/UltaHost＋NordVPN/Systeme.io＋Gumroad/CapCut/NordVPN＋DigitalOcean。台灣六大情境選型決策表、三種整合方案（綠界全包/TapPay＋綠界發票/綠界主＋藍新備援）、費率含稅試算（月交易 100 萬）、發票自動化五細節（載具驗證/開立時點/折讓單/B2B 與 B2C 分開/字軌配號）、三個月主備遷移計畫、FAQ 5 題。費率均標明以廠商書面報價為準。目標關鍵字：電子發票工具/金流工具推薦/綠界ECPay評測/TapPay評測/藍新金流評測/台灣電商金流/電子發票API/信用卡手續費/Shopify金流/發票自動化2026。"
+    },
     {
       "date": "2026-11-13",
       "action": "publish_article",
@@ -141,6 +168,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html",
     "blog/ai-customer-data-platform-tools-segment-vs-rudderstack-vs-hightouch-2026.html",
     "blog/ai-screen-recording-tools-loom-vs-screenpal-vs-tango-2026.html",
     "blog/ai-accounting-tools-xero-vs-quickbooks-online-vs-freshbooks-2026.html",
@@ -279,19 +307,29 @@
     {
       "date": "2026-04-15",
       "action": "internal_link_optimization",
-      "articlesEdited": ["blog/owl-camel-ai-multi-agent-2026.html","blog/elevenlabs-elevencreative-review-2026.html"],
+      "articlesEdited": [
+        "blog/owl-camel-ai-multi-agent-2026.html",
+        "blog/elevenlabs-elevencreative-review-2026.html"
+      ],
       "notes": "TW: 優先連結聯盟文章"
     },
     {
       "date": "2026-04-22",
       "action": "internal_link_optimization",
-      "articlesEdited": ["blog/klariqo-ai-receptionist-smb-review-2026.html","blog/n8n-vs-make-vs-zapier-2026.html"],
+      "articlesEdited": [
+        "blog/klariqo-ai-receptionist-smb-review-2026.html",
+        "blog/n8n-vs-make-vs-zapier-2026.html"
+      ],
       "notes": "TW: klariqo 延伸閱讀新增 answrr 同類 AI 接待員評測連結；n8n-vs-make 文中 MCP 段落自然嵌入 n8n-2-14 評測連結"
     },
     {
       "date": "2026-09-23",
       "action": "internal_link_optimization",
-      "articlesEdited": ["blog/deepseek-v4-pro-review-2026.html","blog/claude-4-sonnet-opus-review-2026.html","blog/vibe-coding-tools-comparison-2026.html"],
+      "articlesEdited": [
+        "blog/deepseek-v4-pro-review-2026.html",
+        "blog/claude-4-sonnet-opus-review-2026.html",
+        "blog/vibe-coding-tools-comparison-2026.html"
+      ],
       "notes": "TW: deepseek-v4 文中 OpenCode 提及文字加入評測連結；claude-4 場景一新增 OpenCode 開源替代方案連結；vibe-coding Intent 段落加入 Gemini CLI 評測連結"
     }
   ]
