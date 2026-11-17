@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-11-15T02:00:00+00:00",
+  "lastUpdated": "2026-11-17T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-17",
+      "action": "publish_article",
+      "title": "自架私有 AI 知識庫推薦 2026：Flowise vs AnythingLLM vs Dify — 台灣企業 RAG 私有部署完整比較",
+      "file": "blog/private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
+      "wordCount": 2800,
+      "topicSource": "自選新主題 — 自架 RAG 知識庫在台灣企業 IT 與開發者社群搜尋量高，繁中深度評測空白，三大平台（Flowise 視覺化 LangChain/AnythingLLM 開箱即用/Dify AI 應用開發平台）切入點清晰，與已發 Dify 教學、n8n 自動化、AI 客服系列互補（企業私有 AI 底層基礎設施）",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "nordvpn",
+        "ultahost",
+        "systeme.io",
+        "capcut",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "dify-complete-guide-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "rag-explained.html",
+        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+        "dify-v1-6-mcp-two-way-integration-2026.html"
+      ],
+      "notes": "三大開源自架 AI 知識庫平台深度評測：Flowise（Apache 2.0/視覺化 LangChain.js/拖拉式 Chatflow + Agentflow v2/Document Store 自動同步/10+ 向量資料庫 Pinecone+Qdrant+Chroma+pgvector/Predict API 自動生成/Human in the Loop v2.2+/自架免費/Cloud Starter 5/Pro 5/開發者與 LangChain 生態首選/綜合評分 86）、AnythingLLM（MIT/開箱即用企業私有 AI/多 Workspace 隔離/廣泛文件格式 PDF+Word+Excel+PPT+Notion+Confluence/Ollama 本地模型完全離線/內建 LanceDB + 5+ 外部向量庫/Multi-User 權限管理/嵌入式 Widget/桌面版 Mac+Windows+Linux/自架免費/Cloud 7+/中小企業非技術用戶首選/綜合評分 82）、Dify（Apache 2.0/82k GitHub Stars/Q&A 增強索引模式/Workflow 最完整含迭代+平行+子工作流+Code Node/Agent 20+ 內建工具/Prompt IDE A/B 測試/Annotation 標記改善/Cohere+Jina Reranker 整合/繁中界面/Cloud Sandbox 免費/Professional 9/Team 59/AI 應用開發者首選/綜合評分 90）。6 個漸層 CTA：Hahow+DataCamp（AI 開發課程）/DigitalOcean+Cloudways（RAG 伺服器主機）/NordVPN+UltaHost（安全連線）/Systeme.io（行銷漏斗整合）/CapCut（Demo 影片製作）/Gumroad（Claude Code Pack）。台灣七大情境選型（非技術部門自用→AnythingLLM/高保密離線→AnythingLLM+Ollama/複雜 RAG 管道→Flowise/多步驟工作流→Dify/最高繁中準確率→Dify Q&A 增強/網站客服 Widget→AnythingLLM 或 Flowise/n8n 整合→Flowise 或 Dify）。三大整合實戰方案：法律事務所離線知識庫（AnythingLLM+Ollama Qwen2.5-14B+DigitalOcean CPU-Optimized 6/月/合約查詢準確率 80-85%/零外洩/節省 Westlaw 00+/月 80%）、電商 LINE Bot 客服（Flowise+Qdrant+GPT-4o-mini+Cohere Rerank+n8n LINE Webhook/回覆時間從 4 小時→30 秒/月節省客服人力 NT0,000-60,000）、製造業技術文件 Telegram Bot（Dify Q&A 增強+Jina Reranker+Cloudways+n8n Telegram/FAQ 解決時間從 2 小時→5 分鐘/新人訓練從 3 個月→1 個月）。四大挑戰解法：繁中分塊優化（Chunk 500-700/中文分隔符/Dify Q&A 模式）、掃描 PDF OCR（Adobe AI/ABBYY/Dify Azure Doc Intelligence）、幻覺控制（Re-ranking+System Prompt 限制/Annotation 標記）、文件更新自動化（Flowise Document Store 自動同步/Dify API+n8n 觸發/AnythingLLM 月度 SOP）。FAQ 5 題（Flowise vs AnythingLLM 中小企業/自架 vs ChatGPT/Dify vs Flowise/伺服器規格/繁中最佳化四步驟）。目標關鍵字：私有AI知識庫/RAG工具推薦/Flowise評測/AnythingLLM評測/Dify評測/自架AI/向量資料庫/企業AI問答/台灣RAG工具/開源AI平台2026。"
+    },
     {
       "date": "2026-11-15",
       "action": "publish_article",
@@ -9,8 +36,27 @@
       "file": "blog/ai-scheduling-tools-calendly-vs-cal-com-vs-tidycal-2026.html",
       "wordCount": 2650,
       "topicSource": "自選新主題 — 台灣 B2B 業務、顧問、講師與醫美診所手動排程痛點明確，繁中深度評測空白，三大平台（Calendly 企業全功能/Cal.com 開源自建/TidyCal 終身授權）切入點清晰，與已發 CRM、行銷自動化、電商金流系列互補",
-      "affiliates": ["hahow","datacamp","digitalocean","cloudways","systeme.io","nordvpn","ultahost","capcut","gumroad"],
-      "internalLinks": ["ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html","ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html","line-bot-n8n-templates-2026.html","n8n-vs-make-vs-zapier-2026.html","ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html","ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html","systeme-io-review-2026.html","ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html"],
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "systeme.io",
+        "nordvpn",
+        "ultahost",
+        "capcut",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html",
+        "ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
+        "line-bot-n8n-templates-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html",
+        "systeme-io-review-2026.html",
+        "ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html"
+      ],
       "notes": "三大 AI 線上排程工具深度評測：Calendly（智慧衝突偵測多帳號合併/AI Routing Forms/Round Robin/Collective/Workflows 雙提醒/Stripe 付款/HubSpot+Salesforce 整合/Smart Scheduling/Standard US$10/Teams US$16/B2B 業務首選/綜合評分 90）、Cal.com（開源 AGPL-3.0/免費無限事件類型/Cal AI 自然語言設定/200+ Apps/Webhook API 完整/DigitalOcean Tokyo 自建月費 US$6/醫美診所隱私合規首選/綜合評分 86）、TidyCal（US$29 終身/0% 抽成/品牌化/Stripe+PayPal/Zapier 整合/個人顧問講師首選/綜合評分 80）。6 個漸層 CTA：Hahow+DataCamp/DigitalOcean+Cloudways（Cal.com 自建主機）/Systeme.io/NordVPN+UltaHost/Gumroad/CapCut。台灣七大情境選型、三大整合方案（Calendly+HubSpot+n8n/Cal.com 自建+Telegram Bot+診所系統/TidyCal+Systeme.io）、四大挑戰解方、三個月導入計畫、FAQ 5 題。"
     },
     {
@@ -179,6 +225,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
     "blog/ai-scheduling-tools-calendly-vs-cal-com-vs-tidycal-2026.html",
     "blog/ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html",
     "blog/ai-customer-data-platform-tools-segment-vs-rudderstack-vs-hightouch-2026.html",
