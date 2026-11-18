@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-11-17T02:00:00+00:00",
+  "lastUpdated": "2026-11-18T02:00:00+00:00",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-18",
+      "action": "publish_article",
+      "title": "AI Newsletter 電子報工具推薦 2026：Beehiiv vs Substack vs Ghost — 台灣創作者、顧問與品牌電子報變現完整比較",
+      "file": "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
+      "wordCount": 2600,
+      "topicSource": "自選新主題 — 電子報平台在台灣創作者經濟與個人品牌崛起背景下搜尋量上升，繁中深度評測空白，三大平台（Beehiiv 成長工具最強/Substack 社群生態/Ghost 開源自建）切入點清晰，與已發 Email 行銷、行銷自動化、Systeme.io、n8n 系列互補",
+      "affiliates": ["hahow", "datacamp", "digitalocean", "cloudways", "systeme.io", "nordvpn", "ultahost", "capcut", "gumroad"],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
+        "ai-marketing-automation-tools-hubspot-vs-marketo-vs-activecampaign-2026.html",
+        "systeme-io-review-2026.html",
+        "private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html"
+      ],
+      "notes": "三大電子報平台深度評測：Beehiiv（Boosts 推薦廣告網路每訂閱者 $0.5-3/AI 功能草稿+標題A/B測試+摘要自動化/分眾Segmentation行為分群/3D分析儀表板/0%付費抽成Scale+/Scale $39/月/主動成長首選/綜合評分88）、Substack（完全免費無訂閱數上限/Notes 類 Twitter 社群推薦/Chat 付費私群/Referrals 推薦機制/付費抽成10%+Stripe/中文創作者友善/剛起步首選/綜合評分82）、Ghost（MIT開源/完整SEO canonical+meta+sitemap/Content API + Admin API/Webhook/0%抽成/Theme完全自訂/自建DigitalOcean $6+/Ghost Pro $9+/企業品牌進階開發者首選/綜合評分85）。6個漸層CTA：Hahow+DataCamp（內容行銷課程）/DigitalOcean+Cloudways（Ghost自建主機）/Systeme.io（課程銷售漏斗）/Gumroad（Claude Code Pack）/NordVPN+UltaHost（安全連線）/CapCut（宣傳短影音）。三大整合方案：Beehiiv+Systeme.io課程銷售漏斗（付費轉換率1-2%→4-6%）/Ghost+n8n+GPT-4o AI自動化工作流（3-4小時縮短至45-60分鐘）/Substack+Gumroad快速起步路徑（月收NT$10,000-30,000）。從零到1,000訂閱者三個月計畫（第一月建立基礎50-100訂/第二月鉛磁鐵擴大300-400訂/第三月啟動付費變現500-1,000訂）。四大挑戰解方（開信率低→AI A/B測試+時段優化/訂閱者不成長→Boosts+Notes+SEO/付費轉換率低→分層內容設計/Ghost技術問題→Mailgun SMTP+DigitalOcean備份）。FAQ 5題。目標關鍵字：Newsletter工具/電子報平台/Beehiiv評測/Substack評測/Ghost評測/電子報變現/訂閱制內容/個人品牌電子報/台灣創作者工具/AI電子報2026。"
+    },
     {
       "date": "2026-11-17",
       "action": "publish_article",
@@ -225,6 +242,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
     "blog/private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
     "blog/ai-scheduling-tools-calendly-vs-cal-com-vs-tidycal-2026.html",
     "blog/ai-einvoice-payment-tools-ecpay-vs-tappay-vs-newebpay-2026.html",
