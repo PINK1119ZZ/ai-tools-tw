@@ -1,7 +1,34 @@
 {
-  "lastUpdated": "2026-11-18T02:00:00+00:00",
+  "lastUpdated": "2026-11-19T02:06:43.812588Z",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-19",
+      "action": "publish_article",
+      "title": "網站主機推薦 2026：Cloudways vs UltaHost vs DigitalOcean — 台灣 WordPress、電商與 AI 自架完整比較",
+      "file": "blog/web-hosting-cloudways-vs-ultahost-vs-digitalocean-2026.html",
+      "wordCount": 5958,
+      "topicSource": "自選新主題 — 網站主機與 VPS 是所有自架工具（n8n、Dify、Bot 後端）與 WordPress 網站的基礎設施，台灣站長常在 Cloudways（託管雲端）、UltaHost（平價主機）與 DigitalOcean（自助 VPS）三者之間選擇，繁中深度比較空缺，與已發 n8n、Dify、電商、電子報系列形成完整工具鏈閉環",
+      "affiliates": [
+        "digitalocean",
+        "cloudways",
+        "ultahost",
+        "hahow",
+        "systeme.io",
+        "nordvpn",
+        "gumroad",
+        "datacamp"
+      ],
+      "internalLinks": [
+        "n8n-vs-make-vs-zapier-2026.html",
+        "private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
+        "systeme-io-review-2026.html",
+        "nordvpn-review-2026.html",
+        "ai-website-builder-tools-framer-ai-vs-webflow-vs-wix-ai-2026.html",
+        "ai-ecommerce-tools-shopify-ai-vs-woocommerce-vs-squarespace-2026.html"
+      ],
+      "notes": "三大網站主機深度評測：Cloudways（託管雲端主機/底層 DigitalOcean+Vultr+AWS/WordPress 一鍵安裝/Nginx+Redis+Varnish 預調校/面板內建備份與監控/一個帳號管多站/可隨時升級規格/WooCommerce 電商與接案工作室首選/繁中客服少/編輯評分 86）、UltaHost（平價主機/共享+WordPress託管+VPS+雲端多產品線/cPanel 面板/入門價親民/首購促銷力度大/共享主機效能受鄰居影響/第一個網站與小型官網首選/編輯評分 78）、DigitalOcean（自助式雲端 VPS/Droplet 完整 Root 權限/按小時計費月費封頂/文件完整社群成熟/快照、區塊儲存、託管資料庫等周邊服務/n8n、Dify、Bot 後端、客製應用首選/維運全部自己來/編輯評分 88）。含虛擬主機 vs 託管雲端 vs VPS 判斷、核心差異表、台灣八大情境選型決策表（第一次架站→UltaHost/WooCommerce 電商→Cloudways/接案維運→Cloudways/n8n 自動化→DigitalOcean/Dify 自架→DigitalOcean/Bot 後端→DigitalOcean/流量成長→Cloudways/官網+自動化分離→Cloudways+DigitalOcean）、三大方案月費與工時估算表、三種整合實戰方案（Cloudways+HubSpot+Zapier 電商全自動/DigitalOcean+n8n+Telegram Bot 自動化監控/UltaHost+WordPress+Gumroad 個人品牌起步）、總持有成本思路（主機月費+時間成本+備份安全+續約價+網域 SSL）、機房位置與 CDN 速度實測（新加坡/東京/香港/美西延遲比較+Cloudflare CDN 使用時機）、備份策略三層（主機自動備份+異地備份+還原測試）、三種主機安全防護差異（Cloudways 內建防火牆與自動更新/UltaHost cPanel ModSecurity/DigitalOcean 全部自己設防火牆 fail2ban）、什麼時候該換主機五訊號、搬站與上線檢查清單八步驟、常見踩雷八項、FAQ 5 題。6 個漸層 CTA：DigitalOcean+Cloudways（VPS 與託管雲端雙選項）/UltaHost+Systeme.io（入門站與行銷漏斗）/NordVPN+NordVPN 評測內連（安全連線）/Hahow+DataCamp+Gumroad（架站課程與 Claude Code Pack）。延伸閱讀四篇：AI 網站建置工具、n8n vs Make vs Zapier、Systeme.io 評測、電商平台比較。目標關鍵字：網站主機推薦/Cloudways評測/UltaHost評測/DigitalOcean教學/WordPress主機/VPS推薦/n8n自架/台灣架站/虛擬主機比較/主機推薦2026。"
+    },
     {
       "date": "2026-11-18",
       "action": "publish_article",
@@ -9,7 +36,17 @@
       "file": "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
       "wordCount": 2600,
       "topicSource": "自選新主題 — 電子報平台在台灣創作者經濟與個人品牌崛起背景下搜尋量上升，繁中深度評測空白，三大平台（Beehiiv 成長工具最強/Substack 社群生態/Ghost 開源自建）切入點清晰，與已發 Email 行銷、行銷自動化、Systeme.io、n8n 系列互補",
-      "affiliates": ["hahow", "datacamp", "digitalocean", "cloudways", "systeme.io", "nordvpn", "ultahost", "capcut", "gumroad"],
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "systeme.io",
+        "nordvpn",
+        "ultahost",
+        "capcut",
+        "gumroad"
+      ],
       "internalLinks": [
         "n8n-vs-make-vs-zapier-2026.html",
         "ai-email-marketing-tools-mailchimp-vs-activecampaign-vs-convertkit-2026.html",
@@ -242,6 +279,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/web-hosting-cloudways-vs-ultahost-vs-digitalocean-2026.html",
     "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
     "blog/private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
     "blog/ai-scheduling-tools-calendly-vs-cal-com-vs-tidycal-2026.html",
