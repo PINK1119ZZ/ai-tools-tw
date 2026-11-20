@@ -1,7 +1,23 @@
 {
-  "lastUpdated": "2026-11-19T02:06:43.812588Z",
+  "lastUpdated": "2026-11-20T02:00:00.000000Z",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-20",
+      "action": "publish_article",
+      "title": "AI 影片翻譯配音工具推薦 2026：HeyGen vs Rask.ai vs Captions — 台灣創作者、企業培訓與行銷影片多語言自動化完整比較",
+      "file": "blog/ai-video-translation-dubbing-tools-heygen-vs-rask-vs-captions-2026.html",
+      "wordCount": 2800,
+      "topicSource": "自選新主題 — AI 影片翻譯配音在台灣 YouTube 創作者、跨境電商行銷與企業培訓多語言化需求急速成長，三大平台（HeyGen 口型同步業界最佳/Rask.ai 批次翻譯 130+ 語言/Captions 字幕剪輯一體化）切入點清晰，繁中深度評測空白，與已發 AI 影片剪輯、短影音、TTS 系列互補",
+      "affiliates": ["hahow", "capcut", "nordvpn", "systeme.io", "datacamp", "digitalocean", "ultahost", "gumroad"],
+      "internalLinks": [
+        "ai-video-editing-tools-capcut-vs-runway-vs-premiere-ai-2026.html",
+        "ai-short-video-tools-opus-clip-vs-pictory-vs-munch-2026.html",
+        "ai-tts-tools-elevenlabs-vs-azure-neural-tts-vs-google-text-to-speech-2026.html",
+        "n8n-vs-make-vs-zapier-2026.html"
+      ],
+      "notes": "三大 AI 影片翻譯配音平台深度評測：HeyGen（ElevenLabs 語音合成/口型同步準確率業界最佳 80-85%/Voice Clone 3 分鐘音檔/AI Avatar 虛擬人物影片/40+ 語言/Creator US$29/Business US$89/Enterprise 客製/綜合評分 90）、Rask.ai（130+ 語言對/Multi-speaker 自動偵測/批次處理所有付費方案/API Webhook 整合/Starter US$60/Pro US$140/Business US$360/批次翻譯王者/綜合評分 84）、Captions（字幕+剪輯+翻譯一體化/Eye Contact Correction/Auto B-Roll/Remove Filler Words/AI Clip 長片剪短/28+ 語言/Pro US$19/最簡單入門/個人創作者首選/綜合評分 80）。5 個漸層 CTA：Hahow+CapCut（影片創作課程）/CapCut+NordVPN（剪輯+安全上傳）/Systeme.io+DataCamp（行銷漏斗+課程）/DigitalOcean+UltaHost（自動化後端主機）/Gumroad（Claude Code Pack $29）。台灣七大情境選型決策表（繁中 YouTube 拓英語→HeyGen Creator/線上課程多語言→Rask.ai Pro/企業培訓→HeyGen Business 或 Rask.ai Business/個人短影音字幕→Captions Pro/跨境電商產品介紹→HeyGen Creator/訪談影片翻譯→Rask.ai Starter/只要字幕→Captions Free）。三大整合方案：YouTube 創作者國際化流程（HeyGen+CapCut+YouTube，翻譯成本 NT$225/支 vs 人工 NT$3,000-8,000）、線上教育平台多語言擴張（Rask.ai+n8n+AWS S3，500 支×3 語言節省 95% 翻譯成本）、企業培訓 AI Avatar 維護（HeyGen Enterprise，更新週期從 3 天縮短至 60 分鐘）。四大挑戰解法：繁中口語翻英不自然（逐字稿手動修改/腳本書面化）、口型同步在側臉效果差（保持正面/選無口型同步模式）、語速不對齊（時間軸手動調整/腳本留停頓空間）、多說話者辨識混亂（Rask.ai Multi-speaker 手動確認 Speaker 標記）。三個月國際化計畫（第一月建立基礎 Voice Clone 與英語頻道/第二月自動化流程與術語庫/第三月擴展第三語言與 Systeme.io 銷售漏斗）。FAQ 5 題。目標關鍵字：AI影片翻譯/AI配音工具/HeyGen評測/Rask.ai評測/Captions評測/影片自動字幕/多語言影片/AI口型同步/台灣影片翻譯工具/影片配音2026。"
+    },
     {
       "date": "2026-11-19",
       "action": "publish_article",
@@ -279,6 +295,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-video-translation-dubbing-tools-heygen-vs-rask-vs-captions-2026.html",
     "blog/web-hosting-cloudways-vs-ultahost-vs-digitalocean-2026.html",
     "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
     "blog/private-ai-rag-tools-flowise-vs-anythingllm-vs-dify-2026.html",
