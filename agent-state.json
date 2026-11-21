@@ -1,7 +1,24 @@
 {
-  "lastUpdated": "2026-11-20T02:00:00.000000Z",
+  "lastUpdated": "2026-11-21T02:00:00.000000Z",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-21",
+      "action": "publish_article",
+      "title": "AI 語音對話訓練工具推薦 2026：Yoodli vs Poised vs Orai — 台灣業務簡報、英語口說與面試訓練完整比較",
+      "file": "blog/ai-speech-training-tools-yoodli-vs-poised-vs-orai-2026.html",
+      "wordCount": 3000,
+      "topicSource": "自選新主題 — AI 語音對話訓練在台灣職場簡報、英語口說訓練、業務提案與面試準備需求大，繁中深度評測空白，三大平台（Yoodli 完全免費無限練習/Poised 即時會議回饋/Orai 口說分數化評測）切入點清晰，與已發線上課程、會議記錄、招募工具系列互補",
+      "affiliates": ["hahow", "datacamp", "digitalocean", "cloudways", "systeme.io", "nordvpn", "ultahost", "capcut", "gumroad"],
+      "internalLinks": [
+        "ai-meeting-intelligence-tools-tldv-vs-avoma-vs-grain-2026.html",
+        "ai-screen-recording-tools-loom-vs-screenpal-vs-tango-2026.html",
+        "ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
+        "ai-lms-tools-docebo-ai-vs-talentlms-vs-cornerstone-2026.html",
+        "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html"
+      ],
+      "notes": "三大 AI 語音對話訓練工具深度評測：Yoodli（完全免費無限練習/多種模式 Private Speech+Interview Practice+Impromptu+Roleplay/AI 回饋指標 Filler Words+Pacing+Pauses+Eye Contact+Energy/逐字稿與 AI 改善建議/進步追蹤報告/Pro US$10 Zoom/Teams 外掛/簡報與面試準備首選/綜合評分 88）、Poised（即時會議 AI 教練/Zoom+Google Meet+Teams+Slack Huddles 原生外掛/即時提示 Filler words alert+Speaking pace+發言時間/會後詳細報告/AI 會議摘要/隱私優先本地分析/Starter US$29/Professional US$99/即時會議回饋唯一選擇/綜合評分 84）、Orai（分數化評測 0-100 拆解 Clarity+Energy+Pacing+Filler Words+Conciseness/每日挑戰與課程 Daily Lesson/語音模式與發音分析 Intonation+Stress/AI 虛擬對話夥伴/進步徽章遊戲化/Premium US$19.99/英語口說初學者首選/綜合評分 78）。6 個漸層 CTA：Hahow+DataCamp（簡報溝通與數據簡報課程）/DigitalOcean+Cloudways（主機）/Systeme.io+Hahow（行銷漏斗與英語課程）/CapCut+NordVPN（影片剪輯與安全連線）/Gumroad+UltaHost（Claude Code Pack 與虛擬主機）。核心差異對比表 12 項（免費方案/即時會議回饋/簡報練習/發音分析/填充詞辨識/語速控制/進步追蹤/AI 虛擬對話/團隊協作/繁中支援/價格/綜合評分）。台灣六大情境選型表（業務簡報準備→Yoodli Free/每日客戶 Zoom 會議→Poised Starter/英語口說初學者→Orai Premium/求職面試準備→Yoodli Free/主管定期簡報→Yoodli+Poised Pro/跨國英語會議非母語者→Poised+Orai）。三大整合方案：業務簡報全流程訓練（Yoodli+Loom+HubSpot，填充詞從 8-10 次/分降至 2-3 次，客戶回饋「表達清晰」提升 40%，成本 NT$880/月）、英語口說自學路徑（Orai+Hahow+ChatGPT，三個月內流暢度提升 30-40%，發音準確率提升 25%，成本 NT$907/月）、團隊溝通訓練計畫（Yoodli Enterprise+Poised Enterprise+Docebo LMS，50 人團隊填充詞降低 50%，業務成交率提升 20%，成本 NT$194,960-202,960/月人均 NT$3,899-4,059）。四大挑戰與解方：缺乏持續練習動機（設定可測量目標+練習社群+遊戲化+綁定真實需求+定期檢視進步）、AI 回饋與真人教練建議衝突（理解 AI 客觀量化 vs 真人主觀感受+結合使用互補+情境化判斷+以真人為主 AI 為輔）、繁中語音辨識準確率低（英語簡報優先/繁中手動記錄+螢幕錄製+ChatGPT 分析/混合練習策略）、無法改善深層問題邏輯混亂內容空洞（區分表達 vs 內容/先優化內容再練表達 ChatGPT 優化結構+Notion 腳本/學習簡報框架 Hahow 課程/真人回饋內容品質）。90 天訓練計畫（第一月建立基礎習慣 Yoodli 每週 3 次減少填充詞 30%/第二月提升流暢度 Yoodli+Orai 或 Poised 語速穩定 Energy 提升/第三月實戰應用真實簡報或面試+長期練習機制）。FAQ 5 題（Yoodli 完全免費無隱藏費用/AI 無法完全取代真人教練但可降低依賴/如何選擇依情境決定/繁中簡報準確率 70-80% 需手動輔助/2-4 週填充詞減 30-40% 2-3 個月達目標）。目標關鍵字：AI語音訓練工具/Yoodli評測/Poised評測/Orai評測/簡報訓練/英語口說訓練/面試訓練/業務簡報/台灣口說工具/AI演講訓練2026。"
+    },
     {
       "date": "2026-11-20",
       "action": "publish_article",
@@ -295,6 +312,7 @@
     }
   ],
   "publishedArticles": [
+    "blog/ai-speech-training-tools-yoodli-vs-poised-vs-orai-2026.html",
     "blog/ai-video-translation-dubbing-tools-heygen-vs-rask-vs-captions-2026.html",
     "blog/web-hosting-cloudways-vs-ultahost-vs-digitalocean-2026.html",
     "blog/ai-newsletter-tools-beehiiv-vs-substack-vs-ghost-2026.html",
