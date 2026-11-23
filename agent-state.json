@@ -1,7 +1,33 @@
 {
-  "lastUpdated": "2026-11-22T02:00:00.000000Z",
+  "lastUpdated": "2026-11-23T02:00:00.000000Z",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-23",
+      "action": "publish_article",
+      "title": "AI 團隊協作與知識共享工具推薦 2026：Confluence AI vs SharePoint AI vs Coda — 台灣企業文件管理、跨部門協作與知識庫完整比較",
+      "file": "blog/ai-team-collaboration-knowledge-tools-confluence-ai-vs-sharepoint-ai-vs-coda-2026.html",
+      "wordCount": 2900,
+      "topicSource": "自選新主題 — 企業級協作與知識管理平台在台灣遠端與混合工作模式下需求大（知識散落/新人 Onboarding/跨部門協作/文件版本追蹤），繁中深度評測空白，三大平台（Confluence AI Atlassian 生態整合王 Jira 無縫協作/SharePoint AI Microsoft 365 深度整合企業既有基礎設施/Coda All-in-One 文件表格工作流靈活度最高）切入點清晰，與已發專案管理（Asana/Monday/ClickUp）、協作白板（Miro/Mural/FigJam）、知識庫（Notion/Obsidian/Logseq）、流程圖（Lucidchart/Miro Diagramming/Whimsical）、會議記錄（tldv/Avoma/Grain）系列互補，形成完整企業協作工具鏈閉環",
+      "affiliates": [
+        "hahow",
+        "datacamp",
+        "digitalocean",
+        "cloudways",
+        "systeme.io",
+        "nordvpn",
+        "ultahost",
+        "capcut",
+        "gumroad"
+      ],
+      "internalLinks": [
+        "ai-project-management-tools-asana-vs-monday-vs-clickup-2026.html",
+        "ai-whiteboard-tools-miro-ai-vs-mural-vs-figjam-ai-2026.html",
+        "notion-ai-vs-obsidian-vs-logseq-knowledge-base-2026.html",
+        "ai-diagram-flowchart-tools-lucidchart-vs-miro-diagramming-vs-whimsical-2026.html"
+      ],
+      "notes": "三大企業知識共享平台深度評測：Confluence AI（Atlassian 生態整合王/AI 草稿生成與內容改寫正式輕鬆技術/AI 搜尋增強與摘要/Page Tree 結構化知識庫 Space 為單位/Jira 整合雙向同步/Template Gallery 100+ 範本/版本歷史與權限管理/Standard US$6.05/Premium US$11.55/Enterprise 客製/適合 Atlassian 生態用戶工程團隊大型企業部門協作/綜合評分 87）、SharePoint AI（Microsoft 365 深度整合/Copilot 整合跨平台檢索自動生成摘要/Document Library 文件管理/Power Platform 整合與自動化/Enterprise 合規與安全 DLP 資訊屏障敏感度標籤 eDiscovery/Teams 整合與頻道連結/Sites 與 Pages 內容發布/M365 Business Basic US$6/Business Standard US$12.5/E3 US$36/E5 US$57/Copilot 額外 US$30/適合 Microsoft 365 企業用戶金融醫療政府 HR 與行政部門/綜合評分 81）、Coda（All-in-One 文件表格工作流/AI Assistant 與 AI Pack 自訂工作流/Doc as App 文件即應用/Table 與 View 多維度資料表/Packs 整合與自動化 500+/Template Gallery 社群範本/靈活權限與分享/Pro US$12/Team US$36/Enterprise 客製/適合新創敏捷團隊產品經理專案經理小型工程團隊/綜合評分 85）。核心差異對比表 14 項（核心定位/AI 功能/知識結構/表格功能/自動化能力/範本與社群/權限管理/生態整合/合規與安全/學習曲線/定價小團隊 10 人企業 100 人/適合團隊規模/綜合評分）。台灣八大情境選型決策表（工程團隊技術文件與 Jira 整合→Confluence Standard/Microsoft 365 企業既有基礎設施→SharePoint + M365 E3/產品團隊 Roadmap 與 OKR 追蹤→Coda Pro/金融醫療政府高度監管產業→SharePoint + M365 E5/新創敏捷團隊全功能工作區→Coda Team/大型企業部門協作與知識分類→Confluence Premium/HR Onboarding 與制度規範管理→SharePoint + M365 Business Standard/小型工程團隊客製化工作流→Coda Free + Pro）。三大整合實戰方案：Confluence+Jira+Slack 工程團隊技術文件與開發流程整合（技術文件與開發工作完美串聯/新人 Onboarding 時間從 4 週縮短至 2 週/Release Notes 自動生成節省 PM 每週 2 小時/月成本 50 人 NT$35,572 人均 NT$711）、SharePoint+Teams+Power Automate Microsoft 365 企業知識管理與流程自動化（HR Onboarding 流程自動化/公司公告與制度規範集中管理/業務團隊客戶案例共享/月成本 200 人 E3+Copilot 部分用戶 NT$269,700 人均 NT$1,348）、Coda+Slack+Figma 產品團隊 Roadmap 與 OKR 追蹤（產品 Roadmap 與 OKR 追蹤整合單一工作區/RICE 評分公式自動計算 Feature 優先級/設計稿與需求文件並排/月成本 20 人 NT$9,610 人均 NT$481）。四大挑戰與解方：知識散落在多個平台員工找不到最新版本（建立統一知識平台/設定文件負責人與更新頻率/AI 搜尋增強/版本歷史與追蹤）、新人 Onboarding 流程混亂 HR 負擔重（建立 Onboarding Checklist 範本/自動化權限與任務指派/進度追蹤與提醒/新人回饋收集）、跨部門協作困難文件權限設定過於複雜（部門 Space 與繼承權限/SharePoint 資訊屏障/Coda 欄位層級權限/外部訪客與密碼保護連結）、知識平台導入後使用率低員工仍習慣 Email 與即時通訊（管理層以身作則/即時通訊整合與通知/知識貢獻獎勵機制/內部工作坊與範本/AI 自動生成降低門檻）。5 個漸層 CTA：Hahow+DataCamp（技術寫作與敏捷開發課程）/DigitalOcean+Cloudways（自建知識庫伺服器與託管）/Systeme.io+Gumroad（產品行銷漏斗與數位商品銷售）/NordVPN+UltaHost（保護企業知識庫安全連線）/CapCut（製作知識平台教學影片）。FAQ 5 題（小型企業 10-20 人需要專屬知識平台嗎還是 Google Drive 就夠/如何選擇 Confluence SharePoint Coda 依據既有生態團隊規模客製化需求四維度/AI 功能差異 Copilot 跨平台檢索最強 Coda AI 工作流最靈活 Confluence AI 搜尋摘要最好/導入需要多少時間如何確保員工實際使用技術部署 1-2 週內容遷移與習慣養成 3-6 個月/資料安全與備份如何處理萬一平台商倒閉怎麼辦三大平台皆提供企業級安全與備份但仍需定期匯出資料與建立異地備份）。延伸閱讀四篇：專案管理工具/白板協作工具/個人知識庫工具/流程圖繪製工具。目標關鍵字：AI團隊協作工具/Confluence AI評測/SharePoint AI評測/Coda評測/企業知識管理/文件協作平台/台灣知識庫工具/遠端協作工具/知識共享平台/AI文件管理2026。"
+    },
     {
       "date": "2026-11-22",
       "action": "publish_article",
@@ -495,7 +521,8 @@
     "blog/ai-coding-tools-comparison-2026-final.html",
     "blog/claude-4-sonnet-opus-review-2026.html",
     "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
-    "blog/ai-diagram-flowchart-tools-lucidchart-vs-miro-diagramming-vs-whimsical-2026.html"
+    "blog/ai-diagram-flowchart-tools-lucidchart-vs-miro-diagramming-vs-whimsical-2026.html",
+    "blog/ai-team-collaboration-knowledge-tools-confluence-ai-vs-sharepoint-ai-vs-coda-2026.html"
   ],
   "nextPriority": [],
   "directives": [],
