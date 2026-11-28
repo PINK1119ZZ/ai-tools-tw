@@ -1,7 +1,18 @@
 {
-  "lastUpdated": "2026-11-26T02:00:00.000000Z",
+  "lastUpdated": "2026-11-28T02:00:00.000000Z",
   "status": "active",
   "agentLog": [
+    {
+      "date": "2026-11-28",
+      "action": "publish_article",
+      "title": "AI 招募工具推薦 2026：HireVue vs Pymetrics vs Paradox AI — 台灣人資、影片面試與候選人篩選完整比較",
+      "file": "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html",
+      "wordCount": 2850,
+      "topicSource": "自選新主題 — 台灣企業招募痛點明確（大量履歷人工篩選耗時/面試安排繁瑣/候選人體驗差），三大平台（HireVue 影片面試 AI 分析/Pymetrics 遊戲化神經科學測評/Paradox AI 對話式 AI 助理 Olivia）切入點清晰，繁中深度評測空白，與已發協作、會議、表單系列互補（HR 流程閉環）",
+      "affiliates": ["hahow", "datacamp", "digitalocean", "cloudways", "systeme.io", "nordvpn", "ultahost", "capcut", "gumroad"],
+      "internalLinks": ["ai-customer-service-tools-intercom-vs-zendesk-vs-freshdesk-ai-2026.html", "ai-form-tools-typeform-ai-vs-tally-vs-google-forms-ai-2026.html", "n8n-vs-make-vs-zapier-2026.html", "ai-crm-tools-hubspot-vs-salesforce-vs-pipedrive-2026.html"],
+      "notes": "三大 AI 招募工具深度評測：HireVue（影片面試 AI 分析/語言內容情緒表達語速語調/AI 自動評分排序/Live Video Interview 即時視訊/Text-Based Interview/Assessments Library/Mobile-First 完成率 85-90%/ATS 整合 Workday+Greenhouse+SAP/EEOC+GDPR 合規/企業客製年費 US$30,000-100,000+/適合大型企業校園招募跨國企業客服銷售高階主管/優勢業界領導品牌 700+ 客戶 AI 分析成熟/劣勢價格昂貴候選人體驗爭議繁中準確率 70-75%/編輯評分 84）、Pymetrics（遊戲化神經科學測評/12 款認知遊戲 25 分鐘 90+ 特質/AI Job Matching 自動匹配/Soft Skills Assessment/Fair AI 無偏見獨立稽核/Mobile-First 完成率 90%+/ATS 整合/Talent Rediscovery 重複利用/企業客製年費 US$20,000-60,000+/適合大型企業校園招募內部晉升多元化招募/優勢候選人體驗最佳 Fair AI Talent Rediscovery/劣勢價格昂貴遊戲測評爭議繁中有限職位建模需 50-100 位員工數據/編輯評分 82）、Paradox AI（對話式 AI 助理 Olivia/SMS+WhatsApp+Messenger+WeChat/Automated Screening 自動詢問/Interview Scheduling 自動排程/24-7 Candidate Support/Multi-Language 100+ 含繁中/ATS 整合/Career Site Integration/Analytics Dashboard/企業客製年費 US$30,000-80,000+/適合大量招募 24-7 支援應屆畢業生提升候選人體驗/優勢候選人體驗最佳即時回覆滿意度 90%+ 自動化程度最高 HR 工作量降 70-80% Multi-Language 完整/劣勢價格昂貴 AI 對話限制複雜問題需轉人工候選人偏好差異技術整合需 2-3 月/編輯評分 86）。6 個漸層 CTA：Hahow+DataCamp（人資數據分析與 AI 人力資源管理課程）/DigitalOcean+Cloudways（ATS 整合後端主機）/Systeme.io（行銷漏斗）/NordVPN+UltaHost（保護候選人個資與 ATS 連線安全）/CapCut（教學影片）/Gumroad（Claude Code Pack US$29）。核心差異對比表 12 項（核心定位/主要功能/候選人體驗/自動化程度/繁中支援/Mobile-First/Fair AI/ATS整合/價格年費/適合規模/學習曲線/編輯評分）。台灣六大情境選型決策表（大型企業校園招募批次篩選 500+ 應屆畢業生→Pymetrics 或 HireVue/零售與客服大量招募每月 50-100 人→Paradox AI/跨國企業全球招募多語言職缺→Paradox AI 100+ 語言自動偵測/高階主管與專業職位需評估領導力→HireVue Live Video Interview/內部晉升與職位轉換評估現有員工適合性→Pymetrics Talent Rediscovery/中小企業預算有限年費 NT$30 萬以下→開源 ATS+n8n+Typeform+Calendly 或 n8n 串接 Telegram-LINE Bot）。三大挑戰與解決方案：候選人抗拒 AI 評判（透明溝通明確說明用途評估標準隱私保護/混合模式 AI 篩選後真人 HR 最終面試/候選人選擇權提供 AI 與傳統兩種選項/Fair AI 認證 Pymetrics 增強信任）、繁中語言分析準確率低 HireVue Pymetrics 70-75%（英語面試優先跨國企業外商/混合評估結合 AI 與真人避免單一依賴/Paradox AI 優先 100+ 語言/持續訓練要求供應商繁中模型）、高昂年費與 ROI 計算困難年費皆超 US$20,000（ROI 計算框架時間成本 HR 月省 40-60 小時+招募成本每位候選人降 30-50%+留任率提升 Pymetrics 20-30%/分階段導入先單一模組再擴展/開源替代方案 Odoo Recruitment+n8n+Typeform+Calendly 約 NT$50,000-100,000 年/供應商談判大型企業年費折扣試用期 ROI 報告）、ATS 整合與技術導入困難 2-3 月（原生整合優先現有 ATS/專業導入顧問供應商或第三方專家/API 與 Webhook 自建整合 n8n Make/試用期驗證 1-3 月確認整合穩定數據同步準確率）。FAQ 5 題（中小企業是否需要 AI 招募工具還是 LinkedIn+人力銀行就夠年度招募規模與預算決策/AI 是否造成歧視偏見如何確保 Fair AI 認證演算法透明混合評估定期稽核候選人申訴/HireVue Pymetrics Paradox AI 該選哪一個四大維度招募規模職位類型語言需求預算/導入時間 3-6 月如何確保 HR 團隊上手第一月需求訪談第二月技術整合第三月試運行第四月起全面上線供應商培訓 1-2 天指定 AI 招募冠軍/能否整合現有 ATS CRM Email 行銷工具如何實現自動化流程 ATS 原生整合 CRM 整合串接 HubSpot Salesforce Pipedrive Email 行銷整合 Mailchimp ActiveCampaign 自動化流程範例 Career Site 申請→Olivia 自動篩選→通過排程面試→結果同步 ATS→未錄取加入 Talent Pool 未來新職缺通知/低程式碼整合 n8n Make）。延伸閱讀四篇：AI 客服工具/AI 表單工具/n8n 自動化/AI CRM 工具。目標關鍵字：AI招募工具/HireVue評測/Pymetrics評測/Paradox AI評測/影片面試/人資工具/AI面試/候選人篩選/招募自動化/台灣人資工具/AI招聘2026。"
+    },
     {
       "date": "2026-11-26",
       "action": "publish_article",
@@ -558,7 +569,8 @@
     "blog/claude-4-sonnet-opus-review-2026.html",
     "blog/ai-ecommerce-customer-service-tools-gorgias-ai-vs-reamaze-vs-richpanel-2026.html",
     "blog/ai-diagram-flowchart-tools-lucidchart-vs-miro-diagramming-vs-whimsical-2026.html",
-    "blog/ai-team-collaboration-knowledge-tools-confluence-ai-vs-sharepoint-ai-vs-coda-2026.html"
+    "blog/ai-team-collaboration-knowledge-tools-confluence-ai-vs-sharepoint-ai-vs-coda-2026.html",
+    "blog/ai-recruitment-tools-hirevue-vs-pymetrics-vs-paradox-ai-2026.html"
   ],
   "nextPriority": [],
   "directives": [],
